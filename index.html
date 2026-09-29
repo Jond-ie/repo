@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>John's Repo</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff; --fg: #1a1a1a; --muted: #666; --card: #f4f4f5;
+    --accent: #3b6ea5; --border: #e2e2e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
+      --accent: #6ea8dc; --border: #26262b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
+    --accent: #6ea8dc; --border: #26262b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font: 16px/1.6 -apple-system, system-ui, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--fg);
+    max-width: 40rem; margin: 0 auto; padding: 3rem 1rem 4rem;
+  }
+  header { margin-bottom: 2rem; }
+  h1 { font-size: 1.9rem; margin: 0 0 .25rem; }
+  .tag { color: var(--muted); margin: 0 0 1.25rem; }
+  .add {
+    display: inline-block; background: var(--accent); color: #fff;
+    text-decoration: none; padding: .6rem 1.1rem; border-radius: .6rem;
+    font-weight: 600;
+  }
+  .note { font-size: .85rem; color: var(--muted); margin-top: .75rem; }
+  h2 { font-size: 1.1rem; margin: 2.5rem 0 1rem; }
+  .tweak {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: .75rem; padding: 1rem 1.15rem; margin-bottom: .85rem;
+  }
+  .tweak h3 { margin: 0 0 .3rem; font-size: 1.05rem; }
+  .tweak p { margin: 0; color: var(--muted); font-size: .95rem; }
+  .badge {
+    display: inline-block; font-size: .7rem; text-transform: uppercase;
+    letter-spacing: .04em; color: var(--accent); border: 1px solid var(--accent);
+    border-radius: .4rem; padding: .05rem .4rem; margin-left: .4rem; vertical-align: middle;
+  }
+  footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>John's Repo</h1>
+  <p class="tag">Rootless privacy &amp; utility tweaks for Dopamine (iOS 15–16).</p>
+  <a class="add" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a>
+  <p class="note">Or add <code>https://jond-ie.github.io/repo/</code> manually in Sileo → Sources.</p>
+</header>
+
+<h2>Tweaks</h2>
+
+<div class="tweak">
+  <h3>Begonecia <span class="badge">port</span></h3>
+  <p>Control Center toggle that silences camera, microphone and location system-wide —
+     total blackout, no permission errors. Rootless port of Nepeta's BegoneCIA (MIT).</p>
+</div>
+
+<div class="tweak">
+  <h3>Sentinel</h3>
+  <p>Gate any app behind the stock Face ID / Touch ID prompt. Per-app, all off by default.</p>
+</div>
+
+<div class="tweak">
+  <h3>Crossfade</h3>
+  <p>True crossfade between local-library tracks in the stock Music app. For your own files —
+     no subscription needed.</p>
+</div>
+
+<div class="tweak">
+  <h3>Scrub</h3>
+  <p>Removes GPS &amp; identifying metadata from photos before apps send them. Preserves
+     orientation and color.</p>
+</div>
+
+<footer>
+  <p><strong>Heads-up:</strong> jailbreaking itself lowers your device's baseline security.
+  These tweaks harden your <em>privacy</em> (what apps see and send); they don't undo that
+  tradeoff. Install what you need, nothing more.</p>
+  <p>Bugs &amp; requests: <a href="https://github.com/Jond-ie/repo/issues">GitHub Issues</a>.
+  Ports retain their original authors' licenses and credit. Tweaks by John d_ie.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [{
+    "tabname": "Details", "class": "DepictionStackView",
+    "views": [
+      { "class": "DepictionMarkdownView", "markdown": "## Scrub\n\nRemoves **GPS and identifying metadata** from photos before apps receive them for sending — so your location and device details don't ride along with a shared image. Orientation and color profile are preserved; JPEG and HEIC supported.\n\nModes and a per-app exclude list in Settings → Scrub." },
+      { "class": "DepictionHeaderView", "title": "Notes" },
+      { "class": "DepictionMarkdownView", "markdown": "- Covers the common photo-pick paths (Photos library, the system picker). Coverage can vary for apps using custom pickers — feedback on which apps work welcome.\n- Requires **AltList** (com.opa334.altlist) for the app list, plus PreferenceLoader; hooks run via ellekit/Substrate." },
+      { "class": "DepictionHeaderView", "title": "Credits" },
+      { "class": "DepictionMarkdownView", "markdown": "Original work by **John d_ie**." }
+    ]
+  }]
+}

@@ -1,0 +1,13 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [{
+    "tabname": "Details", "class": "DepictionStackView",
+    "views": [
+      { "class": "DepictionMarkdownView", "markdown": "## Sentinel\n\nLock any app behind the stock **Face ID / Touch ID** prompt (with passcode fallback). Choose which apps to protect — everything is **off by default**, so nothing is locked until you enable it.\n\nConfigure the app list in Settings → Sentinel." },
+      { "class": "DepictionHeaderView", "title": "Notes" },
+      { "class": "DepictionMarkdownView", "markdown": "- Locked apps re-prompt on next foreground; the app-switcher snapshot is redacted.\n- Requires **AltList** (com.opa334.altlist) for the app picker, plus PreferenceLoader; hooks run via ellekit/Substrate.\n- Report any bypass you find — that's the most useful feedback." },
+      { "class": "DepictionHeaderView", "title": "Credits" },
+      { "class": "DepictionMarkdownView", "markdown": "Original work by **John d_ie**." }
+    ]
+  }]
+}

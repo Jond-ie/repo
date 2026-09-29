@@ -1,0 +1,13 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [{
+    "tabname": "Details", "class": "DepictionStackView",
+    "views": [
+      { "class": "DepictionMarkdownView", "markdown": "## Crossfade\n\nTrue crossfade between tracks in the stock **Music** app — one song fades out as the next fades in. Works on your **local library** (owned files), so no subscription is needed.\n\nAdjustable fade length in Settings → Crossfade." },
+      { "class": "DepictionHeaderView", "title": "Notes" },
+      { "class": "DepictionMarkdownView", "markdown": "- **Local library only.** Apple Music streaming tracks are DRM-protected and out of scope — they won't crossfade.\n- Requires **ellekit** (Dopamine)." },
+      { "class": "DepictionHeaderView", "title": "Credits" },
+      { "class": "DepictionMarkdownView", "markdown": "Original work by **John d_ie**." }
+    ]
+  }]
+}

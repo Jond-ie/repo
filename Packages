@@ -1,0 +1,74 @@
+Package: com.crossfade.music
+Version: 0.4.0
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 424
+Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
+Filename: debs/com.crossfade.music_0.4.0_iphoneos-arm64.deb
+Size: 27902
+MD5sum: b60a06d499dd0e227777810b5c364104
+SHA1: fc95c3463a1600026ec745a1c8d6d655ed547661
+SHA256: fe85e7f32cd13288b809390488c6e0894baadc84d37207b83c2889f119fa5019
+Section: Tweaks
+Description: True crossfade between local library songs in the Music app.
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.crossfade.music.html
+Name: Crossfade
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.crossfade.music.json
+
+Package: com.johndie.begonecia
+Version: 0.2.0-rootless1
+Architecture: iphoneos-arm64
+Maintainer: John d_ie (rootless port)
+Installed-Size: 568
+Depends: ellekit, com.opa334.ccsupport, ws.hbang.common
+Conflicts: me.nepeta.begonecia
+Replaces: me.nepeta.begonecia
+Filename: debs/com.johndie.begonecia_0.2.0-rootless1_iphoneos-arm64.deb
+Size: 19940
+MD5sum: 5f4ce434b112ade06e0d9dea19286acc
+SHA1: 83b27ded6cf8b00a3f73cf7b353552927e4adf38
+SHA256: 09292f3f7315ab0da615f9e63a1013662630a10478bdf0affb0d022a75f0d114
+Section: Tweaks
+Description: CC toggle to disable microphone, camera and GPS system-wide. Rootless port for Dopamine (iOS 15-16). Total silence: mic samples are zeroed in mediaserverd, location delegates are nulled, camera inputs are dropped.
+Author: Nepeta <ominousness@protonmail.com>
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html
+Name: BegoneCIA (rootless)
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.json
+
+Package: com.scrub.exif
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 428
+Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
+Filename: debs/com.scrub.exif_1.0.0_iphoneos-arm64.deb
+Size: 23104
+MD5sum: 47ad163519e18227b123f328a2add5b8
+SHA1: d4a35125e0ac8173d69abe3bfcf42f09b12abc83
+SHA256: c7517f640e9799c146c0c7322d0ee7221b66d0aa8de7189ab5fbbfe0d23ec638
+Section: Tweaks
+Description: Strips location and identifying metadata from photos apps receive.
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.scrub.exif.html
+Name: Scrub
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.scrub.exif.json
+
+Package: com.sentinel.applock
+Version: 0.2.0~beta1
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 420
+Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
+Filename: debs/com.sentinel.applock_0.2.0~beta1_iphoneos-arm64.deb
+Size: 19420
+MD5sum: 131a4321cb55300e56f8fd5768be8c80
+SHA1: 28fb0a065d25880483a71b6736f2cb50d3d5a8a2
+SHA256: d0586fd68b295f82ac61b0a049df6ac572e6066ad37e74de477e288b76a19d24
+Section: Tweaks
+Description: Lock chosen apps behind Face ID / Touch ID (with passcode fallback).
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.sentinel.applock.html
+Name: Sentinel
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.sentinel.applock.json
+
