@@ -1,0 +1,47 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## Triggr\n\nAn **Activator-lite** for rootless Dopamine. Pick a trigger, pick what it runs, in **Settings → Triggr**. Triggr only changes a button when you assign something to it.\n\n- **Triggers:** Home button (single, double, triple, short and long hold), Touch ID light double tap, lock button (single, double, triple, hold), volume buttons (presses, holds, up-then-down, both), mute switch, status bar taps, **Home Screen icon flicks** (any icon or one app's icon), **shake**, charger and headphones, Wi-Fi / Bluetooth / Low Power / lock / screen changes.\n- **Custom events:** a specific Wi-Fi network or Bluetooth device, battery level, an app opening, a time of day.\n- **Actions:** Home, App Switcher, Last App, Quit App, Control Center, Notification Center, Spotlight, Siri, screenshot, Sleep, Lock, Respring, Power Off Slider, Safe Mode, Restart, Power Off; switches for Flashlight, Wi-Fi, Bluetooth, Airplane Mode, Cellular Data, Do Not Disturb, Low Power Mode, Rotation Lock, Mute, Dark Mode, Night Shift, Auto-Brightness, Keep Screen Awake and Location Services; media controls; brightness and volume levels; apps, URLs, Shortcuts, Settings pages and shell commands; pop-up menus.\n- **Several actions per trigger**, with pauses and reordering.\n- **Places:** Anywhere, Home Screen, In Apps, Lock Screen.\n- **Extras:** block list, action banners, profiles, export / import of setups, an opt-in API and a `triggr` command-line tool."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Device Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**arm64 only for now: A11 and older (iPhone 8 / 8 Plus / X and earlier), iOS 15–16.**\n\n- **A12 and newer (iPhone XS / XR and later) aren't supported yet.** Triggr hasn't moved to the new arm64e toolchain the other tweaks here use, and it refuses to install on A12+ devices so it can't put them into safe mode.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and Dopamine."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Beta & Feedback"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Triggr is in **public beta**. Please report bugs, crashes and requests on the **[Triggr beta GitHub](https://github.com/Jond-ie/triggr-beta)** ([open an issue](https://github.com/Jond-ie/triggr-beta/issues/new/choose)), with your device, iOS version, jailbreak and Triggr version."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Notes"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Lock button:** runs alongside the button by default. **Options → Replace Lock Button Actions** (experimental) makes an assigned press or hold run instead of locking, like Activator; add **Sleep** to lock as well. Emergency SOS is left to iOS, but check it still starts if you rely on it.\n- **Restart** and **Power Off** act at once and turn the jailbreak off until you run Dopamine again.\n- **Safe Mode** uses ElleKit's own Safe Mode; leave it from its Safe Mode screen.\n- Requires **AltList** (BigBoss) and PreferenceLoader; Sileo installs them automatically."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Original work by **John d_ie**, inspired by Activator (Ryan Petrich). Developed with AI assistance (Claude Code) and tested on-device."
+        }
+      ]
+    }
+  ]
+}

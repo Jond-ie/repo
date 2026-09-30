@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Triggr · John's Repo</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff; --fg: #1a1a1a; --muted: #666; --card: #f4f4f5;
+    --accent: #3b6ea5; --border: #e2e2e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
+      --accent: #6ea8dc; --border: #26262b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
+    --accent: #6ea8dc; --border: #26262b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font: 16px/1.6 -apple-system, system-ui, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--fg);
+    max-width: 40rem; margin: 0 auto; padding: 2.5rem 1rem 4rem;
+    overflow-wrap: anywhere;
+  }
+  h1 { font-size: 1.9rem; margin: 0 0 .75rem; }
+  h2 { font-size: 1.1rem; margin: 2rem 0 .6rem; }
+  p { margin: 0 0 .9rem; }
+  ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+  li { margin: .25rem 0; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: .75rem; padding: 1rem 1.15rem;
+  }
+  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+  code { font-size: .9em; }
+  .back { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; }
+  footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<a class="back" href="../">&larr; John's Repo</a>
+<h1>Triggr</h1>
+<p>An <strong>Activator-lite</strong> for rootless Dopamine. Pick a trigger, pick what it runs, in <strong>Settings → Triggr</strong>. Triggr only changes a button when you assign something to it.</p>
+<ul>
+  <li><strong>Triggers:</strong> Home button (single, double, triple, short and long hold), Touch ID light double tap, lock button (single, double, triple, hold), volume buttons (presses, holds, up-then-down, both), mute switch, status bar taps, <strong>Home Screen icon flicks</strong> (any icon or one app's icon), <strong>shake</strong>, charger and headphones, Wi-Fi / Bluetooth / Low Power / lock / screen changes.</li>
+  <li><strong>Custom events:</strong> a specific Wi-Fi network or Bluetooth device, battery level, an app opening, a time of day.</li>
+  <li><strong>Actions:</strong> Home, App Switcher, Last App, Quit App, Control Center, Notification Center, Spotlight, Siri, screenshot, Sleep, Lock, Respring, Power Off Slider, Safe Mode, Restart, Power Off; switches for Flashlight, Wi-Fi, Bluetooth, Airplane Mode, Cellular Data, Do Not Disturb, Low Power Mode, Rotation Lock, Mute, Dark Mode, Night Shift, Auto-Brightness, Keep Screen Awake and Location Services; media controls; brightness and volume levels; apps, URLs, Shortcuts, Settings pages and shell commands; pop-up menus.</li>
+  <li><strong>Several actions per trigger</strong>, with pauses and reordering.</li>
+  <li><strong>Places:</strong> Anywhere, Home Screen, In Apps, Lock Screen.</li>
+  <li><strong>Extras:</strong> block list, action banners, profiles, export / import of setups, an opt-in API and a <code>triggr</code> command-line tool.</li>
+</ul>
+<h2>Device Support</h2>
+<div class="card">
+<p><strong>arm64 only for now: A11 and older (iPhone 8 / 8 Plus / X and earlier), iOS 15–16.</strong></p>
+<ul>
+  <li><strong>A12 and newer (iPhone XS / XR and later) aren't supported yet.</strong> Triggr hasn't moved to the new arm64e toolchain the other tweaks here use, and it refuses to install on A12+ devices so it can't put them into safe mode.</li>
+  <li>Tested on an <strong>iPhone 8 Plus (A11)</strong> with iOS 16.7 and Dopamine.</li>
+</ul>
+</div>
+<h2>Beta &amp; Feedback</h2>
+<div class="card">
+<p>Triggr is in <strong>public beta</strong>. Please report bugs, crashes and requests on the <a href="https://github.com/Jond-ie/triggr-beta"><strong>Triggr beta GitHub</strong></a> (<a href="https://github.com/Jond-ie/triggr-beta/issues/new/choose">open an issue</a>), with your device, iOS version, jailbreak and Triggr version.</p>
+</div>
+<h2>Notes</h2>
+<div class="card">
+<ul>
+  <li><strong>Lock button:</strong> runs alongside the button by default. <strong>Options → Replace Lock Button Actions</strong> (experimental) makes an assigned press or hold run instead of locking, like Activator; add <strong>Sleep</strong> to lock as well. Emergency SOS is left to iOS, but check it still starts if you rely on it.</li>
+  <li><strong>Restart</strong> and <strong>Power Off</strong> act at once and turn the jailbreak off until you run Dopamine again.</li>
+  <li><strong>Safe Mode</strong> uses ElleKit's own Safe Mode; leave it from its Safe Mode screen.</li>
+  <li>Requires <strong>AltList</strong> (BigBoss) and PreferenceLoader; Sileo installs them automatically.</li>
+</ul>
+</div>
+<h2>Credits</h2>
+<div class="card">
+<p>Original work by <strong>John d_ie</strong>, inspired by Activator (Ryan Petrich). Developed with AI assistance (Claude Code) and tested on-device.</p>
+</div>
+<footer>
+  <p>Triggr bugs &amp; requests: <a href="https://github.com/Jond-ie/triggr-beta/issues">Triggr beta GitHub</a>.</p>
+</footer>
+</body>
+</html>

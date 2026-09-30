@@ -74,6 +74,24 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.html
 Name: Slaplock
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.json
 
+Package: com.johndie.triggr
+Version: 1.0.0~beta3
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 568
+Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
+Filename: debs/com.johndie.triggr_1.0.0~beta3_iphoneos-arm64.deb
+Size: 90872
+MD5sum: cf4e560b676326f8832ec5ea56cad925
+SHA1: 8e2b809803c55ccfb6f50023ce6a00b6ffbd3b05
+SHA256: b3691d14f317a1f181d4f4d72886f0d8911f01d522888ae7428771efa76a0111
+Section: Tweaks
+Description: Activator-lite for rootless Dopamine: assign actions to the home, lock and volume buttons, Touch ID, the mute switch, status bar taps, icon flicks, shaking, and events like charger, Wi-Fi, battery level or a time of day. arm64 (A11 and older) only for now.
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html
+Name: Triggr
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.json
+
 Package: com.scrub.exif
 Version: 1.0.0-2
 Architecture: iphoneos-arm64
