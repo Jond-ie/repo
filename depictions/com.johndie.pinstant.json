@@ -1,0 +1,39 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## Pinstant\n\nWake your device and go **straight to the passcode**: no Lock Screen, no swipe, no wait.\n\n- Works when you wake with the **Home button**, the **side / lock button**, **Raise to Wake** or **Tap to Wake**.\n- A screen lit by a notification, a call or an alarm is left alone, so you still see what woke it.\n- Touch ID and Face ID keep working on the passcode screen.\n- **No settings.** Install, respring, done. To turn it off, uninstall it."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Device Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and Dopamine (Home button, side button and Raise to Wake). A12 and newer aren't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Notes"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Devices without a passcode aren't tested.\n- Only for rootless jailbreaks with ElleKit (Dopamine)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Written from scratch by **John d_ie**. Concept from **UnlockOrElse** by **Ethan Whited (ETHN)**."
+        }
+      ]
+    }
+  ]
+}
