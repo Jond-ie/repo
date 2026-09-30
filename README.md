@@ -29,6 +29,7 @@ Or open [jond-ie.github.io/repo](https://jond-ie.github.io/repo/) on your device
 | [**Begonecia**](https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html) | 0.2.0-rootless3 | Control Center toggle that silences camera, microphone and location system-wide. Rootless port of Nepeta's BegoneCIA. |
 | [**Slaplock**](https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.html) | 0.2.0~beta1-2 | Lock chosen apps behind Face ID / Touch ID, with passcode fallback. |
 | [**Triggr**](https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html) <sup>beta</sup> | 1.0.0~beta3 | Activator-lite: assign actions to buttons, Touch ID, status bar taps, icon flicks, shaking and events. arm64 (A11 and older) only for now. Feedback: [triggr-beta](https://github.com/Jond-ie/triggr-beta). |
+| [**Pinstant**](https://jond-ie.github.io/repo/depictions/com.johndie.pinstant.html) | 1.0.0 | Wake straight to the passcode: no Lock Screen, no swipe. No settings. Concept from UnlockOrElse by ETHN. |
 | [**Podified**](https://jond-ie.github.io/repo/depictions/com.johndie.podified.html) | 1.0.0-2 | Makes a SIM-less iPhone present itself as an iPod: Settings naming, no Cellular, "iPod" status bar, optional hidden Phone app. |
 | [**Crossfade**](https://jond-ie.github.io/repo/depictions/com.crossfade.music.html) | 0.4.0-2 | True crossfade between local-library songs in the stock Music app. |
 | [**Scrub**](https://jond-ie.github.io/repo/depictions/com.scrub.exif.html) | 1.0.0-2 | Strips GPS and identifying metadata from photos before apps send them. |
@@ -59,7 +60,8 @@ your device, iOS version, jailbreak, and the tweak's version.
 - **Begonecia** is a rootless port of [BegoneCIA](https://github.com/larygwil/BegoneCIA) by Eva (Nepeta),
   MIT licensed. (Nepeta's own repo is no longer online; the link is an unofficial mirror.) The original license and copyright ship inside the package.
   The port's source code is at [Jond-ie/begonecia](https://github.com/Jond-ie/begonecia).
-- **Slaplock**, **Podified**, **Crossfade**, **Scrub** and **Triggr** are original works by John d_ie. Triggr is inspired by
+- **Slaplock**, **Podified**, **Crossfade**, **Scrub**, **Triggr** and **Pinstant** are original works by John d_ie. Triggr is inspired by
   Activator (Ryan Petrich).
 
 This repository hosts the installable packages only.
+- **Pinstant** is written from scratch; the idea comes from UnlockOrElse by Ethan Whited (ETHN).

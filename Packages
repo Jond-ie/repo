@@ -36,6 +36,24 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html
 Name: BegoneCIA (rootless)
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.json
 
+Package: com.johndie.pinstant
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 168
+Depends: ellekit, firmware (>= 15.0)
+Filename: debs/com.johndie.pinstant_1.0.0_iphoneos-arm64.deb
+Size: 3996
+MD5sum: d9636bddcb3241d17ec8e00aadacd231
+SHA1: da47b08719025942389684eeee3c3d130de56d36
+SHA256: becfe0fea377aacd6cef329e88dc07ecb21c1f7145d4bf6eb23c8834ea3e43c8
+Section: Tweaks
+Description: Skips the Lock Screen: waking your device goes straight to the passcode. No settings. Concept from UnlockOrElse by Ethan Whited (ETHN).
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.pinstant.html
+Name: Pinstant
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.pinstant.json
+
 Package: com.johndie.podified
 Version: 1.0.0-2
 Architecture: iphoneos-arm64
