@@ -50,6 +50,7 @@ your device, iOS version, jailbreak, and the tweak's version.
 
 - **Begonecia** is a rootless port of [BegoneCIA](https://github.com/Nepeta/BegoneCIA) by Eva (Nepeta),
   MIT licensed. The original license and copyright ship inside the package.
+  The port's source code is at [Jond-ie/begonecia](https://github.com/Jond-ie/begonecia).
 - **Sentinel**, **Crossfade** and **Scrub** are original works by John d_ie.
 
 This repository hosts the installable packages only.

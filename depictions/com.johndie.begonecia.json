@@ -1,13 +1,31 @@
 {
   "class": "DepictionTabView",
-  "tabs": [{
-    "tabname": "Details", "class": "DepictionStackView",
-    "views": [
-      { "class": "DepictionMarkdownView", "markdown": "## Begonecia\n\nA Control Center toggle that silences the **microphone, camera and location** across the whole system. When it's on, apps don't get a permission error — they just get nothing: zeroed mic audio, no camera frames, no location callbacks. A silent blackout, not a visible denial.\n\nToggle it from Control Center; add the tile in Settings → Control Center." },
-      { "class": "DepictionHeaderView", "title": "Notes" },
-      { "class": "DepictionMarkdownView", "markdown": "- The mic silencer targets the common capture path; verify on your setup.\n- Jailbreaking lowers your device's baseline security — this hardens privacy, it doesn't undo that.\n- Requires **CCSupport** (com.opa334.ccsupport), **Cephei** (ws.hbang.common, from Chariz), and **ellekit** (ships with Dopamine)." },
-      { "class": "DepictionHeaderView", "title": "Credits" },
-      { "class": "DepictionMarkdownView", "markdown": "Original **BegoneCIA** by **Eva (Nepeta)** — MIT licensed. Rootless port by **John d_ie**. The original license and copyright ship inside this package." }
-    ]
-  }]
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## Begonecia\n\nA Control Center toggle that silences the **microphone, camera and location** across the whole system. When it's on, apps don't get a permission error — they just get nothing: zeroed mic audio, no camera frames, no location callbacks. A silent blackout, not a visible denial.\n\nToggle it from Control Center; add the tile in Settings → Control Center."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Notes"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- The mic silencer targets the common capture path; verify on your setup.\n- Jailbreaking lowers your device's baseline security — this hardens privacy, it doesn't undo that.\n- Requires **CCSupport** (com.opa334.ccsupport), **Cephei** (ws.hbang.common, from Chariz), and **ellekit** (ships with Dopamine)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Original **BegoneCIA** by **Eva (Nepeta)** — MIT licensed. Rootless port by **John d_ie**. The original license and copyright ship inside this package.\n\n[Original BegoneCIA](https://github.com/Nepeta/BegoneCIA) · [Port source code](https://github.com/Jond-ie/begonecia)"
+        }
+      ]
+    }
+  ]
 }
