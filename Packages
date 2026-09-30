@@ -36,6 +36,26 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html
 Name: BegoneCIA (rootless)
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.json
 
+Package: com.johndie.slaplock
+Version: 0.2.0~beta1
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 420
+Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
+Conflicts: com.sentinel.applock
+Replaces: com.sentinel.applock
+Filename: debs/com.johndie.slaplock_0.2.0~beta1_iphoneos-arm64.deb
+Size: 19496
+MD5sum: 8b99300e5ab9657ad312d7b21434fb10
+SHA1: e6b6afb3e4a6113f45fd4145e8d91992b521e0b4
+SHA256: 702915a7381d21c397fb140d0644f551299f6f02d704d13ffa018761edcc8571
+Section: Tweaks
+Description: Lock chosen apps behind Face ID / Touch ID (with passcode fallback).
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.html
+Name: Slaplock
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.json
+
 Package: com.scrub.exif
 Version: 1.0.0
 Architecture: iphoneos-arm64
@@ -53,22 +73,4 @@ Author: John d_ie
 Depiction: https://jond-ie.github.io/repo/depictions/com.scrub.exif.html
 Name: Scrub
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.scrub.exif.json
-
-Package: com.sentinel.applock
-Version: 0.2.0~beta1
-Architecture: iphoneos-arm64
-Maintainer: John d_ie
-Installed-Size: 420
-Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
-Filename: debs/com.sentinel.applock_0.2.0~beta1_iphoneos-arm64.deb
-Size: 19420
-MD5sum: 131a4321cb55300e56f8fd5768be8c80
-SHA1: 28fb0a065d25880483a71b6736f2cb50d3d5a8a2
-SHA256: d0586fd68b295f82ac61b0a049df6ac572e6066ad37e74de477e288b76a19d24
-Section: Tweaks
-Description: Lock chosen apps behind Face ID / Touch ID (with passcode fallback).
-Author: John d_ie
-Depiction: https://jond-ie.github.io/repo/depictions/com.sentinel.applock.html
-Name: Sentinel
-SileoDepiction: https://jond-ie.github.io/repo/depictions/com.sentinel.applock.json
 

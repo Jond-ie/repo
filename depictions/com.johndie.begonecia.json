@@ -15,7 +15,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- The mic silencer targets the common capture path; verify on your setup.\n- Jailbreaking lowers your device's baseline security — this hardens privacy, it doesn't undo that.\n- Requires **CCSupport** (com.opa334.ccsupport), **Cephei** (ws.hbang.common, from Chariz), and **ellekit** (ships with Dopamine)."
+          "markdown": "- The mic silencer targets the common capture path; verify on your setup.\n- Jailbreaking lowers your device's baseline security — this hardens privacy, it doesn't undo that.\n- Requires **CCSupport** (com.opa334.ccsupport), **Cephei** (ws.hbang.common, from Chariz), and **ellekit** (ships with Dopamine).\n- Tested on an **iPhone 8 Plus (A11, arm64)** with iOS 16.7 only. **A12 and newer devices are untested**; please report whether it works on yours."
         },
         {
           "class": "DepictionHeaderView",
