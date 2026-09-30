@@ -36,24 +36,6 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html
 Name: BegoneCIA (rootless)
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.json
 
-Package: com.johndie.podified
-Version: 1.0.0
-Architecture: iphoneos-arm64
-Maintainer: John d_ie
-Installed-Size: 388
-Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
-Filename: debs/com.johndie.podified_1.0.0_iphoneos-arm64.deb
-Size: 11762
-MD5sum: 42df2cdb5e272b7d750e335fff716b73
-SHA1: 80cdf1f7d0987afc7677257f522a25e80b0f81d5
-SHA256: 8bcd0bd25ecabb4449f8fc500171c708d349e51b77351e7ebc094eb58a4cdbab
-Section: Tweaks
-Description: Makes a SIM-less iPhone present itself as an iPod: iPod naming in Settings, no Cellular, a clean "iPod" status bar, and an optional hidden Phone app. Cosmetic only; emergency calling is untouched.
-Author: John d_ie
-Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.podified.html
-Name: Podified
-SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.podified.json
-
 Package: com.johndie.slaplock
 Version: 0.2.0~beta1
 Architecture: iphoneos-arm64
