@@ -41,12 +41,23 @@
   .back { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; }
   footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
   a { color: var(--accent); }
+  .shots { display: flex; gap: .75rem; overflow-x: auto; padding: .25rem 0 1rem; margin: 0 0 .5rem; scroll-snap-type: x mandatory; }
+  .shots img { width: 200px; height: auto; border-radius: .75rem; border: 1px solid var(--border); flex: none; scroll-snap-align: start; }
 </style>
 </head>
 <body>
 <a class="back" href="../">&larr; John's Repo</a>
 <h1>Triggr</h1>
 <p>An <strong>Activator-lite</strong> for rootless Dopamine. Pick a trigger, pick what it runs, in <strong>Settings → Triggr</strong>. Triggr only changes a button when you assign something to it.</p>
+<div class="shots">
+  <img src="../screenshots/triggr/1-main.png" alt="Main page" loading="lazy" width="200" height="346">
+  <img src="../screenshots/triggr/2-place.png" alt="A place: what's assigned, then every kind of trigger" loading="lazy" width="200" height="346">
+  <img src="../screenshots/triggr/3-events.png" alt="Custom events" loading="lazy" width="200" height="346">
+  <img src="../screenshots/triggr/4-picker.png" alt="Action picker: folded categories and search" loading="lazy" width="200" height="346">
+  <img src="../screenshots/triggr/5-switches.png" alt="Switches: toggle, turn on or turn off" loading="lazy" width="200" height="346">
+  <img src="../screenshots/triggr/6-all-assignments.png" alt="All Assignments, by trigger or by action" loading="lazy" width="200" height="346">
+  <img src="../screenshots/triggr/7-options.png" alt="Options" loading="lazy" width="200" height="346">
+</div>
 <ul>
   <li><strong>Triggers:</strong> Home button (single, double, triple, short and long hold), Touch ID light double tap, lock button (single, double, triple, hold), volume buttons (presses, holds, up-then-down, both), mute switch, status bar taps, <strong>Home Screen icon flicks</strong> (any icon or one app's icon), <strong>shake</strong>, charger and headphones, Wi-Fi / Bluetooth / Low Power / lock / screen changes.</li>
   <li><strong>Custom events:</strong> a specific Wi-Fi network or Bluetooth device, battery level, an app opening, a time of day.</li>

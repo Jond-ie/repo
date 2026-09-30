@@ -10,6 +10,41 @@
           "markdown": "## Triggr\n\nAn **Activator-lite** for rootless Dopamine. Pick a trigger, pick what it runs, in **Settings → Triggr**. Triggr only changes a button when you assign something to it.\n\n- **Triggers:** Home button (single, double, triple, short and long hold), Touch ID light double tap, lock button (single, double, triple, hold), volume buttons (presses, holds, up-then-down, both), mute switch, status bar taps, **Home Screen icon flicks** (any icon or one app's icon), **shake**, charger and headphones, Wi-Fi / Bluetooth / Low Power / lock / screen changes.\n- **Custom events:** a specific Wi-Fi network or Bluetooth device, battery level, an app opening, a time of day.\n- **Actions:** Home, App Switcher, Last App, Quit App, Control Center, Notification Center, Spotlight, Siri, screenshot, Sleep, Lock, Respring, Power Off Slider, Safe Mode, Restart, Power Off; switches for Flashlight, Wi-Fi, Bluetooth, Airplane Mode, Cellular Data, Do Not Disturb, Low Power Mode, Rotation Lock, Mute, Dark Mode, Night Shift, Auto-Brightness, Keep Screen Awake and Location Services; media controls; brightness and volume levels; apps, URLs, Shortcuts, Settings pages and shell commands; pop-up menus.\n- **Several actions per trigger**, with pauses and reordering.\n- **Places:** Anywhere, Home Screen, In Apps, Lock Screen.\n- **Extras:** block list, action banners, profiles, export / import of setups, an opt-in API and a `triggr` command-line tool."
         },
         {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{160, 277}",
+          "screenshots": [
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/triggr/1-main.png",
+              "accessibilityText": "Main page"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/triggr/2-place.png",
+              "accessibilityText": "A place: what's assigned, then every kind of trigger"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/triggr/3-events.png",
+              "accessibilityText": "Custom events"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/triggr/4-picker.png",
+              "accessibilityText": "Action picker: folded categories and search"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/triggr/5-switches.png",
+              "accessibilityText": "Switches: toggle, turn on or turn off"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/triggr/6-all-assignments.png",
+              "accessibilityText": "All Assignments, by trigger or by action"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/triggr/7-options.png",
+              "accessibilityText": "Options"
+            }
+          ]
+        },
+        {
           "class": "DepictionHeaderView",
           "title": "Device Support"
         },
