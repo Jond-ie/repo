@@ -15,7 +15,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**A11 and older only for now** (iPhone X / 8 and earlier). Earlier builds of this tweak put **A12 and newer devices** (iPhone XS / XR and later) into safe mode: their A12+ part was built with the wrong format. This update is arm64-only, and it refuses to install on A12+ devices so nobody else is affected.\n\n- **On an A12+ device with it installed?** Update or uninstall it in Sileo (safe mode still lets you open Sileo).\n- A12+ support needs a new build toolchain and an A12+ tester. If you can help, open a [GitHub issue](https://github.com/Jond-ie/repo/issues)."
+          "markdown": "**A12 and newer are supported again, but not confirmed yet.** Earlier builds put A12+ devices (iPhone XS / XR and later) into safe mode because their A12+ part was built in the wrong format. This version is built with a new toolchain and passes the format check, but it **hasn't been confirmed on a real A12+ device yet**.\n\n- **On A12+?** Please try it and [report back](https://github.com/Jond-ie/repo/issues), whether it works or not.\n- **If it puts you into safe mode:** open Sileo (safe mode still allows it) and uninstall it.\n- Tested on an **iPhone 8 Plus (A11)**, iOS 16.7."
         },
         {
           "class": "DepictionHeaderView",
@@ -23,7 +23,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **Local library only.** Apple Music streaming tracks are DRM-protected and out of scope — they won't crossfade.\n- Requires **ellekit** (Dopamine).\n- Tested on an **iPhone 8 Plus (A11, arm64)** with iOS 16.7. **A11 and older only for now** (see Device Support)."
+          "markdown": "- **Local library only.** Apple Music streaming tracks are DRM-protected and out of scope — they won't crossfade.\n- Requires **ellekit** (Dopamine).\n- Tested on an **iPhone 8 Plus (A11, arm64)** with iOS 16.7. A12 and newer: see Device Support."
         },
         {
           "class": "DepictionHeaderView",
