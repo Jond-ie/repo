@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Podified · John's Repo</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff; --fg: #1a1a1a; --muted: #666; --card: #f4f4f5;
+    --accent: #3b6ea5; --border: #e2e2e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
+      --accent: #6ea8dc; --border: #26262b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
+    --accent: #6ea8dc; --border: #26262b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font: 16px/1.6 -apple-system, system-ui, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--fg);
+    max-width: 40rem; margin: 0 auto; padding: 2.5rem 1rem 4rem;
+    overflow-wrap: anywhere;
+  }
+  h1 { font-size: 1.9rem; margin: 0 0 .75rem; }
+  h2 { font-size: 1.1rem; margin: 2rem 0 .6rem; }
+  p { margin: 0 0 .9rem; }
+  ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+  li { margin: .25rem 0; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: .75rem; padding: 1rem 1.15rem;
+  }
+  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+  code { font-size: .9em; }
+  .back { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; }
+  footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<a class="back" href="../">&larr; John's Repo</a>
+<h1>Podified</h1>
+<p>Makes a <strong>SIM-less iPhone</strong> present itself as an <strong>iPod</strong>. Every feature is a switch in Settings → Podified, all off by default:</p>
+<ul>
+  <li><strong>Rename in Settings:</strong> only the word "iPhone" changes to "iPod" on About and Storage, and your own model stays (iPhone 13 Pro → <strong>iPod 13 Pro</strong>, iPhone Storage → <strong>iPod Storage</strong>). Your device name is left alone.</li>
+  <li><strong>Hide Cellular:</strong> removes the Cellular row from Settings.</li>
+  <li><strong>Status Bar:</strong> replaces "SOS only" / "No Service" with <strong>iPod</strong>, or hides it like an iPod touch, and removes the signal dots in Control Center.</li>
+  <li><strong>Hide Phone App:</strong> hides Phone from the Home Screen, Dock and App Library (after a respring). The app stays installed.</li>
+</ul>
+<h2>Notes</h2>
+<div class="card">
+<ul>
+  <li><strong>Cosmetic only.</strong> Labels and visibility; emergency calling, SOS and the Phone app itself are never touched.</li>
+  <li>Built for SIM-less iPhones: with a SIM inserted, the carrier name is replaced too.</li>
+  <li>To keep Phone out of Spotlight, use Settings → Siri &amp; Search → Phone → Show App in Search.</li>
+  <li>Tested on an <strong>iPhone 8 Plus (A11, arm64)</strong> with iOS 16.7 only. <strong>A12 and newer devices are untested</strong>; please report whether it works on yours.</li>
+</ul>
+</div>
+<h2>Credits</h2>
+<div class="card">
+<p>Original work by <strong>John d_ie</strong>.</p>
+</div>
+<footer>
+  <p>Bugs &amp; requests: <a href="https://github.com/Jond-ie/repo/issues">GitHub Issues</a>.</p>
+</footer>
+</body>
+</html>

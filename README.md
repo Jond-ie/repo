@@ -28,6 +28,7 @@ Or open [jond-ie.github.io/repo](https://jond-ie.github.io/repo/) on your device
 |---|---|---|
 | [**Begonecia**](https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html) | 0.2.0-rootless1 | Control Center toggle that silences camera, microphone and location system-wide. Rootless port of Nepeta's BegoneCIA. |
 | [**Slaplock**](https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.html) | 0.2.0~beta1 | Lock chosen apps behind Face ID / Touch ID, with passcode fallback. |
+| [**Podified**](https://jond-ie.github.io/repo/depictions/com.johndie.podified.html) | 1.0.0 | Makes a SIM-less iPhone present itself as an iPod: Settings naming, no Cellular, "iPod" status bar, optional hidden Phone app. |
 | [**Crossfade**](https://jond-ie.github.io/repo/depictions/com.crossfade.music.html) | 0.4.0 | True crossfade between local-library songs in the stock Music app. |
 | [**Scrub**](https://jond-ie.github.io/repo/depictions/com.scrub.exif.html) | 1.0.0 | Strips GPS and identifying metadata from photos before apps send them. |
 

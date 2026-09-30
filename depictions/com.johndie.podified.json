@@ -1,0 +1,31 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## Podified\n\nMakes a **SIM-less iPhone** present itself as an **iPod**. Every feature is a switch in Settings → Podified, all off by default:\n\n- **Rename in Settings:** only the word \"iPhone\" changes to \"iPod\" on About and Storage, and your own model stays (iPhone 13 Pro → **iPod 13 Pro**, iPhone Storage → **iPod Storage**). Your device name is left alone.\n- **Hide Cellular:** removes the Cellular row from Settings.\n- **Status Bar:** replaces \"SOS only\" / \"No Service\" with **iPod**, or hides it like an iPod touch, and removes the signal dots in Control Center.\n- **Hide Phone App:** hides Phone from the Home Screen, Dock and App Library (after a respring). The app stays installed."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Notes"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Cosmetic only.** Labels and visibility; emergency calling, SOS and the Phone app itself are never touched.\n- Built for SIM-less iPhones: with a SIM inserted, the carrier name is replaced too.\n- To keep Phone out of Spotlight, use Settings → Siri & Search → Phone → Show App in Search.\n- Tested on an **iPhone 8 Plus (A11, arm64)** with iOS 16.7 only. **A12 and newer devices are untested**; please report whether it works on yours."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Original work by **John d_ie**."
+        }
+      ]
+    }
+  ]
+}
