@@ -26,19 +26,21 @@ Or open [jond-ie.github.io/repo](https://jond-ie.github.io/repo/) on your device
 
 | Tweak | Version | What it does |
 |---|---|---|
-| [**Begonecia**](https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html) | 0.2.0-rootless1 | Control Center toggle that silences camera, microphone and location system-wide. Rootless port of Nepeta's BegoneCIA. |
-| [**Slaplock**](https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.html) | 0.2.0~beta1 | Lock chosen apps behind Face ID / Touch ID, with passcode fallback. |
-| [**Podified**](https://jond-ie.github.io/repo/depictions/com.johndie.podified.html) | 1.0.0 | Makes a SIM-less iPhone present itself as an iPod: Settings naming, no Cellular, "iPod" status bar, optional hidden Phone app. |
-| [**Crossfade**](https://jond-ie.github.io/repo/depictions/com.crossfade.music.html) | 0.4.0 | True crossfade between local-library songs in the stock Music app. |
-| [**Scrub**](https://jond-ie.github.io/repo/depictions/com.scrub.exif.html) | 1.0.0 | Strips GPS and identifying metadata from photos before apps send them. |
+| [**Begonecia**](https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html) | 0.2.0-rootless2 | Control Center toggle that silences camera, microphone and location system-wide. Rootless port of Nepeta's BegoneCIA. |
+| [**Slaplock**](https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.html) | 0.2.0~beta1-1 | Lock chosen apps behind Face ID / Touch ID, with passcode fallback. |
+| [**Podified**](https://jond-ie.github.io/repo/depictions/com.johndie.podified.html) | 1.0.0-1 | Makes a SIM-less iPhone present itself as an iPod: Settings naming, no Cellular, "iPod" status bar, optional hidden Phone app. |
+| [**Crossfade**](https://jond-ie.github.io/repo/depictions/com.crossfade.music.html) | 0.4.0-1 | True crossfade between local-library songs in the stock Music app. |
+| [**Scrub**](https://jond-ie.github.io/repo/depictions/com.scrub.exif.html) | 1.0.0-1 | Strips GPS and identifying metadata from photos before apps send them. |
 
 Tap a name for the full details, notes and known limitations.
 
 ## Requirements
 
 - **Dopamine** (rootless jailbreak), iOS 15–16.
-- Tested on an **iPhone 8 Plus (A11, arm64)** with iOS 16.7 only. **A12 and newer devices are untested**;
-  if you try one, please [report](https://github.com/Jond-ie/repo/issues) whether it works.
+- **A11 and older only for now.** Earlier builds put **A12 and newer devices** (iPhone XS / XR and later) into safe mode.
+  The current versions are arm64-only and refuse to install on A12+. If you have one installed on an A12+ device, update or
+  uninstall it (safe mode still lets you open Sileo). A12+ support needs a new build toolchain and a tester; [help here](https://github.com/Jond-ie/repo/issues).
+- Tested on an **iPhone 8 Plus (A11, arm64)** with iOS 16.7.
 - Some tweaks need packages from other repos. Sileo installs them automatically when you have
   those repos added:
   - **Begonecia:** CCSupport, Cephei (Chariz)

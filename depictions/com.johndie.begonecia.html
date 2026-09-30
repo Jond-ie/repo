@@ -48,13 +48,21 @@
 <h1>Begonecia</h1>
 <p>A Control Center toggle that silences the <strong>microphone, camera and location</strong> across the whole system. When it's on, apps don't get a permission error — they just get nothing: zeroed mic audio, no camera frames, no location callbacks. A silent blackout, not a visible denial.</p>
 <p>Toggle it from Control Center; add the tile in Settings → Control Center.</p>
+<h2>Device Support</h2>
+<div class="card">
+<p><strong>A11 and older only for now</strong> (iPhone X / 8 and earlier). Earlier builds of this tweak put <strong>A12 and newer devices</strong> (iPhone XS / XR and later) into safe mode: their A12+ part was built with the wrong format. This update is arm64-only, and it refuses to install on A12+ devices so nobody else is affected.</p>
+<ul>
+  <li><strong>On an A12+ device with it installed?</strong> Update or uninstall it in Sileo (safe mode still lets you open Sileo).</li>
+  <li>A12+ support needs a new build toolchain and an A12+ tester. If you can help, open a <a href="https://github.com/Jond-ie/repo/issues">GitHub issue</a>.</li>
+</ul>
+</div>
 <h2>Notes</h2>
 <div class="card">
 <ul>
   <li>The mic silencer targets the common capture path; verify on your setup.</li>
   <li>Jailbreaking lowers your device's baseline security — this hardens privacy, it doesn't undo that.</li>
   <li>Requires <strong>CCSupport</strong> (com.opa334.ccsupport), <strong>Cephei</strong> (ws.hbang.common, from Chariz), and <strong>ellekit</strong> (ships with Dopamine).</li>
-  <li>Tested on an <strong>iPhone 8 Plus (A11, arm64)</strong> with iOS 16.7 only. <strong>A12 and newer devices are untested</strong>; please report whether it works on yours.</li>
+  <li>Tested on an <strong>iPhone 8 Plus (A11, arm64)</strong> with iOS 16.7. <strong>A11 and older only for now</strong> (see Device Support).</li>
 </ul>
 </div>
 <h2>Credits</h2>

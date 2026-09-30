@@ -48,13 +48,21 @@
 <h1>Slaplock</h1>
 <p>Lock any app behind the stock <strong>Face ID / Touch ID</strong> prompt (with passcode fallback). Choose which apps to protect — everything is <strong>off by default</strong>, so nothing is locked until you enable it.</p>
 <p>Configure the app list in Settings → Slaplock.</p>
+<h2>Device Support</h2>
+<div class="card">
+<p><strong>A11 and older only for now</strong> (iPhone X / 8 and earlier). Earlier builds of this tweak put <strong>A12 and newer devices</strong> (iPhone XS / XR and later) into safe mode: their A12+ part was built with the wrong format. This update is arm64-only, and it refuses to install on A12+ devices so nobody else is affected.</p>
+<ul>
+  <li><strong>On an A12+ device with it installed?</strong> Update or uninstall it in Sileo (safe mode still lets you open Sileo).</li>
+  <li>A12+ support needs a new build toolchain and an A12+ tester. If you can help, open a <a href="https://github.com/Jond-ie/repo/issues">GitHub issue</a>.</li>
+</ul>
+</div>
 <h2>Notes</h2>
 <div class="card">
 <ul>
   <li>Locked apps re-prompt on next foreground; the app-switcher snapshot is redacted.</li>
   <li>Requires <strong>AltList</strong> (com.opa334.altlist) for the app picker, plus PreferenceLoader; hooks run via ellekit/Substrate.</li>
   <li>Report any bypass you find — that's the most useful feedback.</li>
-  <li>Tested on an <strong>iPhone 8 Plus (A11, arm64)</strong> with iOS 16.7 only. <strong>A12 and newer devices are untested</strong>; please report whether it works on yours.</li>
+  <li>Tested on an <strong>iPhone 8 Plus (A11, arm64)</strong> with iOS 16.7. <strong>A11 and older only for now</strong> (see Device Support).</li>
 </ul>
 </div>
 <h2>Credits</h2>

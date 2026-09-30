@@ -11,11 +11,19 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "Device Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**A11 and older only for now** (iPhone X / 8 and earlier). Earlier builds of this tweak put **A12 and newer devices** (iPhone XS / XR and later) into safe mode: their A12+ part was built with the wrong format. This update is arm64-only, and it refuses to install on A12+ devices so nobody else is affected.\n\n- **On an A12+ device with it installed?** Update or uninstall it in Sileo (safe mode still lets you open Sileo).\n- A12+ support needs a new build toolchain and an A12+ tester. If you can help, open a [GitHub issue](https://github.com/Jond-ie/repo/issues)."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Notes"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **Local library only.** Apple Music streaming tracks are DRM-protected and out of scope — they won't crossfade.\n- Requires **ellekit** (Dopamine).\n- Tested on an **iPhone 8 Plus (A11, arm64)** with iOS 16.7 only. **A12 and newer devices are untested**; please report whether it works on yours."
+          "markdown": "- **Local library only.** Apple Music streaming tracks are DRM-protected and out of scope — they won't crossfade.\n- Requires **ellekit** (Dopamine).\n- Tested on an **iPhone 8 Plus (A11, arm64)** with iOS 16.7. **A11 and older only for now** (see Device Support)."
         },
         {
           "class": "DepictionHeaderView",

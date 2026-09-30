@@ -1,14 +1,14 @@
 Package: com.crossfade.music
-Version: 0.4.0
+Version: 0.4.0-1
 Architecture: iphoneos-arm64
 Maintainer: John d_ie
-Installed-Size: 424
+Installed-Size: 216
 Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
-Filename: debs/com.crossfade.music_0.4.0_iphoneos-arm64.deb
-Size: 27902
-MD5sum: b60a06d499dd0e227777810b5c364104
-SHA1: fc95c3463a1600026ec745a1c8d6d655ed547661
-SHA256: fe85e7f32cd13288b809390488c6e0894baadc84d37207b83c2889f119fa5019
+Filename: debs/com.crossfade.music_0.4.0-1_iphoneos-arm64.deb
+Size: 20774
+MD5sum: d3eeb1fd078be65e881a300ee3c9eab6
+SHA1: af99679c9631603ffec56171d41e101c99b777c8
+SHA256: 164b46ac2f19299e8bbb80a6d1d904eb87feff37fa4b81529612aafd6aa14758
 Section: Tweaks
 Description: True crossfade between local library songs in the Music app.
 Author: John d_ie
@@ -17,18 +17,18 @@ Name: Crossfade
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.crossfade.music.json
 
 Package: com.johndie.begonecia
-Version: 0.2.0-rootless1
+Version: 0.2.0-rootless2
 Architecture: iphoneos-arm64
 Maintainer: John d_ie (rootless port)
-Installed-Size: 568
+Installed-Size: 280
 Depends: ellekit, com.opa334.ccsupport, ws.hbang.common
 Conflicts: me.nepeta.begonecia
 Replaces: me.nepeta.begonecia
-Filename: debs/com.johndie.begonecia_0.2.0-rootless1_iphoneos-arm64.deb
-Size: 19940
-MD5sum: 5f4ce434b112ade06e0d9dea19286acc
-SHA1: 83b27ded6cf8b00a3f73cf7b353552927e4adf38
-SHA256: 09292f3f7315ab0da615f9e63a1013662630a10478bdf0affb0d022a75f0d114
+Filename: debs/com.johndie.begonecia_0.2.0-rootless2_iphoneos-arm64.deb
+Size: 16742
+MD5sum: 7db16bf0354d52096243229d0819d21a
+SHA1: afdb7b595e3fda0c1b22d91289d65c03c4467d7f
+SHA256: c568528430363047d0f142e62005da7c02492d3f5867f16b5568fe9c200d4395
 Section: Tweaks
 Description: CC toggle to disable microphone, camera and GPS system-wide. Rootless port for Dopamine (iOS 15-16). Total silence: mic samples are zeroed in mediaserverd, location delegates are nulled, camera inputs are dropped.
 Author: Nepeta <ominousness@protonmail.com>
@@ -37,16 +37,16 @@ Name: BegoneCIA (rootless)
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.json
 
 Package: com.johndie.podified
-Version: 1.0.0
+Version: 1.0.0-1
 Architecture: iphoneos-arm64
 Maintainer: John d_ie
-Installed-Size: 388
+Installed-Size: 196
 Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
-Filename: debs/com.johndie.podified_1.0.0_iphoneos-arm64.deb
-Size: 11762
-MD5sum: 42df2cdb5e272b7d750e335fff716b73
-SHA1: 80cdf1f7d0987afc7677257f522a25e80b0f81d5
-SHA256: 8bcd0bd25ecabb4449f8fc500171c708d349e51b77351e7ebc094eb58a4cdbab
+Filename: debs/com.johndie.podified_1.0.0-1_iphoneos-arm64.deb
+Size: 9498
+MD5sum: 342e7fa8b289e75df5df831a9ebb106f
+SHA1: 9dff2301bacea9f26cdb4807e79a8f7139fae54b
+SHA256: 5789884331533253bc7425778ca36a6bd194464e7bc4a03038ea8be69fbef947
 Section: Tweaks
 Description: Makes a SIM-less iPhone present itself as an iPod: iPod naming in Settings, no Cellular, a clean "iPod" status bar, and an optional hidden Phone app. Cosmetic only; emergency calling is untouched.
 Author: John d_ie
@@ -55,18 +55,18 @@ Name: Podified
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.podified.json
 
 Package: com.johndie.slaplock
-Version: 0.2.0~beta1
+Version: 0.2.0~beta1-1
 Architecture: iphoneos-arm64
 Maintainer: John d_ie
-Installed-Size: 420
+Installed-Size: 212
 Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
 Conflicts: com.sentinel.applock
 Replaces: com.sentinel.applock
-Filename: debs/com.johndie.slaplock_0.2.0~beta1_iphoneos-arm64.deb
-Size: 19496
-MD5sum: 8b99300e5ab9657ad312d7b21434fb10
-SHA1: e6b6afb3e4a6113f45fd4145e8d91992b521e0b4
-SHA256: 702915a7381d21c397fb140d0644f551299f6f02d704d13ffa018761edcc8571
+Filename: debs/com.johndie.slaplock_0.2.0~beta1-1_iphoneos-arm64.deb
+Size: 14970
+MD5sum: 3b14653bbc00389de8743df790ca52b6
+SHA1: 487d038c24b34feed285221efdda18b01c966dd2
+SHA256: bf7c47ab093ea1b6a0d47b3bf9da9cb106f85dffc39a28a1d120611d28dec2c0
 Section: Tweaks
 Description: Lock chosen apps behind Face ID / Touch ID (with passcode fallback).
 Author: John d_ie
@@ -75,16 +75,16 @@ Name: Slaplock
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.json
 
 Package: com.scrub.exif
-Version: 1.0.0
+Version: 1.0.0-1
 Architecture: iphoneos-arm64
 Maintainer: John d_ie
-Installed-Size: 428
+Installed-Size: 220
 Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
-Filename: debs/com.scrub.exif_1.0.0_iphoneos-arm64.deb
-Size: 23104
-MD5sum: 47ad163519e18227b123f328a2add5b8
-SHA1: d4a35125e0ac8173d69abe3bfcf42f09b12abc83
-SHA256: c7517f640e9799c146c0c7322d0ee7221b66d0aa8de7189ab5fbbfe0d23ec638
+Filename: debs/com.scrub.exif_1.0.0-1_iphoneos-arm64.deb
+Size: 17462
+MD5sum: 7cb9a01b2366c748f4de6a2613d3154f
+SHA1: 8284a691792527ea332b2bcb58a40e1ba8a58010
+SHA256: e2dc8e4c838cb8ce5d7c5a83ca48752420516ba84446756e0988125d70691663
 Section: Tweaks
 Description: Strips location and identifying metadata from photos apps receive.
 Author: John d_ie
