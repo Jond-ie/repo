@@ -1,0 +1,39 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## Density\n\n**More on screen in the apps you pick**, like Android's display density setting. The app lays itself out for a bigger screen, so lists, feeds and pages fit more, while the status bar and keyboard stay exactly as they are.\n\n- **Per app:** Settings → Density → pick an app → **Default**, **More** or **Most**.\n- **Stock look:** layout lines up with the screen's pixels, so there are no seams or blurry text; the keyboard and status bar are untouched.\n- **Light:** apps left on Default load nothing extra.\n- A change applies the next time the app opens: close it in the App Switcher first."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Device Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and Dopamine, in Settings, Notes, X and YouTube. A12 and newer aren't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Notes"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Beta.** Games and video players aren't tested yet. If an app looks wrong, set it back to Default.\n- Needs **AltList** and **PreferenceLoader** (Sileo installs them).\n- Only for rootless jailbreaks (Dopamine)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Written from scratch by **John d_ie**. Inspired by Android's display density (DPI) setting."
+        }
+      ]
+    }
+  ]
+}
