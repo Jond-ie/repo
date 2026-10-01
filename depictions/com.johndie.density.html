@@ -41,6 +41,8 @@
   .back { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; }
   footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
   a { color: var(--accent); }
+  .shots { display: flex; gap: .75rem; overflow-x: auto; margin: 1rem 0; }
+  .shots img { border-radius: .5rem; border: 1px solid var(--border); flex: none; }
 </style>
 </head>
 <body>
@@ -53,6 +55,9 @@
   <li><strong>Light:</strong> apps left on Default load nothing extra.</li>
   <li>A change applies the next time the app opens: close it in the App Switcher first.</li>
 </ul>
+<div class="shots">
+  <img src="../screenshots/density/1-settings.png" alt="Settings: the Amount slider and the app switches (shown with Density on for Settings at 22)" loading="lazy" width="200" height="346">
+</div>
 <h2>Device Support</h2>
 <div class="card">
 <ul>
