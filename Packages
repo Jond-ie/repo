@@ -55,16 +55,16 @@ Name: BlankPass
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.json
 
 Package: com.johndie.density
-Version: 1.0.0~beta5
+Version: 1.0.0~beta6
 Architecture: iphoneos-arm64
 Maintainer: John d_ie
-Installed-Size: 356
+Installed-Size: 360
 Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
-Filename: debs/com.johndie.density_1.0.0~beta5_iphoneos-arm64.deb
-Size: 17694
-MD5sum: 01b646625aa3d5b8a294fee67b279868
-SHA1: 230063e82a59aa38323c59419fdc910e541b1dff
-SHA256: 97d8148bbaa9049366c801f691df225e2ebdc23e08ab3ea298d851bbd79aa7ce
+Filename: debs/com.johndie.density_1.0.0~beta6_iphoneos-arm64.deb
+Size: 19434
+MD5sum: f52f73ee998b8c2fcbbc9cef27e6de09
+SHA1: 8aaec08cccf9fcfbe8c3c3ed4dac4ff83f71d8a8
+SHA256: ff6a9462e8aba2c1dc577c16d4c513f2051fc117f8893729f1084228549bd31f
 Section: Tweaks
 Description: More on screen in the apps you pick, like Android's display density, while the status bar and keyboard stay stock.
 Author: John d_ie

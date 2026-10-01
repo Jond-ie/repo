@@ -7,7 +7,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "## Density\n\n**More on screen in the apps you pick**, like Android's display density setting. The app lays itself out for a bigger screen, so lists, feeds and pages fit more, while the status bar and keyboard stay exactly as they are.\n\n- **Simple:** Settings → Density. Set the **Amount** slider (0 is normal, 30 fits the most), then switch Density on for the apps you want.\n- **Stock look:** the keyboard and status bar are untouched, and text stays sharp.\n- **Light:** apps you don't switch on load nothing extra.\n- A change applies the next time the app opens: close it in the App Switcher first."
+          "markdown": "## Density\n\n**More on screen in the apps you pick**, like Android's display density setting. The app lays itself out for a bigger screen, so lists, feeds and pages fit more, while the status bar and keyboard stay exactly as they are.\n\n- **Simple:** Settings → Density. Set the **Amount** slider (0 is normal, 30 fits the most), then switch Density on for the apps you want.\n- **Stock look:** the keyboard and status bar are untouched, and text stays sharp.\n- **Light:** apps you don't switch on load nothing extra.\n- Changed something? Tap **Apply Changes**: it closes the apps you changed and resprings."
         },
         {
           "class": "DepictionScreenshotsView",
@@ -26,7 +26,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and Dopamine, in Settings, Notes, X, YouTube and Reddit, up to an Amount of 30. Reported working on an **iPhone 15 Pro Max (A17 Pro) with iOS 17.3**; more reports welcome: [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and Dopamine, in Settings, Notes, X, YouTube and Reddit, up to an Amount of 30. Reported working on an **iPhone 15 Pro Max (A17 Pro) with iOS 17.3** and an **iPhone SE (2nd gen) with iOS 18.2**; more reports welcome: [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
         },
         {
           "class": "DepictionHeaderView",
