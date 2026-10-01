@@ -36,6 +36,24 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html
 Name: BegoneCIA (rootless)
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.json
 
+Package: com.johndie.blankpass
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 168
+Depends: ellekit, firmware (>= 15.0)
+Filename: debs/com.johndie.blankpass_1.0.0_iphoneos-arm64.deb
+Size: 3360
+MD5sum: eef4107cddec7c9f3ad4d3ec82e0d035
+SHA1: ebbb5f77512365e1496fc9bf553ecacdbca4264d
+SHA256: 2818de00129be84b378ee1426d095bbc5998a167e40e50f04e72f2ddfd28269a
+Section: Tweaks
+Description: Blank passcode keypad: the numbers on the Lock Screen passcode buttons are hidden. No settings.
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.html
+Name: BlankPass
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.json
+
 Package: com.johndie.density
 Version: 1.0.0~beta5
 Architecture: iphoneos-arm64

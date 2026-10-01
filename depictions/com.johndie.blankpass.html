@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BlankPass · John's Repo</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff; --fg: #1a1a1a; --muted: #666; --card: #f4f4f5;
+    --accent: #3b6ea5; --border: #e2e2e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
+      --accent: #6ea8dc; --border: #26262b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
+    --accent: #6ea8dc; --border: #26262b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font: 16px/1.6 -apple-system, system-ui, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--fg);
+    max-width: 40rem; margin: 0 auto; padding: 2.5rem 1rem 4rem;
+    overflow-wrap: anywhere;
+  }
+  h1 { font-size: 1.9rem; margin: 0 0 .75rem; }
+  h2 { font-size: 1.1rem; margin: 2rem 0 .6rem; }
+  p { margin: 0 0 .9rem; }
+  ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+  li { margin: .25rem 0; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: .75rem; padding: 1rem 1.15rem;
+  }
+  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+  code { font-size: .9em; }
+  .back { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; }
+  footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<a class="back" href="../">&larr; John's Repo</a>
+<h1>BlankPass</h1>
+<p>A <strong>blank passcode keypad</strong>: the numbers and letters on the Lock Screen passcode buttons are hidden, so only the circles show.</p>
+<ul>
+  <li>The buttons, the passcode dots, Emergency and Cancel work exactly as before.</li>
+  <li>Pressing a button doesn't reveal its number either.</li>
+  <li>Only the Lock Screen keypad changes: other number pads (Phone, Settings) are untouched.</li>
+  <li><strong>No settings.</strong> Install, respring, done. To turn it off, uninstall it.</li>
+</ul>
+<h2>Device Support</h2>
+<div class="card">
+<ul>
+  <li><strong>arm64 and arm64e</strong> (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.</li>
+  <li>Tested on an <strong>iPhone 7 (A10)</strong> with iOS 15.8.6 and Dopamine. iOS 16 and A12 and newer aren't confirmed yet: please <a href="https://github.com/Jond-ie/repo/issues">report back</a>. If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it.</li>
+</ul>
+</div>
+<h2>Notes</h2>
+<div class="card">
+<ul>
+  <li>Make sure you know your passcode by heart: the keypad layout is the standard one (1 2 3 / 4 5 6 / 7 8 9 / 0).</li>
+  <li>Only for rootless jailbreaks with ElleKit (Dopamine).</li>
+</ul>
+</div>
+<h2>Credits</h2>
+<div class="card">
+<p>Written from scratch by <strong>John d_ie</strong>, after the original rootful BlankPass tweak.</p>
+</div>
+<footer>
+  <p>Bugs &amp; requests: <a href="https://github.com/Jond-ie/repo/issues">GitHub Issues</a>.</p>
+</footer>
+</body>
+</html>

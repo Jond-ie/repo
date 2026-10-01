@@ -1,0 +1,39 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## BlankPass\n\nA **blank passcode keypad**: the numbers and letters on the Lock Screen passcode buttons are hidden, so only the circles show.\n\n- The buttons, the passcode dots, Emergency and Cancel work exactly as before.\n- Pressing a button doesn't reveal its number either.\n- Only the Lock Screen keypad changes: other number pads (Phone, Settings) are untouched.\n- **No settings.** Install, respring, done. To turn it off, uninstall it."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Device Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 7 (A10)** with iOS 15.8.6 and Dopamine. iOS 16 and A12 and newer aren't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Notes"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Make sure you know your passcode by heart: the keypad layout is the standard one (1 2 3 / 4 5 6 / 7 8 9 / 0).\n- Only for rootless jailbreaks with ElleKit (Dopamine)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Written from scratch by **John d_ie**, after the original rootful BlankPass tweak."
+        }
+      ]
+    }
+  ]
+}
