@@ -22,6 +22,14 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in beta7"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Keyboard fix:** Apps now move up for the keyboard: text boxes and bars attached to the keyboard (like a chat app's message box) sit above it instead of behind it. The keyboard itself stays stock."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Device Support"
         },
         {
