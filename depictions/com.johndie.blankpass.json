@@ -31,7 +31,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Written from scratch by **John d_ie**, after the original rootful BlankPass tweak."
+          "markdown": "Written from scratch by **John d_ie**. Concept from the original **BlankPass** by **VladGeek** (Packix)."
         }
       ]
     }

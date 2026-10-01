@@ -31,7 +31,7 @@ Or open [jond-ie.github.io/repo](https://jond-ie.github.io/repo/) on your device
 | [**Triggr**](https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html) <sup>beta</sup> | 1.0.0~beta3 | Activator-lite: assign actions to buttons, Touch ID, status bar taps, icon flicks, shaking and events. arm64 (A11 and older); [experimental A12+ build](https://github.com/Jond-ie/triggr-beta/releases/tag/v1.0.0-beta3-arm64e-experimental). Source & feedback: [triggr-beta](https://github.com/Jond-ie/triggr-beta). |
 | [**Pinstant**](https://jond-ie.github.io/repo/depictions/com.johndie.pinstant.html) | 1.0.0 | Wake straight to the passcode: no Lock Screen, no swipe. No settings. Concept from UnlockOrElse by ETHN. |
 | [**Density**](https://jond-ie.github.io/repo/depictions/com.johndie.density.html) <sup>beta</sup> | 1.0.0~beta5 | More on screen in the apps you pick, like Android's display density. Status bar and keyboard stay stock. |
-| [**BlankPass**](https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.html) | 1.0.0 | A blank Lock Screen passcode keypad: the numbers are hidden. No settings. |
+| [**BlankPass**](https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.html) | 1.0.0 | A blank Lock Screen passcode keypad: the numbers are hidden. No settings. Concept from BlankPass by VladGeek. |
 | [**Podified**](https://jond-ie.github.io/repo/depictions/com.johndie.podified.html) | 1.0.0-2 | Makes a SIM-less iPhone present itself as an iPod: Settings naming, no Cellular, "iPod" status bar, optional hidden Phone app. |
 | [**Crossfade**](https://jond-ie.github.io/repo/depictions/com.crossfade.music.html) | 0.4.0-2 | True crossfade between local-library songs in the stock Music app. |
 | [**Scrub**](https://jond-ie.github.io/repo/depictions/com.scrub.exif.html) | 1.0.0-2 | Strips GPS and identifying metadata from photos before apps send them. |
@@ -68,3 +68,4 @@ your device, iOS version, jailbreak, and the tweak's version.
 
 This repository hosts the installable packages only.
 - **Pinstant** is written from scratch; the idea comes from UnlockOrElse by Ethan Whited (ETHN).
+- **BlankPass** is written from scratch; the idea comes from the original BlankPass by VladGeek (Packix).
