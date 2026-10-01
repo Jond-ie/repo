@@ -28,7 +28,7 @@ Or open [jond-ie.github.io/repo](https://jond-ie.github.io/repo/) on your device
 |---|---|---|
 | [**Begonecia**](https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html) | 0.2.0-rootless3 | Control Center toggle that silences camera, microphone and location system-wide. Rootless port of Nepeta's BegoneCIA. |
 | [**Slaplock**](https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.html) | 0.2.0~beta1-2 | Lock chosen apps behind Face ID / Touch ID, with passcode fallback. |
-| [**Triggr**](https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html) <sup>beta</sup> | 1.0.0~beta4 | Activator-lite: assign actions to buttons, Touch ID, status bar taps, icon flicks, shaking and events. arm64 (A11 and older); [experimental A12+ build](https://github.com/Jond-ie/triggr-beta/releases/tag/v1.0.0-beta4-arm64e-experimental). Source & feedback: [triggr-beta](https://github.com/Jond-ie/triggr-beta). |
+| [**Triggr**](https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html) <sup>beta</sup> | 1.0.0~beta6 | Activator-lite: assign actions to buttons, Touch ID, status bar taps, icon flicks, shaking and events. Source & feedback: [triggr-beta](https://github.com/Jond-ie/triggr-beta). |
 | [**Pinstant**](https://jond-ie.github.io/repo/depictions/com.johndie.pinstant.html) | 1.0.0 | Wake straight to the passcode: no Lock Screen, no swipe. No settings. Concept from UnlockOrElse by ETHN. |
 | [**Density**](https://jond-ie.github.io/repo/depictions/com.johndie.density.html) <sup>beta</sup> | 1.0.0~beta6 | More on screen in the apps you pick, like Android's display density. Status bar and keyboard stay stock. |
 | [**BlankPass**](https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.html) | 1.0.0 | A blank Lock Screen passcode keypad: the numbers are hidden. No settings. Concept from BlankPass by VladGeek. |
@@ -47,10 +47,9 @@ Tap a name for the full details, notes and known limitations.
   please [report back](https://github.com/Jond-ie/repo/issues). If one puts you into safe mode, uninstall it in Sileo.
 - **Density 1.0.0~beta6** is confirmed by testers to fix the issues reported on earlier betas (Google Maps search bar,
   WhatsApp/Narwhal drawing past the screen, Strava's tab bar).
-- **Triggr on this repo is arm64-only** (A11 and older) and refuses to install on A12+ devices. A12+ can try the
-  [experimental arm64e build](https://github.com/Jond-ie/triggr-beta/releases/tag/v1.0.0-beta4-arm64e-experimental) on GitHub (untested on A12+ yet). Triggr is open source (GPL-3.0); report
-  issues on the [Triggr GitHub](https://github.com/Jond-ie/triggr-beta/issues).
-- Tested on an **iPhone 8 Plus (A11, arm64)** with iOS 16.7.
+- **Triggr** includes arm64e (A12+) since 1.0.0~beta6; it isn't confirmed on an A12+ device yet. Triggr is open source
+  (GPL-3.0); report issues on the [Triggr GitHub](https://github.com/Jond-ie/triggr-beta/issues).
+- Tested on an **iPhone 8 Plus (A11, arm64)** with iOS 16.7 and an **iPhone 7 (A10)** with iOS 15.8.6.
 - Some tweaks need packages from other repos. Sileo installs them automatically when you have
   those repos added:
   - **Begonecia:** CCSupport, Cephei (Chariz)
