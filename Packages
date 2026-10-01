@@ -37,16 +37,16 @@ Name: BegoneCIA (rootless)
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.json
 
 Package: com.johndie.density
-Version: 1.0.0~beta4
+Version: 1.0.0~beta5
 Architecture: iphoneos-arm64
 Maintainer: John d_ie
 Installed-Size: 356
 Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
-Filename: debs/com.johndie.density_1.0.0~beta4_iphoneos-arm64.deb
-Size: 17176
-MD5sum: 3b43eb77424b73fceffc04c10e816de8
-SHA1: 38b0278f07540e0a16c3af142ac59acf2a75971f
-SHA256: 6dc43c388797d3fadf99757db89019009d941aebad63a3ecf7d043d6160e04f2
+Filename: debs/com.johndie.density_1.0.0~beta5_iphoneos-arm64.deb
+Size: 17694
+MD5sum: 01b646625aa3d5b8a294fee67b279868
+SHA1: 230063e82a59aa38323c59419fdc910e541b1dff
+SHA256: 97d8148bbaa9049366c801f691df225e2ebdc23e08ab3ea298d851bbd79aa7ce
 Section: Tweaks
 Description: More on screen in the apps you pick, like Android's display density, while the status bar and keyboard stay stock.
 Author: John d_ie
