@@ -26,7 +26,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and Dopamine, in Settings, Notes, X and YouTube, up to an Amount of 30. A12 and newer aren't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and Dopamine, in Settings, Notes, X, YouTube and Reddit, up to an Amount of 30. A12 and newer aren't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
         },
         {
           "class": "DepictionHeaderView",
