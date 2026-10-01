@@ -41,9 +41,12 @@ Tap a name for the full details, notes and known limitations.
 ## Requirements
 
 - **Dopamine** (rootless jailbreak), iOS 15–16.
-- **A12 and newer: supported again, not confirmed yet.** Earlier builds put A12+ devices into safe mode (a wrong build
-  format). The current versions are built with a new toolchain and pass the format check, but haven't been confirmed on a real
-  A12+ device. Please [report back](https://github.com/Jond-ie/repo/issues). If one puts you into safe mode, uninstall it in Sileo.
+- **A12 and newer: supported again.** Earlier builds put A12+ devices into safe mode (a wrong build format). The current
+  versions are built with a new toolchain and pass the format check. **Density is confirmed working on A12+**: an
+  iPhone 15 Pro Max on iOS 17.3 and an iPhone SE (2nd gen) on iOS 18.2. The other tweaks aren't confirmed on A12+ yet:
+  please [report back](https://github.com/Jond-ie/repo/issues). If one puts you into safe mode, uninstall it in Sileo.
+- **Density 1.0.0~beta6** is confirmed by testers to fix the issues reported on earlier betas (Google Maps search bar,
+  WhatsApp/Narwhal drawing past the screen, Strava's tab bar).
 - **Triggr on this repo is arm64-only** (A11 and older) and refuses to install on A12+ devices. A12+ can try the
   [experimental arm64e build](https://github.com/Jond-ie/triggr-beta/releases/tag/v1.0.0-beta3-arm64e-experimental) on GitHub (untested on A12+ yet). Triggr is open source (GPL-3.0); report
   issues on the [Triggr GitHub](https://github.com/Jond-ie/triggr-beta/issues).
