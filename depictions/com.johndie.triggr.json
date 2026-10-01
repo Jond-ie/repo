@@ -50,7 +50,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**arm64 only for now: A11 and older (iPhone 8 / 8 Plus / X and earlier), iOS 15–16.**\n\n- **A12 and newer (iPhone XS / XR and later) aren't supported yet.** Triggr hasn't moved to the new arm64e toolchain the other tweaks here use, and it refuses to install on A12+ devices so it can't put them into safe mode.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and Dopamine."
+          "markdown": "**arm64 only for now: A11 and older (iPhone 8 / 8 Plus / X and earlier), iOS 15–16.**\n\n- **A12 and newer (iPhone XS / XR and later):** this build refuses to install there, so it can't put them into safe mode. An **experimental arm64e build** for A12+ is on [GitHub](https://github.com/Jond-ie/triggr-beta/releases/tag/v1.0.0-beta3-arm64e-experimental) (not on this repo). It isn't tested on an A12+ device yet: if it lands you in safe mode, uninstall Triggr from Sileo. Please report how it goes.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and Dopamine."
         },
         {
           "class": "DepictionHeaderView",
