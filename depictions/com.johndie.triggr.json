@@ -46,11 +46,19 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in beta4"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **iOS 15 fixes:** Sleep works after quick lock button presses, volume up/down, Mute and volume steps work, and Low Power Mode no longer shows a one-time alert.\n- **Snappier:** The lock button waits 0.4 s for another press (was 0.5 s) and volume holds trigger after 0.5 s (was 0.6 s).\n- **Events:** When Triggr changes something itself (say, Wi-Fi), only that kind of event is paused for a second, so other events still run.\n- **Action picker:** Shows what's selected at the top in run order (swipe to remove, tap to find it), Remove All, category icons, order numbers, and categories in search results.\n- **Settings:** Assigned triggers are listed in order (Single, Double, Triple…), and the lock button notes follow Replace Lock Button Actions."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Device Support"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**arm64 only for now: A11 and older (iPhone 8 / 8 Plus / X and earlier), iOS 15–16.**\n\n- **A12 and newer (iPhone XS / XR and later):** this build refuses to install there, so it can't put them into safe mode. An **experimental arm64e build** for A12+ is on [GitHub](https://github.com/Jond-ie/triggr-beta/releases/tag/v1.0.0-beta3-arm64e-experimental) (not on this repo). It isn't tested on an A12+ device yet: if it lands you in safe mode, uninstall Triggr from Sileo. Please report how it goes.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and Dopamine."
+          "markdown": "**arm64 only for now: A11 and older (iPhone 8 / 8 Plus / X and earlier), iOS 15–16.**\n\n- **A12 and newer (iPhone XS / XR and later):** this build refuses to install there, so it can't put them into safe mode. An **experimental arm64e build** for A12+ is on [GitHub](https://github.com/Jond-ie/triggr-beta/releases/tag/v1.0.0-beta4-arm64e-experimental) (not on this repo). It isn't tested on an A12+ device yet: if it lands you in safe mode, uninstall Triggr from Sileo. Please report how it goes.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and an **iPhone 7 (A10)** with iOS 15.8.6, both on Dopamine."
         },
         {
           "class": "DepictionHeaderView",
