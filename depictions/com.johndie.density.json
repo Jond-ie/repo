@@ -22,11 +22,19 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in beta8"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Keyboard fix:** chat boxes and text bars should no longer hide behind the keyboard (reported in Messenger, Discord, WhatsApp, Telegram, Narwhal, WeChat and X DMs). They now sit right on top of it, with or without the predictive bar, at any Amount. The keyboard itself stays stock.\n- Tested in Reddit, Messages and the Reynard browser on iOS 15.8 (iPhone 7) and iOS 16.7 (iPhone 8 Plus). If a chat app still hides its box, or you're on iOS 17 or 18, please [report back](https://github.com/Jond-ie/repo/issues)."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Device Support"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and Dopamine, in Settings, Notes, X, YouTube and Reddit, up to an Amount of 30. Reported working on an **iPhone 15 Pro Max (A17 Pro) with iOS 17.3** and an **iPhone SE (2nd gen) with iOS 18.2**; more reports welcome: [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and an **iPhone 7 (A10)** with iOS 15.8.6, with Dopamine, in Settings, Notes, X, YouTube and Reddit, up to an Amount of 30. Reported working on an **iPhone 15 Pro Max (A17 Pro) with iOS 17.3** and an **iPhone SE (2nd gen) with iOS 18.2**; more reports welcome: [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
         },
         {
           "class": "DepictionHeaderView",

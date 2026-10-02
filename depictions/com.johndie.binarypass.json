@@ -1,0 +1,50 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## BinaryPass\n\nA **binary passcode keypad**: each Lock Screen passcode button shows its number as **four dots** instead of a digit.\n\n- Read the dots left to right as **8 4 2 1**: a big dot counts, a small faint one doesn't. Add up the big ones.\n- 1 = small small small **big**, 5 = small **big** small **big** (4 + 1), 9 = **big** small small **big** (8 + 1), and 0 is four small dots.\n- The buttons, the passcode dots, Emergency and Cancel work exactly as before. Only the Lock Screen keypad changes.\n- **No settings.** Install, respring, done. To turn it off, uninstall it."
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{200, 193}",
+          "screenshots": [
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/binarypass/keypad.png",
+              "accessibilityText": "The passcode keypad with each number shown as four dots"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Device Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 7 (A10)** with iOS 15.8.6 and Dopamine. iOS 16 and A12 and newer aren't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Notes"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- The keypad layout is the standard one (1 2 3 / 4 5 6 / 7 8 9 / 0), so muscle memory still works.\n- Can't be installed together with **BlankPass** (both change the same buttons).\n- Only for rootless jailbreaks with ElleKit (Dopamine)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Written from scratch by **John d_ie**, as a rootless port requested on r/jailbreak. Concept from the original **BinaryPasscode** by **eskimo** (Jordan Koch)."
+        }
+      ]
+    }
+  ]
+}

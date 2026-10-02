@@ -36,6 +36,25 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html
 Name: BegoneCIA (rootless)
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.json
 
+Package: com.johndie.binarypass
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 168
+Depends: ellekit, firmware (>= 15.0)
+Conflicts: com.johndie.blankpass
+Filename: debs/com.johndie.binarypass_1.0.0_iphoneos-arm64.deb
+Size: 5084
+MD5sum: 7027672545f3554c3e89d1e907b86eea
+SHA1: 5a10adb3aeb5367b719a916084025bd604e822d1
+SHA256: 98e04c031a0575572c90263700015d892bd999d7bebf04ee6c780f9e866969d8
+Section: Tweaks
+Description: Binary passcode keypad: each Lock Screen passcode button shows its number as four dots (8 4 2 1) instead of a digit. No settings. Concept from BinaryPasscode by eskimo (Jordan Koch).
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.binarypass.html
+Name: BinaryPass
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.binarypass.json
+
 Package: com.johndie.blankpass
 Version: 1.0.0
 Architecture: iphoneos-arm64
@@ -55,16 +74,16 @@ Name: BlankPass
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.json
 
 Package: com.johndie.density
-Version: 1.0.0~beta6
+Version: 1.0.0~beta8
 Architecture: iphoneos-arm64
 Maintainer: John d_ie
 Installed-Size: 360
 Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
-Filename: debs/com.johndie.density_1.0.0~beta6_iphoneos-arm64.deb
-Size: 19434
-MD5sum: f52f73ee998b8c2fcbbc9cef27e6de09
-SHA1: 8aaec08cccf9fcfbe8c3c3ed4dac4ff83f71d8a8
-SHA256: ff6a9462e8aba2c1dc577c16d4c513f2051fc117f8893729f1084228549bd31f
+Filename: debs/com.johndie.density_1.0.0~beta8_iphoneos-arm64.deb
+Size: 23092
+MD5sum: dd3620c1b23804e7ce8ec79568a00b43
+SHA1: da6c5ac3ac173a4f450e5b25834eea95920c6821
+SHA256: aec8e9d9db6c743e79b362399128587c5efc300a6bae001fab06a7bc667a6725
 Section: Tweaks
 Description: More on screen in the apps you pick, like Android's display density, while the status bar and keyboard stay stock.
 Author: John d_ie
