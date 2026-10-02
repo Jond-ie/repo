@@ -48,6 +48,13 @@
 <h1>Begonecia</h1>
 <p>A Control Center toggle that silences the <strong>microphone, camera and location</strong> across the whole system. When it's on, apps don't get a permission error — they just get nothing: zeroed mic audio, no camera frames, no location callbacks. A silent blackout, not a visible denial.</p>
 <p>Toggle it from Control Center; add the tile in Settings → Control Center.</p>
+<h2>What's New in 0.2.0-rootless4</h2>
+<div class="card">
+<ul>
+  <li><strong>Siri no longer hears the mic</strong> while Begonecia is on. Siri records in its own background service, which Begonecia didn't cover; it now gets silence there too, along with apps that record the same way.</li>
+  <li>Tested on iOS 15.8.6 (iPhone 7). If Siri still reacts to your voice with Begonecia on, please <a href="https://github.com/Jond-ie/repo/issues">report back</a>.</li>
+</ul>
+</div>
 <h2>Device Support</h2>
 <div class="card">
 <p><strong>A12 and newer are supported again, but not confirmed yet.</strong> Earlier builds put A12+ devices (iPhone XS / XR and later) into safe mode because their A12+ part was built in the wrong format. This version is built with a new toolchain and passes the format check, but it <strong>hasn't been confirmed on a real A12+ device yet</strong>.</p>

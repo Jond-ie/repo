@@ -17,18 +17,18 @@ Name: Crossfade
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.crossfade.music.json
 
 Package: com.johndie.begonecia
-Version: 0.2.0-rootless3
+Version: 0.2.0-rootless4
 Architecture: iphoneos-arm64
 Maintainer: John d_ie (rootless port)
 Installed-Size: 520
 Depends: ellekit, com.opa334.ccsupport, ws.hbang.common
 Conflicts: me.nepeta.begonecia
 Replaces: me.nepeta.begonecia
-Filename: debs/com.johndie.begonecia_0.2.0-rootless3_iphoneos-arm64.deb
-Size: 18756
-MD5sum: 317ee8ff42babc1740c16471f0bc8405
-SHA1: 67c5176f9bb39c510a93ae750d5ad3383fdd42b9
-SHA256: e7d7eaef61943cbcf3f2b378bc8aeb3d799de2764fd987268f431d1906f6c5a5
+Filename: debs/com.johndie.begonecia_0.2.0-rootless4_iphoneos-arm64.deb
+Size: 19700
+MD5sum: 6d2480bae044ce670efb4f68464ada93
+SHA1: ca5dd76a636341d128b8b9bda8cdbb96ce880ad1
+SHA256: 9eea90718b7c9b3150e15ae24828aaa66af3540dcd43b2f6f55ee9e32c515ceb
 Section: Tweaks
 Description: CC toggle to disable microphone, camera and GPS system-wide. Rootless port for Dopamine (iOS 15-16). Total silence: mic samples are zeroed in mediaserverd, location delegates are nulled, camera inputs are dropped.
 Author: Nepeta <ominousness@protonmail.com>
@@ -74,16 +74,16 @@ Name: BlankPass
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.json
 
 Package: com.johndie.density
-Version: 1.0.0~beta8
+Version: 1.0.0~beta9
 Architecture: iphoneos-arm64
 Maintainer: John d_ie
-Installed-Size: 360
+Installed-Size: 392
 Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
-Filename: debs/com.johndie.density_1.0.0~beta8_iphoneos-arm64.deb
-Size: 23092
-MD5sum: dd3620c1b23804e7ce8ec79568a00b43
-SHA1: da6c5ac3ac173a4f450e5b25834eea95920c6821
-SHA256: aec8e9d9db6c743e79b362399128587c5efc300a6bae001fab06a7bc667a6725
+Filename: debs/com.johndie.density_1.0.0~beta9_iphoneos-arm64.deb
+Size: 24500
+MD5sum: b810f908fa84d4fa822e7296f96e5e17
+SHA1: d05110cb6a069a7bf3dc08199acb02cade53455c
+SHA256: f9b2e0b785401bfdb8ee9c153de78df0d076e800c156b5e31224e31003e69172
 Section: Tweaks
 Description: More on screen in the apps you pick, like Android's display density, while the status bar and keyboard stay stock.
 Author: John d_ie

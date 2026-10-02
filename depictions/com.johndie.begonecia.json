@@ -11,6 +11,14 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in 0.2.0-rootless4"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Siri no longer hears the mic** while Begonecia is on. Siri records in its own background service, which Begonecia didn't cover; it now gets silence there too, along with apps that record the same way.\n- Tested on iOS 15.8.6 (iPhone 7). If Siri still reacts to your voice with Begonecia on, please [report back](https://github.com/Jond-ie/repo/issues)."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Device Support"
         },
         {
