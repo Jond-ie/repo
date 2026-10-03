@@ -91,6 +91,22 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.density.html
 Name: Density
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.density.json
 
+Package: com.johndie.glide
+Version: 1.0.0~beta1
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 168
+Depends: ellekit, firmware (>= 15.0)
+Filename: debs/com.johndie.glide_1.0.0~beta1_iphoneos-arm64.deb
+Size: 6682
+MD5sum: ef1228229ba9fff72bcf932b958e091e
+SHA1: c29949e9966449b2d8c86b8e38232d2856c31fc2
+SHA256: 489445ae0a93c5ab1e301e835e841f7606f6345a89e19b132efaf6601d826f68
+Section: Tweaks
+Description: Slide to unlock is back: the shimmering "slide to unlock" on the Lock Screen, and a swipe to the right unlocks (or shows the passcode). No settings. Concept from SlideToUnlock by Nepeta.
+Author: John d_ie
+Name: Glide
+
 Package: com.johndie.pinstant
 Version: 1.0.0
 Architecture: iphoneos-arm64
@@ -127,6 +143,38 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.podified.html
 Name: Podified
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.podified.json
 
+Package: com.johndie.quintet
+Version: 1.0.0~beta1
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 168
+Depends: ellekit, firmware (>= 15.0)
+Filename: debs/com.johndie.quintet_1.0.0~beta1_iphoneos-arm64.deb
+Size: 4224
+MD5sum: 54086ef44e7ffaefa73be228520e25e1
+SHA1: 33cfeb6e710b9daaa3f7b7a5d383ac4681f2eb37
+SHA256: 2a8c8ede28ac96e09d4ba6d3cb09a6884f8e4f77118b64552f5260011c1eb726
+Section: Tweaks
+Description: Five columns of icons on the Home Screen pages, and room for five icons in the Dock. Widgets are resized to fit. No settings.
+Author: John d_ie
+Name: Quintet
+
+Package: com.johndie.shelf
+Version: 1.0.0~beta1
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 168
+Depends: ellekit, firmware (>= 15.0)
+Filename: debs/com.johndie.shelf_1.0.0~beta1_iphoneos-arm64.deb
+Size: 7024
+MD5sum: e9ad99bbc4c6ed5f2d7d8aadbaefbce2
+SHA1: 42c548a9900ff20e6452c5b1a6d35447554ce110
+SHA256: 7db4a2918452910f856943b159419b011c1887b2729881ea47df93d75d18c96e
+Section: Tweaks
+Description: The iOS 6 glass dock: a shelf in perspective with your Dock icons reflected in it. Drawn in code, no Apple artwork. No settings. Concept from ClassicDock by CoolStar.
+Author: John d_ie
+Name: Shelf
+
 Package: com.johndie.slaplock
 Version: 0.2.0~beta1-2
 Architecture: iphoneos-arm64
@@ -148,16 +196,16 @@ Name: Slaplock
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.json
 
 Package: com.johndie.triggr
-Version: 1.0.0~beta6
+Version: 1.0.1
 Architecture: iphoneos-arm64
 Maintainer: John d_ie
-Installed-Size: 1092
+Installed-Size: 1108
 Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
-Filename: debs/com.johndie.triggr_1.0.0~beta6_iphoneos-arm64.deb
-Size: 120682
-MD5sum: b15d4273251b203cbeaa32b815c12df3
-SHA1: 5dc39d2f69a799bafa5712203e00b9100eee7524
-SHA256: e4de28f4e58e9b93ad22e2dedfe69423e7ad77ce6c530cb5be5963ad2a5f08de
+Filename: debs/com.johndie.triggr_1.0.1_iphoneos-arm64.deb
+Size: 128098
+MD5sum: 8c3709d4b0b753c665a86dc9373c26dd
+SHA1: ecda86b4d4ed3270e8021f3101d10d877bdd79ec
+SHA256: 322e38cc66a75e2f9db9b2f1f77fd6a5bac4a128ebf218bda3e5d3173f40561f
 Section: Tweaks
 Description: Activator-lite for rootless Dopamine: assign actions to the home, lock and volume buttons, Touch ID, the mute switch, status bar taps, icon flicks, shaking, and events like charger, Wi-Fi, battery level or a time of day. Supports A12 and newer (arm64e).
 Author: John d_ie

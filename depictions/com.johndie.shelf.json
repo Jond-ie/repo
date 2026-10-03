@@ -1,0 +1,50 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## Shelf\n\n**The iOS 6 glass dock.** Your Dock icons stand on a glass shelf seen in perspective, reflected in it.\n\n- Drawn entirely in code: no images from old iOS versions.\n- Reflections follow your Dock: add, move or remove icons and they update.\n- **No settings.**"
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{200, 62}",
+          "screenshots": [
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/shelf/dock.png",
+              "accessibilityText": "The Dock as an iOS 6 glass shelf with reflections"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Device Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 7 (A10)** with iOS 15.8.6 and Dopamine. iOS 16 and A12 and newer aren't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Notes"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Beta.** If something looks wrong, uninstall it and please [report back](https://github.com/Jond-ie/repo/issues).\n- Made for Home button iPhones' Dock; Face ID iPhones and the iPad's floating Dock aren't tested.\n- Only for rootless jailbreaks with ElleKit (Dopamine)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Written from scratch by **John d_ie**, after a request on r/jailbreak. Concept from **ClassicDock** by **CoolStar**."
+        }
+      ]
+    }
+  ]
+}

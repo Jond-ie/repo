@@ -1,0 +1,50 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## Quintet\n\n**Five columns** of icons on your Home Screen pages instead of four, and room for **five icons in the Dock**.\n\n- Works on pages with widgets too: widgets are resized so they fit the grid.\n- Folders, the Today View and the App Library stay as they are.\n- **No settings.** Install, respring, done. Uninstall and your icons flow back to four columns."
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{200, 254}",
+          "screenshots": [
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/quintet/home.png",
+              "accessibilityText": "A Home Screen with five columns of icons and widgets"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Device Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 7 (A10)** with iOS 15.8.6 and Dopamine. iOS 16 and A12 and newer aren't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Notes"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Beta.** If something looks wrong, uninstall it and please [report back](https://github.com/Jond-ie/repo/issues).\n- iOS moves icons around by itself when the grid changes; nothing is lost.\n- Only for rootless jailbreaks with ElleKit (Dopamine)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Written from scratch by **John d_ie**, after a request on r/jailbreak."
+        }
+      ]
+    }
+  ]
+}

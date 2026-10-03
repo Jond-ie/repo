@@ -46,11 +46,11 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "What's New in beta6"
+          "title": "What's New in 1.0.1"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **Replace Button Actions:** One toggle (Options, on by default) for every button and the mute switch: an assigned press runs instead of the button's own action, like Activator. Nothing assigned = the normal action, Do Nothing = blocked. Turn it off to run everything alongside.\n- **Mute switch:** With Replace on, an assigned flip runs instead of muting or unmuting.\n- **Clearer settings:** Unassigned button triggers show their default (\"Default: Lock\"), and the picker says how to keep it too (e.g. add Sleep to still lock).\n- **Instant Triple → Sleep:** The screen goes dark right at the third press; the lock follows once Triggr is sure it's not a 4th press (Emergency SOS). Also fixes Triple → Sleep not locking on iOS 16.\n- **A12 and newer:** The repo build now includes arm64e, so A12+ (iPhone XS / XR and later) can install it straight from here."
+          "markdown": "- **AirPlay:** **AirPlay Picker** opens the system AirPlay menu, **Play on iPhone** brings the sound back to the phone, and **AirPlay To…** sends it straight to a speaker or TV you pick from a list (Media).\n- **Screen Recording:** starts and stops iOS screen recording, like Control Center's button (System).\n- **Close Background Apps:** clears the App Switcher except the app you're in and the one playing audio (System).\n- **Status Bar Hold:** a new trigger: hold the status bar for half a second, on the Home Screen, Lock Screen and in apps. Tap and Double Tap don't run along with it.\n- **Tested:** every volume button trigger was tested on a device for this release (press, hold, Up then Down, Down then Up, both, hold both)."
         },
         {
           "class": "DepictionHeaderView",
@@ -58,15 +58,15 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**iOS 15–16, rootless Dopamine. arm64 and arm64e (A12 and newer).**\n\n- **A12 and newer (iPhone XS / XR and later):** new in beta6 and not confirmed on a device yet. Phones without a Home button don't see the Home Button or Touch ID triggers, and the lock button is called the Side Button. If it lands you in safe mode, uninstall Triggr from Sileo, and please report how it goes.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and an **iPhone 7 (A10)** with iOS 15.8.6, both on Dopamine."
+          "markdown": "**iOS 15–16, rootless Dopamine. arm64 and arm64e (A12 and newer).**\n\n- **A12 and newer (iPhone XS / XR and later):** included since beta6, not confirmed on a device yet. Phones without a Home button don't see the Home Button or Touch ID triggers, and the lock button is called the Side Button. If it lands you in safe mode, uninstall Triggr from Sileo, and please report how it goes.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and an **iPhone 7 (A10)** with iOS 15.8.6, both on Dopamine."
         },
         {
           "class": "DepictionHeaderView",
-          "title": "Beta & Feedback"
+          "title": "Feedback"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Triggr is in **public beta**. Please report bugs, crashes and requests on the **[Triggr beta GitHub](https://github.com/Jond-ie/triggr-beta)** ([open an issue](https://github.com/Jond-ie/triggr-beta/issues/new/choose)), with your device, iOS version, jailbreak and Triggr version."
+          "markdown": "Please report bugs, crashes and requests on the **[Triggr beta GitHub](https://github.com/Jond-ie/triggr-beta)** ([open an issue](https://github.com/Jond-ie/triggr-beta/issues/new/choose)), with your device, iOS version, jailbreak and Triggr version."
         },
         {
           "class": "DepictionHeaderView",

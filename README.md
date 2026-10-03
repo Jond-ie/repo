@@ -28,11 +28,14 @@ Or open [jond-ie.github.io/repo](https://jond-ie.github.io/repo/) on your device
 |---|---|---|
 | [**Begonecia**](https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html) | 0.2.0-rootless4 | Control Center toggle that silences camera, microphone and location system-wide. Rootless port of Nepeta's BegoneCIA. |
 | [**Slaplock**](https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.html) | 0.2.0~beta1-2 | Lock chosen apps behind Face ID / Touch ID, with passcode fallback. |
-| [**Triggr**](https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html) <sup>beta</sup> | 1.0.0~beta6 | Activator-lite: assign actions to buttons, Touch ID, status bar taps, icon flicks, shaking and events. Source & feedback: [triggr-beta](https://github.com/Jond-ie/triggr-beta). |
+| [**Triggr**](https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html) | 1.0.1 | Activator-lite: assign actions to buttons, Touch ID, status bar taps, icon flicks, shaking and events. Source & feedback: [triggr-beta](https://github.com/Jond-ie/triggr-beta). |
 | [**Pinstant**](https://jond-ie.github.io/repo/depictions/com.johndie.pinstant.html) | 1.0.0 | Wake straight to the passcode: no Lock Screen, no swipe. No settings. Concept from UnlockOrElse by ETHN. |
 | [**Density**](https://jond-ie.github.io/repo/depictions/com.johndie.density.html) <sup>beta</sup> | 1.0.0~beta9 | More on screen in the apps you pick, like Android's display density. Status bar and keyboard stay stock. |
 | [**BlankPass**](https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.html) | 1.0.0 | A blank Lock Screen passcode keypad: the numbers are hidden. No settings. Concept from BlankPass by VladGeek. |
 | [**BinaryPass**](https://jond-ie.github.io/repo/depictions/com.johndie.binarypass.html) | 1.0.0 | Binary Lock Screen passcode keypad: each number shown as four dots (8 4 2 1). No settings. Concept from BinaryPasscode by eskimo. |
+| [**Quintet**](https://jond-ie.github.io/repo/depictions/com.johndie.quintet.html) <sup>beta</sup> | 1.0.0~beta1 | Five columns of icons on the Home Screen and a five-icon Dock. No settings. |
+| [**Glide**](https://jond-ie.github.io/repo/depictions/com.johndie.glide.html) <sup>beta</sup> | 1.0.0~beta1 | iOS 6's slide to unlock on the Lock Screen. No settings. Concept from SlideToUnlock by Nepeta. |
+| [**Shelf**](https://jond-ie.github.io/repo/depictions/com.johndie.shelf.html) <sup>beta</sup> | 1.0.0~beta1 | The iOS 6 glass dock with icon reflections, drawn in code. No settings. Concept from ClassicDock by CoolStar. |
 | [**Podified**](https://jond-ie.github.io/repo/depictions/com.johndie.podified.html) | 1.0.0-2 | Makes a SIM-less iPhone present itself as an iPod: Settings naming, no Cellular, "iPod" status bar, optional hidden Phone app. |
 | [**Crossfade**](https://jond-ie.github.io/repo/depictions/com.crossfade.music.html) | 0.4.0-2 | True crossfade between local-library songs in the stock Music app. |
 | [**Scrub**](https://jond-ie.github.io/repo/depictions/com.scrub.exif.html) | 1.0.0-2 | Strips GPS and identifying metadata from photos before apps send them. |
@@ -66,10 +69,12 @@ your device, iOS version, jailbreak, and the tweak's version.
 - **Begonecia** is a rootless port of [BegoneCIA](https://github.com/larygwil/BegoneCIA) by Eva (Nepeta),
   MIT licensed. (Nepeta's own repo is no longer online; the link is an unofficial mirror.) The original license and copyright ship inside the package.
   The port's source code is at [Jond-ie/begonecia](https://github.com/Jond-ie/begonecia).
-- **Slaplock**, **Podified**, **Crossfade**, **Scrub**, **Triggr**, **Pinstant**, **Density**, **BlankPass** and **BinaryPass** are original works by John d_ie. Triggr is inspired by
+- **Slaplock**, **Podified**, **Crossfade**, **Scrub**, **Triggr**, **Pinstant**, **Density**, **BlankPass**, **BinaryPass**, **Quintet**, **Glide** and **Shelf** are original works by John d_ie. Triggr is inspired by
   Activator (Ryan Petrich).
 
 This repository hosts the installable packages only.
 - **Pinstant** is written from scratch; the idea comes from UnlockOrElse by Ethan Whited (ETHN).
 - **BlankPass** is written from scratch; the idea comes from the original BlankPass by VladGeek (Packix).
 - **BinaryPass** is written from scratch; the idea comes from the original BinaryPasscode by eskimo (Jordan Koch).
+- **Glide** is written from scratch; the idea comes from SlideToUnlock by Nepeta and its port Slyd by s8ngyu.
+- **Shelf** is written from scratch and draws everything in code; the idea comes from ClassicDock by CoolStar.

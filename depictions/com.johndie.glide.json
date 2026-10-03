@@ -1,0 +1,54 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## Glide\n\n**Slide to unlock is back.** The shimmering *slide to unlock* from iOS 6 replaces \"Press home to open\" on the Lock Screen.\n\n- Slide right: the text follows your finger and fades, and letting go past a third of the way unlocks (or brings up the passcode).\n- A short slide springs back. The widgets page no longer opens by accident on the Lock Screen.\n- Home, Touch ID and your passcode work exactly as before. Notification Center isn't touched.\n- **No settings.**"
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{200, 73}",
+          "screenshots": [
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/glide/lock.png",
+              "accessibilityText": "The Lock Screen with the shimmering slide to unlock"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/glide/sliding.png",
+              "accessibilityText": "slide to unlock following the finger"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Device Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 7 (A10)** with iOS 15.8.6 and Dopamine. iOS 16 and A12 and newer aren't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Notes"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Beta.** If something looks wrong, uninstall it and please [report back](https://github.com/Jond-ie/repo/issues).\n- Not compatible with tweaks that skip the Lock Screen (like Pinstant): there's nothing to slide.\n- Only for rootless jailbreaks with ElleKit (Dopamine)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Written from scratch by **John d_ie**, after a request on r/jailbreak. Concept from **SlideToUnlock** by **Nepeta** and its port **Slyd** by **s8ngyu**."
+        }
+      ]
+    }
+  ]
+}
