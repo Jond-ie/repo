@@ -48,20 +48,20 @@
 <h1>Begonecia</h1>
 <p>A Control Center toggle that silences the <strong>microphone, camera and location</strong> across the whole system. When it's on, apps don't get a permission error — they just get nothing: zeroed mic audio, no camera frames, no location callbacks. A silent blackout, not a visible denial.</p>
 <p>Toggle it from Control Center; add the tile in Settings → Control Center.</p>
-<h2>What's New in 0.2.0-rootless4</h2>
+<h2>What's New in 0.2.0-rootless5</h2>
 <div class="card">
 <ul>
-  <li><strong>Siri no longer hears the mic</strong> while Begonecia is on. Siri records in its own background service, which Begonecia didn't cover; it now gets silence there too, along with apps that record the same way.</li>
-  <li>Tested on iOS 15.8.6 (iPhone 7). If Siri still reacts to your voice with Begonecia on, please <a href="https://github.com/Jond-ie/repo/issues">report back</a>.</li>
+  <li><strong>iOS 17 support:</strong> iOS 17 moved audio processing to a new background service; Begonecia now covers it too.</li>
+  <li><strong>A12 and newer confirmed:</strong> on an iPhone SE (2nd gen) with iOS 17.5.1, recording apps get pure silence with Begonecia on and normal sound with it off, and Siri hears nothing.</li>
+  <li>Still in this version: Siri silenced (since rootless4).</li>
 </ul>
 </div>
 <h2>Device Support</h2>
 <div class="card">
-<p><strong>A12 and newer are supported again, but not confirmed yet.</strong> Earlier builds put A12+ devices (iPhone XS / XR and later) into safe mode because their A12+ part was built in the wrong format. This version is built with a new toolchain and passes the format check, but it <strong>hasn't been confirmed on a real A12+ device yet</strong>.</p>
+<p><strong>A12 and newer: supported and confirmed.</strong> Earlier builds put A12+ devices (iPhone XS / XR and later) into safe mode; the current builds are made with Xcode's toolchain and are tested on a real A12+ device.</p>
 <ul>
-  <li><strong>On A12+?</strong> Please try it and <a href="https://github.com/Jond-ie/repo/issues">report back</a>, whether it works or not.</li>
-  <li><strong>If it puts you into safe mode:</strong> open Sileo (safe mode still allows it) and uninstall it.</li>
-  <li>Tested on an <strong>iPhone 8 Plus (A11)</strong>, iOS 16.7.</li>
+  <li>Tested on an <strong>iPhone SE (2nd gen, A13)</strong> with iOS 17.5.1 (arm64e) and an <strong>iPhone 8 Plus (A11)</strong> with iOS 16.7, both with Dopamine. On iOS 17, apps and Siri get complete silence with Begonecia on (measured).</li>
+  <li><strong>If it ever puts you into safe mode:</strong> open Sileo (safe mode still allows it), uninstall it and please <a href="https://github.com/Jond-ie/repo/issues">report back</a>.</li>
 </ul>
 </div>
 <h2>Notes</h2>

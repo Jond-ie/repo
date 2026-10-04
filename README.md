@@ -5,7 +5,7 @@
 <h1 align="center">John's Repo</h1>
 
 <p align="center">
-  Rootless privacy &amp; utility tweaks for Dopamine · iOS 15–16
+  Rootless privacy &amp; utility tweaks for Dopamine · iOS 15–17 · A12+ supported
   <br>
   <a href="https://jond-ie.github.io/repo/"><strong>jond-ie.github.io/repo</strong></a>
 </p>
@@ -26,17 +26,17 @@ Or open [jond-ie.github.io/repo](https://jond-ie.github.io/repo/) on your device
 
 | Tweak | Version | What it does |
 |---|---|---|
-| [**Begonecia**](https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html) | 0.2.0-rootless4 | Control Center toggle that silences camera, microphone and location system-wide. Rootless port of Nepeta's BegoneCIA. |
+| [**Begonecia**](https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html) | 0.2.0-rootless5 | Control Center toggle that silences camera, microphone and location system-wide. Rootless port of Nepeta's BegoneCIA. |
 | [**Slaplock**](https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.html) | 0.2.0~beta1-2 | Lock chosen apps behind Face ID / Touch ID, with passcode fallback. |
-| [**Triggr**](https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html) | 1.0.1 | Activator-lite: assign actions to buttons, Touch ID, status bar taps, icon flicks, shaking and events. Source & feedback: [triggr-beta](https://github.com/Jond-ie/triggr-beta). |
-| [**Pinstant**](https://jond-ie.github.io/repo/depictions/com.johndie.pinstant.html) | 1.0.0 | Wake straight to the passcode: no Lock Screen, no swipe. No settings. Concept from UnlockOrElse by ETHN. |
-| [**Density**](https://jond-ie.github.io/repo/depictions/com.johndie.density.html) <sup>beta</sup> | 1.0.0~beta9 | More on screen in the apps you pick, like Android's display density. Status bar and keyboard stay stock. |
+| [**Triggr**](https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html) | 1.0.2 | Activator-lite: assign actions to buttons, Touch ID, status bar taps, icon flicks, shaking and events. Source & feedback: [triggr-beta](https://github.com/Jond-ie/triggr-beta). |
+| [**Pinstant**](https://jond-ie.github.io/repo/depictions/com.johndie.pinstant.html) | 1.0.1 | Wake straight to the passcode: no Lock Screen, no swipe. No settings. Concept from UnlockOrElse by ETHN. |
+| [**Density**](https://jond-ie.github.io/repo/depictions/com.johndie.density.html) <sup>beta</sup> | 1.0.0~beta10 | More on screen in the apps you pick, like Android's display density. Status bar and keyboard stay stock. |
 | [**BlankPass**](https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.html) | 1.0.0 | A blank Lock Screen passcode keypad: the numbers are hidden. No settings. Concept from BlankPass by VladGeek. |
 | [**BinaryPass**](https://jond-ie.github.io/repo/depictions/com.johndie.binarypass.html) | 1.0.0 | Binary Lock Screen passcode keypad: each number shown as four dots (8 4 2 1). No settings. Concept from BinaryPasscode by eskimo. |
-| [**Quintet**](https://jond-ie.github.io/repo/depictions/com.johndie.quintet.html) <sup>beta</sup> | 1.0.0~beta1 | Five columns of icons on the Home Screen and a five-icon Dock. No settings. |
-| [**Glide**](https://jond-ie.github.io/repo/depictions/com.johndie.glide.html) <sup>beta</sup> | 1.0.0~beta1 | iOS 6's slide to unlock on the Lock Screen. No settings. Concept from SlideToUnlock by Nepeta. |
-| [**Shelf**](https://jond-ie.github.io/repo/depictions/com.johndie.shelf.html) <sup>beta</sup> | 1.0.0~beta1 | The iOS 6 glass dock with icon reflections, drawn in code. No settings. Concept from ClassicDock by CoolStar. |
-| [**Podified**](https://jond-ie.github.io/repo/depictions/com.johndie.podified.html) | 1.0.0-2 | Makes a SIM-less iPhone present itself as an iPod: Settings naming, no Cellular, "iPod" status bar, optional hidden Phone app. |
+| [**Quintet**](https://jond-ie.github.io/repo/depictions/com.johndie.quintet.html) <sup>beta</sup> | 1.0.0~beta2 | Five columns of icons on the Home Screen and a five-icon Dock (the Dock part can be switched off). |
+| [**Glide**](https://jond-ie.github.io/repo/depictions/com.johndie.glide.html) <sup>beta</sup> | 1.0.0~beta2 | iOS 6's slide to unlock on the Lock Screen. No settings. Concept from SlideToUnlock by Nepeta. |
+| [**Shelf**](https://jond-ie.github.io/repo/depictions/com.johndie.shelf.html) <sup>beta</sup> | 1.0.0~beta2 | The iOS 6 glass dock with icon reflections, drawn in code. No settings. Concept from ClassicDock by CoolStar. |
+| [**Podified**](https://jond-ie.github.io/repo/depictions/com.johndie.podified.html) | 1.0.1 | Makes a SIM-less iPhone present itself as an iPod: Settings naming, no Cellular, "iPod" status bar, optional hidden Phone app. |
 | [**Crossfade**](https://jond-ie.github.io/repo/depictions/com.crossfade.music.html) | 0.4.0-2 | True crossfade between local-library songs in the stock Music app. |
 | [**Scrub**](https://jond-ie.github.io/repo/depictions/com.scrub.exif.html) | 1.0.0-2 | Strips GPS and identifying metadata from photos before apps send them. |
 
@@ -44,16 +44,16 @@ Tap a name for the full details, notes and known limitations.
 
 ## Requirements
 
-- **Dopamine** (rootless jailbreak), iOS 15–16.
-- **A12 and newer: supported again.** Earlier builds put A12+ devices into safe mode (a wrong build format). The current
-  versions are built with a new toolchain and pass the format check. **Density is confirmed working on A12+**: an
-  iPhone 15 Pro Max on iOS 17.3 and an iPhone SE (2nd gen) on iOS 18.2. The other tweaks aren't confirmed on A12+ yet:
-  please [report back](https://github.com/Jond-ie/repo/issues). If one puts you into safe mode, uninstall it in Sileo.
-- **Density 1.0.0~beta6** is confirmed by testers to fix the issues reported on earlier betas (Google Maps search bar,
-  WhatsApp/Narwhal drawing past the screen, Strava's tab bar).
-- **Triggr** includes arm64e (A12+) since 1.0.0~beta6; it isn't confirmed on an A12+ device yet. Triggr is open source
-  (GPL-3.0); report issues on the [Triggr GitHub](https://github.com/Jond-ie/triggr-beta/issues).
-- Tested on an **iPhone 8 Plus (A11, arm64)** with iOS 16.7 and an **iPhone 7 (A10)** with iOS 15.8.6.
+- **Dopamine** (rootless jailbreak), iOS 15–17.
+- **A12 and newer: supported and confirmed.** Every tweak is now tested on an **iPhone SE (2nd gen, A13)** with
+  **iOS 17.5.1**, as well as an **iPhone 8 Plus (A11)** with iOS 16.7 and an **iPhone 7 (A10)** with iOS 15.8.6.
+  The iOS 17 fixes are in Podified 1.0.1, Triggr 1.0.2, Density beta10 and Begonecia rootless5.
+  (Crossfade and Scrub install and load fine there, but their features weren't re-checked on iOS 17.)
+  (Earlier builds put A12+ devices into safe mode; if anything ever does, uninstall it in Sileo and
+  [report back](https://github.com/Jond-ie/repo/issues).)
+- **Density** is also reported working by testers on an iPhone 15 Pro Max (iOS 17.3) and an iPhone SE (2nd gen, iOS 18.2).
+- **Triggr** is open source (GPL-3.0); report issues on the [Triggr GitHub](https://github.com/Jond-ie/triggr-beta/issues).
+- **Glide** and **Pinstant** can't be installed together (Pinstant skips the Lock Screen Glide lives on).
 - Some tweaks need packages from other repos. Sileo installs them automatically when you have
   those repos added:
   - **Begonecia:** CCSupport, Cephei (Chariz)

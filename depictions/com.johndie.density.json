@@ -22,11 +22,11 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "What's New in beta9"
+          "title": "What's New in beta10"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **Telegram:** the message box now moves up for the keyboard. Telegram (and other apps that convert the keyboard's position the way Apple recommends since iOS 16.1) got a keyboard about 40 % too short.\n- Also in beta8: chat boxes and text bars sit right on top of the keyboard, with or without the predictive bar, at any Amount. Confirmed by a tester on iOS 17.3 in Discord, WhatsApp, Narwhal, WeChat and X.\n- Messenger may still hide its box; please [report back](https://github.com/Jond-ie/repo/issues) with your iOS version and Amount."
+          "markdown": "- **iOS 17: the keyboard no longer covers the message box.** On iOS 17 some apps (Messages, for one) were told the keyboard was far shorter than it is, so their text bar stayed hidden behind it. They now get its real height.\n- Tested on an iPhone SE (2nd gen) with iOS 17.5.1 at an Amount of 15.\n- Still in this version: the Telegram fix and chat boxes on top of the keyboard (beta8–9).\n- Messenger isn't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues) with your iOS version and Amount."
         },
         {
           "class": "DepictionHeaderView",
@@ -34,7 +34,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and an **iPhone 7 (A10)** with iOS 15.8.6, with Dopamine, in Settings, Notes, X, YouTube and Reddit, up to an Amount of 30. Reported working on an **iPhone 15 Pro Max (A17 Pro) with iOS 17.3** and an **iPhone SE (2nd gen) with iOS 18.2**; more reports welcome: [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and an **iPhone 7 (A10)** with iOS 15.8.6, with Dopamine, in Settings, Notes, X, YouTube and Reddit, up to an Amount of 30. Also tested on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1 (arm64e). Reported working on an **iPhone 15 Pro Max (A17 Pro) with iOS 17.3** and an **iPhone SE (2nd gen) with iOS 18.2**; more reports welcome: [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
         },
         {
           "class": "DepictionHeaderView",

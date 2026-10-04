@@ -17,20 +17,20 @@ Name: Crossfade
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.crossfade.music.json
 
 Package: com.johndie.begonecia
-Version: 0.2.0-rootless4
+Version: 0.2.0-rootless5
 Architecture: iphoneos-arm64
 Maintainer: John d_ie (rootless port)
 Installed-Size: 520
 Depends: ellekit, com.opa334.ccsupport, ws.hbang.common
 Conflicts: me.nepeta.begonecia
 Replaces: me.nepeta.begonecia
-Filename: debs/com.johndie.begonecia_0.2.0-rootless4_iphoneos-arm64.deb
-Size: 19700
-MD5sum: 6d2480bae044ce670efb4f68464ada93
-SHA1: ca5dd76a636341d128b8b9bda8cdbb96ce880ad1
-SHA256: 9eea90718b7c9b3150e15ae24828aaa66af3540dcd43b2f6f55ee9e32c515ceb
+Filename: debs/com.johndie.begonecia_0.2.0-rootless5_iphoneos-arm64.deb
+Size: 19714
+MD5sum: bff258efecb0a2d18b2c7032c57e1e10
+SHA1: 79fbf1ba1d06f60743414aede33402e5ed6adb56
+SHA256: 9b87cde00b3f4297de5556af83aae2561b9280262e644c319537d808383b1fb7
 Section: Tweaks
-Description: CC toggle to disable microphone, camera and GPS system-wide. Rootless port for Dopamine (iOS 15-16). Total silence: mic samples are zeroed in mediaserverd, location delegates are nulled, camera inputs are dropped.
+Description: CC toggle to disable microphone, camera and GPS system-wide. Rootless port for Dopamine (iOS 15-17, A12+ supported). Total silence: mic audio is zeroed in the audio server and Siri, location delegates are nulled, camera inputs are dropped.
 Author: Nepeta <ominousness@protonmail.com>
 Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html
 Name: BegoneCIA (rootless)
@@ -74,16 +74,16 @@ Name: BlankPass
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.json
 
 Package: com.johndie.density
-Version: 1.0.0~beta9
+Version: 1.0.0~beta10
 Architecture: iphoneos-arm64
 Maintainer: John d_ie
 Installed-Size: 392
 Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
-Filename: debs/com.johndie.density_1.0.0~beta9_iphoneos-arm64.deb
-Size: 24500
-MD5sum: b810f908fa84d4fa822e7296f96e5e17
-SHA1: d05110cb6a069a7bf3dc08199acb02cade53455c
-SHA256: f9b2e0b785401bfdb8ee9c153de78df0d076e800c156b5e31224e31003e69172
+Filename: debs/com.johndie.density_1.0.0~beta10_iphoneos-arm64.deb
+Size: 25946
+MD5sum: f52dc05059e5ae814480e308b4283746
+SHA1: a07615f5b839ec1907121b187dec0f9aa3d7f0d7
+SHA256: cc0eeb5b7714b19adfa07610980c65d71d77786653b22c276f033cd4fd1bc622
 Section: Tweaks
 Description: More on screen in the apps you pick, like Android's display density, while the status bar and keyboard stay stock.
 Author: John d_ie
@@ -92,32 +92,36 @@ Name: Density
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.density.json
 
 Package: com.johndie.glide
-Version: 1.0.0~beta1
+Version: 1.0.0~beta2
 Architecture: iphoneos-arm64
 Maintainer: John d_ie
 Installed-Size: 168
 Depends: ellekit, firmware (>= 15.0)
-Filename: debs/com.johndie.glide_1.0.0~beta1_iphoneos-arm64.deb
-Size: 6682
-MD5sum: ef1228229ba9fff72bcf932b958e091e
-SHA1: c29949e9966449b2d8c86b8e38232d2856c31fc2
-SHA256: 489445ae0a93c5ab1e301e835e841f7606f6345a89e19b132efaf6601d826f68
+Conflicts: com.johndie.pinstant
+Filename: debs/com.johndie.glide_1.0.0~beta2_iphoneos-arm64.deb
+Size: 7266
+MD5sum: 3a083c23a8fc3ef92a3402b2fdfe0d9b
+SHA1: e40c0c2e72b604d9a4c107334cff50b0a4571359
+SHA256: b22861f15da50c2164c81194d6fe7183988ef0b979327980d6e5b70d0a445411
 Section: Tweaks
 Description: Slide to unlock is back: the shimmering "slide to unlock" on the Lock Screen, and a swipe to the right unlocks (or shows the passcode). No settings. Concept from SlideToUnlock by Nepeta.
 Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.glide.html
 Name: Glide
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.glide.json
 
 Package: com.johndie.pinstant
-Version: 1.0.0
+Version: 1.0.1
 Architecture: iphoneos-arm64
 Maintainer: John d_ie
 Installed-Size: 168
 Depends: ellekit, firmware (>= 15.0)
-Filename: debs/com.johndie.pinstant_1.0.0_iphoneos-arm64.deb
-Size: 3996
-MD5sum: d9636bddcb3241d17ec8e00aadacd231
-SHA1: da47b08719025942389684eeee3c3d130de56d36
-SHA256: becfe0fea377aacd6cef329e88dc07ecb21c1f7145d4bf6eb23c8834ea3e43c8
+Conflicts: com.johndie.glide
+Filename: debs/com.johndie.pinstant_1.0.1_iphoneos-arm64.deb
+Size: 4012
+MD5sum: 337526b6edfc505fa2a08c5147a7b7c6
+SHA1: f6e7fdea7b2482442e52e0c9957a720ac5e82db8
+SHA256: 1ad8b56e031a8eb052f084596a0e5571ca2e6748c32d24f4e893acd9d3442b73
 Section: Tweaks
 Description: Skips the Lock Screen: waking your device goes straight to the passcode. No settings. Concept from UnlockOrElse by Ethan Whited (ETHN).
 Author: John d_ie
@@ -126,16 +130,16 @@ Name: Pinstant
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.pinstant.json
 
 Package: com.johndie.podified
-Version: 1.0.0-2
+Version: 1.0.1
 Architecture: iphoneos-arm64
 Maintainer: John d_ie
 Installed-Size: 356
 Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
-Filename: debs/com.johndie.podified_1.0.0-2_iphoneos-arm64.deb
-Size: 10988
-MD5sum: f7e90e6e6725b04248c1797893ebd471
-SHA1: 10220caf9dd6380eada521c526e67c46114c8d6e
-SHA256: 75daac4dad3467e3d93e96ae776a52270ea6dc539778df1589e0d1b5f9fbd1fa
+Filename: debs/com.johndie.podified_1.0.1_iphoneos-arm64.deb
+Size: 12528
+MD5sum: 03055012217cde93dea6fed10e7651de
+SHA1: 41e61b6abb78a3de41bfd3d186e23d22ccedb5b7
+SHA256: e9a0efdac5bbc0aa72805d9b1ab9bbe9ea04a46f7c7dbf51d507657be9be6802
 Section: Tweaks
 Description: Makes a SIM-less iPhone present itself as an iPod: iPod naming in Settings, no Cellular, a clean "iPod" status bar, and an optional hidden Phone app. Cosmetic only; emergency calling is untouched.
 Author: John d_ie
@@ -144,36 +148,40 @@ Name: Podified
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.podified.json
 
 Package: com.johndie.quintet
-Version: 1.0.0~beta1
+Version: 1.0.0~beta2
 Architecture: iphoneos-arm64
 Maintainer: John d_ie
-Installed-Size: 168
-Depends: ellekit, firmware (>= 15.0)
-Filename: debs/com.johndie.quintet_1.0.0~beta1_iphoneos-arm64.deb
-Size: 4224
-MD5sum: 54086ef44e7ffaefa73be228520e25e1
-SHA1: 33cfeb6e710b9daaa3f7b7a5d383ac4681f2eb37
-SHA256: 2a8c8ede28ac96e09d4ba6d3cb09a6884f8e4f77118b64552f5260011c1eb726
+Installed-Size: 352
+Depends: ellekit, preferenceloader, firmware (>= 15.0)
+Filename: debs/com.johndie.quintet_1.0.0~beta2_iphoneos-arm64.deb
+Size: 8848
+MD5sum: a6f11830afa2ebcb54cd342c7c4cd5f9
+SHA1: 9654c6549021b888f7d5db8621129fe56c4b4f04
+SHA256: cfff9bbf9f76f5c00e497c13c6fe3f806fd76335f3296fe751537fb3ecc39987
 Section: Tweaks
-Description: Five columns of icons on the Home Screen pages, and room for five icons in the Dock. Widgets are resized to fit. No settings.
+Description: Five columns of icons on the Home Screen pages, and room for five icons in the Dock (can be turned off in Settings for Dock tweaks). Widgets are resized to fit.
 Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.quintet.html
 Name: Quintet
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.quintet.json
 
 Package: com.johndie.shelf
-Version: 1.0.0~beta1
+Version: 1.0.0~beta2
 Architecture: iphoneos-arm64
 Maintainer: John d_ie
 Installed-Size: 168
 Depends: ellekit, firmware (>= 15.0)
-Filename: debs/com.johndie.shelf_1.0.0~beta1_iphoneos-arm64.deb
-Size: 7024
-MD5sum: e9ad99bbc4c6ed5f2d7d8aadbaefbce2
-SHA1: 42c548a9900ff20e6452c5b1a6d35447554ce110
-SHA256: 7db4a2918452910f856943b159419b011c1887b2729881ea47df93d75d18c96e
+Filename: debs/com.johndie.shelf_1.0.0~beta2_iphoneos-arm64.deb
+Size: 7258
+MD5sum: e8c21b0cddb84f522942841cb0c59f58
+SHA1: 70eb92a4ec3bfe587dccdea4123580c9658413c3
+SHA256: ad8f4e8ca72caea0d78b1d91a3efebabac95a9f8cc90d9050c25334aaf7e3910
 Section: Tweaks
 Description: The iOS 6 glass dock: a shelf in perspective with your Dock icons reflected in it. Drawn in code, no Apple artwork. No settings. Concept from ClassicDock by CoolStar.
 Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.shelf.html
 Name: Shelf
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.shelf.json
 
 Package: com.johndie.slaplock
 Version: 0.2.0~beta1-2
@@ -196,16 +204,16 @@ Name: Slaplock
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.json
 
 Package: com.johndie.triggr
-Version: 1.0.1
+Version: 1.0.2
 Architecture: iphoneos-arm64
 Maintainer: John d_ie
 Installed-Size: 1108
 Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
-Filename: debs/com.johndie.triggr_1.0.1_iphoneos-arm64.deb
-Size: 128098
-MD5sum: 8c3709d4b0b753c665a86dc9373c26dd
-SHA1: ecda86b4d4ed3270e8021f3101d10d877bdd79ec
-SHA256: 322e38cc66a75e2f9db9b2f1f77fd6a5bac4a128ebf218bda3e5d3173f40561f
+Filename: debs/com.johndie.triggr_1.0.2_iphoneos-arm64.deb
+Size: 128204
+MD5sum: 77025a50504d3f5241eddd3679ac82b2
+SHA1: 03682be13f0eacb7e2a0cfc4bbfdcc543abc618e
+SHA256: 241434b870d3dd4a19de00290e2d825a35e3d9c97938f6cc0da4f31276526ad3
 Section: Tweaks
 Description: Activator-lite for rootless Dopamine: assign actions to the home, lock and volume buttons, Touch ID, the mute switch, status bar taps, icon flicks, shaking, and events like charger, Wi-Fi, battery level or a time of day. Supports A12 and newer (arm64e).
 Author: John d_ie

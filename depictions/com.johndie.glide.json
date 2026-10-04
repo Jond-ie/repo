@@ -26,11 +26,19 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in beta2"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Fixed: touches could stop working after sliding to unlock** until a respring (most often on the first slide after a respring). If that happened to you on beta1, update.\n- **Works with a passcode:** sliding brings up the keypad, as a Home press does.\n- **iOS 17 and A12 and newer confirmed** (iPhone SE 2nd gen, iOS 17.5.1).\n- Sileo won't install it together with Pinstant (Pinstant skips the Lock Screen Glide lives on)."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Device Support"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 7 (A10)** with iOS 15.8.6 and Dopamine. iOS 16 and A12 and newer aren't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 7 (A10)** with iOS 15.8.6 and Dopamine. Also tested on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1 (arm64e), so **A12 and newer are confirmed**. iOS 16 isn't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
         },
         {
           "class": "DepictionHeaderView",

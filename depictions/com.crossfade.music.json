@@ -15,7 +15,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**A12 and newer are supported again, but not confirmed yet.** Earlier builds put A12+ devices (iPhone XS / XR and later) into safe mode because their A12+ part was built in the wrong format. This version is built with a new toolchain and passes the format check, but it **hasn't been confirmed on a real A12+ device yet**.\n\n- **On A12+?** Please try it and [report back](https://github.com/Jond-ie/repo/issues), whether it works or not.\n- **If it puts you into safe mode:** open Sileo (safe mode still allows it) and uninstall it.\n- Tested on an **iPhone 8 Plus (A11)**, iOS 16.7."
+          "markdown": "**A12 and newer: supported and confirmed.** Earlier builds put A12+ devices (iPhone XS / XR and later) into safe mode; the current builds are made with Xcode's toolchain and are tested on a real A12+ device.\n\n- Tested on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1 (arm64e) and an **iPhone 8 Plus (A11)** with iOS 16.7, both with Dopamine. On iOS 17 it installs and loads cleanly; crossfading wasn't re-checked there (no local music on the test phone).\n- **If it ever puts you into safe mode:** open Sileo (safe mode still allows it), uninstall it and please [report back](https://github.com/Jond-ie/repo/issues)."
         },
         {
           "class": "DepictionHeaderView",

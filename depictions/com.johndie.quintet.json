@@ -7,7 +7,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "## Quintet\n\n**Five columns** of icons on your Home Screen pages instead of four, and room for **five icons in the Dock**.\n\n- Works on pages with widgets too: widgets are resized so they fit the grid.\n- Folders, the Today View and the App Library stay as they are.\n- **No settings.** Install, respring, done. Uninstall and your icons flow back to four columns."
+          "markdown": "## Quintet\n\n**Five columns** of icons on your Home Screen pages instead of four, and room for **five icons in the Dock**.\n\n- Works on pages with widgets too: widgets are resized so they fit the grid.\n- Folders, the Today View and the App Library stay as they are.\n- **One setting:** Settings → Quintet → **Five-Icon Dock**, on by default. Turn it off if another tweak changes your Dock. Uninstall and your icons flow back to four columns."
         },
         {
           "class": "DepictionScreenshotsView",
@@ -22,11 +22,19 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in beta2"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **New setting:** the five-icon Dock can be turned off (Settings → Quintet), for people who use another Dock tweak. A fifth Dock icon then moves to the Home Screen. Home Screen pages always get five columns. There's a Respring button.\n- **iOS 17 and A12 and newer confirmed** (iPhone SE 2nd gen, iOS 17.5.1)."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Device Support"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 7 (A10)** with iOS 15.8.6 and Dopamine. iOS 16 and A12 and newer aren't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 7 (A10)** with iOS 15.8.6 and Dopamine. Also tested on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1 (arm64e), so **A12 and newer are confirmed**. iOS 16 isn't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
         },
         {
           "class": "DepictionHeaderView",

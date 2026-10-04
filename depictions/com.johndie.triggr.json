@@ -46,11 +46,11 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "What's New in 1.0.1"
+          "title": "What's New in 1.0.2"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **AirPlay:** **AirPlay Picker** opens the system AirPlay menu, **Play on iPhone** brings the sound back to the phone, and **AirPlay To…** sends it straight to a speaker or TV you pick from a list (Media).\n- **Screen Recording:** starts and stops iOS screen recording, like Control Center's button (System).\n- **Close Background Apps:** clears the App Switcher except the app you're in and the one playing audio (System).\n- **Status Bar Hold:** a new trigger: hold the status bar for half a second, on the Home Screen, Lock Screen and in apps. Tap and Double Tap don't run along with it.\n- **Tested:** every volume button trigger was tested on a device for this release (press, hold, Up then Down, Down then Up, both, hold both)."
+          "markdown": "- **iOS 17 fixes:** Status Bar Hold, Flashlight and Close Background Apps now work on iOS 17.\n- **Flashlight** now switches the light the way Control Center does, which is also more reliable on iOS 15–16.\n- **A12 and newer confirmed:** every volume trigger, status bar tap and hold, icon flicks, Home and lock presses and the actions were tested on an iPhone SE (2nd gen) with iOS 17.5.1.\n- Also in 1.0.1: AirPlay actions, Screen Recording, Close Background Apps and the Status Bar Hold trigger."
         },
         {
           "class": "DepictionHeaderView",
@@ -58,7 +58,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**iOS 15–16, rootless Dopamine. arm64 and arm64e (A12 and newer).**\n\n- **A12 and newer (iPhone XS / XR and later):** included since beta6, not confirmed on a device yet. Phones without a Home button don't see the Home Button or Touch ID triggers, and the lock button is called the Side Button. If it lands you in safe mode, uninstall Triggr from Sileo, and please report how it goes.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and an **iPhone 7 (A10)** with iOS 15.8.6, both on Dopamine."
+          "markdown": "**iOS 15–17, rootless Dopamine. arm64 and arm64e (A12 and newer).**\n\n- **A12 and newer (iPhone XS / XR and later):** **confirmed** on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1. Phones without a Home button don't see the Home Button or Touch ID triggers, and the lock button is called the Side Button. If it ever lands you in safe mode, uninstall Triggr from Sileo and please report it.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and an **iPhone 7 (A10)** with iOS 15.8.6, both on Dopamine."
         },
         {
           "class": "DepictionHeaderView",

@@ -22,11 +22,19 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in beta2"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Reflections update right away** when you move icons into, around or out of the Dock, and when an icon's picture changes. Nothing runs while nothing changes, so no battery cost.\n- **iOS 17 and A12 and newer confirmed** (iPhone SE 2nd gen, iOS 17.5.1)."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Device Support"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 7 (A10)** with iOS 15.8.6 and Dopamine. iOS 16 and A12 and newer aren't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 7 (A10)** with iOS 15.8.6 and Dopamine. Also tested on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1 (arm64e), so **A12 and newer are confirmed**. iOS 16 isn't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
         },
         {
           "class": "DepictionHeaderView",

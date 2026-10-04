@@ -11,11 +11,19 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in 1.0.1"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Sileo won't install it together with **Glide** (slide to unlock): Pinstant skips the Lock Screen that Glide lives on.\n- **iOS 17 and A12 and newer confirmed** (iPhone SE 2nd gen, iOS 17.5.1)."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Device Support"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and Dopamine (Home button, side button and Raise to Wake). A12 and newer aren't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and Dopamine (Home button, side button and Raise to Wake). Also tested on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1 (arm64e), so **A12 and newer are confirmed**. If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
         },
         {
           "class": "DepictionHeaderView",
