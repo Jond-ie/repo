@@ -1,0 +1,39 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## LiteFace\n\nEvery Face ID prompt uses **iOS 18's small Face ID animation at the top of the screen** (the one the Hidden apps folder uses) instead of the box in the middle of the screen.\n\n- Works everywhere an app asks for Face ID: Passwords, banking apps, locked apps, App Store purchases and so on.\n- Only the look changes: what you're asked for and what unlocks stays the same.\n- **No settings.** Install, done (no respring needed). To turn it off, uninstall it."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Device Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **iOS 18 only.** Sileo won't install it on other versions.\n- **Face ID iPhones only** (iPhone XS / XR and newer). On Touch ID devices it does nothing.\n- **arm64 and arm64e** builds, checked for the correct arm64e format. (The iPhone X can't run iOS 18, so on Face ID phones this means arm64e.)\n- Tested on an **iPhone 11 Pro (A13)** with iOS 18.6.2 and Dopamine. If it ever puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Notes"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Only for rootless jailbreaks with ElleKit (Dopamine).\n- Open source (GPL-3.0): [github.com/Jond-ie/liteface](https://github.com/Jond-ie/liteface)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Written from scratch by **John d_ie**."
+        }
+      ]
+    }
+  ]
+}

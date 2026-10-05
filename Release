@@ -5,4 +5,4 @@ Version: 1.0
 Codename: ios
 Architectures: iphoneos-arm64
 Components: main
-Description: Rootless privacy and utility tweaks for iOS 15-16.
+Description: Rootless privacy and utility tweaks for iOS 15-18 (arm64 and arm64e).

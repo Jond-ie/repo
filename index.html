@@ -34,7 +34,13 @@
     text-decoration: none; padding: .6rem 1.1rem; border-radius: .6rem;
     font-weight: 600;
   }
+  .add + .add { margin-left: .5rem; }
+  .add.zebra { background: transparent; color: var(--accent); border: 2px solid var(--accent); padding: calc(.6rem - 2px) calc(1.1rem - 2px); }
   .note { font-size: .85rem; color: var(--muted); margin-top: .75rem; }
+  table.devices { width: 100%; border-collapse: collapse; font-size: .88rem; margin-top: 1rem; }
+  table.devices th, table.devices td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid var(--border); }
+  table.devices th { color: var(--muted); font-weight: 600; }
+  .tweak p.meta { margin-top: .5rem; font-size: .8rem; }
   h2 { font-size: 1.1rem; margin: 2.5rem 0 1rem; }
   .tweak {
     background: var(--card); border: 1px solid var(--border);
@@ -55,13 +61,30 @@
 <body>
 <header>
   <h1>John's Repo</h1>
-  <p class="tag">Rootless privacy &amp; utility tweaks for Dopamine (iOS 15–17, A12 and newer supported).</p>
-  <a class="add" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a>
-  <p class="note">Or add <code>https://jond-ie.github.io/repo/</code> manually in Sileo → Sources.</p>
-  <p class="note"><strong>A12 and newer: supported and confirmed.</strong> Every tweak is tested on an iPhone SE (2nd gen, A13) with iOS 17.5.1, alongside iOS 16.7 (A11) and iOS 15.8.6 (A10) (Crossfade and Scrub: installed and loading, features not re-checked on iOS 17). If anything ever puts you into safe mode, uninstall it in Sileo and please report back.</p>
+  <p class="tag">Rootless privacy &amp; utility tweaks for Dopamine (iOS 15–18).</p>
+  <a class="add" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a><a class="add zebra" href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a>
+  <p class="note">Or add <code>https://jond-ie.github.io/repo/</code> manually in Sileo or Zebra → Sources.</p>
+  <p class="note"><strong>Every tweak ships arm64 and arm64e</strong>, so A12 and newer (iPhone XS / XR and later) are supported, and every build is checked for the correct arm64e format. Tested on real devices:</p>
+  <table class="devices">
+    <tr><th>Device</th><th>Chip</th><th>Arch</th><th>iOS</th></tr>
+    <tr><td>iPhone 7</td><td>A10</td><td>arm64</td><td>15.8.6</td></tr>
+    <tr><td>iPhone 8 Plus</td><td>A11</td><td>arm64</td><td>16.7</td></tr>
+    <tr><td>iPhone SE (2nd gen)</td><td>A13</td><td>arm64e</td><td>17.5.1</td></tr>
+    <tr><td>iPhone 11 Pro</td><td>A13</td><td>arm64e</td><td>18.6.2</td></tr>
+  </table>
+  <p class="note">Each tweak lists where it was tested. Unless a tweak says iOS 18, it isn't tested on iOS 18 yet. If anything ever puts you into safe mode, uninstall it in Sileo or Zebra and please report back.</p>
 </header>
 
 <h2>Tweaks</h2>
+
+<div class="tweak">
+  <h3>LiteFace <span class="badge">new</span></h3>
+  <p>Every Face ID prompt uses iOS 18's small Face ID animation at the top of the screen (the one hidden apps use)
+     instead of the box in the middle. Face ID iPhones only. No settings. Open source (GPL-3.0).</p>
+  <p class="links"><a href="depictions/com.johndie.liteface.html">Details</a> ·
+     <a href="https://github.com/Jond-ie/liteface">Source code</a></p>
+  <p class="meta">iOS 18 only · Face ID iPhones (XS / XR and newer) · Tested: iPhone 11 Pro (A13, 18.6.2) · arm64 + arm64e</p>
+</div>
 
 <div class="tweak">
   <h3>Begonecia <span class="badge">port</span></h3>
@@ -69,11 +92,13 @@
      total blackout, no permission errors. Rootless port of Nepeta's BegoneCIA (MIT).</p>
   <p class="links"><a href="https://github.com/larygwil/BegoneCIA">Original BegoneCIA (mirror)</a> ·
      <a href="https://github.com/Jond-ie/begonecia">Source code</a></p>
+  <p class="meta">iOS 15–17 · Tested: iPhone 8 Plus (A11, 16.7), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
 </div>
 
 <div class="tweak">
   <h3>Slaplock</h3>
   <p>Gate any app behind the stock Face ID / Touch ID prompt. Per-app, all off by default.</p>
+  <p class="meta">iOS 15–17 · Tested: iPhone 8 Plus (A11, 16.7), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
 </div>
 
 <div class="tweak">
@@ -83,61 +108,72 @@
      (tested on iOS 17.5.1).</p>
   <p class="links"><a href="depictions/com.johndie.triggr.html">Details</a> ·
      <a href="https://github.com/Jond-ie/triggr-beta">Source &amp; feedback on GitHub</a></p>
+  <p class="meta">iOS 15–17 · Tested: iPhone 7 (A10, 15.8.6), iPhone 8 Plus (A11, 16.7), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
 </div>
 <div class="tweak">
   <h3>Pinstant</h3>
   <p>Wake straight to the passcode: no Lock Screen, no swipe, no wait. No settings.
      Concept from UnlockOrElse by Ethan Whited (ETHN).</p>
   <p class="links"><a href="depictions/com.johndie.pinstant.html">Details</a></p>
+  <p class="meta">iOS 15–17 · Tested: iPhone 8 Plus (A11, 16.7), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
 </div>
 <div class="tweak">
   <h3>BlankPass</h3>
   <p>A blank Lock Screen passcode keypad: the numbers are hidden, the circles stay. No settings.</p>
   <p class="links"><a href="depictions/com.johndie.blankpass.html">Details</a></p>
+  <p class="meta">iOS 15–17 · Tested: iPhone 7 (A10, 15.8.6), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
 </div>
 <div class="tweak">
   <h3>BinaryPass</h3>
   <p>A binary Lock Screen passcode keypad: each number is shown as four dots (8 4 2 1). No settings.
      Concept from BinaryPasscode by eskimo (Jordan Koch).</p>
   <p class="links"><a href="depictions/com.johndie.binarypass.html">Details</a></p>
+  <p class="meta">iOS 15–17 · Tested: iPhone 7 (A10, 15.8.6), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
 </div>
 <div class="tweak">
   <h3>Quintet <span class="badge">beta</span></h3>
   <p>Five columns of icons on the Home Screen, widgets resized to fit, and a five-icon Dock (which can be switched off in Settings).</p>
   <p class="links"><a href="depictions/com.johndie.quintet.html">Details</a></p>
+  <p class="meta">iOS 15–17 only (not iOS 18) · Tested: iPhone 7 (A10, 15.8.6), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
 </div>
 <div class="tweak">
   <h3>Glide <span class="badge">beta</span></h3>
   <p>Slide to unlock is back: iOS 6's shimmering prompt on the Lock Screen, and a slide to the right unlocks. No settings.</p>
   <p class="links"><a href="depictions/com.johndie.glide.html">Details</a></p>
+  <p class="meta">iOS 15–17 · Tested: iPhone 7 (A10, 15.8.6), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
 </div>
 <div class="tweak">
   <h3>Shelf <span class="badge">beta</span></h3>
   <p>The iOS 6 glass dock: your Dock icons on a glass shelf with reflections, drawn in code. No settings.</p>
   <p class="links"><a href="depictions/com.johndie.shelf.html">Details</a></p>
+  <p class="meta">iOS 15–17 · Tested: iPhone 7 (A10, 15.8.6), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
 </div>
 <div class="tweak">
   <h3>Density <span class="badge">beta</span></h3>
   <p>More on screen in the apps you pick, like Android's display density. The status bar and
      keyboard stay stock; one slider, then switch it on per app.</p>
   <p class="links"><a href="depictions/com.johndie.density.html">Details</a></p>
+  <p class="meta">iOS 15–17 · Tested: iPhone 7 (A10, 15.8.6), iPhone 8 Plus (A11, 16.7), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
 </div>
 <div class="tweak">
   <h3>Podified</h3>
   <p>Makes a SIM-less iPhone present itself as an iPod: iPod naming in Settings, no Cellular,
      an "iPod" status bar and an optional hidden Phone app. Cosmetic only.</p>
+  <p class="meta">iOS 15–17 · Tested: iPhone 8 Plus (A11, 16.7), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
 </div>
 
 <div class="tweak">
   <h3>Crossfade</h3>
   <p>True crossfade between local-library tracks in the stock Music app. For your own files —
      no subscription needed.</p>
+  <p class="meta">iOS 15–17 · Tested: iPhone 8 Plus (A11, 16.7); loads on iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
 </div>
 
 <div class="tweak">
   <h3>Scrub</h3>
   <p>Removes GPS &amp; identifying metadata from photos before apps send them. Preserves
      orientation and color.</p>
+  <p class="meta">iOS 15–17 · Tested: iPhone 8 Plus (A11, 16.7); loads on iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
 </div>
 
 <footer>

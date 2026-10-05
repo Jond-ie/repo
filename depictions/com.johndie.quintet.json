@@ -22,11 +22,11 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "What's New in beta2"
+          "title": "What's New in beta3"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **New setting:** the five-icon Dock can be turned off (Settings → Quintet), for people who use another Dock tweak. A fifth Dock icon then moves to the Home Screen. Home Screen pages always get five columns. There's a Respring button.\n- **iOS 17 and A12 and newer confirmed** (iPhone SE 2nd gen, iOS 17.5.1)."
+          "markdown": "- **Not for iOS 18:** Sileo won't install it there anymore. On iOS 18, beta2 could put the phone into safe mode, and five columns made opening folders and swiping back from the App Library stutter. iOS 15–17 are unchanged.\n- **Earlier in beta2:** the five-icon Dock can be turned off (Settings → Quintet), with a Respring button. iOS 17 and A12 and newer confirmed."
         },
         {
           "class": "DepictionHeaderView",
@@ -34,7 +34,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 7 (A10)** with iOS 15.8.6 and Dopamine. Also tested on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1 (arm64e), so **A12 and newer are confirmed**. iOS 16 isn't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, checked for the correct arm64e format.\n- **iOS 15–17.** Not iOS 18.\n- Tested on an **iPhone 7 (A10)** with iOS 15.8.6 and Dopamine. Also tested on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1 (arm64e), so **A12 and newer are confirmed**. iOS 16 isn't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
         },
         {
           "class": "DepictionHeaderView",

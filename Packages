@@ -110,6 +110,24 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.glide.html
 Name: Glide
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.glide.json
 
+Package: com.johndie.liteface
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 184
+Depends: ellekit, firmware (>= 18.0), firmware (<< 19.0)
+Filename: debs/com.johndie.liteface_1.0.0_iphoneos-arm64.deb
+Size: 3042
+MD5sum: 2abd94237da4645f0266f69397f2db94
+SHA1: 44e0e9e807f81dc053455ac7ae4928536a2f64f1
+SHA256: e90ad47d4ca9ef7be50f240ff58a183e798e2dfaa928dfab7e51e5c20db9e2c1
+Section: Tweaks
+Description: Every Face ID prompt uses iOS 18's small Face ID animation at the top of the screen (the one hidden apps use) instead of the box in the middle. iOS 18, Face ID iPhones. No settings.
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.liteface.html
+Name: LiteFace
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.liteface.json
+
 Package: com.johndie.pinstant
 Version: 1.0.1
 Architecture: iphoneos-arm64
@@ -158,6 +176,24 @@ Size: 8848
 MD5sum: a6f11830afa2ebcb54cd342c7c4cd5f9
 SHA1: 9654c6549021b888f7d5db8621129fe56c4b4f04
 SHA256: cfff9bbf9f76f5c00e497c13c6fe3f806fd76335f3296fe751537fb3ecc39987
+Section: Tweaks
+Description: Five columns of icons on the Home Screen pages, and room for five icons in the Dock (can be turned off in Settings for Dock tweaks). Widgets are resized to fit.
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.quintet.html
+Name: Quintet
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.quintet.json
+
+Package: com.johndie.quintet
+Version: 1.0.0~beta3
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 384
+Depends: ellekit, preferenceloader, firmware (>= 15.0), firmware (<< 18.0)
+Filename: debs/com.johndie.quintet_1.0.0~beta3_iphoneos-arm64.deb
+Size: 9580
+MD5sum: b2ba9a0eed6492655c21d7181c79e0b5
+SHA1: f79b8fbb4137f199feaa503cca92b72b5b18aa54
+SHA256: ac41352ee2d3e3557063613e287a32b9d3a0c850de1376cd8938792c5e0a49e9
 Section: Tweaks
 Description: Five columns of icons on the Home Screen pages, and room for five icons in the Dock (can be turned off in Settings for Dock tweaks). Widgets are resized to fit.
 Author: John d_ie
