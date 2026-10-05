@@ -20,12 +20,13 @@ In **Sileo** or **Zebra**: Sources → **+** → enter
 https://jond-ie.github.io/repo/
 ```
 
-Or open [jond-ie.github.io/repo](https://jond-ie.github.io/repo/) on your device and tap **Add to Sileo**.
+Or open [jond-ie.github.io/repo](https://jond-ie.github.io/repo/) on your device and tap **Add to Sileo** or **Add to Zebra**.
 
 ## Packages
 
 | Tweak | Version | What it does |
 |---|---|---|
+| [**LiteFace**](https://jond-ie.github.io/repo/depictions/com.johndie.liteface.html) <sup>new</sup> | 1.0.0 | iOS 18, Face ID iPhones: every Face ID prompt uses the small top animation that hidden apps use, instead of the box in the middle. Source: [Jond-ie/liteface](https://github.com/Jond-ie/liteface). |
 | [**Begonecia**](https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html) | 0.2.0-rootless5 | Control Center toggle that silences camera, microphone and location system-wide. Rootless port of Nepeta's BegoneCIA. |
 | [**Slaplock**](https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.html) | 0.2.0~beta1-2 | Lock chosen apps behind Face ID / Touch ID, with passcode fallback. |
 | [**Triggr**](https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html) | 1.0.2 | Activator-lite: assign actions to buttons, Touch ID, status bar taps, icon flicks, shaking and events. Source & feedback: [triggr-beta](https://github.com/Jond-ie/triggr-beta). |
@@ -33,7 +34,6 @@ Or open [jond-ie.github.io/repo](https://jond-ie.github.io/repo/) on your device
 | [**Density**](https://jond-ie.github.io/repo/depictions/com.johndie.density.html) <sup>beta</sup> | 1.0.0~beta10 | More on screen in the apps you pick, like Android's display density. Status bar and keyboard stay stock. |
 | [**BlankPass**](https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.html) | 1.0.0 | A blank Lock Screen passcode keypad: the numbers are hidden. No settings. Concept from BlankPass by VladGeek. |
 | [**BinaryPass**](https://jond-ie.github.io/repo/depictions/com.johndie.binarypass.html) | 1.0.0 | Binary Lock Screen passcode keypad: each number shown as four dots (8 4 2 1). No settings. Concept from BinaryPasscode by eskimo. |
-| [**Quintet**](https://jond-ie.github.io/repo/depictions/com.johndie.quintet.html) <sup>beta</sup> | 1.0.0~beta2 | Five columns of icons on the Home Screen and a five-icon Dock (the Dock part can be switched off). |
 | [**Glide**](https://jond-ie.github.io/repo/depictions/com.johndie.glide.html) <sup>beta</sup> | 1.0.0~beta2 | iOS 6's slide to unlock on the Lock Screen. No settings. Concept from SlideToUnlock by Nepeta. |
 | [**Shelf**](https://jond-ie.github.io/repo/depictions/com.johndie.shelf.html) <sup>beta</sup> | 1.0.0~beta2 | The iOS 6 glass dock with icon reflections, drawn in code. No settings. Concept from ClassicDock by CoolStar. |
 | [**Podified**](https://jond-ie.github.io/repo/depictions/com.johndie.podified.html) | 1.0.1 | Makes a SIM-less iPhone present itself as an iPod: Settings naming, no Cellular, "iPod" status bar, optional hidden Phone app. |
@@ -69,7 +69,7 @@ your device, iOS version, jailbreak, and the tweak's version.
 - **Begonecia** is a rootless port of [BegoneCIA](https://github.com/larygwil/BegoneCIA) by Eva (Nepeta),
   MIT licensed. (Nepeta's own repo is no longer online; the link is an unofficial mirror.) The original license and copyright ship inside the package.
   The port's source code is at [Jond-ie/begonecia](https://github.com/Jond-ie/begonecia).
-- **Slaplock**, **Podified**, **Crossfade**, **Scrub**, **Triggr**, **Pinstant**, **Density**, **BlankPass**, **BinaryPass**, **Quintet**, **Glide** and **Shelf** are original works by John d_ie. Triggr is inspired by
+- **Slaplock**, **Podified**, **Crossfade**, **Scrub**, **Triggr**, **Pinstant**, **Density**, **BlankPass**, **BinaryPass**, **LiteFace**, **Glide** and **Shelf** are original works by John d_ie. Triggr is inspired by
   Activator (Ryan Petrich).
 
 This repository hosts the installable packages only.
