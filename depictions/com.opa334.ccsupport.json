@@ -1,0 +1,31 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## CCSupport (iOS 18 fix)\n\n**CCSupport** by **opa334**, the tweak that loads Control Center modules from other tweaks, with one fix for **iOS 18**.\n\n- **The problem:** on iOS 18, whenever SpringBoard runs without tweaks (safe mode, or after a reboot before you re-jailbreak), iOS removes every tweak's module from Control Center, so you have to add them back each time.\n- **The fix:** with CCSupport running, the Control Center layout is kept in its own file, so those modules survive safe mode and reboots. Add your modules back once after installing.\n- Everything else is CCSupport as you know it."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Recommended for"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **iOS 18** with rootless Dopamine. It only installs on iOS 18 and newer; iOS 15–17 should keep the official CCSupport.\n- **Not tested on iOS 26.**\n- When opa334 releases an official update, it replaces this one automatically."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**CCSupport** by **opa334 (Lars Fröder)**, MIT License (included in the package). iOS 18 fix by **John d_ie**, submitted upstream: [opa334/CCSupport#26](https://github.com/opa334/CCSupport/pull/26). Source: [Jond-ie/CCSupport](https://github.com/Jond-ie/CCSupport/tree/ios18-iconstate)."
+        }
+      ]
+    }
+  ]
+}

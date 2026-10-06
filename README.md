@@ -27,7 +27,8 @@ Or open [jond-ie.github.io/repo](https://jond-ie.github.io/repo/) on your device
 | Tweak | Version | What it does |
 |---|---|---|
 | [**LiteFace**](https://jond-ie.github.io/repo/depictions/com.johndie.liteface.html) <sup>new</sup> | 1.0.0 | iOS 18, Face ID iPhones: every Face ID prompt uses the small top animation that hidden apps use, instead of the box in the middle. Source: [Jond-ie/liteface](https://github.com/Jond-ie/liteface). |
-| [**Begonecia**](https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html) | 0.2.0-rootless5 | Control Center toggle that silences camera, microphone and location system-wide. Rootless port of Nepeta's BegoneCIA. |
+| [**Begonecia**](https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html) | 1.0.0 | Control Center toggle that silences camera, microphone and location system-wide. Rootless port of Nepeta's BegoneCIA. |
+| [**CCSupport (iOS 18 fix)**](https://jond-ie.github.io/repo/depictions/com.opa334.ccsupport.html) | 1.3.13-3~ios18fix1 | opa334's CCSupport with a fix that keeps tweak modules in Control Center on iOS 18 after safe mode and reboots. iOS 18+ only, not tested on iOS 26. |
 | [**Slaplock**](https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.html) | 0.2.0~beta1-2 | Lock chosen apps behind Face ID / Touch ID, with passcode fallback. |
 | [**Triggr**](https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html) | 1.0.4 | Activator-style triggers for buttons, the status bar, Home Screen gestures, sensors and events, with its own app. Source: [Jond-ie/triggr](https://github.com/Jond-ie/triggr). |
 | [**EQELinker**](https://jond-ie.github.io/repo/depictions/com.johndie.eqelinker.html) | 1.0.0 | Load EQE presets from Triggr (e.g. per Bluetooth device). Needs Triggr and EQE. |

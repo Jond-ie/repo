@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Begonecia · John's Repo</title>
+<title>CCSupport (iOS 18 fix) · John's Repo</title>
 <style>
   :root {
     color-scheme: light dark;
@@ -45,30 +45,24 @@
 </head>
 <body>
 <a class="back" href="../">&larr; John's Repo</a>
-<h1>Begonecia</h1>
-<p>A Control Center toggle that silences the <strong>microphone, camera and location</strong> across the whole system. When it&#x27;s on, apps don&#x27;t get a permission error — they just get nothing: zeroed mic audio, no camera frames, no location callbacks. A silent blackout, not a visible denial.</p>
-<p>Toggle it from Control Center; add the tile in Settings → Control Center.</p>
-<h2>What&#x27;s New in 1.0.0</h2>
-<div class="card">
+<h1>CCSupport (iOS 18 fix)</h1>
+<p><strong>CCSupport</strong> by <strong>opa334</strong>, the tweak that loads Control Center modules from other tweaks, with one fix for <strong>iOS 18</strong>.</p>
 <ul>
-  <li><strong>iOS 18:</strong> Siri hears nothing again with Begonecia on. iOS 18 moved Siri&#x27;s microphone to a new path; Begonecia now silences it there too.</li>
-  <li><strong>Release build:</strong> out of beta, for iOS 15–18.</li>
-  <li><strong>iOS 18 tip:</strong> if Begonecia&#x27;s tile disappears from Control Center after safe mode or a reboot, install the <strong>CCSupport iOS 18 fix</strong> from this repo.</li>
+  <li><strong>The problem:</strong> on iOS 18, whenever SpringBoard runs without tweaks (safe mode, or after a reboot before you re-jailbreak), iOS removes every tweak&#x27;s module from Control Center, so you have to add them back each time.</li>
+  <li><strong>The fix:</strong> with CCSupport running, the Control Center layout is kept in its own file, so those modules survive safe mode and reboots. Add your modules back once after installing.</li>
+  <li>Everything else is CCSupport as you know it.</li>
 </ul>
-</div>
-<h2>Notes</h2>
+<h2>Recommended for</h2>
 <div class="card">
 <ul>
-  <li>Rootless jailbreaks with ElleKit (Dopamine), iOS 15–18, arm64 and arm64e.</li>
-  <li>Requires <strong>CCSupport</strong> and <strong>Cephei</strong> (ws.hbang.common, from Chariz).</li>
-  <li>Jailbreaking lowers your device&#x27;s baseline security. Begonecia hardens privacy; it doesn&#x27;t undo that.</li>
-  <li>If it ever puts you into safe mode, open Sileo and uninstall it.</li>
+  <li><strong>iOS 18</strong> with rootless Dopamine. It only installs on iOS 18 and newer; iOS 15–17 should keep the official CCSupport.</li>
+  <li><strong>Not tested on iOS 26.</strong></li>
+  <li>When opa334 releases an official update, it replaces this one automatically.</li>
 </ul>
 </div>
 <h2>Credits</h2>
 <div class="card">
-<p>Original <strong>BegoneCIA</strong> by <strong>Eva (Nepeta)</strong> — MIT licensed. Rootless port by <strong>John d_ie</strong>. The original license and copyright ship inside this package.</p>
-<p><a href="https://github.com/larygwil/BegoneCIA">Original BegoneCIA (mirror)</a> · <a href="https://github.com/Jond-ie/begonecia">Port source code</a></p>
+<p><strong>CCSupport</strong> by <strong>opa334 (Lars Fröder)</strong>, MIT License (included in the package). iOS 18 fix by <strong>John d_ie</strong>, submitted upstream: <a href="https://github.com/opa334/CCSupport/pull/26">opa334/CCSupport#26</a>. Source: <a href="https://github.com/Jond-ie/CCSupport/tree/ios18-iconstate">Jond-ie/CCSupport</a>.</p>
 </div>
 <footer>
   <p>Bugs &amp; requests: <a href="https://github.com/Jond-ie/repo/issues">GitHub Issues</a>.</p>

@@ -11,19 +11,11 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "What's New in 0.2.0-rootless5"
+          "title": "What's New in 1.0.0"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **iOS 17 support:** iOS 17 moved audio processing to a new background service; Begonecia now covers it too.\n- **A12 and newer confirmed:** on an iPhone SE (2nd gen) with iOS 17.5.1, recording apps get pure silence with Begonecia on and normal sound with it off, and Siri hears nothing.\n- Still in this version: Siri silenced (since rootless4)."
-        },
-        {
-          "class": "DepictionHeaderView",
-          "title": "Device Support"
-        },
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "**A12 and newer: supported and confirmed.** Earlier builds put A12+ devices (iPhone XS / XR and later) into safe mode; the current builds are made with Xcode's toolchain and are tested on a real A12+ device.\n\n- Tested on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1 (arm64e) and an **iPhone 8 Plus (A11)** with iOS 16.7, both with Dopamine. On iOS 17, apps and Siri get complete silence with Begonecia on (measured).\n- **If it ever puts you into safe mode:** open Sileo (safe mode still allows it), uninstall it and please [report back](https://github.com/Jond-ie/repo/issues)."
+          "markdown": "- **iOS 18:** Siri hears nothing again with Begonecia on. iOS 18 moved Siri's microphone to a new path; Begonecia now silences it there too.\n- **Release build:** out of beta, for iOS 15–18.\n- **iOS 18 tip:** if Begonecia's tile disappears from Control Center after safe mode or a reboot, install the **CCSupport iOS 18 fix** from this repo."
         },
         {
           "class": "DepictionHeaderView",
@@ -31,7 +23,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- The mic silencer targets the common capture path; verify on your setup.\n- Jailbreaking lowers your device's baseline security — this hardens privacy, it doesn't undo that.\n- Requires **CCSupport** (com.opa334.ccsupport), **Cephei** (ws.hbang.common, from Chariz), and **ellekit** (ships with Dopamine).\n- Tested on an **iPhone 8 Plus (A11, arm64)** with iOS 16.7. A12 and newer: see Device Support."
+          "markdown": "- Rootless jailbreaks with ElleKit (Dopamine), iOS 15–18, arm64 and arm64e.\n- Requires **CCSupport** and **Cephei** (ws.hbang.common, from Chariz).\n- Jailbreaking lowers your device's baseline security. Begonecia hardens privacy; it doesn't undo that.\n- If it ever puts you into safe mode, open Sileo and uninstall it."
         },
         {
           "class": "DepictionHeaderView",
