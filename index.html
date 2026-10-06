@@ -7,175 +7,232 @@
 <style>
   :root {
     color-scheme: light dark;
-    --bg: #ffffff; --fg: #1a1a1a; --muted: #666; --card: #f4f4f5;
-    --accent: #3b6ea5; --border: #e2e2e5;
+    --bg: #f5f5f7; --fg: #1d1d1f; --muted: #6e6e73; --card: #ffffff; --border: #e5e5ea;
+    --accent: #0a7aff; --accent-fg: #ffffff; --shadow: 0 1px 2px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.04);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
-      --accent: #6ea8dc; --border: #26262b;
+      --bg: #000000; --fg: #f5f5f7; --muted: #98989d; --card: #1c1c1e; --border: #2c2c2e;
+      --accent: #0a84ff; --shadow: none;
     }
   }
   :root[data-theme="dark"] {
-    --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
-    --accent: #6ea8dc; --border: #26262b;
+    --bg: #000000; --fg: #f5f5f7; --muted: #98989d; --card: #1c1c1e; --border: #2c2c2e;
+    --accent: #0a84ff; --shadow: none;
   }
   * { box-sizing: border-box; }
   body {
-    font: 16px/1.6 -apple-system, system-ui, "Segoe UI", sans-serif;
-    background: var(--bg); color: var(--fg);
-    max-width: 40rem; margin: 0 auto; padding: 3rem 1rem 4rem;
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.5 -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
-  header { margin-bottom: 2rem; }
-  h1 { font-size: 1.9rem; margin: 0 0 .25rem; }
-  .tag { color: var(--muted); margin: 0 0 1.25rem; }
-  .add {
-    display: inline-block; background: var(--accent); color: #fff;
-    text-decoration: none; padding: .6rem 1.1rem; border-radius: .6rem;
-    font-weight: 600;
+  main { max-width: 56rem; margin: 0 auto; padding: 3rem 1rem 4rem; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header { text-align: center; margin-bottom: 2.5rem; }
+  header img { width: 84px; height: 84px; border-radius: 20px; box-shadow: var(--shadow); }
+  h1 { font-size: 2.2rem; letter-spacing: -.02em; margin: .9rem 0 .3rem; }
+  .tag { color: var(--muted); margin: 0 0 1.4rem; }
+  .buttons { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
+  .button {
+    display: inline-block; padding: .65rem 1.3rem; border-radius: 999px; font-weight: 600;
+    background: var(--accent); color: var(--accent-fg);
   }
-  .add + .add { margin-left: .5rem; }
-  .add.zebra { background: transparent; color: var(--accent); border: 2px solid var(--accent); padding: calc(.6rem - 2px) calc(1.1rem - 2px); }
-  .note { font-size: .85rem; color: var(--muted); margin-top: .75rem; }
-  table.devices { width: 100%; border-collapse: collapse; font-size: .88rem; margin-top: 1rem; }
-  table.devices th, table.devices td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid var(--border); }
-  table.devices th { color: var(--muted); font-weight: 600; }
-  .tweak p.meta { margin-top: .5rem; font-size: .8rem; }
-  h2 { font-size: 1.1rem; margin: 2.5rem 0 1rem; }
-  .tweak {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: .75rem; padding: 1rem 1.15rem; margin-bottom: .85rem;
+  .button.secondary { background: var(--card); color: var(--accent); border: 1px solid var(--border); }
+  .button:hover { text-decoration: none; opacity: .9; }
+  .url { font-size: .85rem; color: var(--muted); margin-top: .9rem; }
+  code { font-size: .9em; background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: .1rem .35rem; overflow-wrap: anywhere; }
+  section { margin-top: 2.2rem; }
+  h2 { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 .75rem .25rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr)); gap: .75rem; }
+  .card {
+    display: flex; gap: .9rem; align-items: flex-start;
+    background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+    padding: 1rem; box-shadow: var(--shadow);
   }
-  .tweak h3 { margin: 0 0 .3rem; font-size: 1.05rem; }
-  .tweak p { margin: 0; color: var(--muted); font-size: .95rem; }
-  .tweak p.links { margin-top: .5rem; font-size: .85rem; }
+  .icon { width: 48px; height: 48px; border-radius: 12px; flex: none; }
+  .letter { display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 1.3rem; }
+  .body { min-width: 0; }
+  .card h3 { font-size: 1.05rem; margin: 0 0 .2rem; }
+  .card p { margin: 0; color: var(--muted); font-size: .93rem; }
+  .card p.links { margin-top: .45rem; font-size: .88rem; }
   .badge {
-    display: inline-block; font-size: .7rem; text-transform: uppercase;
-    letter-spacing: .04em; color: var(--accent); border: 1px solid var(--accent);
-    border-radius: .4rem; padding: .05rem .4rem; margin-left: .4rem; vertical-align: middle;
+    display: inline-block; font-size: .65rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em;
+    border-radius: 6px; padding: .1rem .4rem; margin-left: .25rem; vertical-align: middle;
+    background: var(--border); color: var(--muted);
   }
-  footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
-  a { color: var(--accent); }
+  .badge.new { background: var(--accent); color: var(--accent-fg); }
+  .request {
+    margin-top: 2.5rem; text-align: center; background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 1.4rem 1rem; box-shadow: var(--shadow);
+  }
+  .request h2 { font-size: 1.15rem; text-transform: none; letter-spacing: 0; color: var(--fg); margin: 0 0 .3rem; }
+  .request p { margin: 0 0 1rem; color: var(--muted); }
+  footer { margin-top: 2.5rem; font-size: .82rem; color: var(--muted); text-align: center; }
+  footer p { margin: .4rem 0; }
 </style>
 </head>
 <body>
-<header>
-  <h1>John's Repo</h1>
-  <p class="tag">Rootless privacy &amp; utility tweaks for Dopamine (iOS 15–18).</p>
-  <a class="add" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a><a class="add zebra" href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a>
-  <p class="note">Or add <code>https://jond-ie.github.io/repo/</code> manually in Sileo or Zebra → Sources.</p>
-  <p class="note"><strong>Every tweak ships arm64 and arm64e</strong>, so A12 and newer (iPhone XS / XR and later) are supported, and every build is checked for the correct arm64e format. Tested on real devices:</p>
-  <table class="devices">
-    <tr><th>Device</th><th>Chip</th><th>Arch</th><th>iOS</th></tr>
-    <tr><td>iPhone 7</td><td>A10</td><td>arm64</td><td>15.8.6</td></tr>
-    <tr><td>iPhone 8 Plus</td><td>A11</td><td>arm64</td><td>16.7</td></tr>
-    <tr><td>iPhone SE (2nd gen)</td><td>A13</td><td>arm64e</td><td>17.5.1</td></tr>
-    <tr><td>iPhone 11 Pro</td><td>A13</td><td>arm64e</td><td>18.6.2</td></tr>
-  </table>
-  <p class="note">Each tweak lists where it was tested. Unless a tweak says iOS 18, it isn't tested on iOS 18 yet. If anything ever puts you into safe mode, uninstall it in Sileo or Zebra and please report back.</p>
-</header>
+<main>
+  <header>
+    <img src="CydiaIcon.png" alt="">
+    <h1>John's Repo</h1>
+    <p class="tag">Rootless tweaks for Dopamine, made and tested on real devices.</p>
+    <div class="buttons">
+      <a class="button" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a>
+      <a class="button secondary" href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a>
+    </div>
+    <p class="url">Or add <code>https://jond-ie.github.io/repo/</code> in your package manager.</p>
+  </header>
 
-<h2>Tweaks</h2>
+    <section>
+      <h2>Automation</h2>
+      <div class="grid">
+      <article class="card">
+        <img class="icon" src="assets/triggr.png" alt="">
+        <div class="body">
+          <h3>Triggr <span class="badge new">new</span></h3>
+          <p>Activator-style triggers: buttons, status bar, Home Screen gestures, sensors and events run whatever you pick. Now with its own app.</p>
+          <p class="links"><a href="depictions/com.johndie.triggr.html">Details</a> · <a href="https://github.com/Jond-ie/triggr">Source</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <span class="icon letter" style="background:#af52de">E</span>
+        <div class="body">
+          <h3>EQELinker <span class="badge new">new</span></h3>
+          <p>Load your EQE presets from Triggr, like one preset when your AirPods connect and another when they disconnect.</p>
+          <p class="links"><a href="depictions/com.johndie.eqelinker.html">Details</a></p>
+        </div>
+      </article>
+      </div>
+    </section>
+    <section>
+      <h2>Lock Screen</h2>
+      <div class="grid">
+      <article class="card">
+        <span class="icon letter" style="background:#34c759">P</span>
+        <div class="body">
+          <h3>Pinstant </h3>
+          <p>Wake straight to the passcode: no Lock Screen, no swipe, no wait.</p>
+          <p class="links"><a href="depictions/com.johndie.pinstant.html">Details</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <span class="icon letter" style="background:#5ac8fa">G</span>
+        <div class="body">
+          <h3>Glide <span class="badge beta">beta</span></h3>
+          <p>Slide to unlock is back, with iOS 6&#x27;s shimmering prompt.</p>
+          <p class="links"><a href="depictions/com.johndie.glide.html">Details</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <span class="icon letter" style="background:#8e8e93">B</span>
+        <div class="body">
+          <h3>BlankPass </h3>
+          <p>A blank passcode keypad: the numbers are hidden, the circles stay.</p>
+          <p class="links"><a href="depictions/com.johndie.blankpass.html">Details</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <span class="icon letter" style="background:#30b0c7">B</span>
+        <div class="body">
+          <h3>BinaryPass </h3>
+          <p>A binary passcode keypad: each number shown as four dots (8 4 2 1).</p>
+          <p class="links"><a href="depictions/com.johndie.binarypass.html">Details</a></p>
+        </div>
+      </article>
+      </div>
+    </section>
+    <section>
+      <h2>Look &amp; Feel</h2>
+      <div class="grid">
+      <article class="card">
+        <span class="icon letter" style="background:#0a84ff">L</span>
+        <div class="body">
+          <h3>LiteFace <span class="badge new">new</span></h3>
+          <p>Every Face ID prompt uses iOS 18&#x27;s small animation at the top instead of the box in the middle.</p>
+          <p class="links"><a href="depictions/com.johndie.liteface.html">Details</a> · <a href="https://github.com/Jond-ie/liteface">Source</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <span class="icon letter" style="background:#64d2ff">S</span>
+        <div class="body">
+          <h3>Shelf <span class="badge beta">beta</span></h3>
+          <p>The iOS 6 glass dock, with reflections, drawn in code.</p>
+          <p class="links"><a href="depictions/com.johndie.shelf.html">Details</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <span class="icon letter" style="background:#ff375f">D</span>
+        <div class="body">
+          <h3>Density <span class="badge beta">beta</span></h3>
+          <p>More on screen in the apps you pick, like Android&#x27;s display density.</p>
+          <p class="links"><a href="depictions/com.johndie.density.html">Details</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <span class="icon letter" style="background:#ff9f0a">P</span>
+        <div class="body">
+          <h3>Podified </h3>
+          <p>Makes a SIM-less iPhone present itself as an iPod.</p>
+          <p class="links"><a href="depictions/com.johndie.podified.html">Details</a></p>
+        </div>
+      </article>
+      </div>
+    </section>
+    <section>
+      <h2>Privacy</h2>
+      <div class="grid">
+      <article class="card">
+        <span class="icon letter" style="background:#ff3b30">B</span>
+        <div class="body">
+          <h3>Begonecia <span class="badge port">port</span></h3>
+          <p>One Control Center toggle silences camera, microphone and location system-wide. Port of Nepeta&#x27;s BegoneCIA.</p>
+          <p class="links"><a href="depictions/com.johndie.begonecia.html">Details</a> · <a href="https://github.com/Jond-ie/begonecia">Source</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <span class="icon letter" style="background:#5856d6">S</span>
+        <div class="body">
+          <h3>Slaplock </h3>
+          <p>Lock any app behind Face ID or Touch ID.</p>
+          <p class="links"><a href="depictions/com.johndie.slaplock.html">Details</a></p>
+        </div>
+      </article>
+      <article class="card">
+        <span class="icon letter" style="background:#32d74b">S</span>
+        <div class="body">
+          <h3>Scrub </h3>
+          <p>Removes GPS and identifying metadata from photos before apps send them.</p>
+          <p class="links"><a href="depictions/com.scrub.exif.html">Details</a></p>
+        </div>
+      </article>
+      </div>
+    </section>
+    <section>
+      <h2>Media</h2>
+      <div class="grid">
+      <article class="card">
+        <span class="icon letter" style="background:#ff2d55">C</span>
+        <div class="body">
+          <h3>Crossfade </h3>
+          <p>True crossfade between your own songs in the Music app.</p>
+          <p class="links"><a href="depictions/com.crossfade.music.html">Details</a></p>
+        </div>
+      </article>
+      </div>
+    </section>
 
-<div class="tweak">
-  <h3>LiteFace <span class="badge">new</span></h3>
-  <p>Every Face ID prompt uses iOS 18's small Face ID animation at the top of the screen (the one hidden apps use)
-     instead of the box in the middle. Face ID iPhones only. No settings. Open source (GPL-3.0).</p>
-  <p class="links"><a href="depictions/com.johndie.liteface.html">Details</a> ·
-     <a href="https://github.com/Jond-ie/liteface">Source code</a></p>
-  <p class="meta">iOS 18 only · Face ID iPhones (XS / XR and newer) · Tested: iPhone 11 Pro (A13, 18.6.2) · arm64 + arm64e</p>
-</div>
+  <div class="request">
+    <h2>Want a tweak?</h2>
+    <p>Request one, or a port of an old favourite, and it might be next.</p>
+    <a class="button" href="https://github.com/Jond-ie/repo/issues/new">Request a Tweak</a>
+  </div>
 
-<div class="tweak">
-  <h3>Begonecia <span class="badge">port</span></h3>
-  <p>Control Center toggle that silences camera, microphone and location system-wide —
-     total blackout, no permission errors. Rootless port of Nepeta's BegoneCIA (MIT).</p>
-  <p class="links"><a href="https://github.com/larygwil/BegoneCIA">Original BegoneCIA (mirror)</a> ·
-     <a href="https://github.com/Jond-ie/begonecia">Source code</a></p>
-  <p class="meta">iOS 15–17 · Tested: iPhone 8 Plus (A11, 16.7), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
-</div>
-
-<div class="tweak">
-  <h3>Slaplock</h3>
-  <p>Gate any app behind the stock Face ID / Touch ID prompt. Per-app, all off by default.</p>
-  <p class="meta">iOS 15–17 · Tested: iPhone 8 Plus (A11, 16.7), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
-</div>
-
-<div class="tweak">
-  <h3>Triggr</h3>
-  <p>Activator-lite: assign actions to the home, lock and volume buttons, Touch ID, status bar taps,
-     Home Screen icon flicks, shaking and events. Open source (GPL-3.0). Works on A12 and newer
-     (tested on iOS 17.5.1).</p>
-  <p class="links"><a href="depictions/com.johndie.triggr.html">Details</a> ·
-     <a href="https://github.com/Jond-ie/triggr-beta">Source &amp; feedback on GitHub</a></p>
-  <p class="meta">iOS 15–17 · Tested: iPhone 7 (A10, 15.8.6), iPhone 8 Plus (A11, 16.7), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
-</div>
-<div class="tweak">
-  <h3>Pinstant</h3>
-  <p>Wake straight to the passcode: no Lock Screen, no swipe, no wait. No settings.
-     Concept from UnlockOrElse by Ethan Whited (ETHN).</p>
-  <p class="links"><a href="depictions/com.johndie.pinstant.html">Details</a></p>
-  <p class="meta">iOS 15–17 · Tested: iPhone 8 Plus (A11, 16.7), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
-</div>
-<div class="tweak">
-  <h3>BlankPass</h3>
-  <p>A blank Lock Screen passcode keypad: the numbers are hidden, the circles stay. No settings.</p>
-  <p class="links"><a href="depictions/com.johndie.blankpass.html">Details</a></p>
-  <p class="meta">iOS 15–17 · Tested: iPhone 7 (A10, 15.8.6), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
-</div>
-<div class="tweak">
-  <h3>BinaryPass</h3>
-  <p>A binary Lock Screen passcode keypad: each number is shown as four dots (8 4 2 1). No settings.
-     Concept from BinaryPasscode by eskimo (Jordan Koch).</p>
-  <p class="links"><a href="depictions/com.johndie.binarypass.html">Details</a></p>
-  <p class="meta">iOS 15–17 · Tested: iPhone 7 (A10, 15.8.6), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
-</div>
-<div class="tweak">
-  <h3>Glide <span class="badge">beta</span></h3>
-  <p>Slide to unlock is back: iOS 6's shimmering prompt on the Lock Screen, and a slide to the right unlocks. No settings.</p>
-  <p class="links"><a href="depictions/com.johndie.glide.html">Details</a></p>
-  <p class="meta">iOS 15–17 · Tested: iPhone 7 (A10, 15.8.6), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
-</div>
-<div class="tweak">
-  <h3>Shelf <span class="badge">beta</span></h3>
-  <p>The iOS 6 glass dock: your Dock icons on a glass shelf with reflections, drawn in code. No settings.</p>
-  <p class="links"><a href="depictions/com.johndie.shelf.html">Details</a></p>
-  <p class="meta">iOS 15–17 · Tested: iPhone 7 (A10, 15.8.6), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
-</div>
-<div class="tweak">
-  <h3>Density <span class="badge">beta</span></h3>
-  <p>More on screen in the apps you pick, like Android's display density. The status bar and
-     keyboard stay stock; one slider, then switch it on per app.</p>
-  <p class="links"><a href="depictions/com.johndie.density.html">Details</a></p>
-  <p class="meta">iOS 15–17 · Tested: iPhone 7 (A10, 15.8.6), iPhone 8 Plus (A11, 16.7), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
-</div>
-<div class="tweak">
-  <h3>Podified</h3>
-  <p>Makes a SIM-less iPhone present itself as an iPod: iPod naming in Settings, no Cellular,
-     an "iPod" status bar and an optional hidden Phone app. Cosmetic only.</p>
-  <p class="meta">iOS 15–17 · Tested: iPhone 8 Plus (A11, 16.7), iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
-</div>
-
-<div class="tweak">
-  <h3>Crossfade</h3>
-  <p>True crossfade between local-library tracks in the stock Music app. For your own files —
-     no subscription needed.</p>
-  <p class="meta">iOS 15–17 · Tested: iPhone 8 Plus (A11, 16.7); loads on iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
-</div>
-
-<div class="tweak">
-  <h3>Scrub</h3>
-  <p>Removes GPS &amp; identifying metadata from photos before apps send them. Preserves
-     orientation and color.</p>
-  <p class="meta">iOS 15–17 · Tested: iPhone 8 Plus (A11, 16.7); loads on iPhone SE 2 (A13, 17.5.1) · arm64 + arm64e</p>
-</div>
-
-<footer>
-  <p><strong>Heads-up:</strong> jailbreaking itself lowers your device's baseline security.
-  These tweaks harden your <em>privacy</em> (what apps see and send); they don't undo that
-  tradeoff. Install what you need, nothing more.</p>
-  <p>Bugs &amp; requests: <a href="https://github.com/Jond-ie/repo/issues">GitHub Issues</a>.
-  Ports retain their original authors' licenses and credit. Tweaks by John d_ie.</p>
-</footer>
+  <footer>
+    <p>If a tweak ever puts you into safe mode, uninstall it from your package manager and please <a href="https://github.com/Jond-ie/repo/issues">report it</a>.</p>
+    <p>Ports keep their original authors' licenses and credit. Tweaks by John d_ie.</p>
+  </footer>
+</main>
 </body>
 </html>

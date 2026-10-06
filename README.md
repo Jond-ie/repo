@@ -29,7 +29,8 @@ Or open [jond-ie.github.io/repo](https://jond-ie.github.io/repo/) on your device
 | [**LiteFace**](https://jond-ie.github.io/repo/depictions/com.johndie.liteface.html) <sup>new</sup> | 1.0.0 | iOS 18, Face ID iPhones: every Face ID prompt uses the small top animation that hidden apps use, instead of the box in the middle. Source: [Jond-ie/liteface](https://github.com/Jond-ie/liteface). |
 | [**Begonecia**](https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html) | 0.2.0-rootless5 | Control Center toggle that silences camera, microphone and location system-wide. Rootless port of Nepeta's BegoneCIA. |
 | [**Slaplock**](https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.html) | 0.2.0~beta1-2 | Lock chosen apps behind Face ID / Touch ID, with passcode fallback. |
-| [**Triggr**](https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html) | 1.0.2 | Activator-lite: assign actions to buttons, Touch ID, status bar taps, icon flicks, shaking and events. Source & feedback: [triggr-beta](https://github.com/Jond-ie/triggr-beta). |
+| [**Triggr**](https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html) | 1.0.4 | Activator-style triggers for buttons, the status bar, Home Screen gestures, sensors and events, with its own app. Source: [Jond-ie/triggr](https://github.com/Jond-ie/triggr). |
+| [**EQELinker**](https://jond-ie.github.io/repo/depictions/com.johndie.eqelinker.html) | 1.0.0 | Load EQE presets from Triggr (e.g. per Bluetooth device). Needs Triggr and EQE. |
 | [**Pinstant**](https://jond-ie.github.io/repo/depictions/com.johndie.pinstant.html) | 1.0.1 | Wake straight to the passcode: no Lock Screen, no swipe. No settings. Concept from UnlockOrElse by ETHN. |
 | [**Density**](https://jond-ie.github.io/repo/depictions/com.johndie.density.html) <sup>beta</sup> | 1.0.0~beta10 | More on screen in the apps you pick, like Android's display density. Status bar and keyboard stay stock. |
 | [**BlankPass**](https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.html) | 1.0.0 | A blank Lock Screen passcode keypad: the numbers are hidden. No settings. Concept from BlankPass by VladGeek. |
@@ -52,7 +53,7 @@ Tap a name for the full details, notes and known limitations.
   (Earlier builds put A12+ devices into safe mode; if anything ever does, uninstall it in Sileo and
   [report back](https://github.com/Jond-ie/repo/issues).)
 - **Density** is also reported working by testers on an iPhone 15 Pro Max (iOS 17.3) and an iPhone SE (2nd gen, iOS 18.2).
-- **Triggr** is open source (GPL-3.0); report issues on the [Triggr GitHub](https://github.com/Jond-ie/triggr-beta/issues).
+- **Triggr** is open source (GPL-3.0); report issues on the [Triggr GitHub](https://github.com/Jond-ie/triggr/issues). Betas live in [triggr-beta](https://github.com/Jond-ie/triggr-beta).
 - **Glide** and **Pinstant** can't be installed together (Pinstant skips the Lock Screen Glide lives on).
 - Some tweaks need packages from other repos. Sileo installs them automatically when you have
   those repos added:
@@ -69,7 +70,7 @@ your device, iOS version, jailbreak, and the tweak's version.
 - **Begonecia** is a rootless port of [BegoneCIA](https://github.com/larygwil/BegoneCIA) by Eva (Nepeta),
   MIT licensed. (Nepeta's own repo is no longer online; the link is an unofficial mirror.) The original license and copyright ship inside the package.
   The port's source code is at [Jond-ie/begonecia](https://github.com/Jond-ie/begonecia).
-- **Slaplock**, **Podified**, **Crossfade**, **Scrub**, **Triggr**, **Pinstant**, **Density**, **BlankPass**, **BinaryPass**, **LiteFace**, **Glide** and **Shelf** are original works by John d_ie. Triggr is inspired by
+- **Slaplock**, **Podified**, **Crossfade**, **Scrub**, **Triggr**, **Pinstant**, **Density**, **BlankPass**, **BinaryPass**, **LiteFace**, **EQELinker**, **Glide** and **Shelf** are original works by John d_ie. Triggr is inspired by
   Activator (Ryan Petrich).
 
 This repository hosts the installable packages only.

@@ -7,66 +7,54 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "## Triggr\n\nAn **Activator-lite** for rootless Dopamine. Pick a trigger, pick what it runs, in **Settings → Triggr**. Triggr only changes a button when you assign something to it.\n\n- **Triggers:** Home button (single, double, triple, short and long hold), Touch ID light double tap, lock button (single, double, triple, hold), volume buttons (presses, holds, up-then-down, both), mute switch, status bar taps, **Home Screen icon flicks** (any icon or one app's icon), **shake**, charger and headphones, Wi-Fi / Bluetooth / Low Power / lock / screen changes.\n- **Custom events:** a specific Wi-Fi network or Bluetooth device, battery level, an app opening, a time of day.\n- **Actions:** Home, App Switcher, Last App, Quit App, Control Center, Notification Center, Spotlight, Siri, screenshot, Sleep, Lock, Respring, Power Off Slider, Safe Mode, Restart, Power Off; switches for Flashlight, Wi-Fi, Bluetooth, Airplane Mode, Cellular Data, Do Not Disturb, Low Power Mode, Rotation Lock, Mute, Dark Mode, Night Shift, Auto-Brightness, Keep Screen Awake and Location Services; media controls; brightness and volume levels; apps, URLs, Shortcuts, Settings pages and shell commands; pop-up menus.\n- **Several actions per trigger**, with pauses and reordering.\n- **Places:** Anywhere, Home Screen, In Apps, Lock Screen.\n- **Extras:** block list, action banners, profiles, export / import of setups, an opt-in API and a `triggr` command-line tool."
+          "markdown": "## Triggr\n\nActivator-style triggers for modern jailbreaks. Pick a trigger, pick what it runs, in **Settings → Triggr** or the **Triggr app**. Triggr only changes a button when you assign something to it.\n\n- **Buttons:** Home, Lock / Side, Volume, Mute switch and Touch ID, with single, double, triple presses, holds and sequences.\n- **Status bar:** tap, double tap and hold, also per left / right half, plus swipe left / right.\n- **Home Screen:** icon flicks (per app too), pinch, spread, two-finger swipes and double tap on empty space.\n- **Sensors and events:** shake, proximity cover and wave, charger, headphones, Wi-Fi, Bluetooth, battery level, an app opened, a notification from an app, a time of day.\n- **Actions:** system and power actions, 14 switches, media and AirPlay, levels, apps, Shortcuts, URLs, Settings pages, messages, speech, shell commands, menus, and sequences with pauses.\n- **Places:** Anywhere, Home Screen, In Apps, Lock Screen, or **one specific app**."
         },
         {
           "class": "DepictionScreenshotsView",
           "itemCornerRadius": 8,
-          "itemSize": "{160, 277}",
+          "itemSize": "{160, 274}",
           "screenshots": [
             {
               "url": "https://jond-ie.github.io/repo/screenshots/triggr/1-main.png",
-              "accessibilityText": "Main page"
+              "accessibilityText": "Main page with trigger search"
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/triggr/2-place.png",
-              "accessibilityText": "A place: what's assigned, then every kind of trigger"
+              "accessibilityText": "A place: Assigned, then every kind of trigger"
             },
             {
-              "url": "https://jond-ie.github.io/repo/screenshots/triggr/3-events.png",
-              "accessibilityText": "Custom events"
+              "url": "https://jond-ie.github.io/repo/screenshots/triggr/3-assigned.png",
+              "accessibilityText": "Assigned: tap to change, swipe to remove"
             },
             {
-              "url": "https://jond-ie.github.io/repo/screenshots/triggr/4-picker.png",
-              "accessibilityText": "Action picker: folded categories and search"
+              "url": "https://jond-ie.github.io/repo/screenshots/triggr/4-statusbar.png",
+              "accessibilityText": "Status bar triggers with left / right halves and swipes"
             },
             {
-              "url": "https://jond-ie.github.io/repo/screenshots/triggr/5-switches.png",
-              "accessibilityText": "Switches: toggle, turn on or turn off"
+              "url": "https://jond-ie.github.io/repo/screenshots/triggr/5-picker.png",
+              "accessibilityText": "Action picker with Recently Used and Test"
             },
             {
-              "url": "https://jond-ie.github.io/repo/screenshots/triggr/6-all-assignments.png",
-              "accessibilityText": "All Assignments, by trigger or by action"
+              "url": "https://jond-ie.github.io/repo/screenshots/triggr/6-apps.png",
+              "accessibilityText": "In Specific Apps"
             },
             {
-              "url": "https://jond-ie.github.io/repo/screenshots/triggr/7-options.png",
+              "url": "https://jond-ie.github.io/repo/screenshots/triggr/7-app.png",
+              "accessibilityText": "One app's own triggers"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/triggr/8-options.png",
               "accessibilityText": "Options"
             }
           ]
         },
         {
           "class": "DepictionHeaderView",
-          "title": "What's New in 1.0.2"
+          "title": "What's New in 1.0.4"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **iOS 17 fixes:** Status Bar Hold, Flashlight and Close Background Apps now work on iOS 17.\n- **Flashlight** now switches the light the way Control Center does, which is also more reliable on iOS 15–16.\n- **A12 and newer confirmed:** every volume trigger, status bar tap and hold, icon flicks, Home and lock presses and the actions were tested on an iPhone SE (2nd gen) with iOS 17.5.1.\n- Also in 1.0.1: AirPlay actions, Screen Recording, Close Background Apps and the Status Bar Hold trigger."
-        },
-        {
-          "class": "DepictionHeaderView",
-          "title": "Device Support"
-        },
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "**iOS 15–17, rootless Dopamine. arm64 and arm64e (A12 and newer).**\n\n- **A12 and newer (iPhone XS / XR and later):** **confirmed** on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1. Phones without a Home button don't see the Home Button or Touch ID triggers, and the lock button is called the Side Button. If it ever lands you in safe mode, uninstall Triggr from Sileo and please report it.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and an **iPhone 7 (A10)** with iOS 15.8.6, both on Dopamine."
-        },
-        {
-          "class": "DepictionHeaderView",
-          "title": "Feedback"
-        },
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "Please report bugs, crashes and requests on the **[Triggr beta GitHub](https://github.com/Jond-ie/triggr-beta)** ([open an issue](https://github.com/Jond-ie/triggr-beta/issues/new/choose)), with your device, iOS version, jailbreak and Triggr version."
+          "markdown": "- **The Triggr app** on your Home Screen, plus **trigger search**, **Recently Used** actions and a **Test** button.\n- **iOS 18 and Face ID:** the side button's Single / Double / Triple Press work properly, and an assigned Double or Triple Press replaces Wallet or the Accessibility Shortcut. Commands and extension actions run through a small helper on iOS 18.\n- **New triggers:** status bar left / right halves and swipes, Home Screen gestures, proximity sensor, a notification from an app.\n- **In Specific Apps:** give one app its own assignments.\n- **Options → Status Bar Single Tap** (off by default on Face ID iPhones).\n- **Extensions:** other packages can add actions, like **EQELinker** for EQE presets.\n- Tidier places (one Assigned row), and picking another option of the only switch picked replaces it.\n- Fixes: status bar taps on the Home Screen on iOS 17+, saved Wi-Fi networks and Bluetooth devices in the app."
         },
         {
           "class": "DepictionHeaderView",
@@ -74,7 +62,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **Buttons:** with **Options → Replace Button Actions** on (the default), an assigned press runs instead of the button's own action; add the matching action (like **Sleep** for the lock button) to keep it too. Emergency SOS, waking and force restart are left to iOS, but check SOS still starts if you rely on it.\n- **Restart** and **Power Off** act at once and turn the jailbreak off until you run Dopamine again.\n- **Safe Mode** uses ElleKit's own Safe Mode; leave it from its Safe Mode screen.\n- Requires **AltList** (BigBoss) and PreferenceLoader; Sileo installs them automatically."
+          "markdown": "- Rootless jailbreaks with ElleKit (Dopamine), iOS 15–18, arm64 and arm64e.\n- If it ever puts you into safe mode, open Sileo (safe mode still allows it) and uninstall Triggr.\n- Source, docs and feedback: [github.com/Jond-ie/triggr](https://github.com/Jond-ie/triggr). Betas: [triggr-beta](https://github.com/Jond-ie/triggr-beta)."
         },
         {
           "class": "DepictionHeaderView",
@@ -82,7 +70,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Original work by **John d_ie**, inspired by Activator (Ryan Petrich). Developed with AI assistance (Claude Code) and tested on-device."
+          "markdown": "Original work by **John d_ie**, inspired by Activator (Ryan Petrich). App pickers by AltList (opa334). Developed with AI assistance (Claude Code) and tested on device."
         }
       ]
     }

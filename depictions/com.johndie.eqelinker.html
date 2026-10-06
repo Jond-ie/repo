@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EQELinker · John's Repo</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff; --fg: #1a1a1a; --muted: #666; --card: #f4f4f5;
+    --accent: #3b6ea5; --border: #e2e2e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
+      --accent: #6ea8dc; --border: #26262b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
+    --accent: #6ea8dc; --border: #26262b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font: 16px/1.6 -apple-system, system-ui, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--fg);
+    max-width: 40rem; margin: 0 auto; padding: 2.5rem 1rem 4rem;
+    overflow-wrap: anywhere;
+  }
+  h1 { font-size: 1.9rem; margin: 0 0 .75rem; }
+  h2 { font-size: 1.1rem; margin: 2rem 0 .6rem; }
+  p { margin: 0 0 .9rem; }
+  ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+  li { margin: .25rem 0; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: .75rem; padding: 1rem 1.15rem;
+  }
+  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+  code { font-size: .9em; }
+  .back { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; }
+  footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<a class="back" href="../">&larr; John's Repo</a>
+<h1>EQELinker</h1>
+<p>Load your saved <strong>EQE</strong> presets from <strong>Triggr</strong>: one preset when your AirPods connect, another when they disconnect, or any preset on any trigger.</p>
+<ul>
+  <li>Adds an <strong>EQE Presets</strong> category to Triggr&#x27;s actions, listing the presets you saved in EQE.</li>
+  <li>Pair it with <strong>Custom Events → Bluetooth Device Connected / Disconnected</strong> for per-device EQ.</li>
+  <li>Talks to EQE only through EQE&#x27;s own preset commands.</li>
+  <li><strong>No settings.</strong></li>
+</ul>
+<h2>Requirements</h2>
+<div class="card">
+<ul>
+  <li><strong>Triggr 1.0.4</strong> or newer and <strong>EQE</strong> (installed separately).</li>
+  <li>Rootless jailbreaks (Dopamine), iOS 15–18.</li>
+</ul>
+</div>
+<h2>Credits</h2>
+<div class="card">
+<p>By <strong>John d_ie</strong>. EQE is by its own developer and isn&#x27;t included.</p>
+</div>
+<footer>
+  <p>Bugs &amp; requests: <a href="https://github.com/Jond-ie/repo/issues">GitHub Issues</a>.</p>
+</footer>
+</body>
+</html>

@@ -91,6 +91,24 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.density.html
 Name: Density
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.density.json
 
+Package: com.johndie.eqelinker
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 32
+Depends: com.johndie.triggr (>= 1.0.4), com.r333d.eqe
+Filename: debs/com.johndie.eqelinker_1.0.0_iphoneos-arm64.deb
+Size: 1690
+MD5sum: 68f81177bcdc5320d1d7c951daa1f3c2
+SHA1: e1b180c8ccaacb8257a04633bf31b851dfe5c711
+SHA256: 241a74deae13ba166b5dc7c81f9b69f193d20e9e30515e02fc750cdf142b00df
+Section: Tweaks
+Description: Load your saved EQE presets from Triggr: e.g. one preset when your AirPods connect, another when they disconnect. Adds an "EQE Presets" category to Triggr's actions.
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.eqelinker.html
+Name: EQELinker
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.eqelinker.json
+
 Package: com.johndie.glide
 Version: 1.0.0~beta2
 Architecture: iphoneos-arm64
@@ -214,6 +232,24 @@ Size: 128204
 MD5sum: 77025a50504d3f5241eddd3679ac82b2
 SHA1: 03682be13f0eacb7e2a0cfc4bbfdcc543abc618e
 SHA256: 241434b870d3dd4a19de00290e2d825a35e3d9c97938f6cc0da4f31276526ad3
+Section: Tweaks
+Description: Activator-lite for rootless Dopamine: assign actions to the home, lock and volume buttons, Touch ID, the mute switch, status bar taps, icon flicks, shaking, and events like charger, Wi-Fi, battery level or a time of day. Supports A12 and newer (arm64e).
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html
+Name: Triggr
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.json
+
+Package: com.johndie.triggr
+Version: 1.0.4
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 1628
+Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, uikittools, firmware (>= 15.0)
+Filename: debs/com.johndie.triggr_1.0.4_iphoneos-arm64.deb
+Size: 200452
+MD5sum: a7f42e6598f28920e939a09b051627cb
+SHA1: adae4bd08ad192c17c808388d3abb313c0971471
+SHA256: 81c58a9a1a93e9f3108e27799adf06a1e0a822e170ca28c5a714745e2e86f720
 Section: Tweaks
 Description: Activator-lite for rootless Dopamine: assign actions to the home, lock and volume buttons, Touch ID, the mute switch, status bar taps, icon flicks, shaking, and events like charger, Wi-Fi, battery level or a time of day. Supports A12 and newer (arm64e).
 Author: John d_ie

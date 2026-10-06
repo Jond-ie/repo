@@ -1,0 +1,31 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## EQELinker\n\nLoad your saved **EQE** presets from **Triggr**: one preset when your AirPods connect, another when they disconnect, or any preset on any trigger.\n\n- Adds an **EQE Presets** category to Triggr's actions, listing the presets you saved in EQE.\n- Pair it with **Custom Events → Bluetooth Device Connected / Disconnected** for per-device EQ.\n- Talks to EQE only through EQE's own preset commands.\n- **No settings.**"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Requirements"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Triggr 1.0.4** or newer and **EQE** (installed separately).\n- Rootless jailbreaks (Dopamine), iOS 15–18."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "By **John d_ie**. EQE is by its own developer and isn't included."
+        }
+      ]
+    }
+  ]
+}

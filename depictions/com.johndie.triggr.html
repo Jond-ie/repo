@@ -41,67 +41,55 @@
   .back { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; }
   footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
   a { color: var(--accent); }
-  .shots { display: flex; gap: .75rem; overflow-x: auto; padding: .25rem 0 1rem; margin: 0 0 .5rem; scroll-snap-type: x mandatory; }
-  .shots img { width: 200px; height: auto; border-radius: .75rem; border: 1px solid var(--border); flex: none; scroll-snap-align: start; }
 </style>
 </head>
 <body>
 <a class="back" href="../">&larr; John's Repo</a>
 <h1>Triggr</h1>
-<p>An <strong>Activator-lite</strong> for rootless Dopamine. Pick a trigger, pick what it runs, in <strong>Settings → Triggr</strong>. Triggr only changes a button when you assign something to it.</p>
-<div class="shots">
-  <img src="../screenshots/triggr/1-main.png" alt="Main page" loading="lazy" width="200" height="346">
-  <img src="../screenshots/triggr/2-place.png" alt="A place: what's assigned, then every kind of trigger" loading="lazy" width="200" height="346">
-  <img src="../screenshots/triggr/3-events.png" alt="Custom events" loading="lazy" width="200" height="346">
-  <img src="../screenshots/triggr/4-picker.png" alt="Action picker: folded categories and search" loading="lazy" width="200" height="346">
-  <img src="../screenshots/triggr/5-switches.png" alt="Switches: toggle, turn on or turn off" loading="lazy" width="200" height="346">
-  <img src="../screenshots/triggr/6-all-assignments.png" alt="All Assignments, by trigger or by action" loading="lazy" width="200" height="346">
-  <img src="../screenshots/triggr/7-options.png" alt="Options" loading="lazy" width="200" height="346">
-</div>
+<p>Activator-style triggers for modern jailbreaks. Pick a trigger, pick what it runs, in <strong>Settings → Triggr</strong> or the <strong>Triggr app</strong>. Triggr only changes a button when you assign something to it.</p>
 <ul>
-  <li><strong>Triggers:</strong> Home button (single, double, triple, short and long hold), Touch ID light double tap, lock button (single, double, triple, hold), volume buttons (presses, holds, up-then-down, both), mute switch, status bar taps, <strong>Home Screen icon flicks</strong> (any icon or one app's icon), <strong>shake</strong>, charger and headphones, Wi-Fi / Bluetooth / Low Power / lock / screen changes.</li>
-  <li><strong>Custom events:</strong> a specific Wi-Fi network or Bluetooth device, battery level, an app opening, a time of day.</li>
-  <li><strong>Actions:</strong> Home, App Switcher, Last App, Quit App, Control Center, Notification Center, Spotlight, Siri, screenshot, Sleep, Lock, Respring, Power Off Slider, Safe Mode, Restart, Power Off; switches for Flashlight, Wi-Fi, Bluetooth, Airplane Mode, Cellular Data, Do Not Disturb, Low Power Mode, Rotation Lock, Mute, Dark Mode, Night Shift, Auto-Brightness, Keep Screen Awake and Location Services; media controls; brightness and volume levels; apps, URLs, Shortcuts, Settings pages and shell commands; pop-up menus.</li>
-  <li><strong>Several actions per trigger</strong>, with pauses and reordering.</li>
-  <li><strong>Places:</strong> Anywhere, Home Screen, In Apps, Lock Screen.</li>
-  <li><strong>Extras:</strong> block list, action banners, profiles, export / import of setups, an opt-in API and a <code>triggr</code> command-line tool.</li>
+  <li><strong>Buttons:</strong> Home, Lock / Side, Volume, Mute switch and Touch ID, with single, double, triple presses, holds and sequences.</li>
+  <li><strong>Status bar:</strong> tap, double tap and hold, also per left / right half, plus swipe left / right.</li>
+  <li><strong>Home Screen:</strong> icon flicks (per app too), pinch, spread, two-finger swipes and double tap on empty space.</li>
+  <li><strong>Sensors and events:</strong> shake, proximity cover and wave, charger, headphones, Wi-Fi, Bluetooth, battery level, an app opened, a notification from an app, a time of day.</li>
+  <li><strong>Actions:</strong> system and power actions, 14 switches, media and AirPlay, levels, apps, Shortcuts, URLs, Settings pages, messages, speech, shell commands, menus, and sequences with pauses.</li>
+  <li><strong>Places:</strong> Anywhere, Home Screen, In Apps, Lock Screen, or <strong>one specific app</strong>.</li>
 </ul>
-<h2>What's New in 1.0.2</h2>
+<img src="../screenshots/triggr/1-main.png" alt="Main page with trigger search" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+<img src="../screenshots/triggr/2-place.png" alt="A place: Assigned, then every kind of trigger" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+<img src="../screenshots/triggr/3-assigned.png" alt="Assigned: tap to change, swipe to remove" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+<img src="../screenshots/triggr/4-statusbar.png" alt="Status bar triggers with left / right halves and swipes" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+<img src="../screenshots/triggr/5-picker.png" alt="Action picker with Recently Used and Test" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+<img src="../screenshots/triggr/6-apps.png" alt="In Specific Apps" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+<img src="../screenshots/triggr/7-app.png" alt="One app&#x27;s own triggers" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+<img src="../screenshots/triggr/8-options.png" alt="Options" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+<h2>What&#x27;s New in 1.0.4</h2>
 <div class="card">
 <ul>
-  <li><strong>iOS 17 fixes:</strong> Status Bar Hold, Flashlight and Close Background Apps now work on iOS 17.</li>
-  <li><strong>Flashlight</strong> now switches the light the way Control Center does, which is also more reliable on iOS 15–16.</li>
-  <li><strong>A12 and newer confirmed:</strong> every volume trigger, status bar tap and hold, icon flicks, Home and lock presses and the actions were tested on an iPhone SE (2nd gen) with iOS 17.5.1.</li>
-  <li>Also in 1.0.1: AirPlay actions, Screen Recording, Close Background Apps and the Status Bar Hold trigger.</li>
+  <li><strong>The Triggr app</strong> on your Home Screen, plus <strong>trigger search</strong>, <strong>Recently Used</strong> actions and a <strong>Test</strong> button.</li>
+  <li><strong>iOS 18 and Face ID:</strong> the side button&#x27;s Single / Double / Triple Press work properly, and an assigned Double or Triple Press replaces Wallet or the Accessibility Shortcut. Commands and extension actions run through a small helper on iOS 18.</li>
+  <li><strong>New triggers:</strong> status bar left / right halves and swipes, Home Screen gestures, proximity sensor, a notification from an app.</li>
+  <li><strong>In Specific Apps:</strong> give one app its own assignments.</li>
+  <li><strong>Options → Status Bar Single Tap</strong> (off by default on Face ID iPhones).</li>
+  <li><strong>Extensions:</strong> other packages can add actions, like <strong>EQELinker</strong> for EQE presets.</li>
+  <li>Tidier places (one Assigned row), and picking another option of the only switch picked replaces it.</li>
+  <li>Fixes: status bar taps on the Home Screen on iOS 17+, saved Wi-Fi networks and Bluetooth devices in the app.</li>
 </ul>
-</div>
-<h2>Device Support</h2>
-<div class="card">
-<p><strong>iOS 15–17, rootless Dopamine. arm64 and arm64e (A12 and newer).</strong></p>
-<ul>
-  <li><strong>A12 and newer (iPhone XS / XR and later):</strong> <strong>confirmed</strong> on an <strong>iPhone SE (2nd gen, A13)</strong> with iOS 17.5.1. Phones without a Home button don't see the Home Button or Touch ID triggers, and the lock button is called the Side Button. If it ever lands you in safe mode, uninstall Triggr from Sileo and please report it.</li>
-  <li>Tested on an <strong>iPhone 8 Plus (A11)</strong> with iOS 16.7 and an <strong>iPhone 7 (A10)</strong> with iOS 15.8.6, both on Dopamine.</li>
-</ul>
-</div>
-<h2>Feedback</h2>
-<div class="card">
-<p>Please report bugs, crashes and requests on the <a href="https://github.com/Jond-ie/triggr-beta"><strong>Triggr beta GitHub</strong></a> (<a href="https://github.com/Jond-ie/triggr-beta/issues/new/choose">open an issue</a>), with your device, iOS version, jailbreak and Triggr version.</p>
 </div>
 <h2>Notes</h2>
 <div class="card">
 <ul>
-  <li><strong>Buttons:</strong> with <strong>Options → Replace Button Actions</strong> on (the default), an assigned press runs instead of the button's own action; add the matching action (like <strong>Sleep</strong> for the lock button) to keep it too. Emergency SOS, waking and force restart are left to iOS, but check SOS still starts if you rely on it.</li>
-  <li><strong>Restart</strong> and <strong>Power Off</strong> act at once and turn the jailbreak off until you run Dopamine again.</li>
-  <li><strong>Safe Mode</strong> uses ElleKit's own Safe Mode; leave it from its Safe Mode screen.</li>
-  <li>Requires <strong>AltList</strong> (BigBoss) and PreferenceLoader; Sileo installs them automatically.</li>
+  <li>Rootless jailbreaks with ElleKit (Dopamine), iOS 15–18, arm64 and arm64e.</li>
+  <li>If it ever puts you into safe mode, open Sileo (safe mode still allows it) and uninstall Triggr.</li>
+  <li>Source, docs and feedback: <a href="https://github.com/Jond-ie/triggr">github.com/Jond-ie/triggr</a>. Betas: <a href="https://github.com/Jond-ie/triggr-beta">triggr-beta</a>.</li>
 </ul>
 </div>
 <h2>Credits</h2>
 <div class="card">
-<p>Original work by <strong>John d_ie</strong>, inspired by Activator (Ryan Petrich). Developed with AI assistance (Claude Code) and tested on-device.</p>
+<p>Original work by <strong>John d_ie</strong>, inspired by Activator (Ryan Petrich). App pickers by AltList (opa334). Developed with AI assistance (Claude Code) and tested on device.</p>
 </div>
 <footer>
-  <p>Triggr bugs &amp; requests: <a href="https://github.com/Jond-ie/triggr-beta/issues">Triggr beta GitHub</a>.</p>
+  <p>Bugs &amp; requests: <a href="https://github.com/Jond-ie/repo/issues">GitHub Issues</a>.</p>
 </footer>
 </body>
 </html>
