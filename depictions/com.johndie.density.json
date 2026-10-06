@@ -22,19 +22,11 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "What's New in beta10"
+          "title": "What's New in 1.0.0"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **iOS 17: the keyboard no longer covers the message box.** On iOS 17 some apps (Messages, for one) were told the keyboard was far shorter than it is, so their text bar stayed hidden behind it. They now get its real height.\n- Tested on an iPhone SE (2nd gen) with iOS 17.5.1 at an Amount of 15.\n- Still in this version: the Telegram fix and chat boxes on top of the keyboard (beta8–9).\n- Messenger isn't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues) with your iOS version and Amount."
-        },
-        {
-          "class": "DepictionHeaderView",
-          "title": "Device Support"
-        },
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 8 Plus (A11)** with iOS 16.7 and an **iPhone 7 (A10)** with iOS 15.8.6, with Dopamine, in Settings, Notes, X, YouTube and Reddit, up to an Amount of 30. Also tested on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1 (arm64e). Reported working on an **iPhone 15 Pro Max (A17 Pro) with iOS 17.3** and an **iPhone SE (2nd gen) with iOS 18.2**; more reports welcome: [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+          "markdown": "- **Out of beta**, for iOS 15–18.\n- **Face ID iPhones:** chat bars and text boxes no longer tuck under the keyboard in any app (Reddit, Swiftgram and others). The strip below the keys (globe, dictation) is now counted at the right size everywhere.\n- **Rotation and split screen:** apps fill their space when they rotate or when a split-screen tweak resizes them, instead of shrinking.\n- **Since the betas:** chat boxes stay above the keyboard in Messages, Telegram, WhatsApp, Discord, Reddit and more, on iOS 15, 16, 17 and 18."
         },
         {
           "class": "DepictionHeaderView",
@@ -42,7 +34,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **Beta.** Games aren't tested yet. If an app looks wrong, switch it off.\n- Needs **AltList** and **PreferenceLoader** (Sileo installs them).\n- Only for rootless jailbreaks (Dopamine)."
+          "markdown": "- Rootless jailbreaks (Dopamine), iOS 15–18, arm64 and arm64e.\n- Needs **AltList** and **PreferenceLoader** (Sileo installs them).\n- If an app looks wrong, switch Density off for it and please [report it](https://github.com/Jond-ie/repo/issues). Games aren't tested."
         },
         {
           "class": "DepictionHeaderView",

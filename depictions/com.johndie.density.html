@@ -41,50 +41,39 @@
   .back { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; }
   footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
   a { color: var(--accent); }
-  .shots { display: flex; gap: .75rem; overflow-x: auto; margin: 1rem 0; }
-  .shots img { border-radius: .5rem; border: 1px solid var(--border); flex: none; }
 </style>
 </head>
 <body>
 <a class="back" href="../">&larr; John's Repo</a>
 <h1>Density</h1>
-<p><strong>More on screen in the apps you pick</strong>, like Android's display density setting. The app lays itself out for a bigger screen, so lists, feeds and pages fit more, while the status bar and keyboard stay exactly as they are.</p>
+<p><strong>More on screen in the apps you pick</strong>, like Android&#x27;s display density setting. The app lays itself out for a bigger screen, so lists, feeds and pages fit more, while the status bar and keyboard stay exactly as they are.</p>
 <ul>
-  <li><strong>Simple:</strong> Settings &rarr; Density. Set the <strong>Amount</strong> slider (0 is normal, 30 fits the most), then switch Density on for the apps you want.</li>
+  <li><strong>Simple:</strong> Settings → Density. Set the <strong>Amount</strong> slider (0 is normal, 30 fits the most), then switch Density on for the apps you want.</li>
   <li><strong>Stock look:</strong> the keyboard and status bar are untouched, and text stays sharp.</li>
-  <li><strong>Light:</strong> apps you don't switch on load nothing extra.</li>
+  <li><strong>Light:</strong> apps you don&#x27;t switch on load nothing extra.</li>
   <li>Changed something? Tap <strong>Apply Changes</strong>: it closes the apps you changed and resprings.</li>
 </ul>
-<div class="shots">
-  <img src="../screenshots/density/settings-stock.png" alt="Settings: the Amount slider and the app switches" loading="lazy" width="200" height="346">
-</div>
-<h2>What's New in beta10</h2>
+<img src="../screenshots/density/settings-stock.png" alt="Settings: the Amount slider and the app switches" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+<h2>What&#x27;s New in 1.0.0</h2>
 <div class="card">
 <ul>
-  <li><strong>iOS 17: the keyboard no longer covers the message box.</strong> On iOS 17 some apps (Messages, for one) were told the keyboard was far shorter than it is, so their text bar stayed hidden behind it. They now get its real height.</li>
-  <li>Tested on an iPhone SE (2nd gen) with iOS 17.5.1 at an Amount of 15.</li>
-  <li>Still in this version: the Telegram fix and chat boxes on top of the keyboard (beta8–9).</li>
-  <li>Messenger isn't confirmed yet: please <a href="https://github.com/Jond-ie/repo/issues">report back</a> with your iOS version and Amount.</li>
-</ul>
-</div>
-<h2>Device Support</h2>
-<div class="card">
-<ul>
-  <li><strong>arm64 and arm64e</strong> (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.</li>
-  <li>Tested on an <strong>iPhone 8 Plus (A11)</strong> with iOS 16.7 and an <strong>iPhone 7 (A10)</strong> with iOS 15.8.6, with Dopamine, in Settings, Notes, X, YouTube and Reddit, up to an Amount of 30. Also tested on an <strong>iPhone SE (2nd gen, A13)</strong> with iOS 17.5.1 (arm64e). Reported working on an <strong>iPhone 15 Pro Max (A17 Pro) with iOS 17.3</strong> and an <strong>iPhone SE (2nd gen) with iOS 18.2</strong>; more reports welcome: <a href="https://github.com/Jond-ie/repo/issues">report back</a>. If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it.</li>
+  <li><strong>Out of beta</strong>, for iOS 15–18.</li>
+  <li><strong>Face ID iPhones:</strong> chat bars and text boxes no longer tuck under the keyboard in any app (Reddit, Swiftgram and others). The strip below the keys (globe, dictation) is now counted at the right size everywhere.</li>
+  <li><strong>Rotation and split screen:</strong> apps fill their space when they rotate or when a split-screen tweak resizes them, instead of shrinking.</li>
+  <li><strong>Since the betas:</strong> chat boxes stay above the keyboard in Messages, Telegram, WhatsApp, Discord, Reddit and more, on iOS 15, 16, 17 and 18.</li>
 </ul>
 </div>
 <h2>Notes</h2>
 <div class="card">
 <ul>
-  <li><strong>Beta.</strong> Games aren't tested yet. If an app looks wrong, switch it off.</li>
+  <li>Rootless jailbreaks (Dopamine), iOS 15–18, arm64 and arm64e.</li>
   <li>Needs <strong>AltList</strong> and <strong>PreferenceLoader</strong> (Sileo installs them).</li>
-  <li>Only for rootless jailbreaks (Dopamine).</li>
+  <li>If an app looks wrong, switch Density off for it and please <a href="https://github.com/Jond-ie/repo/issues">report it</a>. Games aren&#x27;t tested.</li>
 </ul>
 </div>
 <h2>Credits</h2>
 <div class="card">
-<p>Written from scratch by <strong>John d_ie</strong>. Inspired by Android's display density (DPI) setting.</p>
+<p>Written from scratch by <strong>John d_ie</strong>. Inspired by Android&#x27;s display density (DPI) setting.</p>
 </div>
 <footer>
   <p>Bugs &amp; requests: <a href="https://github.com/Jond-ie/repo/issues">GitHub Issues</a>.</p>
