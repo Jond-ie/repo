@@ -50,6 +50,14 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in 1.0.4.1"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Fixes a crash** when opening a trigger's action list (in Settings and in the Triggr app) if no Triggr extension is installed. It hit every install without EQELinker, on Dopamine and RootHide. Thanks to **777qwq** for tracking down the cause."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "What's New in 1.0.4"
         },
         {
