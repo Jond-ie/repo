@@ -93,6 +93,25 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.html
 Name: BlankPass
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.json
 
+Package: com.johndie.bounceit-rootless
+Version: 1.0.4-1~jd1
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 184
+Depends: mobilesubstrate, firmware (>= 15.0)
+Conflicts: com.jakeashacks.bounceit
+Filename: debs/com.johndie.bounceit-rootless_1.0.4-1~jd1_iphoneos-arm64.deb
+Size: 4028
+MD5sum: 8a1e02cfe3223c045247d2592f9b6fdc
+SHA1: 88e12ae01c50afd8eb603e2a363cdfca37f2411c
+SHA256: 453b69d5959ce1fd22953022f72d99f77c300c5d74ae78a93d040430e9b2701f
+Section: Tweaks
+Description: Bouncy spring animations across SpringBoard. Rootless port of Jake James's Bounce It! (iOS 11-13), rebuilt for iOS 15-18.
+Author: Jake James (port: John d_ie)
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.bounceit-rootless.html
+Name: Bounce It! (rootless)
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.bounceit-rootless.json
+
 Package: com.johndie.ccsupport18
 Version: 1.3.13-3~ios18fix2
 Architecture: iphoneos-arm64

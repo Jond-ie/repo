@@ -1,0 +1,39 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## Bounce It! (rootless)\n\n**Jake James's Bounce It!** brought back for rootless jailbreaks: SpringBoard's springs get more mass and less damping, so animations overshoot and **settle with a bounce**: opening and closing apps, folders, swipes home and more.\n\n- Same spring values as the original Bounce It! 1.0.4, read from its binary and rebuilt for modern iOS.\n- **No settings.** Install, respring, done. To turn it off, uninstall it."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Device Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **iOS 15 – 18**, rootless jailbreaks with ElleKit (Dopamine).\n- **arm64 and arm64e** (the current arm64e format, so it loads on A12 and newer; the 2019 original can't).\n- iOS 14 and newer moved the App Switcher and Reachability springs: those parts of the original only apply where iOS still has them. The main SpringBoard springs and fluid gestures bounce on every supported version.\n- Tested on an **iPhone SE 2 (A13)** with iOS 17.5.1 and Dopamine."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Notes"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Replaces the original rootful package (com.jakeashacks.bounceit); they can't be installed together."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**Bounce It!** by **Jake James** (jakeashacks), originally on BigBoss for iOS 11–13. Rootless port by **John d_ie**."
+        }
+      ]
+    }
+  ]
+}
