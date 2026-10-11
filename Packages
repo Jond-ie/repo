@@ -93,24 +93,6 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.html
 Name: BlankPass
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.json
 
-Package: com.johndie.bounceit-ccnc
-Version: 1.0.0~beta1
-Architecture: iphoneos-arm64
-Maintainer: John d_ie
-Installed-Size: 184
-Depends: mobilesubstrate, firmware (>= 15.0)
-Filename: debs/com.johndie.bounceit-ccnc_1.0.0~beta1_iphoneos-arm64.deb
-Size: 3450
-MD5sum: 07fa23357df4d8c68425fc8962247203
-SHA1: 1671b3f8b774836dd99a45e24104a9a80151a843
-SHA256: 216fe816dd0d81af13555c2ffa9956b559a9c889bfeb9375dbdf378d4654ca17
-Section: Tweaks
-Description: The Bounce It! feel for Control Center and Notification Center: opening, closing and modules settle with a bounce. Works on its own or with Bounce It! (rootless).
-Author: John d_ie
-Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.bounceit-ccnc.html
-Name: Bounce It! CC & NC
-SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.bounceit-ccnc.json
-
 Package: com.johndie.bounceit-rootless
 Version: 1.0.4-1~jd1
 Architecture: iphoneos-arm64
