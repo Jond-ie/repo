@@ -12,7 +12,7 @@
         {
           "class": "DepictionScreenshotsView",
           "itemCornerRadius": 8,
-          "itemSize": "{160, 284}",
+          "itemSize": "{160, 276}",
           "screenshots": [
             {
               "url": "https://jond-ie.github.io/repo/screenshots/crest/home.png",
@@ -42,7 +42,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- First public beta. Crest is free during the beta."
+          "markdown": "- First public beta."
         },
         {
           "class": "DepictionHeaderView",

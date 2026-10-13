@@ -140,12 +140,12 @@ Maintainer: John d_ie
 Installed-Size: 8668
 Depends: firmware (>= 15.0)
 Filename: debs/com.johndie.crest_1.0.0~beta1_iphoneos-arm64.deb
-Size: 2061912
-MD5sum: 6db250fd09358d73c6b08016cd35063b
-SHA1: bc5a9aa4949c62ba90751da7807b7055ef7f19eb
-SHA256: d60e6459fd11e9dd74169943f925604a6ed323388a08358ce4dc22a62d2897be
+Size: 2063160
+MD5sum: 482ba8e4ff46e4b809143dc92fed15af
+SHA1: 9d9e957336c9e83e4ca5cc76292340dc72766671
+SHA256: 3e77a9c380f081ad674edb2472c00fd67aa69094562eb941a167826ae7b8f393
 Section: Multimedia
-Description: High-quality offline music player. Plays FLAC, ALAC, DSD, Opus and more at each file's own sample rate, with gapless playback, beat-matched Automix, a parametric EQ that follows your headphones, lyrics, scrobbling, CarPlay and a widget. Free public beta.
+Description: High-quality offline music player. Plays FLAC, ALAC, DSD, Opus and more at each file's own sample rate, with gapless playback, beat-matched Automix, a parametric EQ that follows your headphones, lyrics, scrobbling, CarPlay and a widget.
 Author: John d_ie
 Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.crest.html
 Name: Crest
