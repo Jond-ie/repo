@@ -11,11 +11,19 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in 1.0.0~beta2"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **iOS 17 support:** iOS 17 draws the status bar with a new framework; Mirage now fills that one in too. The lock screen, Home Screen and Control Center all show your lines, labels and live bars."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Device Support"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **iOS 16.** Tested on an **iPhone 11 Pro Max (A13)** with iOS 16.2.\n- Built for arm64 and arm64e (A11 and newer, A12+ included).\n- iOS 17 and 18 draw the status bar differently and aren't supported yet.\n- **If it ever puts you into safe mode:** open Sileo (safe mode still allows it), uninstall it and please [report back](https://github.com/Jond-ie/repo/issues)."
+          "markdown": "- **iOS 16 and 17.** Tested on an **iPhone 11 Pro Max (A13)** with iOS 16.2 and an **iPhone SE (2nd gen, A13)** with iOS 17.5.1.\n- Built for arm64 and arm64e (A11 and newer, A12+ included).\n- iOS 18 isn't supported yet.\n- **If it ever puts you into safe mode:** open Sileo (safe mode still allows it), uninstall it and please [report back](https://github.com/Jond-ie/repo/issues)."
         },
         {
           "class": "DepictionHeaderView",
