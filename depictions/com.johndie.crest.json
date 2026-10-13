@@ -1,0 +1,74 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## Crest\n\nA high-quality offline music player for your own files. Every song plays at its own sample rate, and nothing in it looks like Apple Music.\n\n- **Plays almost anything:** FLAC, ALAC, WAV, AIFF, MP3, AAC, Opus, Vorbis, APE, WavPack, MPC, TAK, TTA, WMA, DSD and CUE sheets.\n- **Gapless, crossfade and Automix:** Automix blends songs on the beat, matches their loudness and keeps albums gapless.\n- **16-band parametric or graphic EQ** with AutoEQ import. Each output keeps its own EQ (speaker, AirPods, USB DACs, CarPlay) and Crest switches when you plug in or connect.\n- **Balance, stereo width, mono, reverb, tempo and key lock.**\n- **ReplayGain and EBU R128 loudness**, synced lyrics, a visualizer, smart playlists, ratings and listening history.\n- **Scrobbling** to Last.fm and ListenBrainz, a Now Playing widget, CarPlay, Wi-Fi Transfer and Files import.\n- **Plays the songs already synced to the Music app** (not Apple Music downloads or protected songs)."
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{160, 284}",
+          "screenshots": [
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/crest/home.png",
+              "accessibilityText": "Home: library stats, pinned and recently played"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/crest/player.png",
+              "accessibilityText": "Now Playing with Automix, format and level chips"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/crest/eq.png",
+              "accessibilityText": "Equalizer: response curve and per-output EQ"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/crest/library.png",
+              "accessibilityText": "Library"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/crest/settings.png",
+              "accessibilityText": "Settings: accent colours, crossfade, ReplayGain"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "What's New in 1.0.0~beta1"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- First public beta. Crest is free during the beta."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Device Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **iOS 15 and up**, rootless. Tested on an **iPhone 7 (A10)** with iOS 15.8.6, an **iPhone SE (2nd gen, A13)** with iOS 17.5.1, an **iPhone 11 Pro Max (A13)** with iOS 16.2 and an **iPhone 11 Pro (A13)** with iOS 18.6.2.\n- Built for arm64 and arm64e."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Notes"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Add music with **Library → Add from Files** or **Wi-Fi Transfer** (drag and drop from a computer on the same network).\n- CarPlay hasn't been tested in a car yet: please [report back](https://github.com/Jond-ie/repo/issues) if you try it.\n- This is a beta: please report songs that won't play or sound wrong."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Original work by **John d_ie**. Uses FFmpeg (LGPL 2.1), TagLib (MPL 1.1), Opus and Ogg (BSD), utfcpp (Boost) and Signalsmith Stretch (MIT). The full licences are in **Settings → Open-Source Licenses**."
+        }
+      ]
+    }
+  ]
+}

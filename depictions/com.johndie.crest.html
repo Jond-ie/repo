@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crest · John's Repo</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff; --fg: #1a1a1a; --muted: #666; --card: #f4f4f5;
+    --accent: #3b6ea5; --border: #e2e2e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
+      --accent: #6ea8dc; --border: #26262b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
+    --accent: #6ea8dc; --border: #26262b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font: 16px/1.6 -apple-system, system-ui, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--fg);
+    max-width: 40rem; margin: 0 auto; padding: 2.5rem 1rem 4rem;
+    overflow-wrap: anywhere;
+  }
+  h1 { font-size: 1.9rem; margin: 0 0 .75rem; }
+  h2 { font-size: 1.1rem; margin: 2rem 0 .6rem; }
+  p { margin: 0 0 .9rem; }
+  ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+  li { margin: .25rem 0; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: .75rem; padding: 1rem 1.15rem;
+  }
+  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+  code { font-size: .9em; }
+  .back { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; }
+  footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<a class="back" href="../">&larr; John's Repo</a>
+<h1>Crest</h1>
+<p>A high-quality offline music player for your own files. Every song plays at its own sample rate, and nothing in it looks like Apple Music.</p>
+<ul>
+  <li><strong>Plays almost anything:</strong> FLAC, ALAC, WAV, AIFF, MP3, AAC, Opus, Vorbis, APE, WavPack, MPC, TAK, TTA, WMA, DSD and CUE sheets.</li>
+  <li><strong>Gapless, crossfade and Automix:</strong> Automix blends songs on the beat, matches their loudness and keeps albums gapless.</li>
+  <li><strong>16-band parametric or graphic EQ</strong> with AutoEQ import. Each output keeps its own EQ (speaker, AirPods, USB DACs, CarPlay) and Crest switches when you plug in or connect.</li>
+  <li><strong>Balance, stereo width, mono, reverb, tempo and key lock.</strong></li>
+  <li><strong>ReplayGain and EBU R128 loudness</strong>, synced lyrics, a visualizer, smart playlists, ratings and listening history.</li>
+  <li><strong>Scrobbling</strong> to Last.fm and ListenBrainz, a Now Playing widget, CarPlay, Wi-Fi Transfer and Files import.</li>
+  <li><strong>Plays the songs already synced to the Music app</strong> (not Apple Music downloads or protected songs).</li>
+</ul>
+<img src="../screenshots/crest/home.png" alt="Home: library stats, pinned and recently played" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+<img src="../screenshots/crest/player.png" alt="Now Playing with Automix, format and level chips" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+<img src="../screenshots/crest/eq.png" alt="Equalizer: response curve and per-output EQ" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+<img src="../screenshots/crest/library.png" alt="Library" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+<img src="../screenshots/crest/settings.png" alt="Settings: accent colours, crossfade, ReplayGain" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+<h2>What&#x27;s New in 1.0.0~beta1</h2>
+<div class="card">
+<ul>
+  <li>First public beta. Crest is free during the beta.</li>
+</ul>
+</div>
+<h2>Device Support</h2>
+<div class="card">
+<ul>
+  <li><strong>iOS 15 and up</strong>, rootless. Tested on an <strong>iPhone 7 (A10)</strong> with iOS 15.8.6, an <strong>iPhone SE (2nd gen, A13)</strong> with iOS 17.5.1, an <strong>iPhone 11 Pro Max (A13)</strong> with iOS 16.2 and an <strong>iPhone 11 Pro (A13)</strong> with iOS 18.6.2.</li>
+  <li>Built for arm64 and arm64e.</li>
+</ul>
+</div>
+<h2>Notes</h2>
+<div class="card">
+<ul>
+  <li>Add music with <strong>Library → Add from Files</strong> or <strong>Wi-Fi Transfer</strong> (drag and drop from a computer on the same network).</li>
+  <li>CarPlay hasn&#x27;t been tested in a car yet: please <a href="https://github.com/Jond-ie/repo/issues">report back</a> if you try it.</li>
+  <li>This is a beta: please report songs that won&#x27;t play or sound wrong.</li>
+</ul>
+</div>
+<h2>Credits</h2>
+<div class="card">
+<p>Original work by <strong>John d_ie</strong>. Uses FFmpeg (LGPL 2.1), TagLib (MPL 1.1), Opus and Ogg (BSD), utfcpp (Boost) and Signalsmith Stretch (MIT). The full licences are in <strong>Settings → Open-Source Licenses</strong>.</p>
+</div>
+<footer>
+  <p>Bugs &amp; requests: <a href="https://github.com/Jond-ie/repo/issues">GitHub Issues</a>.</p>
+</footer>
+</body>
+</html>
