@@ -224,6 +224,24 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.liteface.html
 Name: LiteFace
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.liteface.json
 
+Package: com.johndie.mirage
+Version: 1.0.0~beta1
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 392
+Depends: mobilesubstrate, preferenceloader, firmware (>= 16.0), firmware (<< 17.0)
+Filename: debs/com.johndie.mirage_1.0.0~beta1_iphoneos-arm64.deb
+Size: 10722
+MD5sum: f574b2c835a0c6b951712fc50a0a2096
+SHA1: f21bcba447389d278ba756758f2ebbae62d7a8d5
+SHA256: e9e138b53d09b60cd268ab3deace1de3fd37ccd29c6cdaff6f4ee850af18dc7b
+Section: Tweaks
+Description: A status bar that looks like it has service: one or two lines with your own carrier names, labels, network type and live signal bars. Display only; it doesn't give the phone service.
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.mirage.html
+Name: Mirage
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.mirage.json
+
 Package: com.johndie.pinstant
 Version: 1.0.1
 Architecture: iphoneos-arm64

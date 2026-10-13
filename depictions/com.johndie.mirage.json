@@ -1,0 +1,39 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## Mirage\n\nMakes the status bar look like it **has service**: one or two SIM lines with your own carrier names, line labels, network type and signal bars. Great for SIM-less and Wi-Fi-only iPhones. Everything is in Settings → Mirage, and changes apply instantly:\n\n- **Dual SIM:** show one line or two stacked lines, like a real dual-SIM iPhone.\n- **Carrier names:** any text you like for each line.\n- **Line labels:** Primary, Secondary, Business, Personal, Work, Travel or Data, shown as the letter badge iOS uses for dual SIM.\n- **Network type:** 1x, GPRS, EDGE, 3G, 4G, LTE, LTE-A, LTE+, 5GE, 5G, 5G+, 5G UW or 5G UC.\n- **Signal bars:** 0 to 4 per line.\n- **Live Signal:** the bars dip a bar or two now and then, like real reception. Both lines move on their own, and every app shows the same bars at the same moment.\n- **Wi-Fi aware:** like a real phone, the 4G/5G label hides while Wi-Fi is connected."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Device Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **iOS 16.** Tested on an **iPhone 11 Pro Max (A13)** with iOS 16.2.\n- Built for arm64 and arm64e (A11 and newer, A12+ included).\n- iOS 17 and 18 draw the status bar differently and aren't supported yet.\n- **If it ever puts you into safe mode:** open Sileo (safe mode still allows it), uninstall it and please [report back](https://github.com/Jond-ie/repo/issues)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Notes"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Display only.** It changes what the status bar shows, nothing else: the phone doesn't get service, and calls, SMS, emergency calling and cellular data are never touched.\n- With **Podified**, turn off Podified's Status Bar option, or it hides Mirage's bars."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Original work by **John d_ie**."
+        }
+      ]
+    }
+  ]
+}
