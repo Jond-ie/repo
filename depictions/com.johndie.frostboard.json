@@ -7,13 +7,17 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "## FrostBoard\n\nIcon theming for **iOS 15 and later**, made because SnowBoard hasn't been updated for iOS 18 and newer yet. FrostBoard uses the icon themes you already have (SnowBoard, Anemone and WinterBoard themes) and doesn't need any of those theme managers installed.\n\n- **Icons everywhere iOS draws them:** Home Screen, Dock, folders, App Library, Spotlight, Settings, the share sheet, the app switcher and app open / close.\n- **Live Clock and Calendar** icons from your theme, with moving hands and today's date.\n- **Dark and tinted Home Screens:** themed icons follow iOS 18's tinted mode.\n- **Pick any icon for any app:** choose from every icon in every installed theme, including alternates and themes that are off, or keep Apple's icon.\n- **Theme order:** turn themes on and off and drag them into order; the higher theme wins.\n- **Install Theme from .deb:** install any icon theme package, even ones made only for rootful jailbreaks. FrostBoard checks it's only themes, makes it rootless and opens it in your package manager.\n- Changes apply live, no respring needed."
+          "markdown": "## FrostBoard\n\nIcon theming for **iOS 15 and later**, made because SnowBoard hasn't been updated for iOS 18 and newer yet. FrostBoard uses the icon themes you already have (SnowBoard, Anemone and WinterBoard themes) and doesn't need any of those theme managers installed.\n\n- **Icons everywhere iOS draws them:** Home Screen, Dock, folders, App Library, Spotlight, Settings, the share sheet, the app switcher and app open / close.\n- **Live Clock and Calendar** icons from your theme, with moving hands and today's date.\n- **Pick any icon for any app:** choose from every icon in every installed theme, including alternates and themes that are off, or keep Apple's icon.\n- **Theme order:** turn themes on and off and drag them into order; the higher theme wins.\n- **Install Theme from .deb:** install any icon theme package, even ones made only for rootful jailbreaks. FrostBoard checks it's only themes, makes it rootless and opens it in your package manager.\n- Changes apply live, no respring needed."
         },
         {
           "class": "DepictionScreenshotsView",
           "itemCornerRadius": 8,
           "itemSize": "{160, 276}",
           "screenshots": [
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/frostboard/0-home-ios18.png",
+              "accessibilityText": "Home Screen themed on iOS 18"
+            },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/frostboard/1-home.png",
               "accessibilityText": "Home Screen themed with Goji"
