@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FrostBoard · John's Repo</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff; --fg: #1a1a1a; --muted: #666; --card: #f4f4f5;
+    --accent: #3b6ea5; --border: #e2e2e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
+      --accent: #6ea8dc; --border: #26262b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
+    --accent: #6ea8dc; --border: #26262b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font: 16px/1.6 -apple-system, system-ui, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--fg);
+    max-width: 40rem; margin: 0 auto; padding: 2.5rem 1rem 4rem;
+    overflow-wrap: anywhere;
+  }
+  h1 { font-size: 1.9rem; margin: 0 0 .75rem; }
+  h2 { font-size: 1.1rem; margin: 2rem 0 .6rem; }
+  p { margin: 0 0 .9rem; }
+  ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+  li { margin: .25rem 0; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: .75rem; padding: 1rem 1.15rem;
+  }
+  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+  code { font-size: .9em; }
+  .back { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; }
+  footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<a class="back" href="../">&larr; John's Repo</a>
+<h1>FrostBoard</h1>
+<p>Icon theming for <strong>iOS 15 to 18</strong>, made because SnowBoard&#x27;s icon theming broke on iOS 18. FrostBoard uses the icon themes you already have (SnowBoard, Anemone and WinterBoard themes) and doesn&#x27;t need any of those theme managers installed.</p>
+<ul>
+  <li><strong>Icons everywhere iOS draws them:</strong> Home Screen, Dock, folders, App Library, Spotlight, Settings, the share sheet, the app switcher and app open / close.</li>
+  <li><strong>Live Clock and Calendar</strong> icons from your theme, with moving hands and today&#x27;s date.</li>
+  <li><strong>Dark and tinted Home Screens:</strong> themed icons follow iOS 18&#x27;s tinted mode.</li>
+  <li><strong>Pick any icon for any app:</strong> choose from every icon in every installed theme, including alternates and themes that are off, or keep Apple&#x27;s icon.</li>
+  <li><strong>Theme order:</strong> turn themes on and off and drag them into order; the higher theme wins.</li>
+  <li><strong>Install Theme from .deb:</strong> install any icon theme package, even ones made only for rootful jailbreaks. FrostBoard checks it&#x27;s only themes, makes it rootless and opens it in your package manager.</li>
+  <li>Changes apply live, no respring needed.</li>
+</ul>
+<h2>What&#x27;s New in 0.0.1~beta1</h2>
+<div class="card">
+<ul>
+  <li>First public beta.</li>
+</ul>
+</div>
+<h2>Installing Themes</h2>
+<div class="card">
+<ul>
+  <li>Themes that depend on <strong>SnowBoard, Anemone, WinterBoard, NeonBoard or iThemer</strong> install straight from your package manager: FrostBoard stands in for them.</li>
+  <li>Old rootful-only themes: download the .deb, then <strong>Settings → FrostBoard → Install Theme from .deb…</strong></li>
+  <li>Turn new themes on under <strong>Available Themes</strong>.</li>
+</ul>
+</div>
+<h2>Device Support</h2>
+<div class="card">
+<ul>
+  <li><strong>iOS 15 to 18</strong>, rootless. Tested on an <strong>iPhone 7 (A10)</strong> with iOS 15.8.6, an <strong>iPhone 11 Pro Max (A13)</strong> with iOS 16.2, an <strong>iPhone SE (2nd gen, A13)</strong> with iOS 17.5.1 and an <strong>iPhone 11 Pro (A13)</strong> with iOS 18.6.2.</li>
+  <li>Built for arm64 and arm64e.</li>
+  <li><strong>If it ever puts you into safe mode:</strong> open Sileo (safe mode still allows it), uninstall it and please <a href="https://github.com/Jond-ie/repo/issues">report back</a>.</li>
+</ul>
+</div>
+<h2>Notes</h2>
+<div class="card">
+<ul>
+  <li><strong>Icons only.</strong> FrostBoard themes app icons (and Settings icons). Status bar, badge and keyboard images from themes aren&#x27;t applied.</li>
+  <li>Uninstall <strong>SnowBoard</strong> before installing FrostBoard: on iOS 18 SnowBoard crashes SpringBoard on its own, and the two would theme the same icons.</li>
+  <li>This is a beta: please report icons that stay stock or look wrong.</li>
+</ul>
+</div>
+<h2>Credits</h2>
+<div class="card">
+<p>Original work by <strong>John d_ie</strong>. Works with themes made for SnowBoard (SparkDev), Anemone and WinterBoard (saurik): thank you to their authors and to every theme designer.</p>
+</div>
+<footer>
+  <p>Bugs &amp; requests: <a href="https://github.com/Jond-ie/repo/issues">GitHub Issues</a>.</p>
+</footer>
+</body>
+</html>
