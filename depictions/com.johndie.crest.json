@@ -29,6 +29,18 @@
       {
        "url": "https://jond-ie.github.io/repo/screenshots/crest/album.png",
        "accessibilityText": "Album page with the mini player"
+      },
+      {
+       "url": "https://jond-ie.github.io/repo/screenshots/crest/deck-tone.png",
+       "accessibilityText": "The Deck, Tone: EQ curve, knobs, transitions, ReplayGain"
+      },
+      {
+       "url": "https://jond-ie.github.io/repo/screenshots/crest/deck-space.png",
+       "accessibilityText": "The Deck, Space: balance, width, reverb, tempo, key lock"
+      },
+      {
+       "url": "https://jond-ie.github.io/repo/screenshots/crest/equalizer.png",
+       "accessibilityText": "Equalizer: response curve and per-output EQ"
       }
      ]
     },
