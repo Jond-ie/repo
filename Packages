@@ -262,6 +262,25 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.frostboard.html
 Name: FrostBoard
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.frostboard.json
 
+Package: com.johndie.frostboard
+Version: 0.0.1~beta4
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 596
+Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
+Provides: com.spark.snowboard (= 1.5.99), com.anemonetheming.anemone (= 3.0.99), com.anemonetheming.anemone3 (= 3.0.99), com.saurik.winterboard (= 0.9.99), winterboard (= 0.9.99), com.artikus.neonboard (= 1.0.99), net.dodtweaks.ithemer (= 1.0.99)
+Filename: debs/com.johndie.frostboard_0.0.1~beta4_iphoneos-arm64.deb
+Size: 82194
+MD5sum: 5a5b4bf00b902f10d6455ec6dd25e957
+SHA1: f44d68d3b15f2bc94693909e3311faf2df43dfcf
+SHA256: ffaaeb9308f72dbf10933cf98ad09cf912a55ec17d4d346932a0e1c229a3452f
+Section: Tweaks
+Description: Icon theming for iOS 15 and later (iOS 26 untested). Uses SnowBoard, Anemone and WinterBoard icon themes and installs them without those theme managers. Themes app icons everywhere iOS draws them (Home Screen, Dock, folders, App Library, Spotlight, Settings, the switcher, open / close), plus CarPlay and themed Clock and Calendar. Round every icon with Icon Shape: Circle. Pick any icon from any installed theme for any app, and set which theme wins.
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.frostboard.html
+Name: FrostBoard
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.frostboard.json
+
 Package: com.johndie.glide
 Version: 1.0.0~beta2
 Architecture: iphoneos-arm64
