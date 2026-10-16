@@ -46,7 +46,7 @@
 <body>
 <a class="back" href="../">&larr; John's Repo</a>
 <h1>Crest</h1>
-<p>A high-quality offline music player for your own files. Every song plays at its own sample rate, and nothing in it looks like Apple Music.</p>
+<p>A high-quality offline music player for your own files. Every song plays at its own sample rate, and it looks like a piece of hi-fi gear, not an Apple Music clone.</p>
 <ul>
   <li><strong>Plays almost anything:</strong> FLAC, ALAC, WAV, AIFF, MP3, AAC, Opus, Vorbis, APE, WavPack, MPC, TAK, TTA, WMA, DSD and CUE sheets.</li>
   <li><strong>Gapless, crossfade and Automix:</strong> Automix blends songs on the beat, matches their loudness and keeps albums gapless.</li>
@@ -56,35 +56,39 @@
   <li><strong>Scrobbling</strong> to Last.fm and ListenBrainz, a Now Playing widget, CarPlay, Wi-Fi Transfer and Files import.</li>
   <li><strong>Plays the songs already synced to the Music app</strong> (not Apple Music downloads or protected songs).</li>
 </ul>
+<img src="../screenshots/crest/player.png" alt="Now Playing: smoked acrylic panel, aluminium keys, dot-matrix display" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
 <img src="../screenshots/crest/home.png" alt="Home: library stats, pinned and recently played" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/crest/player.png" alt="Now Playing with Automix, format and level chips" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/crest/eq.png" alt="Equalizer: response curve and per-output EQ" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
 <img src="../screenshots/crest/library.png" alt="Library" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/crest/settings.png" alt="Settings: accent colours, crossfade, ReplayGain" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<h2>What&#x27;s New in 1.0.0~beta1</h2>
+<img src="../screenshots/crest/album.png" alt="Album page with the mini player" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+<h2>What&#x27;s New in 1.0.0~beta2</h2>
 <div class="card">
 <ul>
-  <li>First public beta.</li>
+  <li><strong>New look, &quot;Smoked Acrylic Hi-Fi&quot;:</strong> smoked glass panels, spun-aluminium keys and a dot-matrix display that follows your accent colour. The interface is rebuilt in SwiftUI.</li>
+  <li><strong>The Deck:</strong> swipe up on the player for the EQ curve, bass / treble / preamp / crossfade knobs, the limiter, transitions (gapless, crossfade, Automix) and ReplayGain in one place.</li>
+  <li><strong>Optional L/R VU meters</strong> (off by default: Settings → Appearance).</li>
+  <li><strong>The queue comes back</strong> after a relaunch, paused where you left it.</li>
+  <li><strong>TrollStore and sideload builds</strong> for phones without a jailbreak: see <a href="https://github.com/Jond-ie/crest/releases">GitHub releases</a>.</li>
 </ul>
 </div>
 <h2>Device Support</h2>
 <div class="card">
 <ul>
-  <li><strong>iOS 15 and up</strong>, rootless. Tested on an <strong>iPhone 7 (A10)</strong> with iOS 15.8.6, an <strong>iPhone SE (2nd gen, A13)</strong> with iOS 17.5.1, an <strong>iPhone 11 Pro Max (A13)</strong> with iOS 16.2 and an <strong>iPhone 11 Pro (A13)</strong> with iOS 18.6.2.</li>
-  <li>Built for arm64 and arm64e.</li>
+  <li><strong>iOS 15 and up</strong>, rootless. Beta 2 tested on an <strong>iPhone SE (2nd gen, A13)</strong> with iOS 17.5.1 and an <strong>iPhone 11 Pro Max (A13)</strong> with iOS 16.2. Beta 1 also ran on iOS 15.8.6 (A10) and iOS 18.6.2 (A13).</li>
+  <li>Built for arm64 (runs on every iPhone that supports iOS 15).</li>
 </ul>
 </div>
 <h2>Notes</h2>
 <div class="card">
 <ul>
   <li>Add music with <strong>Library → Add from Files</strong> or <strong>Wi-Fi Transfer</strong> (drag and drop from a computer on the same network).</li>
-  <li>CarPlay hasn&#x27;t been tested in a car yet: please <a href="https://github.com/Jond-ie/repo/issues">report back</a> if you try it.</li>
-  <li>This is a beta: please report songs that won&#x27;t play or sound wrong.</li>
+  <li>No jailbreak? The <strong>TrollStore .tipa</strong> and <strong>sideload .ipa</strong> are on <a href="https://github.com/Jond-ie/crest/releases">GitHub</a>. Those builds add music with <strong>Wi-Fi Transfer</strong> only for now.</li>
+  <li>CarPlay hasn&#x27;t been tested in a car yet: please <a href="https://github.com/Jond-ie/crest/issues">report back</a> if you try it.</li>
+  <li>This is a beta: please <a href="https://github.com/Jond-ie/crest/issues">report</a> songs that won&#x27;t play or sound wrong.</li>
 </ul>
 </div>
 <h2>Credits</h2>
 <div class="card">
-<p>Original work by <strong>John d_ie</strong>. Uses FFmpeg (LGPL 2.1), TagLib (MPL 1.1), Opus and Ogg (BSD), utfcpp (Boost) and Signalsmith Stretch (MIT). The full licences are in <strong>Settings → Open-Source Licenses</strong>.</p>
+<p>Original work by <strong>John d_ie</strong>. Uses FFmpeg (LGPL 2.1), TagLib (MPL 1.1), Opus and Ogg (BSD), utfcpp (Boost) and Signalsmith Stretch (MIT). The full licences are in <strong>Settings → Open-Source Licenses</strong>; the FFmpeg build script and the TagLib change are on <a href="https://github.com/Jond-ie/crest/tree/main/third-party">GitHub</a>.</p>
 </div>
 <footer>
   <p>Bugs &amp; requests: <a href="https://github.com/Jond-ie/repo/issues">GitHub Issues</a>.</p>
