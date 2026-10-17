@@ -51,9 +51,13 @@
   <li><strong>Buttons:</strong> Home, Lock / Side, Volume, Mute switch and Touch ID, with single, double, triple presses, holds and sequences, plus <strong>Lock / Side + Volume</strong> combos (press or hold).</li>
   <li><strong>Status bar:</strong> tap, double tap and hold, also per left / right half, plus swipe left / right.</li>
   <li><strong>Screen edges:</strong> slide in from the left or right edge, with one or two fingers, over apps too.</li>
-  <li><strong>Home Screen:</strong> icon flicks (per app too), pinch, spread, two-finger swipes and double tap on empty space.</li>
+  <li><strong>Home Screen:</strong> icon flicks (per app too), pinch in / out, two-finger swipes and double tap on empty space.</li>
+  <li><strong>Multi-finger gestures in any app:</strong> two- and three-finger taps and swipes, pinch in / out.</li>
+  <li><strong>Swipe up from the bottom</strong> left, middle or right, and the <strong>Action button</strong> (experimental).</li>
   <li><strong>Sensors and events:</strong> shake, proximity cover and wave, charger, headphones, Wi-Fi, Bluetooth, battery level, an app opened, any notification or one from an app, phone calls, music (started, paused, song changed), a time of day or chosen weekdays.</li>
-  <li><strong>Actions:</strong> system and power actions, 14 switches, media and AirPlay, levels and brightness steps, apps, Shortcuts, URLs, Settings pages, messages, speech, shell commands, menus, and sequences with pauses.</li>
+  <li><strong>Actions:</strong> system and power actions, 18 switches (Grayscale, Smart Invert and Zoom included), media and AirPlay, levels and brightness steps, apps, Shortcuts, URLs, Settings pages, messages, speech (time, battery, clipboard), shell commands, menus, and sequences with pauses and <strong>If / Otherwise</strong> steps.</li>
+  <li><strong>Only If:</strong> run an assignment only on a Wi-Fi network, while charging, between times, and more.</li>
+  <li><strong>Other tweaks:</strong> tweaks can add their own triggers and actions (libtriggr), like Activator&#x27;s add-ons.</li>
   <li><strong>Places:</strong> Anywhere, Home Screen, In Apps, Lock Screen, or <strong>one specific app</strong>.</li>
 </ul>
 <img src="../screenshots/triggr/9-triggers.png" alt="Trigger list with the new Screen Edges, Phone Calls, Notifications and Music groups" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
@@ -67,6 +71,20 @@
 <img src="../screenshots/triggr/6-apps.png" alt="In Specific Apps" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
 <img src="../screenshots/triggr/7-app.png" alt="One app&#x27;s own triggers" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
 <img src="../screenshots/triggr/8-options.png" alt="Options" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+<h2>What&#x27;s New in 2.0 Beta 1</h2>
+<div class="card">
+<p><strong>A beta: please report anything odd</strong> (Notes below). You can go back to 1.5 any time in Sileo.</p>
+<ul>
+  <li><strong>Only If:</strong> conditions on any assignment: Wi-Fi network, charging, battery, time range, locked, and more, plus &quot;still true after N seconds&quot;.</li>
+  <li><strong>If / Otherwise steps</strong> inside a sequence.</li>
+  <li><strong>Multi-Finger Gestures</strong> that work inside any app: two- and three-finger taps and swipes, pinch in / out (per app too, under In Specific Apps). Try two fingers → Take Screenshot.</li>
+  <li><strong>Swipe Up from Bottom</strong> left / middle / right. While one is assigned, that part of the edge no longer opens Control Center or goes Home.</li>
+  <li><strong>Action Button</strong> (iPhone 15 Pro and newer): Press, Double Press and Hold. <strong>Experimental, not tested on one yet:</strong> reports very welcome.</li>
+  <li><strong>New actions:</strong> Grayscale, Smart Invert, Classic Invert and Zoom switches; Speak Time, Speak Battery Level, Speak Clipboard, Clear Clipboard; Show Text banner.</li>
+  <li><strong>libtriggr:</strong> other tweaks can add their own triggers, actions and a &quot;Configure via Triggr&quot; button. BegoneCIA&#x27;s next update is the first to use it.</li>
+  <li><strong>Fixes:</strong> the flashlight turns on at your Control Center level instead of the dimmest one; &quot;Spread&quot; is now called Pinch Out.</li>
+</ul>
+</div>
 <h2>What&#x27;s New in 1.5</h2>
 <div class="card">
 <ul>
@@ -100,9 +118,9 @@
 <h2>Notes</h2>
 <div class="card">
 <ul>
-  <li>Rootless jailbreaks with ElleKit (Dopamine), iOS 15–18, arm64 and arm64e.</li>
-  <li>If it ever puts you into safe mode, open Sileo (safe mode still allows it) and uninstall Triggr.</li>
-  <li>Source, docs and feedback: <a href="https://github.com/Jond-ie/triggr">github.com/Jond-ie/triggr</a>. Betas: <a href="https://github.com/Jond-ie/triggr-beta">triggr-beta</a>.</li>
+  <li>Rootless jailbreaks (Dopamine), iOS 15–18.</li>
+  <li>If it ever puts you into safe mode, open Sileo (safe mode still allows it) and uninstall Triggr, or go back to 1.5.</li>
+  <li>Bug reports and requests: <a href="https://github.com/Jond-ie/triggr/issues">github.com/Jond-ie/triggr/issues</a>. From 2.0 on, Triggr is closed source; the 1.x source stays on GitHub.</li>
 </ul>
 </div>
 <h2>Credits</h2>
