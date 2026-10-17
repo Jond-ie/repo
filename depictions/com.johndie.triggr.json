@@ -82,6 +82,14 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in 2.0 Beta 2"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Snapper 3** actions: New Snap, Instant Snap, Freeze Screen & Snap, Reopen Last Snap, Snap History, Cancel Cropping, Close All Snaps.\n- **CopyLog** actions: Show CopyLog, Show CopyLog Favorites.\n- Both groups only show while that tweak is installed. Contributed by **qnblackcat** (thank you!). Untested here: feedback welcome."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "What's New in 2.0 Beta 1"
         },
         {
@@ -126,7 +134,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Original work by **John d_ie**, inspired by Activator (Ryan Petrich). App pickers by AltList (opa334). Developed with AI assistance (Claude Code) and tested on device."
+          "markdown": "Original work by **John d_ie**, inspired by Activator (Ryan Petrich). App pickers by AltList (opa334). Snapper 3 and CopyLog actions by qnblackcat. Developed with AI assistance (Claude Code) and tested on device."
         }
       ]
     }
