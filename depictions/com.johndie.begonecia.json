@@ -11,11 +11,11 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "What's New in 1.0.0"
+          "title": "What's New in 1.1.0"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **iOS 18:** Siri hears nothing again with Begonecia on. iOS 18 moved Siri's microphone to a new path; Begonecia now silences it there too.\n- **Release build:** out of beta, for iOS 15–18.\n- **iOS 18 tip:** if Begonecia's tile disappears from Control Center after safe mode or a reboot, install the **CCSupport iOS 18 fix** from this repo."
+          "markdown": "- **Per-app control:** new Settings page. Block everywhere, everywhere except the apps you pick, or only in the apps you pick.\n- **Triggr actions:** with Triggr 2.0, Turn BegoneCIA On / Off / Toggle are Triggr actions (any button, gesture or event).\n- **Fixes:** Wallet / Apple Pay crash on iOS 18, a parsecd crash, and a Snapchat crash when turning BegoneCIA off.\n- Now also needs **PreferenceLoader** and **AltList** (installed automatically)."
         },
         {
           "class": "DepictionHeaderView",
@@ -23,7 +23,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- Rootless jailbreaks with ElleKit (Dopamine), iOS 15–18, arm64 and arm64e.\n- Requires **CCSupport** and **Cephei** (ws.hbang.common, from Chariz).\n- Jailbreaking lowers your device's baseline security. Begonecia hardens privacy; it doesn't undo that.\n- If it ever puts you into safe mode, open Sileo and uninstall it."
+          "markdown": "- Rootless jailbreaks with ElleKit (Dopamine), iOS 15–18, arm64 and arm64e.\n- Requires **CCSupport**, **Cephei** (ws.hbang.common, from Chariz), **PreferenceLoader** and **AltList**.\n- Jailbreaking lowers your device's baseline security. Begonecia hardens privacy; it doesn't undo that.\n- If it ever puts you into safe mode, open Sileo and uninstall it."
         },
         {
           "class": "DepictionHeaderView",

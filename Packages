@@ -56,6 +56,26 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html
 Name: BegoneCIA (rootless)
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.json
 
+Package: com.johndie.begonecia
+Version: 1.1.0
+Architecture: iphoneos-arm64
+Maintainer: John d_ie (rootless port)
+Installed-Size: 760
+Depends: ellekit, com.opa334.ccsupport, ws.hbang.common, preferenceloader, com.opa334.altlist
+Conflicts: me.nepeta.begonecia
+Replaces: me.nepeta.begonecia
+Filename: debs/com.johndie.begonecia_1.1.0_iphoneos-arm64.deb
+Size: 28928
+MD5sum: dec85d13ce2076cf0a24e8247df48d4b
+SHA1: 0df67a8af48df9b2ea9df585d9a1a6d158bcc617
+SHA256: e7bed3365055c9c3de6c3b78e5550eae8ed5f1c980e3f01976e7764d0741ff70
+Section: Tweaks
+Description: CC toggle to disable microphone, camera and GPS system-wide. Rootless port for Dopamine (iOS 15-18, arm64 and arm64e). Total silence: mic audio is zeroed in the audio server and Siri, location delegates are nulled, camera inputs are dropped.
+Author: Nepeta <ominousness@protonmail.com>
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html
+Name: BegoneCIA (rootless)
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.json
+
 Package: com.johndie.binarypass
 Version: 1.0.0
 Architecture: iphoneos-arm64

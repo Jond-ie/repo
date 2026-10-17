@@ -48,19 +48,20 @@
 <h1>Begonecia</h1>
 <p>A Control Center toggle that silences the <strong>microphone, camera and location</strong> across the whole system. When it&#x27;s on, apps don&#x27;t get a permission error — they just get nothing: zeroed mic audio, no camera frames, no location callbacks. A silent blackout, not a visible denial.</p>
 <p>Toggle it from Control Center; add the tile in Settings → Control Center.</p>
-<h2>What&#x27;s New in 1.0.0</h2>
+<h2>What&#x27;s New in 1.1.0</h2>
 <div class="card">
 <ul>
-  <li><strong>iOS 18:</strong> Siri hears nothing again with Begonecia on. iOS 18 moved Siri&#x27;s microphone to a new path; Begonecia now silences it there too.</li>
-  <li><strong>Release build:</strong> out of beta, for iOS 15–18.</li>
-  <li><strong>iOS 18 tip:</strong> if Begonecia&#x27;s tile disappears from Control Center after safe mode or a reboot, install the <strong>CCSupport iOS 18 fix</strong> from this repo.</li>
+  <li><strong>Per-app control:</strong> new Settings page. Block everywhere, everywhere except the apps you pick, or only in the apps you pick.</li>
+  <li><strong>Triggr actions:</strong> with Triggr 2.0, Turn BegoneCIA On / Off / Toggle are Triggr actions (any button, gesture or event).</li>
+  <li><strong>Fixes:</strong> Wallet / Apple Pay crash on iOS 18, a parsecd crash, and a Snapchat crash when turning BegoneCIA off.</li>
+  <li>Now also needs <strong>PreferenceLoader</strong> and <strong>AltList</strong> (installed automatically).</li>
 </ul>
 </div>
 <h2>Notes</h2>
 <div class="card">
 <ul>
   <li>Rootless jailbreaks with ElleKit (Dopamine), iOS 15–18, arm64 and arm64e.</li>
-  <li>Requires <strong>CCSupport</strong> and <strong>Cephei</strong> (ws.hbang.common, from Chariz).</li>
+  <li>Requires <strong>CCSupport</strong>, <strong>Cephei</strong> (ws.hbang.common, from Chariz), <strong>PreferenceLoader</strong> and <strong>AltList</strong>.</li>
   <li>Jailbreaking lowers your device&#x27;s baseline security. Begonecia hardens privacy; it doesn&#x27;t undo that.</li>
   <li>If it ever puts you into safe mode, open Sileo and uninstall it.</li>
 </ul>
