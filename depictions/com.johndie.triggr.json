@@ -82,6 +82,14 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in 2.0 Beta 3"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Scheduled times run every day again.** They could run once and then skip days, because the timer stopped while the phone slept. They now use the same kind of timer as alarms, which wakes the phone on time.\n- **Multi-finger gestures no longer fire while you type fast.** Triggr ignores the keyboard, so two thumbs typing don't count as a two-finger tap or swipe.\n- **RootHide:** a RootHide build of every release is now on [GitHub](https://github.com/Jond-ie/triggr-beta/releases) (untested, feedback welcome).\n\nThanks to everyone on Reddit who reported these."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "What's New in 2.0 Beta 2"
         },
         {
