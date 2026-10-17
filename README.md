@@ -26,11 +26,15 @@ Or open [jond-ie.github.io/repo](https://jond-ie.github.io/repo/) on your device
 
 | Tweak | Version | What it does |
 |---|---|---|
+| [**Crest**](https://jond-ie.github.io/repo/depictions/com.johndie.crest.html) <sup>beta</sup> | 1.0.0~beta2 | A high-quality music player for your own files: lossless and hi-res, gapless, beat-matched Automix and an EQ that follows your headphones. |
+| [**FrostBoard**](https://jond-ie.github.io/repo/depictions/com.johndie.frostboard.html) <sup>beta</sup> | 0.0.1~beta4 | Icon theming for iOS 15 and later with your SnowBoard, Anemone and WinterBoard themes. No theme manager needed. |
+| [**Mirage**](https://jond-ie.github.io/repo/depictions/com.johndie.mirage.html) <sup>beta</sup> | 1.0.0~beta2 | A status bar that looks like it has service: dual SIM lines, your own carrier names, labels and live signal bars. |
+| [**Bounce It!**](https://jond-ie.github.io/repo/depictions/com.johndie.bounceit-rootless.html) | 1.0.4-1~jd1 | Bouncy spring animations across SpringBoard. Rootless port of Jake James's classic. |
 | [**LiteFace**](https://jond-ie.github.io/repo/depictions/com.johndie.liteface.html) <sup>new</sup> | 1.0.0 | iOS 18, Face ID iPhones: every Face ID prompt uses the small top animation that hidden apps use, instead of the box in the middle. Source: [Jond-ie/liteface](https://github.com/Jond-ie/liteface). |
-| [**Begonecia**](https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html) | 1.0.0 | Control Center toggle that silences camera, microphone and location system-wide. Rootless port of Nepeta's BegoneCIA. |
-| [**CCSupport (iOS 18 fix)**](https://jond-ie.github.io/repo/depictions/com.opa334.ccsupport.html) | 1.3.13-3~ios18fix1 | opa334's CCSupport with a fix that keeps tweak modules in Control Center on iOS 18 after safe mode and reboots. iOS 18+ only, not tested on iOS 26. |
+| [**Begonecia**](https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html) | 1.1.0 | Control Center toggle that silences camera, microphone and location system-wide, everywhere or per app; On / Off / Toggle as Triggr actions. Rootless port of Nepeta\'s BegoneCIA. |
+| [**CCSupport (iOS 18 fix)**](https://jond-ie.github.io/repo/depictions/com.opa334.ccsupport.html) | 1.3.13-3~ios18fix2 | opa334's CCSupport with a fix that keeps tweak modules in Control Center on iOS 18 after safe mode and reboots. iOS 18+ only, not tested on iOS 26. |
 | [**Slaplock**](https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.html) | 0.2.0~beta1-2 | Lock chosen apps behind Face ID / Touch ID, with passcode fallback. |
-| [**Triggr**](https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html) | 1.0.4.1 | Activator-style triggers for buttons, the status bar, Home Screen gestures, sensors and events, with its own app. Source: [Jond-ie/triggr](https://github.com/Jond-ie/triggr). |
+| [**Triggr**](https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html) <sup>beta</sup> | 2.0.0~beta1 | Activator-style triggers: buttons, screen edges, the status bar, gestures in any app, sensors, calls, music and events, with Only If conditions and If / Otherwise steps. Other tweaks plug in with [libtriggr](https://github.com/Jond-ie/libtriggr). |
 | [**EQELinker**](https://jond-ie.github.io/repo/depictions/com.johndie.eqelinker.html) | 1.0.0 | Load EQE presets from Triggr (e.g. per Bluetooth device). Needs Triggr and EQE. |
 | [**Pinstant**](https://jond-ie.github.io/repo/depictions/com.johndie.pinstant.html) | 1.0.1 | Wake straight to the passcode: no Lock Screen, no swipe. No settings. Concept from UnlockOrElse by ETHN. |
 | [**Density**](https://jond-ie.github.io/repo/depictions/com.johndie.density.html) | 1.0.0 | More on screen in the apps you pick, like Android's display density. Status bar and keyboard stay stock. |
@@ -46,7 +50,7 @@ Tap a name for the full details, notes and known limitations.
 
 ## Requirements
 
-- **Dopamine** (rootless jailbreak), iOS 15–17.
+- **Dopamine** (rootless jailbreak), iOS 15–18 (check each tweak's page; some are iOS 18 only or not tested on every version).
 - **A12 and newer: supported and confirmed.** Every tweak is now tested on an **iPhone SE (2nd gen, A13)** with
   **iOS 17.5.1**, as well as an **iPhone 8 Plus (A11)** with iOS 16.7 and an **iPhone 7 (A10)** with iOS 15.8.6.
   The iOS 17 fixes are in Podified 1.0.1, Triggr 1.0.2, Density beta10 and Begonecia rootless5.
@@ -54,11 +58,11 @@ Tap a name for the full details, notes and known limitations.
   (Earlier builds put A12+ devices into safe mode; if anything ever does, uninstall it in Sileo and
   [report back](https://github.com/Jond-ie/repo/issues).)
 - **Density** is also reported working by testers on an iPhone 15 Pro Max (iOS 17.3) and an iPhone SE (2nd gen, iOS 18.2).
-- **Triggr** is open source (GPL-3.0); report issues on the [Triggr GitHub](https://github.com/Jond-ie/triggr/issues). Betas live in [triggr-beta](https://github.com/Jond-ie/triggr-beta).
+- **Triggr** 2.0 is in beta and closed source from 2.0 (the 1.x source stays GPL-3.0 on [Jond-ie/triggr](https://github.com/Jond-ie/triggr)); report issues there. Betas live in [triggr-beta](https://github.com/Jond-ie/triggr-beta). Tweak developers: [libtriggr](https://github.com/Jond-ie/libtriggr) (MIT).
 - **Glide** and **Pinstant** can't be installed together (Pinstant skips the Lock Screen Glide lives on).
 - Some tweaks need packages from other repos. Sileo installs them automatically when you have
   those repos added:
-  - **Begonecia:** CCSupport, Cephei (Chariz)
+  - **Begonecia:** CCSupport, Cephei (Chariz), PreferenceLoader, AltList
   - **Slaplock, Scrub, Triggr, Density:** AltList (BigBoss)
 
 ## Support
@@ -71,8 +75,10 @@ your device, iOS version, jailbreak, and the tweak's version.
 - **Begonecia** is a rootless port of [BegoneCIA](https://github.com/larygwil/BegoneCIA) by Eva (Nepeta),
   MIT licensed. (Nepeta's own repo is no longer online; the link is an unofficial mirror.) The original license and copyright ship inside the package.
   The port's source code is at [Jond-ie/begonecia](https://github.com/Jond-ie/begonecia).
-- **Slaplock**, **Podified**, **Crossfade**, **Scrub**, **Triggr**, **Pinstant**, **Density**, **BlankPass**, **BinaryPass**, **LiteFace**, **EQELinker**, **Glide** and **Shelf** are original works by John d_ie. Triggr is inspired by
+- **Slaplock**, **Podified**, **Crossfade**, **Scrub**, **Triggr**, **Pinstant**, **Density**, **BlankPass**, **BinaryPass**, **LiteFace**, **EQELinker**, **Glide**, **Shelf**, **Crest**, **FrostBoard** and **Mirage** are original works by John d_ie. Triggr is inspired by
   Activator (Ryan Petrich).
+
+- **Bounce It!** is a rootless port of Jake James's Bounce It!.
 
 This repository hosts the installable packages only.
 - **Pinstant** is written from scratch; the idea comes from UnlockOrElse by Ethan Whited (ETHN).
