@@ -27,7 +27,7 @@ Or open [jond-ie.github.io/repo](https://jond-ie.github.io/repo/) on your device
 | Tweak | Version | What it does |
 |---|---|---|
 | [**Crest**](https://jond-ie.github.io/repo/depictions/com.johndie.crest.html) <sup>beta</sup> | 1.0.0~beta2 | A high-quality music player for your own files: lossless and hi-res, gapless, beat-matched Automix and an EQ that follows your headphones. |
-| [**FrostBoard**](https://jond-ie.github.io/repo/depictions/com.johndie.frostboard.html) <sup>beta</sup> | 0.0.1~beta4 | Icon theming for iOS 15 and later with your SnowBoard, Anemone and WinterBoard themes. No theme manager needed. |
+| [**FrostBoard**](https://jond-ie.github.io/repo/depictions/com.johndie.frostboard.html) <sup>beta</sup> | 0.0.1~beta5 | Icon theming for iOS 15 and later with your SnowBoard, Anemone and WinterBoard themes. No theme manager needed. |
 | [**Mirage**](https://jond-ie.github.io/repo/depictions/com.johndie.mirage.html) <sup>beta</sup> | 1.0.0~beta2 | A status bar that looks like it has service: dual SIM lines, your own carrier names, labels and live signal bars. |
 | [**Bounce It!**](https://jond-ie.github.io/repo/depictions/com.johndie.bounceit-rootless.html) | 1.0.4-1~jd1 | Bouncy spring animations across SpringBoard. Rootless port of Jake James's classic. |
 | [**LiteFace**](https://jond-ie.github.io/repo/depictions/com.johndie.liteface.html) <sup>new</sup> | 1.0.0 | iOS 18, Face ID iPhones: every Face ID prompt uses the small top animation that hidden apps use, instead of the box in the middle. Source: [Jond-ie/liteface](https://github.com/Jond-ie/liteface). |

@@ -34,11 +34,11 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "What's New in 0.0.1~beta4"
+          "title": "What's New in 0.0.1~beta5"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **Folders keep their normal shape** with Icon Shape: Circle (they looked broken as circles).\n- Changing Icon Shape now offers a respring, so every icon (not just the Home Screen) gets the new shape.\n- beta3 added **circle icons** (Settings → FrostBoard → Icon Shape) and **CarPlay icons** (iOS 16 and later; please report back how it looks in your car)."
+          "markdown": "- **Fixed on iOS 18:** with Icon Shape: Circle, apps your theme doesn't cover could stay as blank placeholder icons. They now show their real icon, cut to a circle.\n- beta4: **folders keep their normal shape** in circle mode, and changing Icon Shape offers a respring.\n- beta3 added **circle icons** (Settings → FrostBoard → Icon Shape) and **CarPlay icons** (iOS 16 and later; please report back how it looks in your car)."
         },
         {
           "class": "DepictionHeaderView",

@@ -21,7 +21,7 @@ echo "==> Scanning debs/ for packages"
 dpkg-scanpackages --multiversion debs /dev/null > Packages 2>/dev/null
 # dpkg-scanpackages normalizes field names ("SileoDepiction" -> "Sileodepiction");
 # restore Sileo's canonical spelling.
-sed -i 's/^Sileodepiction:/SileoDepiction:/' Packages
+sed -i.bak 's/^Sileodepiction:/SileoDepiction:/' Packages && rm -f Packages.bak  # GNU + BSD (macOS) sed
 bzip2 -kf Packages
 echo "    $(grep -c '^Package:' Packages) package version(s) indexed"
 
