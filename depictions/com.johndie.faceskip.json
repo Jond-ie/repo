@@ -1,0 +1,31 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## FaceSkip\n\n**Face ID goes straight to the Home Screen.** No swipe up after your face is recognised.\n\n- **Stays on the Lock Screen when it should** (each one optional, in Settings → FaceSkip): when notifications are showing (on by default, so you can read the previews), when music is playing (on) or when the flashlight is on (off).\n- **Never leaves StandBy**, and never pulls you away from the widgets or camera page.\n- **Light:** one small hook that only runs when Face ID recognises you. Nothing runs in the background.\n- **Safe:** iOS itself still decides whether the Lock Screen can be dismissed, so it can't unlock into anything unexpected."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Device Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **iOS 18 and later**, Face ID iPhones. **arm64 and arm64e** builds.\n- Tested on an **iPhone 11 Pro (A13)** with iOS 18.6.2 and Dopamine rootless. Newer iOS versions aren't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues).\n- If it ever puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Written from scratch by **John d_ie**. Concept from **AutoUnlockX** by SparkDev and **FastUnlockX**."
+        }
+      ]
+    }
+  ]
+}

@@ -243,6 +243,24 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.eqelinker.html
 Name: EQELinker
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.eqelinker.json
 
+Package: com.johndie.faceskip
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 356
+Depends: mobilesubstrate, preferenceloader, firmware (>= 18.0)
+Filename: debs/com.johndie.faceskip_1.0.0_iphoneos-arm64.deb
+Size: 15168
+MD5sum: 58e6a15ec0fb91d5c116ca698ca6e3a7
+SHA1: 8dcbef603d3c4cc2473297171cac61f5de4e6df2
+SHA256: c2431c1b53285d8b5a3d4bddc48c970e1b57e1b5bfad43e54402503050461c04
+Section: Tweaks
+Description: Face ID goes straight to the Home Screen, no swipe up. Stays on the Lock Screen when you have notifications, music playing or the flashlight on (each optional), and never leaves StandBy. One tiny hook, nothing runs until Face ID matches.
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.faceskip.html
+Name: FaceSkip
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.faceskip.json
+
 Package: com.johndie.frostboard
 Version: 0.0.1~beta1
 Architecture: iphoneos-arm64

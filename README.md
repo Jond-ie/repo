@@ -31,6 +31,7 @@ Or open [jond-ie.github.io/repo](https://jond-ie.github.io/repo/) on your device
 | [**Mirage**](https://jond-ie.github.io/repo/depictions/com.johndie.mirage.html) <sup>beta</sup> | 1.0.0~beta2 | A status bar that looks like it has service: dual SIM lines, your own carrier names, labels and live signal bars. |
 | [**Bounce It!**](https://jond-ie.github.io/repo/depictions/com.johndie.bounceit-rootless.html) | 1.0.4-1~jd1 | Bouncy spring animations across SpringBoard. Rootless port of Jake James's classic. |
 | [**LiteFace**](https://jond-ie.github.io/repo/depictions/com.johndie.liteface.html) <sup>new</sup> | 1.0.0 | iOS 18, Face ID iPhones: every Face ID prompt uses the small top animation that hidden apps use, instead of the box in the middle. Source: [Jond-ie/liteface](https://github.com/Jond-ie/liteface). |
+| [**FaceSkip**](https://jond-ie.github.io/repo/depictions/com.johndie.faceskip.html) <sup>new</sup> | 1.0.0 | iOS 18+, Face ID iPhones: Face ID goes straight to the Home Screen, no swipe up. Stays on the Lock Screen for notifications, music or the flashlight (each optional) and in StandBy. Concept from AutoUnlockX by SparkDev. |
 | [**Begonecia**](https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html) | 1.1.0 | Control Center toggle that silences camera, microphone and location system-wide, everywhere or per app; On / Off / Toggle as Triggr actions. Rootless port of Nepeta\'s BegoneCIA. |
 | [**CCSupport (iOS 18 fix)**](https://jond-ie.github.io/repo/depictions/com.opa334.ccsupport.html) | 1.3.13-3~ios18fix2 | opa334's CCSupport with a fix that keeps tweak modules in Control Center on iOS 18 after safe mode and reboots. iOS 18+ only, not tested on iOS 26. |
 | [**Slaplock**](https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.html) | 0.2.0~beta1-2 | Lock chosen apps behind Face ID / Touch ID, with passcode fallback. |
@@ -75,13 +76,14 @@ your device, iOS version, jailbreak, and the tweak's version.
 - **Begonecia** is a rootless port of [BegoneCIA](https://github.com/larygwil/BegoneCIA) by Eva (Nepeta),
   MIT licensed. (Nepeta's own repo is no longer online; the link is an unofficial mirror.) The original license and copyright ship inside the package.
   The port's source code is at [Jond-ie/begonecia](https://github.com/Jond-ie/begonecia).
-- **Slaplock**, **Podified**, **Crossfade**, **Scrub**, **Triggr**, **Pinstant**, **Density**, **BlankPass**, **BinaryPass**, **LiteFace**, **EQELinker**, **Glide**, **Shelf**, **Crest**, **FrostBoard** and **Mirage** are original works by John d_ie. Triggr is inspired by
+- **Slaplock**, **Podified**, **Crossfade**, **Scrub**, **Triggr**, **Pinstant**, **Density**, **BlankPass**, **BinaryPass**, **LiteFace**, **FaceSkip**, **EQELinker**, **Glide**, **Shelf**, **Crest**, **FrostBoard** and **Mirage** are original works by John d_ie. Triggr is inspired by
   Activator (Ryan Petrich).
 
 - **Bounce It!** is a rootless port of Jake James's Bounce It!.
 
 This repository hosts the installable packages only.
 - **Pinstant** is written from scratch; the idea comes from UnlockOrElse by Ethan Whited (ETHN).
+- **FaceSkip** is written from scratch; the idea comes from AutoUnlockX by SparkDev and FastUnlockX.
 - **BlankPass** is written from scratch; the idea comes from the original BlankPass by VladGeek (Packix).
 - **BinaryPass** is written from scratch; the idea comes from the original BinaryPasscode by eskimo (Jordan Koch).
 - **Glide** is written from scratch; the idea comes from SlideToUnlock by Nepeta and its port Slyd by s8ngyu.
