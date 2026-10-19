@@ -11,11 +11,20 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in 1.0.4-1~jd2"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **The App Switcher stays steady:** its cards no longer bounce and wander while you swipe through them or close apps. Opening and closing apps and the home swipe still bounce.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "Device Support"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **iOS 15 – 18**, rootless jailbreaks with ElleKit (Dopamine).\n- **arm64 and arm64e** (the current arm64e format, so it loads on A12 and newer; the 2019 original can't).\n- iOS 14 and newer moved the App Switcher and Reachability springs: those parts of the original only apply where iOS still has them. The main SpringBoard springs and fluid gestures bounce on every supported version.\n- Tested on an **iPhone SE 2 (A13)** with iOS 17.5.1 and Dopamine."
+          "markdown": "- **iOS 15 – 18**, rootless jailbreaks with ElleKit (Dopamine).\n- **arm64 and arm64e** (the current arm64e format, so it loads on A12 and newer; the 2019 original can't).\n- iOS 14 and newer moved the App Switcher and Reachability springs: those parts of the original only apply where iOS still has them. The main SpringBoard springs and fluid gestures bounce on every supported version.\n- Tested on an **iPhone SE 2 (A13)** with iOS 17.5.1 and an **iPhone 11 Pro Max (A13)** with iOS 16.2, Dopamine."
         },
         {
           "class": "DepictionHeaderView",
