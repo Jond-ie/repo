@@ -1,82 +1,82 @@
 {
- "class": "DepictionTabView",
- "tabs": [
-  {
-   "tabname": "Details",
-   "class": "DepictionStackView",
-   "views": [
+  "class": "DepictionTabView",
+  "tabs": [
     {
-     "class": "DepictionMarkdownView",
-     "markdown": "## Crest\n\nA high-quality offline music player for your own files. Every song plays at its own sample rate, and it looks like a piece of hi-fi gear, not an Apple Music clone.\n\n- **Plays almost anything:** FLAC, ALAC, WAV, AIFF, MP3, AAC, Opus, Vorbis, APE, WavPack, MPC, TAK, TTA, WMA, DSD and CUE sheets.\n- **Gapless, crossfade and Automix:** Automix blends songs on the beat, matches their loudness and keeps albums gapless.\n- **16-band parametric or graphic EQ** with AutoEQ import. Each output keeps its own EQ (speaker, AirPods, USB DACs, CarPlay) and Crest switches when you plug in or connect.\n- **Balance, stereo width, mono, reverb, tempo and key lock.**\n- **ReplayGain and EBU R128 loudness**, synced lyrics, a visualizer, smart playlists, ratings and listening history.\n- **Scrobbling** to Last.fm and ListenBrainz, a Now Playing widget, CarPlay, Wi-Fi Transfer and Files import.\n- **Plays the songs already synced to the Music app** (not Apple Music downloads or protected songs)."
-    },
-    {
-     "class": "DepictionScreenshotsView",
-     "itemCornerRadius": 8,
-     "itemSize": "{160, 276}",
-     "screenshots": [
-      {
-       "url": "https://jond-ie.github.io/repo/screenshots/crest/player.png",
-       "accessibilityText": "Now Playing: smoked acrylic panel, aluminium keys, dot-matrix display"
-      },
-      {
-       "url": "https://jond-ie.github.io/repo/screenshots/crest/home.png",
-       "accessibilityText": "Home: library stats, pinned and recently played"
-      },
-      {
-       "url": "https://jond-ie.github.io/repo/screenshots/crest/library.png",
-       "accessibilityText": "Library"
-      },
-      {
-       "url": "https://jond-ie.github.io/repo/screenshots/crest/album.png",
-       "accessibilityText": "Album page with the mini player"
-      },
-      {
-       "url": "https://jond-ie.github.io/repo/screenshots/crest/deck-tone.png",
-       "accessibilityText": "The Deck, Tone: EQ curve, knobs, transitions, ReplayGain"
-      },
-      {
-       "url": "https://jond-ie.github.io/repo/screenshots/crest/deck-space.png",
-       "accessibilityText": "The Deck, Space: balance, width, reverb, tempo, key lock"
-      },
-      {
-       "url": "https://jond-ie.github.io/repo/screenshots/crest/equalizer.png",
-       "accessibilityText": "Equalizer: response curve and per-output EQ"
-      }
-     ]
-    },
-    {
-     "class": "DepictionHeaderView",
-     "title": "What's New in 1.0.0~beta2"
-    },
-    {
-     "class": "DepictionMarkdownView",
-     "markdown": "- **New look, \"Smoked Acrylic Hi-Fi\":** smoked glass panels, spun-aluminium keys and a dot-matrix display that follows your accent colour. The interface is rebuilt in SwiftUI.\n- **The Deck:** swipe up on the player for the EQ curve, bass / treble / preamp / crossfade knobs, the limiter, transitions (gapless, crossfade, Automix) and ReplayGain in one place.\n- **Optional L/R VU meters** (off by default: Settings → Appearance).\n- **The queue comes back** after a relaunch, paused where you left it.\n- **TrollStore and sideload builds** for phones without a jailbreak: see [GitHub releases](https://github.com/Jond-ie/crest/releases)."
-    },
-    {
-     "class": "DepictionHeaderView",
-     "title": "Device Support"
-    },
-    {
-     "class": "DepictionMarkdownView",
-     "markdown": "- **iOS 15 and up, rootless jailbreaks.** Beta 2 tested on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1 and an **iPhone 11 Pro Max (A13)** with iOS 16.2. Beta 1 also ran on iOS 15.8.6 (A10) and iOS 18.6.2 (A13)."
-    },
-    {
-     "class": "DepictionHeaderView",
-     "title": "Notes"
-    },
-    {
-     "class": "DepictionMarkdownView",
-     "markdown": "- Add music with **Library → Add from Files** or **Wi-Fi Transfer** (drag and drop from a computer on the same network).\n- No jailbreak? The **TrollStore .tipa** and **sideload .ipa** are on [GitHub](https://github.com/Jond-ie/crest/releases). Those builds add music with **Wi-Fi Transfer** only for now.\n- CarPlay hasn't been tested in a car yet: please [report back](https://github.com/Jond-ie/crest/issues) if you try it.\n- This is a beta: please [report](https://github.com/Jond-ie/crest/issues) songs that won't play or sound wrong."
-    },
-    {
-     "class": "DepictionHeaderView",
-     "title": "Credits"
-    },
-    {
-     "class": "DepictionMarkdownView",
-     "markdown": "Original work by **John d_ie**. Uses FFmpeg (LGPL 2.1), TagLib (MPL 1.1), Opus and Ogg (BSD), utfcpp (Boost) and Signalsmith Stretch (MIT). The full licences are in **Settings → Open-Source Licenses**; the FFmpeg build script and the TagLib change are on [GitHub](https://github.com/Jond-ie/crest/tree/main/third-party)."
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## Crest\n\nA high-quality offline music player for your own files. Every song plays at its own sample rate, and it looks like a piece of hi-fi gear, not an Apple Music clone.\n\n- **Plays almost anything:** FLAC, ALAC, WAV, AIFF, MP3, AAC, Opus, Vorbis, APE, WavPack, MPC, TAK, TTA, WMA, DSD and CUE sheets.\n- **Bit-Perfect mode:** nothing between the file and your DAC or headphones.\n- **Gapless, crossfade and Automix:** Automix blends songs on the beat, matches their loudness and keeps albums gapless.\n- **16-band parametric or graphic EQ** with AutoEQ import. Each output keeps its own EQ (speaker, AirPods, USB DACs, CarPlay) and Crest switches when you plug in or connect.\n- **Balance, stereo width, mono, reverb, tempo and key lock.**\n- **ReplayGain and EBU R128 loudness**, synced lyrics, a visualizer, smart playlists, ratings and listening history.\n- **Scrobbling** to Last.fm and ListenBrainz, a Now Playing widget, CarPlay, Wi-Fi Transfer and Files import.\n- **Plays the songs already synced to the Music app** (not Apple Music downloads or protected songs)."
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{160, 276}",
+          "screenshots": [
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/crest/player.png",
+              "accessibilityText": "Now Playing: smoked acrylic panel, aluminium keys, dot-matrix display"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/crest/home.png",
+              "accessibilityText": "Home: library stats, pinned and recently played"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/crest/library.png",
+              "accessibilityText": "Library"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/crest/album.png",
+              "accessibilityText": "Album page with the mini player"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/crest/deck-tone.png",
+              "accessibilityText": "The Deck, Tone: EQ curve, knobs, transitions, ReplayGain"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/crest/deck-space.png",
+              "accessibilityText": "The Deck, Space: balance, width, reverb, tempo, key lock"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/crest/equalizer.png",
+              "accessibilityText": "Equalizer: response curve and per-output EQ"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "What's New in 1.0.0~beta3"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Bit-Perfect mode:** your songs reach the output exactly as they are in the file, with nothing in between. Tested sample for sample. A **BIT-PERFECT** label shows when it really is, and tapping the format chips on Now Playing tells you why when it isn't (Settings → Bit-Perfect).\n- **Minimal Player:** a calm, big-type layout for Now Playing, if you prefer it (Settings → Appearance).\n- **Big libraries:** you see the scan progress (\"1,240 of 5,800 songs\"), Crest saves as it goes, and it no longer closes during or after a long scan (thousands of songs in one album, or leaving the app mid-scan). Tested with 23,000 songs.\n- **Fixed:** the lyrics page could slide off the screen with no way out (with real cover art).\n- **iOS 15 fixes:** the Settings, Add and EQ Done buttons and the Deck icon were missing."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Device Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **iOS 15 and up, rootless jailbreaks.** Beta 3 tested on an **iPhone 7 (A10)** with iOS 15.8.6, an **iPhone 11 Pro Max (A13)** with iOS 16.2, and an **iPhone SE (2nd gen, A13)** with iOS 17.5.1. An earlier beta 3 build also ran on an **iPhone 11 Pro (A13)** with iOS 18."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Notes"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- Add music with **Library → Add from Files** or **Wi-Fi Transfer** (drag and drop from a computer on the same network).\n- No jailbreak? The **TrollStore .tipa** and **sideload .ipa** are on [GitHub](https://github.com/Jond-ie/crest/releases). Those builds add music with **Wi-Fi Transfer** only for now.\n- CarPlay hasn't been tested in a car yet: please [report back](https://github.com/Jond-ie/crest/issues) if you try it.\n- This is a beta: please [report](https://github.com/Jond-ie/crest/issues) songs that won't play or sound wrong."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Original work by **Jond-ie**. Uses FFmpeg (LGPL 2.1), TagLib (MPL 1.1), Opus and Ogg (BSD), utfcpp (Boost) and Signalsmith Stretch (MIT). The full licences are in **Settings → Open-Source Licenses**; the FFmpeg build script and the TagLib change are on [GitHub](https://github.com/Jond-ie/crest/tree/main/third-party)."
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }
