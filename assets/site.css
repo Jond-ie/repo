@@ -93,6 +93,10 @@ header img, .hero img {
   box-shadow: 0 0 0 1px rgba(255,255,255,.14) inset, 0 2px 4px rgba(0,0,0,.18), 0 14px 30px rgba(0,0,0,.22);
 }
 h1 { font-size: 2.8rem; line-height: 1.05; letter-spacing: -.03em; margin: 1rem 0 .4rem; font-weight: 800; }
+/* the wordmark: "pwnapple", bold lowercase (the brand is lowercase everywhere) */
+.wordmark { letter-spacing: -.02em; font-weight: 800; }
+h1.wordmark { font-size: 2.6rem; }
+.bar .title.wordmark { letter-spacing: 0; }
 .hero .lead { font-size: 1.45rem; line-height: 1.28; font-weight: 700; letter-spacing: -.015em; margin: .3rem auto .55rem; max-width: 34rem; }
 .tag { color: var(--muted); margin: 0 auto 1.3rem; max-width: 36rem; }
 .url { font-size: .85rem; color: var(--faint); margin-top: 1rem; }

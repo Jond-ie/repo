@@ -2,7 +2,7 @@
   <img src="CydiaIcon.png" width="112" alt="">
 </p>
 
-<h1 align="center">Pwnapple</h1>
+<h1 align="center">pwnapple</h1>
 
 <p align="center">
   Jailbreak tweaks by Jond-ie, simple to use and tested on real iPhones.<br>
