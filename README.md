@@ -2,10 +2,10 @@
   <img src="CydiaIcon.png" width="112" alt="">
 </p>
 
-<h1 align="center">Jond-ie</h1>
+<h1 align="center">Pwnapple</h1>
 
 <p align="center">
-  Jailbreak tweaks that are simple to use and tested on real iPhones.<br>
+  Jailbreak tweaks by Jond-ie, simple to use and tested on real iPhones.<br>
   Rootless (Dopamine) · iOS 15–18
   <br><br>
   <a href="https://jond-ie.github.io/repo/"><strong>See every tweak →</strong></a> · <a href="https://x.com/Jond_ie">X @Jond_ie</a>
