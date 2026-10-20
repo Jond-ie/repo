@@ -46,6 +46,14 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in 1.0.0~beta4"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Shuffle an artist:** a shuffle button next to each artist in Search plays all their songs, from every album, in random order.\n- **More search results:** songs in Search no longer stop at 50.\n- **Covers:** a cover you add in Get Info now shows right away. Crest also finds folder art named cover, folder, front, album or AlbumArt (any case, jpg or png), and prefers a FLAC's front cover.\n\nThanks to HalfManHalfDragon on Discord for these."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "What's New in 1.0.0~beta3"
         },
         {

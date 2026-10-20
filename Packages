@@ -226,6 +226,24 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.crest.html
 Name: Crest
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.crest.json
 
+Package: com.johndie.crest
+Version: 1.0.0~beta4
+Architecture: iphoneos-arm64
+Maintainer: Jond-ie
+Installed-Size: 12724
+Depends: firmware (>= 15.0)
+Filename: debs/com.johndie.crest_1.0.0~beta4_iphoneos-arm64.deb
+Size: 3047594
+MD5sum: 5ea5aff9268e29474a71cb6b20a2918d
+SHA1: 3c3853dca5df359822ed776930683cfd5bc36050
+SHA256: 4defcde70107d40abdc2f6d3387d4440cf8a4933c656f726e4c3174551ae01a0
+Section: Multimedia
+Description: High-quality offline music player. Bit-Perfect mode, and plays FLAC, ALAC, DSD, Opus and more at each file's own sample rate, with gapless playback, beat-matched Automix, a parametric EQ that follows your headphones, lyrics, scrobbling, CarPlay and a widget.
+Author: Jond-ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.crest.html
+Name: Crest
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.crest.json
+
 Package: com.johndie.density
 Version: 1.0.0
 Architecture: iphoneos-arm64
