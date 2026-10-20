@@ -82,6 +82,14 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in 2.0 Beta 7.1"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Fixed:** opening Options in Beta 7 crashed Settings. 7.1 fixes it. Sorry about that.\n- Everything in Beta 7 (haptic feedback, bottom-corner swipes, Snapper 2) is unchanged."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "What's New in 2.0 Beta 7"
         },
         {
