@@ -7,7 +7,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "## Triggr\n\nActivator-style triggers for modern jailbreaks. Pick a trigger, pick what it runs, in **Settings → Triggr** or the **Triggr app**. Triggr only changes a button when you assign something to it.\n\n- **Buttons:** Home, Lock / Side, Volume, Mute switch and Touch ID, with single, double, triple presses, holds and sequences, plus **Lock / Side + Volume** combos (press or hold).\n- **Status bar:** tap, double tap and hold, also per left / right half, plus swipe left / right.\n- **Screen edges:** slide in from the left or right edge, with one or two fingers, over apps too.\n- **Home Screen:** icon flicks (per app too), pinch in / out, two-finger swipes and double tap on empty space.\n- **Multi-finger gestures in any app:** two- and three-finger taps and swipes, pinch in / out.\n- **Swipe up from the bottom** left, middle or right, and the **Action button** (experimental).\n- **Sensors and events:** shake, proximity cover and wave, charger, headphones, Wi-Fi, Bluetooth, battery level, an app opened, any notification or one from an app, phone calls, music (started, paused, song changed), a time of day or chosen weekdays.\n- **Actions:** system and power actions, 18 switches (Grayscale, Smart Invert and Zoom included), media and AirPlay, levels and brightness steps, apps, Shortcuts, URLs, Settings pages, messages, speech (time, battery, clipboard), shell commands, menus, and sequences with pauses and **If / Otherwise** steps.\n- **Only If:** run an assignment only on a Wi-Fi network, while charging, between times, and more.\n- **Other tweaks:** tweaks can add their own triggers and actions (libtriggr), like Activator's add-ons.\n- **Places:** Anywhere, Home Screen, In Apps, Lock Screen, or **one specific app**."
+          "markdown": "## Triggr\n\nActivator-style triggers for modern jailbreaks. Pick a trigger, pick what it runs, in **Settings → Triggr** or the **Triggr app**. Triggr only changes a button when you assign something to it.\n\n- **Buttons:** Home, Lock / Side, Volume, Mute switch and Touch ID, with single, double, triple presses, holds and sequences, plus **Lock / Side + Volume** combos (press or hold).\n- **Status bar:** tap, double tap and hold, also per left / right half, plus swipe left / right.\n- **Screen edges:** slide in from the left or right edge, with one or two fingers, over apps too, or slide up and down along an edge.\n- **Home Screen:** icon flicks (per app too), pinch in / out, two-finger swipes and double tap on empty space.\n- **Multi-finger gestures in any app:** two- and three-finger taps and swipes, pinch in / out.\n- **Swipe up from the bottom** left, middle or right, and the **Action button** (Press confirmed on a 15 Pro Max; Double Press and Hold untested).\n- **Sensors and events:** shake, proximity cover and wave, charger, headphones, Wi-Fi, Bluetooth, battery level, an app opened, any notification or one from an app, phone calls, music (started, paused, song changed), a time of day or chosen weekdays.\n- **Actions:** system and power actions, 18 switches (Grayscale, Smart Invert and Zoom included), media and AirPlay, levels and brightness steps, apps, Shortcuts, URLs, Settings pages, messages, speech (time, battery, clipboard), shell commands, menus, and sequences with pauses and **If / Otherwise** steps.\n- **Only If:** run an assignment only on a Wi-Fi network, while charging, between times, and more.\n- **Other tweaks:** tweaks can add their own triggers and actions (libtriggr), like Activator's add-ons.\n- **Places:** Anywhere, Home Screen, In Apps, Lock Screen, or **one specific app**."
         },
         {
           "class": "DepictionScreenshotsView",
@@ -28,7 +28,7 @@
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/triggr/15-actionbutton.png",
-              "accessibilityText": "Action Button: Press, Double Press and Hold (experimental)"
+              "accessibilityText": "Action Button: Press, Double Press and Hold"
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/triggr/16-libtriggr.png",
@@ -79,6 +79,14 @@
               "accessibilityText": "Options"
             }
           ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "What's New in 2.0 Beta 5"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Slide along a screen edge.** New triggers: slide up or down along the left or right edge. Start at the edge and make a quick, straight stroke about a fifth of the screen long. A slow drag, like scrolling with your thumb, doesn't count. A fast flick from the edge can, so pick actions that are fine to run by accident.\n- **iOS 15 on A12 and newer (iPhone XS, XR, 11 and later) should work now.** Triggr used to crash or freeze SpringBoard there. I can't test that phone myself, so please tell me how it goes.\n- **Action Button:** Press is confirmed working on an iPhone 15 Pro Max (iOS 17.3). Double Press and Hold are still untested.\n\nThanks to nbaib for the edge slide idea, the0731 for the iOS 15 report and logs, and the Reddit user who confirmed the Action Button."
         },
         {
           "class": "DepictionHeaderView",

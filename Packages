@@ -685,6 +685,24 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html
 Name: Triggr
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.json
 
+Package: com.johndie.triggr
+Version: 2.0.0~beta5
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 1948
+Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, uikittools, firmware (>= 15.0)
+Filename: debs/com.johndie.triggr_2.0.0~beta5_iphoneos-arm64.deb
+Size: 224416
+MD5sum: 1cbd3be4075083d220a42d71bd59d566
+SHA1: 7a76d41c087b3900b75a1b9056f0bc0f769b040f
+SHA256: d802700e19c156a0451ce1ce779e082b720024840944d9f5a5a5ecad3fd890ca
+Section: Tweaks
+Description: Activator-lite for rootless Dopamine: assign actions to the home, lock and volume buttons, Touch ID, the mute switch, status bar taps, icon flicks, shaking, and events like charger, Wi-Fi, battery level or a time of day. Supports A12 and newer (arm64e).
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html
+Name: Triggr
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.json
+
 Package: com.scrub.exif
 Version: 1.0.0-2
 Architecture: iphoneos-arm64
