@@ -46,7 +46,15 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "What's New in 1.0.0~beta4"
+          "title": "What's New in 1.0.0~beta4.1"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Fixed:** Beta 4 shipped with the plain fallback screens on iOS 15 to 17 (the newer look didn't load). 4.1 brings the normal screens back everywhere.\n- **VU meters in the Minimal Player:** the \u22ef menu now shows the VU Meters item greyed out with the reason (they only fit the Crest Player). It was missing on iOS 15.\n- **Files import on sideloads:** picking music in Files now shows the import and the result, and the picker accepts every audio type. Still needs testing on a real sideload.\n- **Plus Beta 4:** shuffle an artist from Search, no 50-song search limit, covers you add show right away."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Beta 4"
         },
         {
           "class": "DepictionMarkdownView",
