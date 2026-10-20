@@ -82,6 +82,14 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in 2.0 Beta 4"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Mute and volume work on iOS 17 and newer.** The Mute actions (Toggle, On and Off) and Volume Up / Down did nothing there, because iOS 17 changed how Triggr reaches them. Tested on iOS 17.5.1.\n- Nothing changes on iOS 15 and 16.\n- The Action Button is still experimental.\n\nThanks to cuucondiep on Reddit for the report."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "What's New in 2.0 Beta 3"
         },
         {
