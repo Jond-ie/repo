@@ -7,7 +7,7 @@
    "views": [
     {
      "class": "DepictionMarkdownView",
-     "markdown": "## Catapult\n\nThe LineageOS launcher (Trebuchet) as your iPhone's Home Screen. Android's home screen, app drawer and folders run in place of iOS's, with Apple's own app open and close animations. Everything else stays iOS.\n\n- **The real Trebuchet layout:** grids, dock, page dots and page transitions, ported from LineageOS's own code.\n- **App drawer** with search that also does sums, unit conversions and web searches.\n- **Folders** that open on one page.\n- **Widgets made for it:** Clock, Weather, Now Playing and Batteries (AirPods too), in several sizes.\n- **12 icon shapes and icon themes**, optionally across all of iOS (app switcher, Spotlight, Settings, notifications). Leaves that to FrostBoard, SnowBoard or Anemone if you use them.\n- **Your own font** (.ttf / .otf), optionally as the system font. Emoji stay Apple's.\n- Notification dots, long-press shortcuts, hidden apps, and a search bar on the dock or at the top."
+     "markdown": "## Catapult\n\n**Make your iPhone's Home Screen work like Android's.** Catapult swaps the iOS Home Screen for Trebuchet, the one from LineageOS. Everything else stays iOS.\n\n- **An app drawer.** Swipe up for every app in one A to Z list. Its search box also does quick sums, converts units and searches the web.\n- **A tidier Home Screen.** Folders open on one page, and widgets show the time, weather, your music and your batteries (AirPods too).\n- **Your look.** Icon shapes, icon themes and your own font, on the Home Screen or across all of iOS. Emoji stay Apple's.\n- **It still feels like an iPhone.** Apps open and close with Apple's own animation, straight from their icon.\n\n[Everything it can do →](https://jond-ie.github.io/repo/catapult/)"
     },
     {
      "class": "DepictionScreenshotsView",
@@ -46,7 +46,7 @@
     },
     {
      "class": "DepictionMarkdownView",
-     "markdown": "- First public beta.\n- **Safe mode:** if SpringBoard crashes 5 times in a row right after starting, Catapult turns itself off and you get the stock Home Screen back. Normal resprings don't count.\n- Replaces MakrSas's Trebuchet package if you have it; your layout and settings carry over."
+     "markdown": "- First public beta.\n- **Safe to try:** if something goes badly wrong, Catapult switches itself off and your normal Home Screen comes back. A normal respring doesn't count.\n- **Had MakrSas's Trebuchet?** Catapult replaces it and keeps your layout."
     },
     {
      "class": "DepictionHeaderView",
@@ -54,15 +54,15 @@
     },
     {
      "class": "DepictionMarkdownView",
-     "markdown": "**Rootless jailbreaks, iOS 15 to 18.** Tested on iOS 15.8.6 (iPhone 7), 16.2 and 16.7 (iPhone 11 Pro Max, iPhone 8 Plus), 17.5.1 (iPhone SE 2nd gen) and 18 (iPhone 11 Pro).\n\nNot tested yet: iPads, landscape, and iOS 15 on iPhone XS and newer. If something goes wrong, [report it](https://github.com/Jond-ie/catapult/issues)."
+     "markdown": "**Rootless jailbreaks (Dopamine, palera1n…), iOS 15 to 18.**\n\nTested on iOS 15.8.6, 16.2, 16.7, 17.5.1 and 18.6.2, on iPhone 7, 8 Plus, SE (2nd gen), 11 Pro and 11 Pro Max.\n\nNot tried yet: iPads, landscape, and iOS 15 on iPhone XS and newer. If something's off, [tell me](https://github.com/Jond-ie/catapult/issues)."
     },
     {
      "class": "DepictionHeaderView",
-     "title": "Notes"
+     "title": "Good to know"
     },
     {
      "class": "DepictionMarkdownView",
-     "markdown": "- iOS's own widgets can't be placed on the home screen; Catapult has its own instead.\n- Portrait only for now.\n- System-wide font: apps switch when they next open; respring for the Home Screen. If the font's Bold or Medium file sits in the same folder, bold text uses it.\n- Pairs with **Material You** (MakrSas) for wallpaper colours."
+     "markdown": "- **iOS widgets:** they can't go on this Home Screen, so Catapult has its own.\n- **Portrait only** for now.\n- **Your font across iOS:** apps pick it up the next time they open. If the font comes with a Bold file, put it in the same folder and bold text uses it.\n- **FrostBoard, SnowBoard or Anemone?** Keep using them. Catapult leaves theming the rest of iOS to them.\n- **Material You** (by MakrSas) adds colours from your wallpaper."
     },
     {
      "class": "DepictionHeaderView",
