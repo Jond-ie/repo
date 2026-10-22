@@ -7,7 +7,7 @@
    "views": [
     {
      "class": "DepictionMarkdownView",
-     "markdown": "## Catapult\n\n**Make your iPhone's Home Screen work like Android's.** Catapult swaps the iOS Home Screen for Trebuchet, the one from LineageOS. Everything else stays iOS.\n\n- **An app drawer.** Swipe up for every app in one A to Z list. Its search box also does quick sums, converts units and searches the web.\n- **A tidier Home Screen.** Folders open on one page, and widgets show the time, weather, your music and your batteries (AirPods too).\n- **Your look.** Icon shapes, icon themes and your own font, on the Home Screen or across all of iOS. Emoji stay Apple's.\n- **It still feels like an iPhone.** Apps open and close with Apple's own animation, straight from their icon.\n\n[Everything it can do →](https://jond-ie.github.io/repo/catapult/)"
+     "markdown": "## Catapult\n\n**Make your iPhone's Home Screen work like Android's.** Catapult swaps the iOS Home Screen for Trebuchet, the one from LineageOS. Everything else stays iOS.\n\n- **An app drawer.** Swipe up for every app in one A to Z list. Its search box also does quick sums, converts units and searches the web.\n- **A tidier Home Screen.** Folders open on one page, and widgets show the time, weather, your music and your batteries (AirPods too).\n- **Your look.** Icon shapes, icon themes and your own font, on the Home Screen or across all of iOS. Emoji stay Apple's.\n- **In your language.** Catapult follows your iPhone's language.\n- **It still feels like an iPhone.** Apps open and close with Apple's own animation, straight from their icon.\n\n[Everything it can do →](https://jond-ie.github.io/repo/catapult/)"
     },
     {
      "class": "DepictionScreenshotsView",
@@ -42,7 +42,15 @@
     },
     {
      "class": "DepictionHeaderView",
-     "title": "What's New in 0.1.0~beta1"
+     "title": "What's New in 0.1.0~beta2"
+    },
+    {
+     "class": "DepictionMarkdownView",
+     "markdown": "- **Catapult speaks your language.** It follows your iPhone's language: LineageOS's own text in 96 languages, and everything Catapult added in 27, including Spanish, Portuguese, French, German, Russian, Arabic, Hindi, Japanese, Korean and Chinese.\n- **Fixed:** copying a search answer like 3,5 (decimal comma) pasted 35.\n- **Weather** follows your iPhone's °C / °F setting.\n- Tested in Simplified Chinese on an iPhone 8 Plus. If a line reads wrong in your language, [tell me](https://github.com/Jond-ie/catapult/issues)."
+    },
+    {
+     "class": "DepictionHeaderView",
+     "title": "Beta 1"
     },
     {
      "class": "DepictionMarkdownView",
@@ -62,7 +70,7 @@
     },
     {
      "class": "DepictionMarkdownView",
-     "markdown": "- **iOS widgets:** they can't go on this Home Screen, so Catapult has its own.\n- **Portrait only** for now.\n- **Your font across iOS:** apps pick it up the next time they open. If the font comes with a Bold file, put it in the same folder and bold text uses it.\n- **FrostBoard, SnowBoard or Anemone?** Keep using them. Catapult leaves theming the rest of iOS to them.\n- **Material You** (by MakrSas) adds colours from your wallpaper."
+     "markdown": "- **iOS widgets:** they can't go on this Home Screen, so Catapult has its own.\n- **Portrait only** for now.\n- **Your font across iOS:** apps pick it up the next time they open. If the font comes with a Bold file, put it in the same folder and bold text uses it.\n- **FrostBoard, SnowBoard or Anemone?** Keep using them. Catapult leaves theming the rest of iOS to them.\n- **Material You** (by MakrSas) adds colours from your wallpaper.\n- **Arabic and Hebrew:** translated, but the layout doesn't flip right to left yet."
     },
     {
      "class": "DepictionHeaderView",
