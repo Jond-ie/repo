@@ -1,0 +1,78 @@
+{
+ "class": "DepictionTabView",
+ "tabs": [
+  {
+   "tabname": "Details",
+   "class": "DepictionStackView",
+   "views": [
+    {
+     "class": "DepictionMarkdownView",
+     "markdown": "## Catapult\n\nThe LineageOS launcher (Trebuchet) as your iPhone's Home Screen. Android's home screen, app drawer and folders run in place of iOS's, with Apple's own app open and close animations. Everything else stays iOS.\n\n- **The real Trebuchet layout:** grids, dock, page dots and page transitions, ported from LineageOS's own code.\n- **App drawer** with search that also does sums, unit conversions and web searches.\n- **Folders** that open on one page.\n- **Widgets made for it:** Clock, Weather, Now Playing and Batteries (AirPods too), in several sizes.\n- **12 icon shapes and icon themes**, optionally across all of iOS (app switcher, Spotlight, Settings, notifications). Leaves that to FrostBoard, SnowBoard or Anemone if you use them.\n- **Your own font** (.ttf / .otf), optionally as the system font. Emoji stay Apple's.\n- Notification dots, long-press shortcuts, hidden apps, and a search bar on the dock or at the top."
+    },
+    {
+     "class": "DepictionScreenshotsView",
+     "itemCornerRadius": 8,
+     "itemSize": "{160, 276}",
+     "screenshots": [
+      {
+       "url": "https://jond-ie.github.io/repo/screenshots/catapult/home.png",
+       "accessibilityText": "Home screen: Trebuchet grid, dock and search bar"
+      },
+      {
+       "url": "https://jond-ie.github.io/repo/screenshots/catapult/drawer.png",
+       "accessibilityText": "App drawer"
+      },
+      {
+       "url": "https://jond-ie.github.io/repo/screenshots/catapult/search.png",
+       "accessibilityText": "Search answers sums and searches the web"
+      },
+      {
+       "url": "https://jond-ie.github.io/repo/screenshots/catapult/shortcuts.png",
+       "accessibilityText": "Long-press shortcuts"
+      },
+      {
+       "url": "https://jond-ie.github.io/repo/screenshots/catapult/edit.png",
+       "accessibilityText": "Editing pages"
+      },
+      {
+       "url": "https://jond-ie.github.io/repo/screenshots/catapult/settings.png",
+       "accessibilityText": "Home settings: icon themes and fonts"
+      }
+     ]
+    },
+    {
+     "class": "DepictionHeaderView",
+     "title": "What's New in 0.1.0~beta1"
+    },
+    {
+     "class": "DepictionMarkdownView",
+     "markdown": "- First public beta.\n- **Safe mode:** if SpringBoard crashes 5 times in a row right after starting, Catapult turns itself off and you get the stock Home Screen back. Normal resprings don't count.\n- Replaces MakrSas's Trebuchet package if you have it; your layout and settings carry over."
+    },
+    {
+     "class": "DepictionHeaderView",
+     "title": "Device Support"
+    },
+    {
+     "class": "DepictionMarkdownView",
+     "markdown": "**Rootless jailbreaks, iOS 15 to 18.** Tested on iOS 15.8.6 (iPhone 7), 16.2 and 16.7 (iPhone 11 Pro Max, iPhone 8 Plus), 17.5.1 (iPhone SE 2nd gen) and 18 (iPhone 11 Pro).\n\nNot tested yet: iPads, landscape, and iOS 15 on iPhone XS and newer. If something goes wrong, [report it](https://github.com/Jond-ie/catapult/issues)."
+    },
+    {
+     "class": "DepictionHeaderView",
+     "title": "Notes"
+    },
+    {
+     "class": "DepictionMarkdownView",
+     "markdown": "- iOS's own widgets can't be placed on the home screen; Catapult has its own instead.\n- Portrait only for now.\n- System-wide font: apps switch when they next open; respring for the Home Screen. If the font's Bold or Medium file sits in the same folder, bold text uses it.\n- Pairs with **Material You** (MakrSas) for wallpaper colours."
+    },
+    {
+     "class": "DepictionHeaderView",
+     "title": "Credits"
+    },
+    {
+     "class": "DepictionMarkdownView",
+     "markdown": "Built on **MakrSas**'s [Trebuchet port](https://github.com/MakrSas/Trebuchet) (Apache 2.0). Thank you, MakrSas.\n\nTrebuchet and Launcher3 by **LineageOS** and the **Android Open Source Project** (Apache 2.0). Roboto Flex by Google (OFL). Full notices in Settings > About and [on GitHub](https://github.com/Jond-ie/catapult/tree/main/third-party).\n\nCatapult by **Jond-ie**."
+    }
+   ]
+  }
+ ]
+}

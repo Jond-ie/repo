@@ -151,6 +151,28 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.bounceit-rootle
 Name: Bounce It! (rootless)
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.bounceit-rootless.json
 
+Package: com.johndie.catapult
+Version: 0.1.0~beta1
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
+Recommends: com.makr.materialyou
+Conflicts: com.makr.trebuchet.springboard, com.johndie.trebuchet
+Replaces: com.makr.trebuchet.springboard, com.johndie.trebuchet
+Provides: com.makr.trebuchet.springboard
+Filename: debs/com.johndie.catapult_0.1.0~beta1_iphoneos-arm64.deb
+Size: 1246348
+MD5sum: aae251dae6b3e198fc1bd5869e4d1a31
+SHA1: 8c0ed0d9242c374280b036448c81431be9b9be52
+SHA256: ba70761413004a4bca4ce7ea0f7cab34c77a4467f013a787bff07275f30b6013
+Section: Tweaks
+Description: The LineageOS launcher (Trebuchet) as your Home Screen, for iOS 15 to 18. App drawer with search, one-page folders, its own widgets (Clock, Weather, Now Playing, Batteries), icon shapes and themes (optionally across all of iOS: app switcher, Spotlight, Settings, notifications), page transitions and hidden apps. Built on MakrSas's Trebuchet port and AOSP/LineageOS Launcher3; credits in Settings > About.
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.catapult.html
+Icon: https://jond-ie.github.io/repo/assets/catapult.png
+Name: Catapult
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.catapult.json
+
 Package: com.johndie.ccsupport18
 Version: 1.3.13-3~ios18fix2
 Architecture: iphoneos-arm64
