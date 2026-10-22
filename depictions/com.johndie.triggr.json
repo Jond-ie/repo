@@ -82,6 +82,14 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in 2.0 Beta 8"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Action Button:** a fix for SpringBoard going into Safe Mode when an Action Button press was assigned (Beta 6 to 7.1). iOS now lets go of the button itself. Please tell me if it still happens.\n- **Shortcuts run in the background,** the way Back Tap runs them: no Shortcuts app popping up. Turn it off in Options if you want the app.\n- **Pick a Shortcut from a list.** The new Shortcuts section shows all of yours, so you don't have to type names.\n- **Tweak Actions:** many tweaks still carry their old Activator actions. Activator can't be installed on rootless, so Triggr now runs those actions itself (made for Snapper 2).\n- **Press Volume Up / Down:** works like pressing the real button, so the volume bar shows and volume mixer tweaks react.\n- **Soft** haptic feedback.\n- **Fixed:** the Mute Switch trigger did nothing on iOS 17 and 18, Proximity (Cover / Wave) did nothing on iOS 15, and Spotlight was missing on iOS 18. Found by checking every trigger and action against iOS 15, 16, 17 and 18.\n\nThanks to nbaib (soft haptics, volume buttons), alexp4re (Shortcuts) and the Reddit testers (Action Button, Snapper 2)."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "What's New in 2.0 Beta 7.1"
         },
         {
@@ -94,7 +102,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **Haptic feedback.** A small tap every time an action runs: Options \u2192 Haptic Feedback (Off, Light, Medium or Strong; off by default). It follows iOS's System Haptics setting.\n- **Swiping up from the bottom corners no longer scrolls the page behind it.** The bottom zones now take the touch from the app, like iOS's own gestures. I can only test that with a real finger on a Face ID iPhone, so tell me if it still happens.\n- **Snapper 2:** Triggr only knows Snapper 3, so the Snapper 3 actions are hidden when only Snapper 2 is installed (they did nothing).\n\nThanks to the Reddit user on an iPhone 13 mini for the feedback."
+          "markdown": "- **Haptic feedback.** A small tap every time an action runs: Options → Haptic Feedback (Off, Light, Medium or Strong; off by default). It follows iOS's System Haptics setting.\n- **Swiping up from the bottom corners no longer scrolls the page behind it.** The bottom zones now take the touch from the app, like iOS's own gestures. I can only test that with a real finger on a Face ID iPhone, so tell me if it still happens.\n- **Snapper 2:** Triggr only knows Snapper 3, so the Snapper 3 actions are hidden when only Snapper 2 is installed (they did nothing).\n\nThanks to the Reddit user on an iPhone 13 mini for the feedback."
         },
         {
           "class": "DepictionHeaderView",
