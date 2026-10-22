@@ -84,6 +84,12 @@ code { font: .85em/1.4 ui-monospace, Menlo, monospace; background: var(--well); 
 .bar .backbtn { left: 6px; padding-left: .6rem; }
 .bar .backbtn::before { content: "‹"; font-size: 1.35rem; line-height: 1; margin-top: -2px; color: var(--accent); }
 .bar .barbtn { right: 6px; }
+.bar .barlinks { position: absolute; left: 6px; top: 6px; display: flex; gap: 6px; }
+.bar .iconbtn {
+  width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; color: var(--fg);
+  background: var(--key); border: 1px solid var(--key-edge); box-shadow: var(--key-shadow);
+}
+.bar .iconbtn svg { width: 15px; height: 15px; fill: currentColor; }
 .bar a:hover { text-decoration: none; }
 
 /* header */

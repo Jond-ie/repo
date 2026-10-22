@@ -42,6 +42,14 @@
     },
     {
      "class": "DepictionHeaderView",
+     "title": "How it works"
+    },
+    {
+     "class": "DepictionMarkdownView",
+     "markdown": "1. **Swipe up** for the app drawer: every app A to Z, with a letter bar to jump.\n2. **Long-press an empty spot** for Wallpaper & style (icon shapes, grid size), Widgets and Home settings.\n3. **Long-press an app** for its shortcuts, App info and Remove. Drag it onto another app to make a folder.\n4. **Type in the search bar:** apps, sums like `9+2`, conversions like `5 km in mi`, or a web search.\n\n[See it in action and everything it can do →](https://jond-ie.github.io/repo/catapult/)"
+    },
+    {
+     "class": "DepictionHeaderView",
      "title": "What's New in 0.1.0~beta2"
     },
     {

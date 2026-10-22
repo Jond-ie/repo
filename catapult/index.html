@@ -15,6 +15,13 @@
 <link rel="icon" href="../CydiaIcon.png">
 <link rel="apple-touch-icon" href="../assets/catapult.png">
 <link rel="stylesheet" href="../assets/site.css">
+<style>
+  .demo { display: flex; justify-content: center; }
+  .demo .twitter-tweet { margin: 0 auto !important; }
+  .demo blockquote { max-width: 32rem; width: 100%; margin: 0; padding: 1rem 1.2rem; }
+  .try { display: grid; gap: .7rem; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); }
+  .try code { display: inline-block; margin: .15rem .25rem .15rem 0; }
+</style>
 </head>
 <body>
 <nav class="bar"><a class="backbtn" href="../">All tweaks</a><span class="title">Catapult</span></nav>
@@ -29,8 +36,27 @@
       <a class="button" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a>
       <a class="button secondary" href="https://github.com/Jond-ie/catapult/releases">Download .deb</a>
     </div>
-    <p class="url">Add the repo, then search <b>Catapult</b>.</p>
+    <p class="url">Add the repo, then search <b>Catapult</b>. Free.</p>
   </header>
+
+  <section>
+    <h2 class="big">See it move</h2>
+    <p class="sub">A demo from an earlier build.</p>
+    <div class="demo">
+      <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-conversation="none"><a href="https://twitter.com/Jond_ie/status/2112398543046803524">Watch the Catapult demo on X</a></blockquote>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="big">How it works</h2>
+    <p class="sub">Install it, and your Home Screen is Trebuchet. Four things to know.</p>
+    <div class="how">
+      <div class="step"><b>1</b>Swipe up<p>Opens the app drawer: every app from A to Z. Drag the bar on the side to jump to a letter.</p></div>
+      <div class="step"><b>2</b>Long-press an empty spot<p>Gives you <b>Wallpaper &amp; style</b> (icon shapes and grid size), <b>Widgets</b> and <b>Home settings</b>.</p></div>
+      <div class="step"><b>3</b>Long-press an app<p>Shows its shortcuts, like New Message or Search, plus App info and Remove. Drag it to move it, onto another app to make a folder, or to Uninstall.</p></div>
+      <div class="step"><b>4</b>Type in the search bar<p>Finds apps, and answers sums and unit conversions. Anything else searches the web in the browser you pick.</p></div>
+    </div>
+  </section>
 
   <section>
     <h2 class="big">Made for you if…</h2>
@@ -48,16 +74,38 @@
   </section>
 
   <section>
+    <h2 class="big">Try typing these</h2>
+    <p class="sub">The search bar answers before you even open an app. Tap an answer to copy it.</p>
+    <div class="try">
+      <div class="point"><h3>Sums</h3><p><code>9+2</code><code>2^10</code><code>sqrt(2)</code><code>(4+6)/3</code></p></div>
+      <div class="point"><h3>Conversions</h3><p><code>5 km in mi</code><code>72 f to c</code><code>2 cups in ml</code><code>100 kg as lb</code></p></div>
+      <div class="point"><h3>Numbers</h3><p><code>0xff</code><code>0b1010</code> show the number in decimal, hex and binary.</p></div>
+      <div class="point"><h3>Anything else</h3><p>Searches the web with DuckDuckGo, Google, Brave Search, Bing or Startpage, in Safari or the browser you pick.</p></div>
+    </div>
+  </section>
+
+  <section>
     <h2 class="big">Everything it can do</h2>
+    <p class="sub">The full list. Items marked <span class="new-word">new</span> came in beta 2.</p>
     <div class="groups">
       <div class="group"><h3>Home Screen</h3><p>Laid out by the same rules as on Android, ported from LineageOS.</p>
-        <ul><li>Grid sizes</li><li>Dock</li><li>Page dots</li><li>Page transitions</li><li>Search bar on the dock or at the top</li><li>Apple's own open and close animation</li><li>Notification dots</li><li>Long-press shortcuts</li><li>Hidden apps</li><li>Two-line labels</li><li>Double tap to lock</li><li>Lock the layout so nothing moves</li></ul></div>
+        <ul><li>Grid sizes</li><li>Dock</li><li>Page dots</li><li>Search bar under the dock, or on top</li><li>Apple's own open and close animation</li><li>Notification dots</li><li>App shortcuts on long-press</li><li>Drag icons, folders and widgets between pages</li><li>Drag to Remove or Uninstall</li><li>New apps added for you (optional)</li><li>Double tap an empty spot to lock</li><li>Lock the layout so nothing moves</li><li>Icon size slider</li><li>Two-line app names</li></ul></div>
       <div class="group"><h3>App drawer</h3><p>Swipe up from the Home Screen.</p>
-        <ul><li>All apps A to Z</li><li>Fast scroll</li><li>App search</li><li>Quick sums (type 9+2)</li><li>Unit conversions</li><li>Web search</li><li>Pick the browser and search engine</li></ul></div>
-      <div class="group"><h3>Folders &amp; widgets</h3>
-        <ul><li>One-page folders</li><li>Android folder animations</li><li>Clock</li><li>Weather</li><li>Now Playing</li><li>Batteries (AirPods too)</li><li>Several sizes</li><li>Material You colours</li></ul></div>
-      <div class="group"><h3>Your look</h3><p>On the Home Screen, or switch it on for all of iOS: the app switcher, Spotlight, Settings and notifications.</p>
-        <ul><li>12 icon shapes</li><li>Icon themes</li><li>Use your icons across iOS</li><li>Your own font</li><li>Use the font across iOS</li><li>Emoji stay Apple's</li><li>Proper bold text when the font has a Bold file</li></ul></div>
+        <ul><li>All apps A to Z, sorted the way your language sorts</li><li>Letter bar for fast scrolling</li><li>App search</li><li>Quick sums (type 9+2)</li><li>Unit conversions</li><li>Web search</li><li>Pick the browser and search engine</li><li>Hidden apps stay out of the drawer and search</li></ul></div>
+      <div class="group"><h3>Folders</h3><p>Drop one app on another.</p>
+        <ul><li>Open on one page, no swiping through pages</li><li>Android's folder animation</li><li>Rename by tapping the name</li><li>Apps close back into the folder</li></ul></div>
+      <div class="group"><h3>Widgets</h3><p>Made for Catapult, in Material You colours. Long-press an empty spot → Widgets.</p>
+        <ul><li>Clock: digital or analog, aligned left, centre or right</li><li>Weather for a city you pick (Open-Meteo, no account)</li><li>Now Playing, with play, pause and skip</li><li>Batteries: iPhone, AirPods (each bud and the case) and other accessories</li><li>Battery: charge left and when it runs out or fills up</li><li>Several sizes each</li></ul></div>
+      <div class="group"><h3>Icons</h3><p>On the Home Screen, or switch it on for all of iOS: the app switcher, Spotlight, Settings and notifications.</p>
+        <ul><li>12 shapes: circle, squircle, square, rounded rect, 4- and 7-sided cookie, pebble, arch, vessel, teardrop, tapered rect, pure square</li><li>SnowBoard, Anemone and FrostBoard themes you already have</li><li>Use your icons across iOS</li><li>Steps aside if FrostBoard, SnowBoard or Anemone is installed</li></ul></div>
+      <div class="group"><h3>Fonts</h3><p>Drop .ttf or .otf files in <code>/var/mobile/Library/Trebuchet/Fonts</code>.</p>
+        <ul><li>Use any font on the Home Screen</li><li>Or as your system font in every app</li><li>Emoji and symbols stay Apple's</li><li>Proper bold text when the font has a Bold file</li><li>Respring prompt when it's ready</li></ul></div>
+      <div class="group"><h3>Page transitions</h3>
+        <ul><li>None (flat slide)</li><li>Cube</li><li>Cylinder</li><li>Carousel</li></ul></div>
+      <div class="group"><h3>Languages <span class="new-word">new</span></h3><p>Follows your iPhone's language.</p>
+        <ul><li class="new">96 languages for LineageOS's own text</li><li class="new">27 for everything Catapult added</li><li class="new">Your region's time, date and number style</li><li class="new">°C or °F, from your iPhone's setting</li></ul></div>
+      <div class="group"><h3>Safety</h3>
+        <ul><li>Safe mode: if the Home Screen keeps crashing right after it starts, Catapult switches itself off</li><li>A normal respring doesn't count</li><li>Uninstall from Sileo any time</li><li>Replaces MakrSas's Trebuchet and keeps your layout</li></ul></div>
     </div>
   </section>
 
@@ -76,11 +124,15 @@
   <section>
     <h2 class="big">Questions</h2>
     <details><summary>Something broke. How do I get my normal Home Screen back?</summary><p>If your iPhone's Home Screen keeps crashing right after it starts (5 times in a row), Catapult switches itself off and the normal one comes back. A normal respring doesn't count. You can also uninstall Catapult from Sileo.</p></details>
+    <details><summary>Where are the settings?</summary><p>Long-press an empty spot on the Home Screen and pick <b>Home settings</b>. Icon shapes and grid size are under <b>Wallpaper &amp; style</b>.</p></details>
+    <details><summary>Is it in my language?</summary><p>Catapult follows your iPhone's language. LineageOS's own text comes in 96 languages, and everything Catapult added in 27, including Spanish, Portuguese, French, German, Russian, Arabic, Hindi, Japanese, Korean and Chinese. Arabic and Hebrew are translated, but the layout doesn't flip right to left yet. If a line reads wrong, <a href="https://github.com/Jond-ie/catapult/issues">tell me</a>.</p></details>
     <details><summary>Can I put iOS widgets on it?</summary><p>No, iOS doesn't let them live outside its own Home Screen. Catapult has its own Clock, Weather, Now Playing and Batteries widgets instead.</p></details>
+    <details><summary>What about Today View, Spotlight pull-down and the App Library?</summary><p>They're the parts of the iOS Home Screen that Catapult replaces: the app drawer and its search do their job. Control Center, notifications and the app switcher are untouched.</p></details>
     <details><summary>I use FrostBoard, SnowBoard or Anemone.</summary><p>Keep using them. Catapult still themes its own icons, and leaves theming the rest of iOS to your engine.</p></details>
     <details><summary>Bold text in my font looks regular.</summary><p>Put the font's Bold (and Medium) file in the same folder as the one you picked. Catapult uses them for bold text. A font with only one weight stays at that weight.</p></details>
-    <details><summary>Is it in my language?</summary><p>Catapult follows your iPhone's language. LineageOS's own text comes in 96 languages, and everything Catapult added in 27, including Spanish, Portuguese, French, German, Russian, Arabic, Hindi, Japanese, Korean and Chinese. Arabic and Hebrew are translated, but the layout doesn't flip right to left yet. If a line reads wrong, <a href="https://github.com/Jond-ie/catapult/issues">tell me</a>.</p></details>
+    <details><summary>Does it slow my phone down?</summary><p>It's tuned to keep scrolling, page swipes and app launches smooth, even on an iPhone 7. The across-iOS icon and font options only load when you switch them on.</p></details>
     <details><summary>I had MakrSas's Trebuchet installed.</summary><p>Installing Catapult replaces it. Your layout and settings carry over.</p></details>
+    <details><summary>Is it free? Is it open source?</summary><p>Free. Catapult is built on MakrSas's open-source Trebuchet port (Apache 2.0). Catapult's own code isn't published, but every licence and notice ships with it.</p></details>
   </section>
 
   <section>
@@ -107,5 +159,6 @@
     <p>Catapult by Jond-ie, built on <a href="https://github.com/MakrSas/Trebuchet">MakrSas's Trebuchet port</a>. Trebuchet and Launcher3 by LineageOS and the Android Open Source Project (Apache 2.0); Roboto Flex by Google (OFL). Licences are in the package and <a href="https://github.com/Jond-ie/catapult/tree/main/third-party">on GitHub</a>.</p>
   </footer>
 </main>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
