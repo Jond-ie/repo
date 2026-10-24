@@ -82,6 +82,14 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in 2.0 Beta 9"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Fixed:** with an Action Button press assigned, the next press could crash SpringBoard (Beta 8). Triggr now lets iOS finish every press properly. Thanks for the crash log!\n- **Getting ready for iOS 27:** the Action Button, edge gestures, App Switcher and Reachability now find their new iOS 27 names. Not tested on iOS 27 yet."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "What's New in 2.0 Beta 8"
         },
         {
