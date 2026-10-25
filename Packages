@@ -16,6 +16,24 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.crossfade.music.html
 Name: Crossfade
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.crossfade.music.json
 
+Package: com.johndie.anywhere
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: John d_ie
+Installed-Size: 204
+Depends: mobilesubstrate, firmware (>= 15.0), firmware (<< 18.0)
+Filename: debs/com.johndie.anywhere_1.0.0_iphoneos-arm64.deb
+Size: 17296
+MD5sum: 62f3fe51bdce131a6386e72863331512
+SHA1: 4c64511a39aa4c692a1015a1f696afa45187f6c5
+SHA256: 86f3bd29d491cbe1370ed35a072001efadc89d278bc06c946c35fb2038a37129
+Section: Tweaks
+Description: Place apps and widgets anywhere on the Home Screen, with empty spaces in between, like iOS 18. For iOS 15 to 17. Nothing to set up: install it and drag.
+Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.anywhere.html
+Name: Anywhere
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.anywhere.json
+
 Package: com.johndie.begonecia
 Version: 0.2.0-rootless5
 Architecture: iphoneos-arm64

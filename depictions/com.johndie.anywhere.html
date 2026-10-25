@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anywhere · pwnapple</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff; --fg: #1a1a1a; --muted: #666; --card: #f4f4f5;
+    --accent: #3b6ea5; --border: #e2e2e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
+      --accent: #6ea8dc; --border: #26262b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
+    --accent: #6ea8dc; --border: #26262b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font: 16px/1.6 -apple-system, system-ui, "Segoe UI", sans-serif;
+    background: var(--bg); color: var(--fg);
+    max-width: 40rem; margin: 0 auto; padding: 2.5rem 1rem 4rem;
+    overflow-wrap: anywhere;
+  }
+  h1 { font-size: 1.9rem; margin: 0 0 .75rem; }
+  h2 { font-size: 1.1rem; margin: 2rem 0 .6rem; }
+  p { margin: 0 0 .9rem; }
+  ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
+  li { margin: .25rem 0; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: .75rem; padding: 1rem 1.15rem;
+  }
+  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
+  code { font-size: .9em; }
+  .back { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; }
+  footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<a class="back" href="../">&larr; pwnapple</a>
+<h1>Anywhere</h1>
+<p><strong>Put your apps and widgets anywhere on the Home Screen, with empty spaces in between, just like iOS 18.</strong> Nothing to set up: install it, hold an app, and drag it where you want it.</p>
+<ul>
+  <li><strong>Empty spaces stay empty.</strong> Move an app away and its spot stays open. Nothing slides up to fill it.</li>
+  <li><strong>Drop on an empty spot and it lands right there.</strong> Nothing else moves.</li>
+  <li><strong>Moves like iOS 18.</strong> Drag onto another app and that app steps aside, the same way iOS 18 does it. Apps next to each other swap. Holding over the middle of an app still makes a folder.</li>
+  <li><strong>Widgets too.</strong> Widgets snap into place the way they do on iOS 18, and apps make room for them.</li>
+  <li><strong>No settings, nothing running in the background.</strong> It only works while you arrange your Home Screen.</li>
+</ul>
+<h2>Device Support</h2>
+<div class="card">
+<ul>
+  <li><strong>iOS 15, 16 and 17</strong>, rootless (Dopamine). arm64 and arm64e (A11 and newer, A12+ included).</li>
+  <li><strong>iOS 16:</strong> tested on an <strong>iPhone 11 Pro Max (A13)</strong> with iOS 16.2.</li>
+  <li><strong>iOS 17:</strong> tested on an <strong>iPhone SE (2nd gen, A13)</strong> with iOS 17.5.1. iOS 17 already has this feature built in, hidden; Anywhere turns it on.</li>
+  <li><strong>iOS 15:</strong> uses the same code as iOS 16 but isn&#x27;t tested yet. Please <a href="https://github.com/Jond-ie/repo/issues">report back</a>.</li>
+  <li><strong>iOS 18 and later</strong> already do this, so Anywhere isn&#x27;t needed there.</li>
+  <li><strong>If it ever puts you into safe mode:</strong> open Sileo (safe mode still allows it), uninstall it and please <a href="https://github.com/Jond-ie/repo/issues">report back</a>.</li>
+</ul>
+</div>
+<h2>Good to know</h2>
+<div class="card">
+<ul>
+  <li><strong>Uninstalling is safe.</strong> Your apps simply pack back together like before. Your Home Screen layout file is never rewritten.</li>
+  <li>Works on Home Screen pages. The dock and folders keep the normal layout, like on iOS 18.</li>
+</ul>
+</div>
+<h2>Credits</h2>
+<div class="card">
+<p>Written from scratch by <strong>Jond-ie</strong>, following how iOS 18 arranges the Home Screen.</p>
+</div>
+<footer>
+  <p>Bugs &amp; requests: <a href="https://github.com/Jond-ie/repo/issues">GitHub Issues</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## Anywhere\n\n**Put your apps and widgets anywhere on the Home Screen, with empty spaces in between, just like iOS 18.** Nothing to set up: install it, hold an app, and drag it where you want it.\n\n- **Empty spaces stay empty.** Move an app away and its spot stays open. Nothing slides up to fill it.\n- **Drop on an empty spot and it lands right there.** Nothing else moves.\n- **Moves like iOS 18.** Drag onto another app and that app steps aside, the same way iOS 18 does it. Apps next to each other swap. Holding over the middle of an app still makes a folder.\n- **Widgets too.** Widgets snap into place the way they do on iOS 18, and apps make room for them.\n- **No settings, nothing running in the background.** It only works while you arrange your Home Screen."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Device Support"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **iOS 15, 16 and 17**, rootless (Dopamine). arm64 and arm64e (A11 and newer, A12+ included).\n- **iOS 16:** tested on an **iPhone 11 Pro Max (A13)** with iOS 16.2.\n- **iOS 17:** tested on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1. iOS 17 already has this feature built in, hidden; Anywhere turns it on.\n- **iOS 15:** uses the same code as iOS 16 but isn't tested yet. Please [report back](https://github.com/Jond-ie/repo/issues).\n- **iOS 18 and later** already do this, so Anywhere isn't needed there.\n- **If it ever puts you into safe mode:** open Sileo (safe mode still allows it), uninstall it and please [report back](https://github.com/Jond-ie/repo/issues)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Good to know"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Uninstalling is safe.** Your apps simply pack back together like before. Your Home Screen layout file is never rewritten.\n- Works on Home Screen pages. The dock and folders keep the normal layout, like on iOS 18."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Written from scratch by **Jond-ie**, following how iOS 18 arranges the Home Screen."
+        }
+      ]
+    }
+  ]
+}
