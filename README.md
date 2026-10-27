@@ -28,7 +28,7 @@ https://jond-ie.github.io/repo/
 - **[Catapult](https://jond-ie.github.io/repo/catapult/)**: make your iPhone's Home Screen work like Android's.
 - **[FrostBoard](https://jond-ie.github.io/repo/depictions/com.johndie.frostboard.html)**: icon themes on iOS 15–18, using the themes you already have.
 
-There are plenty more: Lock Screen, Face ID, look and feel, privacy, music and fixes. **[Browse them on the site](https://jond-ie.github.io/repo/)**, where you can filter by your iOS version.
+There are plenty more: Lock Screen, Face ID, look and feel, privacy, music, tools and fixes. **[Browse them on the site](https://jond-ie.github.io/repo/)**, where you can filter by your iOS version.
 
 ## Will it work on my phone?
 
