@@ -15,7 +15,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **iOS 15 and newer**, rootless (Dopamine and other rootless jailbreaks).\n- **Tested** on an **iPhone 11 Pro (A13)** with iOS 18.6.2 and an **iPhone XR (A12)** with iOS 16.0.3.\n- **iOS 15 and 17** aren't tested yet. Please [report back](https://github.com/Jond-ie/repo/issues)."
+          "markdown": "- **iOS 15 and newer**, rootless (Dopamine and other rootless jailbreaks).\n- **Tested** on an **iPhone 11 Pro (A13)** with iOS 18.6.2, an **iPhone 11 Pro Max (A13)** with iOS 16.2 and an **iPhone XR (A12)** with iOS 16.0.3.\n- **iOS 15 and 17** aren't tested yet. Please [report back](https://github.com/Jond-ie/repo/issues)."
         },
         {
           "class": "DepictionHeaderView",
