@@ -378,28 +378,6 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.faceskip.html
 Name: FaceSkip
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.faceskip.json
 
-Package: com.johndie.fastfetch
-Version: 2.70.0-2
-Architecture: iphoneos-arm64
-Maintainer: John d_ie
-Installed-Size: 1704
-Depends: firmware (>= 15.0)
-Conflicts: fastfetch
-Replaces: fastfetch
-Provides: fastfetch
-Filename: debs/com.johndie.fastfetch_2.70.0-2_iphoneos-arm64.deb
-Size: 430212
-MD5sum: 9c2d7d08261c05538cc3ebd0035ee819
-SHA1: 1323ca328404ca2c3be8701a0d27e2f1edd000c3
-SHA256: ee213ae0d8fd84d60d8f1a38aceb7b138a848f89543bc7b8a8fdf2f11da3adcc
-Section: Utilities
-Homepage: https://github.com/fastfetch-cli/fastfetch
-Description: Show your iPhone's system info in the terminal: model, iOS version, chip, memory, storage, battery and more. A port of fastfetch for jailbroken iOS.
-Author: fastfetch-cli
-Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.fastfetch.html
-Name: fastfetch
-SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.fastfetch.json
-
 Package: com.johndie.frostboard
 Version: 0.0.1~beta1
 Architecture: iphoneos-arm64
