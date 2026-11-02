@@ -7,7 +7,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "## PullOver Pro (Rootless)\n\n**Pin any app to a small handle on the side of the screen and pull it over whatever you're doing.** The app runs live, and you never leave the one you're in. c1d3r's PullOver Pro, brought back.\n\n- **Tap or pull the handle** to slide the pinned app in. Push it back to tuck it away.\n- **QuickSwitch:** long-press the handle to pick another app from your recent apps or favorites. Drag an app to the middle to open it full screen.\n- **Settings** for left-handed mode, a dark handle, QuickSwitch size, hiding in landscape, staying above the keyboard, closing when you go home, and shrinking the handle when it sits idle. Changes apply right away.\n- **Works with Triggr:** install **PullOver Pro for Triggr** to pull over or close your app with any button or gesture."
+          "markdown": "## PullOver Pro (Rootless)\n\n**Pin any app to a small handle on the side of the screen and pull it over whatever you're doing.** The app runs live, and you never leave the one you're in. c1d3r's PullOver Pro, brought back.\n\n- **Tap or pull the handle** to slide the pinned app in. Push it back to tuck it away.\n- **QuickSwitch:** long-press the handle to pick another app from your recent apps or favorites. Drag an app to the middle to open it full screen.\n- **Settings** for left-handed mode, a dark handle, QuickSwitch size, hiding in landscape, staying above the keyboard, closing when you go home, and shrinking the handle when it sits idle. Changes apply right away."
         },
         {
           "class": "DepictionTableTextView",

@@ -849,42 +849,6 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-roo
 Name: PullOver Pro (Rootless)
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-rootless.json
 
-Package: com.johndie.pulloverpro-triggr
-Version: 1.0.0~beta1
-Architecture: iphoneos-arm64e
-Maintainer: Jond-ie
-Installed-Size: 168
-Depends: mobilesubstrate, com.johndie.triggr (>= 2.0.0~beta1), com.johndie.pulloverpro-rootless (>= 3.0.0~beta1), firmware (>= 15.0)
-Filename: debs/com.johndie.pulloverpro-triggr_1.0.0~beta1_iphoneos-arm64e.deb
-Size: 4132
-MD5sum: cc2cad5612d322e2506d37e4abbd90ca
-SHA1: 6bfd8a259a5574bbeeaeb3a19963dec69b750f01
-SHA256: fb020d03b294a109d71499e22d3f5838d4be0129153121564424677ebae04722
-Section: Tweaks
-Description: Pull over your pinned PullOver Pro app, or close it, with any Triggr trigger.
-Author: Jond-ie
-Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-triggr.html
-Name: PullOver Pro for Triggr
-SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-triggr.json
-
-Package: com.johndie.pulloverpro-triggr
-Version: 1.0.0~beta1
-Architecture: iphoneos-arm64
-Maintainer: Jond-ie
-Installed-Size: 168
-Depends: mobilesubstrate, com.johndie.triggr (>= 2.0.0~beta1), com.johndie.pulloverpro-rootless (>= 3.0.0~beta1), firmware (>= 15.0)
-Filename: debs/com.johndie.pulloverpro-triggr_1.0.0~beta1_iphoneos-arm64.deb
-Size: 5122
-MD5sum: 6d095e67bc37de1e0a93ca8c98596a5e
-SHA1: eaed3e36bb74c547c753f9a631ce56d215d89fe0
-SHA256: ee1eae4ea5491a6a382d50f013a5cf391f4883c46f9bf3dbc8a1e60cf882036e
-Section: Tweaks
-Description: Pull over your pinned PullOver Pro app, or close it, with any Triggr trigger.
-Author: Jond-ie
-Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-triggr.html
-Name: PullOver Pro for Triggr
-SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-triggr.json
-
 Package: com.johndie.slaplock
 Version: 0.2.0~beta1-2
 Architecture: iphoneos-arm64
