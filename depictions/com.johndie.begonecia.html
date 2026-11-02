@@ -3,76 +3,126 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Begonecia · pwnapple</title>
+<title>BegoneCIA · pwnapple</title>
+<meta name="description" content="One Control Center button that cuts off the camera, microphone and location for every app. Apps don&#x27;t get an error, they just get nothing: silence, no picture, no location.">
+<link rel="icon" href="../CydiaIcon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,650..800&display=swap">
+<link rel="stylesheet" href="../assets/iphone.css">
 <style>
+  /* Same colours as the front page (assets/home.css), quieter: these pages are for reading. */
   :root {
     color-scheme: light dark;
-    --bg: #ffffff; --fg: #1a1a1a; --muted: #666; --card: #f4f4f5;
-    --accent: #3b6ea5; --border: #e2e2e5;
+    --page: #f4f3fa; --ink: #17193a; --muted: #50547a; --faint: #74789b;
+    --gold: #f2b100; --gold-ink: #17193a; --leaf: #127541; --link: #4a3ee0;
+    --panel: #ffffff; --line: rgba(23,25,58,.1);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
-      --accent: #6ea8dc; --border: #26262b;
+      --page: #0f1230; --ink: #f1f0ff; --muted: #a9acd0; --faint: #8084ab;
+      --gold: #ffc233; --leaf: #3ed68a; --link: #ab9dff;
+      --panel: #181c45; --line: rgba(255,255,255,.09);
     }
   }
   :root[data-theme="dark"] {
-    --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
-    --accent: #6ea8dc; --border: #26262b;
+    --page: #0f1230; --ink: #f1f0ff; --muted: #a9acd0; --faint: #8084ab;
+    --gold: #ffc233; --leaf: #3ed68a; --link: #ab9dff;
+    --panel: #181c45; --line: rgba(255,255,255,.09);
   }
   * { box-sizing: border-box; }
+  html { background: var(--page); }
   body {
-    font: 16px/1.6 -apple-system, system-ui, "Segoe UI", sans-serif;
-    background: var(--bg); color: var(--fg);
-    max-width: 40rem; margin: 0 auto; padding: 2.5rem 1rem 4rem;
-    overflow-wrap: anywhere;
+    margin: 0 auto; max-width: 42rem; padding: 1.5rem 1rem 4rem;
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", sans-serif;
+    color: var(--ink); background: var(--page); overflow-wrap: anywhere;
+    -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%;
   }
-  h1 { font-size: 1.9rem; margin: 0 0 .75rem; }
-  h2 { font-size: 1.1rem; margin: 2rem 0 .6rem; }
-  p { margin: 0 0 .9rem; }
-  ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
-  li { margin: .25rem 0; }
-  .card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: .75rem; padding: 1rem 1.15rem;
+  a { color: var(--link); text-underline-offset: .15em; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+  .back { display: inline-block; font-size: .9rem; margin-bottom: 1.6rem; text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+
+  .top { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.1rem; }
+  .icon { width: 64px; height: 64px; border-radius: 16px; flex: none; display: grid; place-items: center; object-fit: cover; }
+  .icon.letter { color: #fff; font: 800 1.6rem/1 "Bricolage Grotesque", -apple-system, sans-serif; }
+  h1 { margin: 0; font: 750 2rem/1.1 "Bricolage Grotesque", -apple-system, sans-serif; letter-spacing: -.02em; }
+  .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .45rem; }
+  .badge { display: inline-flex; align-items: center; height: 1.35rem; padding: 0 .5rem; border-radius: 6px;
+    font: 600 .75rem/1 -apple-system, BlinkMacSystemFont, system-ui, sans-serif; color: var(--muted); background: var(--line); }
+  .badge.ios { color: var(--leaf); background: color-mix(in srgb, var(--leaf) 13%, transparent); }
+
+  .intro > p:first-child { font-size: 1.12rem; }
+  h2 { margin: 2.2rem 0 .6rem; font: 700 1.2rem/1.2 "Bricolage Grotesque", -apple-system, sans-serif; letter-spacing: -.01em; }
+  h3 { margin: 1.4rem 0 .4rem; font-size: 1rem; }
+  p { margin: 0 0 .85rem; }
+  ul { margin: 0 0 .85rem; padding-left: 1.2rem; }
+  li { margin: .3rem 0; }
+  li::marker { color: var(--faint); }
+  code { font-size: .9em; background: var(--line); padding: .05rem .3rem; border-radius: 4px; }
+
+  .facts { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.4rem 0; padding: 0; }
+  .facts div { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: .55rem .85rem; min-width: 8.5rem; }
+  .facts dt { font-size: .75rem; color: var(--muted); margin: 0; }
+  .facts dd { margin: .1rem 0 0; font-weight: 650; }
+
+  .get { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 1rem 1.1rem; margin: 1.6rem 0; }
+  .get p { margin: 0 0 .75rem; color: var(--muted); font-size: .95rem; }
+  .get .buttons { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .button { display: inline-block; font-weight: 700; padding: .6rem 1.15rem; border-radius: 999px; text-decoration: none;
+    background: var(--gold); color: var(--gold-ink); }
+  .button.secondary { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--faint); }
+  .button:hover { filter: brightness(1.05); }
+
+  details.log { margin-top: 2.2rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+  details.log summary { cursor: pointer; font: 700 1.2rem/1.2 "Bricolage Grotesque", -apple-system, sans-serif; }
+  details.log summary span { font: 400 .9rem/1 -apple-system, system-ui, sans-serif; color: var(--muted); margin-left: .3rem; }
+  .dep-shots { margin: 1.4rem 0; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); }
+  @media (max-width: 30rem) {
+    h1 { font-size: 1.7rem; }
+    .icon { width: 54px; height: 54px; border-radius: 14px; }
   }
-  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
-  code { font-size: .9em; }
-  .back { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; }
-  footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
-  a { color: var(--accent); }
 </style>
 </head>
 <body>
-<a class="back" href="../">&larr; pwnapple</a>
-<h1>Begonecia</h1>
-<p>A Control Center toggle that silences the <strong>microphone, camera and location</strong> across the whole system. When it&#x27;s on, apps don&#x27;t get a permission error — they just get nothing: zeroed mic audio, no camera frames, no location callbacks. A silent blackout, not a visible denial.</p>
-<p>Toggle it from Control Center; add the tile in Settings → Control Center.</p>
-<h2>What&#x27;s New in 1.1.0</h2>
-<div class="card">
+<a class="back" href="../">&larr; All tweaks</a>
+<header class="top"><span class="icon letter" style="background:#ff3b30" aria-hidden="true">B</span><div><h1>BegoneCIA</h1><div class="tags"><span class="badge ios" title="Works on iOS 15 to 27">iOS 15–27</span></div></div></header>
+<div class="intro">
+<p><strong>One Control Center button that cuts off the camera, microphone and location for every app.</strong> Apps don&#x27;t get an error, they just get nothing: silence, no picture, no location.</p>
 <ul>
-  <li><strong>Per-app control:</strong> new Settings page. Block everywhere, everywhere except the apps you pick, or only in the apps you pick.</li>
-  <li><strong>Triggr actions:</strong> with Triggr 2.0, Turn BegoneCIA On / Off / Toggle are Triggr actions (any button, gesture or event).</li>
-  <li><strong>Fixes:</strong> Wallet / Apple Pay crash on iOS 18, a parsecd crash, and a Snapchat crash when turning BegoneCIA off.</li>
-  <li>Now also needs <strong>PreferenceLoader</strong> and <strong>AltList</strong> (installed automatically).</li>
+  <li><strong>Turns itself off during calls</strong> (on by default), so people can still hear you.</li>
+  <li><strong>Pick apps</strong> where it stays off while they&#x27;re open.</li>
+  <li>Add the button in Settings → Control Center.</li>
 </ul>
 </div>
-<h2>Notes</h2>
-<div class="card">
+<dl class="facts"><div><dt>Version</dt><dd>1.2.0</dd></div><div><dt>Jailbreak</dt><dd>Rootless, RootHide</dd></div></dl>
+<div class="get"><p>Get it from the pwnapple repo: add it to your package manager, then search for BegoneCIA.</p><div class="buttons"><a class="button" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a><a class="button secondary" href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a></div></div>
+<h2>What&#x27;s New in 1.2.0</h2>
 <ul>
-  <li>Rootless jailbreaks with ElleKit (Dopamine), iOS 15–18, arm64 and arm64e.</li>
-  <li>Requires <strong>CCSupport</strong>, <strong>Cephei</strong> (ws.hbang.common, from Chariz), <strong>PreferenceLoader</strong> and <strong>AltList</strong>.</li>
-  <li>Jailbreaking lowers your device&#x27;s baseline security. Begonecia hardens privacy; it doesn&#x27;t undo that.</li>
-  <li>If it ever puts you into safe mode, open Sileo and uninstall it.</li>
+  <li><strong>iOS 27:</strong> now works on iOS 15 through 27.</li>
+  <li><strong>Nepeta&#x27;s original Settings page is back:</strong> Enabled, <strong>Disable in calls</strong> and <strong>Disable BegoneCIA for applications</strong>, laid out like the original.</li>
+  <li><strong>Disable in calls:</strong> on by default. While you&#x27;re on a call, BegoneCIA steps aside so the other person can hear you, then turns back on when you hang up. Tested with phone calls; FaceTime and apps like WhatsApp use the same system and should work too, so tell me if they don&#x27;t.</li>
+  <li><strong>Disable for applications:</strong> pick apps where BegoneCIA switches off while they&#x27;re open.</li>
+  <li><strong>Fixes:</strong> location could still reach some apps on iOS 15, and A12 and newer phones on iOS 15.0 and 15.1 could crash.</li>
 </ul>
-</div>
+<h2>Works on</h2>
+<ul>
+  <li><strong>iOS 15 to 27.</strong> Rootless and RootHide jailbreaks.</li>
+  <li>Needs <strong>CCSupport</strong>, <strong>Cephei</strong> (from the Chariz repo), <strong>PreferenceLoader</strong> and <strong>AltList</strong>.</li>
+  <li>On iOS 27, open its settings from the TweakSettings app.</li>
+  <li>If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then <a href="https://github.com/Jond-ie/begonecia/issues">tell me</a>.</li>
+</ul>
+<h2>Good to know</h2>
+<ul>
+  <li>A jailbroken phone is less secure overall. BegoneCIA protects your privacy, but it doesn&#x27;t change that.</li>
+  <li>Set it up in 1.1.0? Your app list keeps working.</li>
+</ul>
 <h2>Credits</h2>
-<div class="card">
-<p>Original <strong>BegoneCIA</strong> by <strong>Eva (Nepeta)</strong> — MIT licensed. Rootless port by <strong>Jond-ie</strong>. The original license and copyright ship inside this package.</p>
-<p><a href="https://github.com/larygwil/BegoneCIA">Original BegoneCIA (mirror)</a> · <a href="https://github.com/Jond-ie/begonecia">Port source code</a></p>
-</div>
+<p>Original <strong>BegoneCIA</strong> by <strong>Eva (Nepeta)</strong>, MIT licence. Rootless and RootHide port by <strong>Jond-ie</strong>. The original licence ships inside the package.</p>
+<p><a href="https://github.com/NepetaDev/BegoneCIA">Original BegoneCIA</a> · <a href="https://github.com/Jond-ie/begonecia">Port source code</a></p>
 <footer>
-  <p>Bugs &amp; requests: <a href="https://github.com/Jond-ie/repo/issues">GitHub Issues</a>.</p>
+  <p>Something wrong, or an idea? <a href="https://github.com/Jond-ie/repo/issues">Tell me on GitHub</a>. <a href="../">All tweaks</a></p>
 </footer>
 </body>
 </html>

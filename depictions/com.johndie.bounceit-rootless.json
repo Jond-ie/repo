@@ -7,7 +7,19 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "## Bounce It! (rootless)\n\n**Jake James's Bounce It!** brought back for rootless jailbreaks: SpringBoard's springs get more mass and less damping, so animations overshoot and **settle with a bounce**: opening and closing apps, folders, swipes home and more.\n\n- Same spring values as the original Bounce It! 1.0.4, read from its binary and rebuilt for modern iOS.\n- **No settings.** Install, respring, done. To turn it off, uninstall it."
+          "markdown": "## Bounce It! (Rootless)\n\n**Bouncy animations, from Jake James's Bounce It!** Opening and closing apps and folders, and swiping home, overshoot a little and settle with a bounce.\n\n- The same feel as the original 1.0.4, rebuilt for today's iOS.\n- No settings. To turn it off, uninstall it."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0.4-1~jd2",
+          "_sync": "compat"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "Rootless, RootHide",
+          "_sync": "compat"
         },
         {
           "class": "DepictionHeaderView",
@@ -15,24 +27,23 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **The App Switcher stays steady:** its cards no longer bounce and wander while you swipe through them or close apps. Opening and closing apps and the home swipe still bounce.",
-          "useSpacing": true
+          "markdown": "- **The App Switcher stays steady:** its cards no longer bounce and wander while you swipe through them or close apps. Opening and closing apps and the home swipe still bounce."
         },
         {
           "class": "DepictionHeaderView",
-          "title": "Device Support"
+          "title": "Works on"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **iOS 15 – 18**, rootless jailbreaks with ElleKit (Dopamine).\n- **arm64 and arm64e** (the current arm64e format, so it loads on A12 and newer; the 2019 original can't).\n- iOS 14 and newer moved the App Switcher and Reachability springs: those parts of the original only apply where iOS still has them. The main SpringBoard springs and fluid gestures bounce on every supported version.\n- Tested on an **iPhone SE 2 (A13)** with iOS 17.5.1 and an **iPhone 11 Pro Max (A13)** with iOS 16.2, Dopamine."
+          "markdown": "- **iOS 15 to 27.** Rootless and RootHide jailbreaks.\n- Tested on an iPhone 11 Pro Max (iOS 16.2) and an iPhone SE 2nd gen (iOS 17.5.1).\n- If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then [tell me](https://github.com/Jond-ie/repo/issues)."
         },
         {
           "class": "DepictionHeaderView",
-          "title": "Notes"
+          "title": "Good to know"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- Replaces the original rootful package (com.jakeashacks.bounceit); they can't be installed together."
+          "markdown": "- It replaces the original Bounce It!. The two can't be installed together.\n- The App Switcher and Reachability don't bounce: newer iOS moved those animations."
         },
         {
           "class": "DepictionHeaderView",
@@ -40,7 +51,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**Bounce It!** by **Jake James** (jakeashacks), originally on BigBoss for iOS 11–13. Rootless port by **Jond-ie**."
+          "markdown": "**Bounce It!** by **Jake James** (jakeashacks), originally for iOS 11 to 13. Rootless and RootHide port by **Jond-ie**."
         }
       ]
     }

@@ -7,23 +7,35 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "## Slaplock\n\nLock any app behind the stock **Face ID / Touch ID** prompt (with passcode fallback). Choose which apps to protect — everything is **off by default**, so nothing is locked until you enable it.\n\nConfigure the app list in Settings → Slaplock."
+          "markdown": "## Slaplock\n\n**Lock any app behind Face ID or Touch ID**, with your passcode as a backup. Nothing is locked until you pick apps in Settings → Slaplock.\n\n- A locked app asks again every time you come back to it.\n- Its preview in the App Switcher is hidden."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "0.2.0~beta1-2",
+          "_sync": "compat"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "Rootless",
+          "_sync": "compat"
         },
         {
           "class": "DepictionHeaderView",
-          "title": "Device Support"
+          "title": "Works on"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**A12 and newer: supported and confirmed.** Earlier builds put A12+ devices (iPhone XS / XR and later) into safe mode; the current builds are made with Xcode's toolchain and are tested on a real A12+ device.\n\n- Tested on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1 (arm64e) and an **iPhone 8 Plus (A11)** with iOS 16.7, both with Dopamine. On iOS 17 a locked app asks for Touch ID / the passcode and opens after it.\n- **If it ever puts you into safe mode:** open Sileo (safe mode still allows it), uninstall it and please [report back](https://github.com/Jond-ie/repo/issues)."
+          "markdown": "- **iOS 15 to 17.** Rootless jailbreaks. A RootHide version comes with the next update.\n- Tested on an iPhone 8 Plus (iOS 16.7) and an iPhone SE 2nd gen (iOS 17.5.1).\n- If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then [tell me](https://github.com/Jond-ie/repo/issues)."
         },
         {
           "class": "DepictionHeaderView",
-          "title": "Notes"
+          "title": "Good to know"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- Locked apps re-prompt on next foreground; the app-switcher snapshot is redacted.\n- Requires **AltList** (com.opa334.altlist) for the app picker, plus PreferenceLoader; hooks run via ellekit/Substrate.\n- Report any bypass you find — that's the most useful feedback.\n- Tested on an **iPhone 8 Plus (A11, arm64)** with iOS 16.7. A12 and newer: see Device Support."
+          "markdown": "- Found a way around the lock? [Tell me](https://github.com/Jond-ie/repo/issues). That's the most useful report there is.\n- Needs **AltList** and **PreferenceLoader**. Sileo installs them for you."
         },
         {
           "class": "DepictionHeaderView",
@@ -31,7 +43,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Original work by **Jond-ie**."
+          "markdown": "Written from scratch by **Jond-ie**."
         }
       ]
     }

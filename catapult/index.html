@@ -4,17 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Catapult · pwnapple</title>
-<meta name="description" content="Make your iPhone's Home Screen work like Android's: an app drawer with search, one-page folders, widgets, icon shapes, themes and your own font. Rootless, iOS 15 to 18.">
+<meta name="description" content="Make your iPhone's Home Screen work like Android's: an app drawer with search, one-page folders, widgets, icon shapes, themes and your own font. iOS 14 to 18, Rootless and rootful.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jond-ie.github.io/repo/catapult/">
 <meta property="og:title" content="Catapult: make your iPhone's Home Screen work like Android's">
-<meta property="og:description" content="The LineageOS Home Screen on iOS 15 to 18: app drawer, one-page folders, widgets, your own icons and font.">
+<meta property="og:description" content="The LineageOS Home Screen on iOS 14 to 18: app drawer, one-page folders, widgets, your own icons and font.">
 <meta property="og:image" content="https://jond-ie.github.io/repo/assets/catapult.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@Jond_ie">
 <link rel="icon" href="../CydiaIcon.png">
 <link rel="apple-touch-icon" href="../assets/catapult.png">
 <link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/iphone.css">
 <style>
   .demo { display: flex; justify-content: center; }
   .demo .twitter-tweet { margin: 0 auto !important; }
@@ -31,7 +32,7 @@
     <h1>Catapult</h1>
     <p class="lead">Make your iPhone's Home Screen work like Android's.</p>
     <p class="tag">Catapult swaps the iOS Home Screen for Trebuchet, the one from LineageOS. Everything else stays iOS, and apps still open with Apple's own animation.</p>
-    <div class="pills"><span class="pill">iOS 15 to 18</span><span class="pill">Rootless jailbreak</span><span class="pill">0.1.0 beta 2</span></div>
+    <div class="pills"><span class="pill">iOS 14 to 18</span><span class="pill">Rootless &amp; Rootful</span><span class="pill">0.1.0 beta 3</span></div>
     <div class="buttons">
       <a class="button" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a>
       <a class="button secondary" href="https://github.com/Jond-ie/catapult/releases">Download .deb</a>
@@ -98,7 +99,7 @@
         <ul><li>Clock: digital or analog, aligned left, centre or right</li><li>Weather for a city you pick (Open-Meteo, no account)</li><li>Now Playing, with play, pause and skip</li><li>Batteries: iPhone, AirPods (each bud and the case) and other accessories</li><li>Battery: charge left and when it runs out or fills up</li><li>Several sizes each</li></ul></div>
       <div class="group"><h3>Icons</h3><p>On the Home Screen, or switch it on for all of iOS: the app switcher, Spotlight, Settings and notifications.</p>
         <ul><li>12 shapes: circle, squircle, square, rounded rect, 4- and 7-sided cookie, pebble, arch, vessel, teardrop, tapered rect, pure square</li><li>SnowBoard, Anemone and FrostBoard themes you already have</li><li>Use your icons across iOS</li><li>Steps aside if FrostBoard, SnowBoard or Anemone is installed</li></ul></div>
-      <div class="group"><h3>Fonts</h3><p>Drop .ttf or .otf files in <code>/var/mobile/Library/Trebuchet/Fonts</code>.</p>
+      <div class="group"><h3>Fonts</h3><p>Put .ttf or .otf files in the Fonts folder with Filza: <code>/var/mobile/Library/Trebuchet/Fonts</code>.</p>
         <ul><li>Use any font on the Home Screen</li><li>Or as your system font in every app</li><li>Emoji and symbols stay Apple's</li><li>Proper bold text when the font has a Bold file</li><li>Respring prompt when it's ready</li></ul></div>
       <div class="group"><h3>Page transitions</h3>
         <ul><li>None (flat slide)</li><li>Cube</li><li>Cylinder</li><li>Carousel</li></ul></div>
@@ -112,12 +113,12 @@
   <section>
     <h2 class="big">Screenshots</h2>
     <div class="shots">
-      <figure><img src="../screenshots/catapult/home.png" alt="" loading="lazy"><figcaption>Home screen</figcaption></figure>
-      <figure><img src="../screenshots/catapult/drawer.png" alt="" loading="lazy"><figcaption>App drawer</figcaption></figure>
-      <figure><img src="../screenshots/catapult/search.png" alt="" loading="lazy"><figcaption>Search answers</figcaption></figure>
-      <figure><img src="../screenshots/catapult/shortcuts.png" alt="" loading="lazy"><figcaption>Long-press shortcuts</figcaption></figure>
-      <figure><img src="../screenshots/catapult/edit.png" alt="" loading="lazy"><figcaption>Editing pages</figcaption></figure>
-      <figure><img src="../screenshots/catapult/settings.png" alt="" loading="lazy"><figcaption>Settings</figcaption></figure>
+      <figure><span class="iphone" style="--sb:linear-gradient(90deg,#0e87ca,#15817c)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/catapult/home.png" alt="" loading="lazy"></span></span><figcaption>Home screen</figcaption></figure>
+      <figure><span class="iphone" style="--sb:linear-gradient(90deg,#0e87ca,#15817c)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/catapult/drawer.png" alt="" loading="lazy"></span></span><figcaption>App drawer</figcaption></figure>
+      <figure><span class="iphone" style="--sb:linear-gradient(90deg,#0e87ca,#15817c)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/catapult/search.png" alt="" loading="lazy"></span></span><figcaption>Search answers</figcaption></figure>
+      <figure><span class="iphone" style="--sb:linear-gradient(90deg,#0e87ca,#15817c)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/catapult/shortcuts.png" alt="" loading="lazy"></span></span><figcaption>Long-press shortcuts</figcaption></figure>
+      <figure><span class="iphone" style="--sb:linear-gradient(90deg,#0e87ca,#15817c)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/catapult/edit.png" alt="" loading="lazy"></span></span><figcaption>Editing pages</figcaption></figure>
+      <figure><span class="iphone" style="--sb:linear-gradient(90deg,#0d0e12,#0d0e12)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/catapult/settings.png" alt="" loading="lazy"></span></span><figcaption>Settings</figcaption></figure>
     </div>
   </section>
 
@@ -137,7 +138,7 @@
 
   <section>
     <h2 class="big">Tested on</h2>
-    <p class="sub">Not tried yet: iPads, landscape, and iOS 15 on iPhone XS and newer. <a href="https://github.com/Jond-ie/catapult/issues">Tell me how it goes.</a></p>
+    <p class="sub">Not tried yet: iPads, landscape, iOS 14 (rootful only), and iOS 15 on iPhone XS and newer. <a href="https://github.com/Jond-ie/catapult/issues">Tell me how it goes.</a></p>
     <div class="wide"><table class="tested">
       <tr><th>Phone</th><th>iOS</th></tr>
       <tr><td>iPhone 7</td><td>15.8.6</td></tr>

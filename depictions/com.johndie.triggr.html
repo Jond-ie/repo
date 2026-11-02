@@ -4,159 +4,203 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Triggr · pwnapple</title>
+<meta name="description" content="Make any button, gesture or event do anything you want. Like Activator, rebuilt for iOS 15 to 27. Pick a trigger, then what it does, in Settings → Triggr or the Triggr app. Nothing changes until you assign something.">
+<link rel="icon" href="../CydiaIcon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,650..800&display=swap">
+<link rel="stylesheet" href="../assets/iphone.css">
 <style>
+  /* Same colours as the front page (assets/home.css), quieter: these pages are for reading. */
   :root {
     color-scheme: light dark;
-    --bg: #ffffff; --fg: #1a1a1a; --muted: #666; --card: #f4f4f5;
-    --accent: #3b6ea5; --border: #e2e2e5;
+    --page: #f4f3fa; --ink: #17193a; --muted: #50547a; --faint: #74789b;
+    --gold: #f2b100; --gold-ink: #17193a; --leaf: #127541; --link: #4a3ee0;
+    --panel: #ffffff; --line: rgba(23,25,58,.1);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
-      --accent: #6ea8dc; --border: #26262b;
+      --page: #0f1230; --ink: #f1f0ff; --muted: #a9acd0; --faint: #8084ab;
+      --gold: #ffc233; --leaf: #3ed68a; --link: #ab9dff;
+      --panel: #181c45; --line: rgba(255,255,255,.09);
     }
   }
   :root[data-theme="dark"] {
-    --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
-    --accent: #6ea8dc; --border: #26262b;
+    --page: #0f1230; --ink: #f1f0ff; --muted: #a9acd0; --faint: #8084ab;
+    --gold: #ffc233; --leaf: #3ed68a; --link: #ab9dff;
+    --panel: #181c45; --line: rgba(255,255,255,.09);
   }
   * { box-sizing: border-box; }
+  html { background: var(--page); }
   body {
-    font: 16px/1.6 -apple-system, system-ui, "Segoe UI", sans-serif;
-    background: var(--bg); color: var(--fg);
-    max-width: 40rem; margin: 0 auto; padding: 2.5rem 1rem 4rem;
-    overflow-wrap: anywhere;
+    margin: 0 auto; max-width: 42rem; padding: 1.5rem 1rem 4rem;
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", sans-serif;
+    color: var(--ink); background: var(--page); overflow-wrap: anywhere;
+    -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%;
   }
-  h1 { font-size: 1.9rem; margin: 0 0 .75rem; }
-  h2 { font-size: 1.1rem; margin: 2rem 0 .6rem; }
-  p { margin: 0 0 .9rem; }
-  ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
-  li { margin: .25rem 0; }
-  .card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: .75rem; padding: 1rem 1.15rem;
+  a { color: var(--link); text-underline-offset: .15em; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+  .back { display: inline-block; font-size: .9rem; margin-bottom: 1.6rem; text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+
+  .top { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.1rem; }
+  .icon { width: 64px; height: 64px; border-radius: 16px; flex: none; display: grid; place-items: center; object-fit: cover; }
+  .icon.letter { color: #fff; font: 800 1.6rem/1 "Bricolage Grotesque", -apple-system, sans-serif; }
+  h1 { margin: 0; font: 750 2rem/1.1 "Bricolage Grotesque", -apple-system, sans-serif; letter-spacing: -.02em; }
+  .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .45rem; }
+  .badge { display: inline-flex; align-items: center; height: 1.35rem; padding: 0 .5rem; border-radius: 6px;
+    font: 600 .75rem/1 -apple-system, BlinkMacSystemFont, system-ui, sans-serif; color: var(--muted); background: var(--line); }
+  .badge.ios { color: var(--leaf); background: color-mix(in srgb, var(--leaf) 13%, transparent); }
+
+  .intro > p:first-child { font-size: 1.12rem; }
+  h2 { margin: 2.2rem 0 .6rem; font: 700 1.2rem/1.2 "Bricolage Grotesque", -apple-system, sans-serif; letter-spacing: -.01em; }
+  h3 { margin: 1.4rem 0 .4rem; font-size: 1rem; }
+  p { margin: 0 0 .85rem; }
+  ul { margin: 0 0 .85rem; padding-left: 1.2rem; }
+  li { margin: .3rem 0; }
+  li::marker { color: var(--faint); }
+  code { font-size: .9em; background: var(--line); padding: .05rem .3rem; border-radius: 4px; }
+
+  .facts { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.4rem 0; padding: 0; }
+  .facts div { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: .55rem .85rem; min-width: 8.5rem; }
+  .facts dt { font-size: .75rem; color: var(--muted); margin: 0; }
+  .facts dd { margin: .1rem 0 0; font-weight: 650; }
+
+  .get { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 1rem 1.1rem; margin: 1.6rem 0; }
+  .get p { margin: 0 0 .75rem; color: var(--muted); font-size: .95rem; }
+  .get .buttons { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .button { display: inline-block; font-weight: 700; padding: .6rem 1.15rem; border-radius: 999px; text-decoration: none;
+    background: var(--gold); color: var(--gold-ink); }
+  .button.secondary { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--faint); }
+  .button:hover { filter: brightness(1.05); }
+
+  details.log { margin-top: 2.2rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+  details.log summary { cursor: pointer; font: 700 1.2rem/1.2 "Bricolage Grotesque", -apple-system, sans-serif; }
+  details.log summary span { font: 400 .9rem/1 -apple-system, system-ui, sans-serif; color: var(--muted); margin-left: .3rem; }
+  .dep-shots { margin: 1.4rem 0; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); }
+  @media (max-width: 30rem) {
+    h1 { font-size: 1.7rem; }
+    .icon { width: 54px; height: 54px; border-radius: 14px; }
   }
-  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
-  code { font-size: .9em; }
-  .back { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; }
-  footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
-  a { color: var(--accent); }
 </style>
 </head>
 <body>
-<a class="back" href="../">&larr; pwnapple</a>
-<h1>Triggr</h1>
-<p>Activator-style triggers for modern jailbreaks. Pick a trigger, pick what it runs, in <strong>Settings → Triggr</strong> or the <strong>Triggr app</strong>. Triggr only changes a button when you assign something to it.</p>
+<a class="back" href="../">&larr; All tweaks</a>
+<header class="top"><img class="icon" src="../assets/triggr.png" alt=""><div><h1>Triggr</h1><div class="tags"><span class="badge ios" title="Works on iOS 15 to 27">iOS 15–27</span></div></div></header>
+<div class="intro">
+<p><strong>Make any button, gesture or event do anything you want.</strong> Like Activator, rebuilt for iOS 15 to 27. Pick a trigger, then what it does, in Settings → Triggr or the Triggr app. Nothing changes until you assign something.</p>
 <ul>
-  <li><strong>Buttons:</strong> Home, Lock / Side, Volume, Mute switch and Touch ID, with single, double, triple presses, holds and sequences, plus <strong>Lock / Side + Volume</strong> combos (press or hold).</li>
-  <li><strong>Status bar:</strong> tap, double tap and hold, also per left / right half, plus swipe left / right.</li>
-  <li><strong>Screen edges:</strong> slide in from the left or right edge, with one or two fingers, over apps too, or slide up and down along an edge.</li>
-  <li><strong>Home Screen:</strong> icon flicks (per app too), pinch in / out, two-finger swipes and double tap on empty space.</li>
-  <li><strong>Multi-finger gestures in any app:</strong> two- and three-finger taps and swipes, pinch in / out.</li>
-  <li><strong>Swipe up from the bottom</strong> left, middle or right, and the <strong>Action button</strong> (confirmed on a 15 Pro Max).</li>
-  <li><strong>Sensors and events:</strong> shake, proximity cover and wave, charger, headphones, Wi-Fi, Bluetooth, battery level, an app opened, any notification or one from an app, phone calls, music (started, paused, song changed), a time of day or chosen weekdays.</li>
-  <li><strong>Actions:</strong> system and power actions, 18 switches (Grayscale, Smart Invert and Zoom included), media and AirPlay, levels and brightness steps, apps, Shortcuts, URLs, Settings pages, messages, speech (time, battery, clipboard), shell commands, menus, and sequences with pauses and <strong>If / Otherwise</strong> steps.</li>
-  <li><strong>Only If:</strong> run an assignment only on a Wi-Fi network, while charging, between times, and more.</li>
-  <li><strong>Other tweaks:</strong> tweaks can add their own triggers and actions (libtriggr), like Activator&#x27;s add-ons.</li>
-  <li><strong>Places:</strong> Anywhere, Home Screen, In Apps, Lock Screen, or <strong>one specific app</strong>.</li>
+  <li><strong>Triggers:</strong> buttons (presses, holds, combos and the Action Button), screen edges, the status bar, multi-finger gestures, shake, charger, headphones, Wi-Fi, Bluetooth, calls, music, notifications and times of day.</li>
+  <li><strong>Actions:</strong> switches, apps, Shortcuts, media, flashlight, screenshots, messages, menus, and sequences with If / Otherwise steps.</li>
+  <li><strong>Only If:</strong> run something only on your home Wi-Fi, while charging, between certain times, and more.</li>
+  <li><strong>Places:</strong> anywhere, on the Home Screen, in apps, on the Lock Screen, or in one app.</li>
+  <li><strong>Other tweaks</strong> can add their own triggers and actions.</li>
 </ul>
-<img src="../screenshots/triggr/12-ifelse.png" alt="If / Otherwise steps in a sequence, with Only If below" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/triggr/13-steps.png" alt="Steps editor: If, Otherwise and End If blocks" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/triggr/14-onlyif.png" alt="Only If: Unlocked, between 07:00 and 23:00, Add Condition" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/triggr/15-actionbutton.png" alt="Action Button: Press, Double Press and Hold" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/triggr/16-libtriggr.png" alt="Action categories, including BegoneCIA added through libtriggr" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/triggr/9-triggers.png" alt="Trigger list with the new Screen Edges, Phone Calls, Notifications and Music groups" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/triggr/10-combos.png" alt="Lock + Volume: Up and Down presses and holds" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/triggr/11-edges.png" alt="Screen Edges: one- and two-finger slide-ins" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/triggr/1-main.png" alt="Main page with trigger search" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/triggr/2-place.png" alt="A place: Assigned, then every kind of trigger" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/triggr/3-assigned.png" alt="Assigned: tap to change, swipe to remove" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/triggr/4-statusbar.png" alt="Status bar triggers with left / right halves and swipes" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/triggr/5-picker.png" alt="Action picker with Recently Used and Test" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/triggr/6-apps.png" alt="In Specific Apps" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/triggr/7-app.png" alt="One app&#x27;s own triggers" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/triggr/8-options.png" alt="Options" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<h2>What&#x27;s New in 2.0 Beta 9</h2>
-<div class="card">
+<p><a href="https://jond-ie.github.io/repo/triggr/">Everything it can do</a></p>
+</div>
+<dl class="facts"><div><dt>Version</dt><dd>2.0.0</dd></div><div><dt>Jailbreak</dt><dd>Rootless, RootHide</dd></div></dl>
+<div class="get"><p>Get it from the pwnapple repo: add it to your package manager, then search for Triggr.</p><div class="buttons"><a class="button" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a><a class="button secondary" href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a></div></div>
+<div class="dep-shots"><span class="iphone" style="--sb:linear-gradient(90deg,#000000,#000000)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/triggr/12-ifelse.png" alt="If / Otherwise steps in a sequence, with Only If below" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#000000,#000000)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/triggr/13-steps.png" alt="Steps editor: If, Otherwise and End If blocks" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#000000,#000000)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/triggr/14-onlyif.png" alt="Only If: Unlocked, between 07:00 and 23:00, Add Condition" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#000000,#000000)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/triggr/15-actionbutton.png" alt="Action Button: Press, Double Press and Hold" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#1d2423,#1e1e1e)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/triggr/16-libtriggr.png" alt="Action categories, including BegoneCIA added through libtriggr" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#000000,#000000)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/triggr/9-triggers.png" alt="Trigger list with the new Screen Edges, Phone Calls, Notifications and Music groups" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#000000,#000000)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/triggr/10-combos.png" alt="Lock + Volume: Up and Down presses and holds" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#000000,#000000)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/triggr/11-edges.png" alt="Screen Edges: one- and two-finger slide-ins" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#000000,#000000)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/triggr/1-main.png" alt="Main page with trigger search" loading="lazy"></span></span><span class="iphone dark-text" style="--sb:linear-gradient(90deg,#f2f2f7,#f2f2f7)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/triggr/2-place.png" alt="A place: Assigned, then every kind of trigger" loading="lazy"></span></span><span class="iphone dark-text" style="--sb:linear-gradient(90deg,#f9f9fb,#f9f9fa)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/triggr/3-assigned.png" alt="Assigned: tap to change, swipe to remove" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#000000,#000000)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/triggr/4-statusbar.png" alt="Status bar triggers with left / right halves and swipes" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#000000,#000000)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/triggr/5-picker.png" alt="Action picker with Recently Used and Test" loading="lazy"></span></span><span class="iphone dark-text" style="--sb:linear-gradient(90deg,#f2f2f7,#f2f2f7)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/triggr/6-apps.png" alt="In Specific Apps" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#000000,#000000)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/triggr/7-app.png" alt="One app&#x27;s own triggers" loading="lazy"></span></span><span class="iphone dark-text" style="--sb:linear-gradient(90deg,#f2f2f7,#f2f2f7)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/triggr/8-options.png" alt="Options" loading="lazy"></span></span></div>
+<h2>What&#x27;s New in 2.0</h2>
+<p>Coming from 1.5? Here is what 2.0 adds.</p>
+<ul>
+  <li><strong>Only If and If / Otherwise:</strong> run something only on your home Wi-Fi, while charging, between certain times, when the flashlight is on, and more. Inside a list of actions, pick what happens either way.</li>
+  <li><strong>More triggers:</strong> multi-finger gestures in apps, the Action Button, slides along the screen edges, the Lock Screen clock, the home bar, the headset button, CarPlay, sunrise and sunset.</li>
+  <li><strong>More actions:</strong> record a video or a voice memo, make the flashlight brighter or dimmer, open phone and clock pages, Back, Unlock, a haptic tap, and Activator actions from other tweaks (no Activator needed).</li>
+  <li><strong>Shortcuts run in the background,</strong> the way Back Tap runs them, without opening the Shortcuts app.</li>
+  <li><strong>Safer buttons:</strong> a short press only waits when a longer trigger on the same button is assigned. If SpringBoard ever crashes while Triggr handles the Action Button, Triggr hands the button back to iOS.</li>
+  <li><strong>A simpler Settings page:</strong> Your Setup lists what you assigned in plain words, and Guide &amp; What&#x27;s New explains everything with ideas to try.</li>
+  <li><strong>iOS 27 support,</strong> plus a RootHide version.</li>
+  <li><strong>For developers:</strong> libtriggr lets other tweaks add their own triggers and actions.</li>
+</ul>
+<p>Every version&#x27;s notes are in the Changelog tab.</p>
+<h2>Works on</h2>
+<ul>
+  <li><strong>iOS 15 to 27.</strong> Rootless and RootHide jailbreaks.</li>
+  <li>If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall Triggr, or go back to 1.5. Then <a href="https://github.com/Jond-ie/triggr/issues">tell me</a>.</li>
+</ul>
+<h2>Good to know</h2>
+<ul>
+  <li>Bugs and ideas: <a href="https://github.com/Jond-ie/triggr/issues">github.com/Jond-ie/triggr/issues</a>.</li>
+  <li>From 2.0 on, Triggr is closed source. The 1.x source stays on GitHub.</li>
+</ul>
+<h2>Credits</h2>
+<p>Original work by <strong>Jond-ie</strong>, inspired by Activator (Ryan Petrich). App pickers by AltList (opa334). Snapper 3 and CopyLog actions by qnblackcat. Developed with AI help (Claude Code) and tested on real iPhones.</p>
+<details class="log"><summary>Changelog<span>14 earlier versions</span></summary>
+<h3>2.0</h3>
+<p>Out of beta. New since Beta 9:</p>
+<ul>
+  <li><strong>Flashlight Brighter and Dimmer</strong> actions, and a <strong>Flashlight On / Off</strong> condition. For example: while the flashlight is on, the volume buttons change its brightness.</li>
+  <li><strong>Record Video</strong> and <strong>Record Voice Memo:</strong> opens the app and starts recording. Run it again to stop.</li>
+  <li><strong>A rebuilt Settings page:</strong> Your Setup (what you assigned, in plain words, swipe to remove), Add a Trigger, and a new Guide &amp; What&#x27;s New page.</li>
+  <li><strong>iOS 27:</strong> fixes for the App Switcher, Control Center, the Lock Screen, Last App and the Camera and Voice Memos actions. Tested in an iOS 27 virtual iPhone.</li>
+  <li><strong>Status bar double taps work in apps on iOS 26 and 27.</strong></li>
+  <li><strong>The <code>triggr</code> command works on iOS 27</strong> (it couldn&#x27;t see the Allow API setting before).</li>
+  <li><strong>RootHide</strong> version added.</li>
+</ul>
+<h3>2.0 Beta 9</h3>
 <ul>
   <li><strong>Fixed:</strong> with an Action Button press assigned, the next press could crash SpringBoard (Beta 8). Triggr now lets iOS finish every press properly. Thanks for the crash log!</li>
   <li><strong>Getting ready for iOS 27:</strong> the Action Button, edge gestures, App Switcher and Reachability now find their new iOS 27 names. Not tested on iOS 27 yet.</li>
 </ul>
-</div>
-<h2>What&#x27;s New in 2.0 Beta 8</h2>
-<div class="card">
+<h3>2.0 Beta 8</h3>
 <ul>
   <li><strong>Action Button:</strong> a fix for SpringBoard going into Safe Mode when an Action Button press was assigned (Beta 6 to 7.1). iOS now lets go of the button itself. Please tell me if it still happens.</li>
   <li><strong>Shortcuts run in the background,</strong> the way Back Tap runs them: no Shortcuts app popping up. Turn it off in Options if you want the app.</li>
   <li><strong>Pick a Shortcut from a list.</strong> The new Shortcuts section shows all of yours, so you don&#x27;t have to type names.</li>
-  <li><strong>Tweak Actions:</strong> many tweaks still carry their old Activator actions. Activator can&#x27;t be installed on rootless, so Triggr now runs those actions itself (made for Snapper 2).</li>
+  <li><strong>Tweak Actions:</strong> many tweaks still carry their old Activator actions. Activator can&#x27;t be installed on Rootless, so Triggr now runs those actions itself (made for Snapper 2).</li>
   <li><strong>Press Volume Up / Down:</strong> works like pressing the real button, so the volume bar shows and volume mixer tweaks react.</li>
   <li><strong>Soft</strong> haptic feedback.</li>
   <li><strong>Fixed:</strong> the Mute Switch trigger did nothing on iOS 17 and 18, Proximity (Cover / Wave) did nothing on iOS 15, and Spotlight was missing on iOS 18. Found by checking every trigger and action against iOS 15, 16, 17 and 18.</li>
 </ul>
 <p>Thanks to nbaib (soft haptics, volume buttons), alexp4re (Shortcuts) and the Reddit testers (Action Button, Snapper 2).</p>
-</div>
-<h2>What&#x27;s New in 2.0 Beta 7.1</h2>
-<div class="card">
+<h3>2.0 Beta 7.1</h3>
 <ul>
   <li><strong>Fixed:</strong> opening Options in Beta 7 crashed Settings. 7.1 fixes it. Sorry about that.</li>
   <li>Everything in Beta 7 (haptic feedback, bottom-corner swipes, Snapper 2) is unchanged.</li>
 </ul>
-</div>
-<h2>What&#x27;s New in 2.0 Beta 7</h2>
-<div class="card">
+<h3>2.0 Beta 7</h3>
 <ul>
   <li><strong>Haptic feedback.</strong> A small tap every time an action runs: Options → Haptic Feedback (Off, Light, Medium or Strong; off by default). It follows iOS&#x27;s System Haptics setting.</li>
   <li><strong>Swiping up from the bottom corners no longer scrolls the page behind it.</strong> The bottom zones now take the touch from the app, like iOS&#x27;s own gestures. I can only test that with a real finger on a Face ID iPhone, so tell me if it still happens.</li>
   <li><strong>Snapper 2:</strong> Triggr only knows Snapper 3, so the Snapper 3 actions are hidden when only Snapper 2 is installed (they did nothing).</li>
 </ul>
 <p>Thanks to the Reddit user on an iPhone 13 mini for the feedback.</p>
-</div>
-<h2>What&#x27;s New in 2.0 Beta 6</h2>
-<div class="card">
+<h3>2.0 Beta 6</h3>
 <ul>
   <li><strong>Action Button:</strong> with Press, Double Press or Hold assigned, the side button (Lock) could stop working. Fixed. I can&#x27;t test an Action Button iPhone myself, so please tell me how it goes.</li>
   <li>Press, Double Press and Hold are all confirmed working on an iPhone 15 Pro Max (iOS 17.3).</li>
 </ul>
 <p>Thanks to the Reddit user who reported it.</p>
-</div>
-<h2>What&#x27;s New in 2.0 Beta 5</h2>
-<div class="card">
+<h3>2.0 Beta 5</h3>
 <ul>
   <li><strong>Slide along a screen edge.</strong> New triggers: slide up or down along the left or right edge. Start at the edge and make a quick, straight stroke about a fifth of the screen long. A slow drag, like scrolling with your thumb, doesn&#x27;t count. A fast flick from the edge can, so pick actions that are fine to run by accident.</li>
   <li><strong>iOS 15 on A12 and newer (iPhone XS, XR, 11 and later) should work now.</strong> Triggr used to crash or freeze SpringBoard there. I can&#x27;t test that phone myself, so please tell me how it goes.</li>
   <li><strong>Action Button:</strong> Press is confirmed working on an iPhone 15 Pro Max (iOS 17.3). Double Press and Hold are still untested.</li>
 </ul>
 <p>Thanks to nbaib for the edge slide idea, the0731 for the iOS 15 report and logs, and the Reddit user who confirmed the Action Button.</p>
-</div>
-<h2>What&#x27;s New in 2.0 Beta 4</h2>
-<div class="card">
+<h3>2.0 Beta 4</h3>
 <ul>
   <li><strong>Mute and volume work on iOS 17 and newer.</strong> The Mute actions (Toggle, On and Off) and Volume Up / Down did nothing there, because iOS 17 changed how Triggr reaches them. Tested on iOS 17.5.1.</li>
   <li>Nothing changes on iOS 15 and 16.</li>
   <li>The Action Button is still experimental.</li>
 </ul>
 <p>Thanks to cuucondiep on Reddit for the report.</p>
-</div>
-<h2>What&#x27;s New in 2.0 Beta 3</h2>
-<div class="card">
+<h3>2.0 Beta 3</h3>
 <ul>
   <li><strong>Scheduled times run every day again.</strong> They could run once and then skip days, because the timer stopped while the phone slept. They now use the same kind of timer as alarms, which wakes the phone on time.</li>
   <li><strong>Multi-finger gestures no longer fire while you type fast.</strong> Triggr ignores the keyboard, so two thumbs typing don&#x27;t count as a two-finger tap or swipe.</li>
   <li><strong>RootHide:</strong> a RootHide build of every release is now on <a href="https://github.com/Jond-ie/triggr-beta/releases">GitHub</a> (untested, feedback welcome).</li>
 </ul>
 <p>Thanks to everyone on Reddit who reported these.</p>
-</div>
-<h2>What&#x27;s New in 2.0 Beta 2</h2>
-<div class="card">
+<h3>2.0 Beta 2</h3>
 <ul>
   <li><strong>Snapper 3</strong> actions: New Snap, Instant Snap, Freeze Screen &amp; Snap, Reopen Last Snap, Snap History, Cancel Cropping, Close All Snaps.</li>
   <li><strong>CopyLog</strong> actions: Show CopyLog, Show CopyLog Favorites.</li>
   <li>Both groups only show while that tweak is installed. Contributed by <strong>qnblackcat</strong> (thank you!). Untested here: feedback welcome.</li>
 </ul>
-</div>
-<h2>What&#x27;s New in 2.0 Beta 1</h2>
-<div class="card">
+<h3>2.0 Beta 1</h3>
 <p><strong>A beta: please report anything odd</strong> (Notes below). You can go back to 1.5 any time in Sileo.</p>
 <ul>
   <li><strong>Only If:</strong> conditions on any assignment: Wi-Fi network, charging, battery, time range, locked, and more, plus &quot;still true after N seconds&quot;.</li>
@@ -168,9 +212,7 @@
   <li><strong>libtriggr:</strong> other tweaks can add their own triggers, actions and a &quot;Configure via Triggr&quot; button. BegoneCIA&#x27;s next update is the first to use it.</li>
   <li><strong>Fixes:</strong> the flashlight turns on at your Control Center level instead of the dimmest one; &quot;Spread&quot; is now called Pinch Out.</li>
 </ul>
-</div>
-<h2>What&#x27;s New in 1.5</h2>
-<div class="card">
+<h3>1.5</h3>
 <ul>
   <li><strong>Lock / Side + Volume:</strong> press the lock (side) button with Volume Up or Down, or hold them, as four new triggers. A press can replace the screenshot on Face ID iPhones; holding still brings up the power-off slider and Emergency SOS.</li>
   <li><strong>Screen edges:</strong> slide in from the left or right edge, also with <strong>two fingers</strong> like Activator, so apps keep their swipe back.</li>
@@ -179,15 +221,11 @@
   <li><strong>Any notification</strong>, <strong>weekly schedules</strong> (a time on chosen days) and <strong>Brightness Up / Down</strong> by a step you pick.</li>
   <li><strong>Fix:</strong> a Respring or Safe Mode run from a Volume Up trigger no longer lands in Safe Mode by accident: it waits until you let go of the button.</li>
 </ul>
-</div>
-<h2>What&#x27;s New in 1.0.4.1</h2>
-<div class="card">
+<h3>1.0.4.1</h3>
 <ul>
   <li><strong>Fixes a crash</strong> when opening a trigger&#x27;s action list (in Settings and in the Triggr app) if no Triggr extension is installed. It hit every install without EQELinker, on Dopamine and RootHide. Thanks to <strong>777qwq</strong> for tracking down the cause.</li>
 </ul>
-</div>
-<h2>What&#x27;s New in 1.0.4</h2>
-<div class="card">
+<h3>1.0.4</h3>
 <ul>
   <li><strong>The Triggr app</strong> on your Home Screen, plus <strong>trigger search</strong>, <strong>Recently Used</strong> actions and a <strong>Test</strong> button.</li>
   <li><strong>iOS 18 and Face ID:</strong> the side button&#x27;s Single / Double / Triple Press work properly, and an assigned Double or Triple Press replaces Wallet or the Accessibility Shortcut. Commands and extension actions run through a small helper on iOS 18.</li>
@@ -198,21 +236,9 @@
   <li>Tidier places (one Assigned row), and picking another option of the only switch picked replaces it.</li>
   <li>Fixes: status bar taps on the Home Screen on iOS 17+, saved Wi-Fi networks and Bluetooth devices in the app.</li>
 </ul>
-</div>
-<h2>Notes</h2>
-<div class="card">
-<ul>
-  <li>Rootless jailbreaks (Dopamine), iOS 15–18.</li>
-  <li>If it ever puts you into safe mode, open Sileo (safe mode still allows it) and uninstall Triggr, or go back to 1.5.</li>
-  <li>Bug reports and requests: <a href="https://github.com/Jond-ie/triggr/issues">github.com/Jond-ie/triggr/issues</a>. From 2.0 on, Triggr is closed source; the 1.x source stays on GitHub.</li>
-</ul>
-</div>
-<h2>Credits</h2>
-<div class="card">
-<p>Original work by <strong>Jond-ie</strong>, inspired by Activator (Ryan Petrich). App pickers by AltList (opa334). Snapper 3 and CopyLog actions by qnblackcat. Developed with AI assistance (Claude Code) and tested on device.</p>
-</div>
+</details>
 <footer>
-  <p>Bugs &amp; requests: <a href="https://github.com/Jond-ie/repo/issues">GitHub Issues</a>.</p>
+  <p>Something wrong, or an idea? <a href="https://github.com/Jond-ie/repo/issues">Tell me on GitHub</a>. <a href="../">All tweaks</a></p>
 </footer>
 </body>
 </html>

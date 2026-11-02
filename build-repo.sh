@@ -36,7 +36,7 @@ Label: ${REPO_LABEL}
 Suite: stable
 Version: 1.0
 Codename: ios
-Architectures: iphoneos-arm64
+Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
 Components: main
 Description: ${REPO_DESCRIPTION}
 EOF

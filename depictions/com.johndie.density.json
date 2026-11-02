@@ -7,7 +7,19 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "## Density\n\n**More on screen in the apps you pick**, like Android's display density setting. The app lays itself out for a bigger screen, so lists, feeds and pages fit more, while the status bar and keyboard stay exactly as they are.\n\n- **Simple:** Settings → Density. Set the **Amount** slider (0 is normal, 30 fits the most), then switch Density on for the apps you want.\n- **Stock look:** the keyboard and status bar are untouched, and text stays sharp.\n- **Light:** apps you don't switch on load nothing extra.\n- Changed something? Tap **Apply Changes**: it closes the apps you changed and resprings."
+          "markdown": "## Density\n\n**Fit more on screen in the apps you pick**, like Android's display size setting. Lists, feeds and pages show more, while the status bar and keyboard stay as they are.\n\n- **Simple:** in Settings → Density, set the **Amount** (0 is normal, 30 fits the most), then switch it on for the apps you want.\n- **Looks stock:** the keyboard and status bar are untouched, and text stays sharp.\n- **Light:** apps you don't switch on load nothing extra.\n- Changed something? Tap **Apply Changes**. It closes the apps you changed and resprings."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0.0",
+          "_sync": "compat"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "Rootless",
+          "_sync": "compat"
         },
         {
           "class": "DepictionScreenshotsView",
@@ -30,11 +42,19 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "Notes"
+          "title": "Works on"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- Rootless jailbreaks (Dopamine), iOS 15–18, arm64 and arm64e.\n- Needs **AltList** and **PreferenceLoader** (Sileo installs them).\n- If an app looks wrong, switch Density off for it and please [report it](https://github.com/Jond-ie/repo/issues). Games aren't tested."
+          "markdown": "- **iOS 15 to 18.** Rootless jailbreaks. A RootHide version comes with the next update.\n- If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then [tell me](https://github.com/Jond-ie/repo/issues)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Good to know"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- If an app looks wrong, switch Density off for it and [tell me](https://github.com/Jond-ie/repo/issues). Games haven't been tested.\n- Needs **AltList** and **PreferenceLoader**. Sileo installs them for you."
         },
         {
           "class": "DepictionHeaderView",
@@ -42,7 +62,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Written from scratch by **Jond-ie**. Inspired by Android's display density (DPI) setting."
+          "markdown": "Written from scratch by **Jond-ie**. Inspired by Android's display size (DPI) setting."
         }
       ]
     }

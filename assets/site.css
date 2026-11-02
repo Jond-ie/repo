@@ -174,6 +174,7 @@ h2.big { font-size: 1.6rem; font-weight: 800; text-transform: none; letter-spaci
 .chips { display: inline-flex; gap: 2px; padding: 3px; border-radius: 999px; background: var(--well); box-shadow: var(--well-shadow); }
 .chip { font: inherit; font-size: .82rem; font-weight: 600; padding: .38rem .8rem; cursor: pointer; border: 1px solid transparent; border-radius: 999px; background: none; color: var(--muted); }
 .chip[aria-pressed="true"] { color: var(--thumb-fg); background: var(--thumb); border-color: var(--key-edge); box-shadow: var(--key-shadow), 0 2px 6px rgba(0,0,0,.12); }
+.chips { flex-wrap: wrap; }
 @media (max-width: 34rem) { .finder { border-radius: 22px; } .chips { width: 100%; justify-content: space-between; } }
 .none { display: none; text-align: center; color: var(--muted); margin-top: 2rem; }
 .card.hidden, section.hidden { display: none; }

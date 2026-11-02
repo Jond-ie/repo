@@ -1,0 +1,86 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## PullOver Pro (Rootless)\n\n**Pin any app to a small handle on the side of the screen and pull it over whatever you're doing.** The app runs live, and you never leave the one you're in. c1d3r's PullOver Pro, brought back.\n\n- **Tap or pull the handle** to slide the pinned app in. Push it back to tuck it away.\n- **QuickSwitch:** long-press the handle to pick another app from your recent apps or favorites. Drag an app to the middle to open it full screen.\n- **Settings** for left-handed mode, a dark handle, QuickSwitch size, hiding in landscape, staying above the keyboard, closing when you go home, and shrinking the handle when it sits idle. Changes apply right away.\n- **Works with Triggr:** install **PullOver Pro for Triggr** to pull over or close your app with any button or gesture."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "3.0.0~beta1",
+          "_sync": "compat"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "Rootless, RootHide",
+          "_sync": "compat"
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{160, 327}",
+          "screenshots": [
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/pullover/open.png",
+              "accessibilityText": "Calendar pulled over Settings"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/pullover/handle.png",
+              "accessibilityText": "The handle on the side of the screen"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/pullover/quickswitch.png",
+              "accessibilityText": "QuickSwitch: hold the handle, then drag an app to the middle to open it"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/pullover/settings.png",
+              "accessibilityText": "PullOver Pro settings"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/pullover/settings-more.png",
+              "accessibilityText": "More settings, including Close When Going Home"
+            }
+          ]
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "What's New in 3.0.0 Beta 1"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **First Rootless and RootHide release,** rebuilt for iOS 15 to 27. Apps that aren't running start in the background when you pull them over, and favorites are picked with AltList.\n- The original's paid unlock is gone. It's free, and the source is public under the GPL, like the original."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Works on"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **iOS 15 to 27.** Rootless and RootHide jailbreaks.\n- Tested on an iPhone XR (iOS 16.0.3), an iPhone 11 Pro Max (iOS 16.2) and iOS 27 (virtual iPhone, RootHide).\n- If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then [tell me](https://github.com/Jond-ie/pulloverpro-rootless/issues)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Good to know"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- An app that's already open full screen can't be pulled over at the same time.\n- Needs **AltList**. Sileo installs it for you. On iOS 27, open its settings from the TweakSettings app."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**PullOver Pro** by **c1d3r** ([@c1d3rdev](https://x.com/c1d3rdev)), released under the GPL-3.0 ([source](https://github.com/c1d3rdev/PullOver-Pro)). iOS 13 support by **@akusio_RR**. iOS 15 to 27 Rootless and RootHide support by **Jond-ie** ([@Jond_ie](https://x.com/Jond_ie))."
+        }
+      ]
+    }
+  ]
+}

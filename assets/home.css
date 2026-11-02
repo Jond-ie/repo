@@ -1,0 +1,250 @@
+/* pwnapple front page: pineapple at night. Indigo dark, a pineapple-skin lattice, one Dynamic Island with a status ring.
+   Only index.html uses this file; the Details and tweak pages keep site.css. */
+:root {
+  color-scheme: light dark;
+  --page: #f4f3fa; --ink: #17193a; --muted: #50547a; --faint: #74789b;
+  --gold: #f2b100; --gold-ink: #17193a; --leaf: #127541; --link: #4a3ee0;
+  --panel: rgba(255,255,255,.74); --panel-edge: rgba(23,25,58,.08); --line: rgba(23,25,58,.09);
+  --lattice: rgba(23,25,58,.07); --glow: rgba(242,177,0,.22);
+  --shadow: 0 1px 2px rgba(23,25,58,.06), 0 18px 40px -18px rgba(23,25,58,.25);
+  }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #0f1230; --ink: #f1f0ff; --muted: #a9acd0; --faint: #8084ab;
+    --gold: #ffc233; --leaf: #3ed68a; --link: #ab9dff;
+    --panel: rgba(31,35,82,.62); --panel-edge: rgba(255,255,255,.07); --line: rgba(255,255,255,.075);
+    --lattice: rgba(255,214,120,.07); --glow: rgba(255,194,51,.2);
+    --shadow: 0 1px 0 rgba(255,255,255,.05) inset, 0 20px 44px -20px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"] {
+  --page: #0f1230; --ink: #f1f0ff; --muted: #a9acd0; --faint: #8084ab;
+  --gold: #ffc233; --leaf: #3ed68a; --link: #ab9dff;
+  --panel: rgba(31,35,82,.62); --panel-edge: rgba(255,255,255,.07); --line: rgba(255,255,255,.075);
+  --lattice: rgba(255,214,120,.07); --glow: rgba(255,194,51,.2);
+  --shadow: 0 1px 0 rgba(255,255,255,.05) inset, 0 20px 44px -20px rgba(0,0,0,.7);
+}
+
+* { box-sizing: border-box; }
+html { background: var(--page); }
+body {
+  margin: 0; min-height: 100vh; color: var(--ink); background: var(--page);
+  font: 16px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; overflow-x: hidden;
+}
+/* pineapple skin: a diamond lattice that glows gold around the island and fades out */
+body::before {
+  content: ""; position: absolute; inset: 0 0 auto; height: 46rem; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(28rem 16rem at 50% 5.5rem, var(--glow), transparent 70%),
+    repeating-linear-gradient(60deg, var(--lattice) 0 1px, transparent 1px 34px),
+    repeating-linear-gradient(-60deg, var(--lattice) 0 1px, transparent 1px 34px);
+  -webkit-mask: radial-gradient(48rem 34rem at 50% 0, #000 30%, transparent 75%);
+  mask: radial-gradient(48rem 34rem at 50% 0, #000 30%, transparent 75%);
+}
+main { max-width: 60rem; margin: 0 auto; padding: 0 1rem 4rem; }
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 8px; }
+code { font: .85em/1.4 ui-monospace, Menlo, monospace; background: var(--line); border-radius: 7px; padding: .12rem .42rem; overflow-wrap: anywhere; }
+
+/* top bar */
+.bar { max-width: 60rem; margin: 0 auto; padding: .9rem 1rem 0; display: flex; align-items: center; justify-content: space-between; }
+.bar .title { display: none; }
+.barlinks { display: flex; gap: .35rem; }
+.iconbtn { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; color: var(--ink); }
+.iconbtn:hover { background: var(--line); }
+.iconbtn svg { width: 18px; height: 18px; fill: currentColor; }
+.barbtn { font-size: .88rem; font-weight: 650; color: var(--ink); padding: .45rem 1rem; border-radius: 999px; border: 1px solid var(--line); }
+.barbtn:hover { text-decoration: none; background: var(--line); }
+
+/* hero */
+.hero { text-align: center; padding: 2.2rem 0 1rem; }
+
+/* the island: black like the hardware, wrapped in a moving status ring */
+@property --a { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+.island {
+  position: relative; display: inline-flex; align-items: center; gap: .8rem; margin: 0;
+  height: 72px; width: 340px; isolation: isolate; max-width: 100%; padding: 0 .7rem 0 .6rem;
+  border-radius: 999px; background: #000; color: #fff; font: inherit; text-align: left;
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,.6);
+  animation: grow .9s cubic-bezier(.2,.9,.25,1.15) .25s both;
+}
+.island::before {
+  content: ""; position: absolute; inset: -3px; border-radius: inherit; padding: 3px; z-index: -1;
+  background: conic-gradient(from var(--a), var(--gold), var(--leaf), #5ad1ff, transparent 55%, var(--gold));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  animation: sweep 6s linear infinite; filter: drop-shadow(0 0 6px var(--glow));
+}
+.island img { width: 50px; height: 50px; border-radius: 14px; flex: none; }
+.island .isl-text { flex: 1; min-width: 0; line-height: 1.2; animation: fadein .4s ease .85s both; }
+.island .wordmark { display: block; font-size: 1.9rem; line-height: 1; margin: 0 0 .15rem; letter-spacing: -.045em; }
+.island small { display: block; font-size: .78rem; color: rgba(255,255,255,.62); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.island .cam { width: 30px; height: 30px; flex: none; border-radius: 50%; animation: fadein .4s ease .85s both;
+  background: radial-gradient(circle at 38% 34%, rgba(120,140,255,.55) 0 2px, transparent 3px),
+    radial-gradient(circle, #121733 0 7px, #05060c 8px 11px, #1a1d2a 12px 13px, transparent 14px); }
+@keyframes grow { from { width: 72px; } }
+@keyframes fadein { from { opacity: 0; } }
+@keyframes sweep { to { --a: 360deg; } }
+
+.wordmark {
+  font-family: "Bricolage Grotesque", -apple-system, system-ui, sans-serif; font-optical-sizing: auto;
+  font-weight: 800;
+}
+.tag { font: 750 clamp(1.9rem, 6vw, 3.3rem)/1.05 "Bricolage Grotesque", -apple-system, system-ui, sans-serif; letter-spacing: -.035em;
+  color: var(--ink); max-width: 15em; margin: 2rem auto .8rem; text-wrap: balance; }
+/* featured banner, like Sileo's Featured page: always dark like a screen, each slide lit by its tweak's colour */
+.featured-banner { margin: 2rem 0 1.4rem; text-align: left; }
+.slides { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; border-radius: 30px; scrollbar-width: none;
+  box-shadow: var(--shadow), 0 30px 60px -30px color-mix(in srgb, var(--gold) 40%, transparent); }
+.slides::-webkit-scrollbar { display: none; }
+.slide { position: relative; flex: 0 0 100%; scroll-snap-align: start; height: clamp(300px, 42vw, 380px); overflow: hidden; color: #fff;
+  background: radial-gradient(60% 90% at 78% 100%, color-mix(in srgb, var(--tint) 55%, transparent), transparent 70%),
+    linear-gradient(160deg, #1b1f4a, #0a0c22); }
+.slide:hover { text-decoration: none; }
+.slide-text { position: absolute; left: clamp(3.4rem, 6vw, 4.6rem); top: 50%; transform: translateY(-50%); max-width: min(26rem, 52%); display: flex; flex-direction: column; gap: .5rem; }
+.slide-text img { width: 56px; height: 56px; border-radius: 15px; box-shadow: 0 6px 18px rgba(0,0,0,.4); }
+.slide-text b { font: 800 clamp(2.2rem, 6vw, 3.8rem)/.95 "Bricolage Grotesque", -apple-system, sans-serif; letter-spacing: -.045em; margin-top: .3rem; }
+.slide-text span { font-size: clamp(1rem, 2.2vw, 1.25rem); color: rgba(255,255,255,.78); text-wrap: balance; }
+.slide-text i { font-style: normal; font-weight: 700; font-size: .9rem; align-self: flex-start; margin-top: .6rem; padding: .55rem 1.1rem; border-radius: 999px; color: #0a0c22; background: var(--tint); }
+.phone { position: absolute; right: clamp(1rem, 6vw, 4rem); top: 2rem; width: clamp(160px, 24vw, 240px);
+  filter: drop-shadow(0 -6px 30px color-mix(in srgb, var(--tint) 45%, transparent)); }
+.stage { position: relative; }
+.arrow { position: absolute; top: 50%; z-index: 2; width: 36px; height: 36px; margin-top: -18px; padding: 0; display: grid; place-items: center;
+  border: 1px solid rgba(255,255,255,.14); border-radius: 50%; cursor: pointer; color: #fff;
+  background: rgba(10,12,34,.55); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); transition: background .15s; }
+.arrow:hover { background: rgba(10,12,34,.8); }
+.arrow svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.arrow.prev { left: .7rem; } .arrow.next { right: .7rem; }
+@media (max-width: 34rem) { .arrow { top: auto; bottom: 1rem; margin-top: 0; width: 34px; height: 34px; } .arrow.prev { left: 1rem; } .arrow.next { right: 1rem; } }
+.dots { display: flex; justify-content: center; gap: .45rem; margin-top: .8rem; }
+.dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 999px; background: var(--faint); opacity: .45; cursor: pointer; transition: width .25s, opacity .25s; }
+.dots button[aria-current="true"] { width: 22px; opacity: 1; background: var(--ink); }
+@media (max-width: 34rem) {
+  .slide { height: 400px; }
+  .slide-text { left: 1.4rem; top: 1.4rem; transform: none; max-width: calc(100% - 2.8rem); }
+  .phone { top: auto; bottom: -230px; right: 50%; transform: translateX(50%); width: 210px; }
+}
+.compat { font-size: .9rem; font-weight: 600; color: var(--leaf); margin: 0 0 1.2rem; }
+.buttons { display: flex; gap: .6rem; justify-content: center; flex-wrap: wrap; }
+.button {
+  display: inline-block; font-weight: 700; padding: .8rem 1.5rem; border-radius: 999px;
+  background: var(--gold); color: var(--gold-ink); box-shadow: 0 8px 22px -10px var(--gold);
+}
+.button.secondary { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--line), inset 0 0 0 1.5px var(--faint); }
+.button:hover { text-decoration: none; filter: brightness(1.05); }
+.url { font-size: .85rem; color: var(--faint); margin: 1rem 0 0; }
+
+/* finder */
+.finder { position: sticky; top: .6rem; z-index: 5; display: flex; gap: .5rem; flex-wrap: wrap; align-items: center;
+  margin: 2.4rem 0 0; padding: .45rem; border-radius: 22px; background: var(--panel); border: 1px solid var(--panel-edge);
+  box-shadow: var(--shadow); -webkit-backdrop-filter: blur(22px) saturate(1.6); backdrop-filter: blur(22px) saturate(1.6); }
+.finder input { flex: 1 1 14rem; min-width: 0; font: inherit; color: var(--ink); background: transparent; border: 0; padding: .55rem .8rem; outline: none; }
+.finder input::placeholder { color: var(--faint); }
+.none { display: none; text-align: center; color: var(--muted); margin-top: 2rem; }
+.card.hidden, section.hidden { display: none; }
+
+/* sections */
+section { margin-top: 2.6rem; }
+h2 { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin: 0 0 .7rem .2rem; letter-spacing: -.01em; }
+
+/* tags: small solid labels. Status (beta, new, port) in neutral or gold; what it runs on (iOS, rootful) in green.
+   Unconfirmed tags look the same: site-compat.py --check blocks a push until they're confirmed. */
+.card h3 { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem .4rem; }
+.badge { display: inline-flex; align-items: center; height: 1.3rem; padding: 0 .45rem; border-radius: 6px;
+  font: 600 .72rem/1 -apple-system, system-ui, sans-serif; letter-spacing: .01em; white-space: nowrap;
+  color: var(--muted); background: var(--line); }
+.badge.new { color: var(--gold-ink); background: var(--gold); }
+.badge.ios, .badge.jb { color: var(--leaf); background: color-mix(in srgb, var(--leaf) 13%, transparent); }
+.badge.jb { color: var(--muted); background: var(--line); }
+
+/* icons */
+.icon { width: 52px; height: 52px; border-radius: 14px; flex: none; display: grid; place-items: center; }
+.icon.letter { color: #fff; font: 800 1.35rem/1 "Bricolage Grotesque", -apple-system, sans-serif; }
+
+/* Start here: tiles of different sizes, Triggr leads */
+.grid.featured { display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem; }
+.featured .card { display: flex; flex-direction: column; gap: .8rem; padding: 1.25rem; border-radius: 26px;
+  background: var(--panel); border: 1px solid var(--panel-edge); box-shadow: var(--shadow); }
+.featured .card:first-child { grid-column: span 2; flex-direction: row; align-items: center; gap: 1.1rem; padding: 1.6rem;
+  background: linear-gradient(140deg, color-mix(in srgb, var(--gold) 18%, transparent), transparent 60%), var(--panel); }
+.featured .card:first-child { grid-column: 1 / -1; }  /* Triggr across the top, two tiles under it */
+.featured .card:first-child .icon { width: 84px; height: 84px; border-radius: 22px; }
+.featured .card:first-child h3 { font-size: 1.9rem; }
+.featured .card:first-child p:not(.points):not(.links) { font-size: 1.12rem; color: var(--ink); max-width: 30rem; }
+.featured h3 { margin: 0 0 .3rem; font: 750 1.2rem/1.15 "Bricolage Grotesque", -apple-system, sans-serif; letter-spacing: -.02em; }
+.featured p { margin: 0; color: var(--muted); font-size: .94rem; }
+.featured p.points { color: var(--faint); font-size: .85rem; margin-top: .45rem; }
+.featured p.links { margin-top: .7rem; font-size: .88rem; }
+@media (max-width: 46rem) {
+  .grid.featured { grid-template-columns: 1fr 1fr; }
+  .featured .card:first-child { grid-column: 1 / -1; }
+}
+@media (max-width: 30rem) {
+  .grid.featured { grid-template-columns: 1fr; }
+  .featured .card, .featured .card:first-child { flex-direction: row; align-items: flex-start; gap: .9rem; padding: 1.1rem; }
+  .featured .card .icon, .featured .card:first-child .icon { width: 52px; height: 52px; border-radius: 14px; }
+  .featured .card:first-child h3 { font-size: 1.45rem; }
+  .featured .card:first-child p:not(.points):not(.links) { font-size: 1rem; }
+}
+
+/* everything else: grouped lists, like Settings */
+.cats { columns: 2 22rem; column-gap: 1.2rem; }
+.cats section { break-inside: avoid; margin-top: 0; padding-top: 2.2rem; }
+.grid:not(.featured) { border-radius: 22px; overflow: hidden; background: var(--panel); border: 1px solid var(--panel-edge); box-shadow: var(--shadow); }
+.grid:not(.featured) .card { display: flex; gap: .85rem; align-items: flex-start; padding: .9rem 1rem; }
+.grid:not(.featured) .card + .card { border-top: 1px solid var(--line); }
+.grid:not(.featured) .card.hidden + .card { border-top: 0; }
+.grid:not(.featured) .icon { width: 40px; height: 40px; border-radius: 11px; }
+.grid:not(.featured) .icon.letter { font-size: 1.05rem; }
+.grid:not(.featured) h3 { margin: 0 0 .15rem; font-size: 1.02rem; font-weight: 650; }
+.grid:not(.featured) p { margin: .1rem 0 0; color: var(--muted); font-size: .95rem; line-height: 1.45; }
+.grid:not(.featured) p.links { font-size: .88rem; margin-top: .35rem; }
+.body { min-width: 0; }
+
+/* install: a real sequence, so it's numbered */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: .8rem; counter-reset: s; }
+.step { padding: 1.2rem; border-radius: 22px; background: var(--panel); border: 1px solid var(--panel-edge); box-shadow: var(--shadow); font-weight: 700; }
+.step b { display: inline-grid; place-items: center; width: 1.8rem; height: 1.8rem; margin-right: .5rem; border-radius: 50%;
+  font-size: .85rem; color: var(--gold-ink); background: var(--gold); }
+.step p { margin: .5rem 0 0; color: var(--muted); font-size: .93rem; font-weight: 400; }
+
+/* request + footer */
+.request { margin-top: 3rem; text-align: center; padding: 2rem 1rem; border-radius: 28px; background: var(--panel); border: 1px solid var(--panel-edge); box-shadow: var(--shadow); }
+.request h2 { font: 800 clamp(1.6rem, 5vw, 2.2rem)/1.05 "Bricolage Grotesque", -apple-system, sans-serif; letter-spacing: -.03em; margin: 0 0 .4rem; }
+.request p { margin: 0 0 1.2rem; color: var(--muted); }
+footer { margin-top: 2.6rem; font-size: .82rem; color: var(--faint); text-align: center; }
+footer p { margin: .4rem 0; }
+.social { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem; }
+.social a { font-size: .88rem; font-weight: 600; color: var(--ink); padding: .4rem .9rem; border-radius: 999px; border: 1px solid var(--line); }
+.social a:hover { text-decoration: none; background: var(--line); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before { animation: none !important; transition: none !important; }
+}
+
+/* the whole card opens its first link (bigger tap target); other links stay clickable on top */
+.card { position: relative; }
+.card .links a:first-child::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.card .links a:not(:first-child) { position: relative; z-index: 1; }
+.card .links a:first-child:focus-visible { outline: none; }
+.card:has(.links a:first-child:focus-visible) { outline: 2px solid var(--gold); outline-offset: 2px; }
+.grid:not(.featured) .card:hover { background: var(--line); }
+.featured .card:hover { border-color: color-mix(in srgb, var(--ink) 18%, transparent); }
+.search-hint { font-size: .8rem; color: var(--faint); padding-right: .7rem; white-space: nowrap; }
+@media (hover: none), (max-width: 34rem) { .search-hint { display: none; } }
+
+/* quality of life: computer note, copy button, match count, category links */
+.desktop-note { font-size: .88rem; color: var(--muted); max-width: 26rem; margin: 0 auto 1rem; }
+.copy { font: 600 .78rem/1 -apple-system, system-ui, sans-serif; padding: .3rem .6rem; margin: 0 .15rem; border-radius: 6px;
+  border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer; vertical-align: 1px; }
+.copy:hover { background: var(--line); }
+.count { margin: .7rem .3rem 0; font-size: .85rem; color: var(--muted); min-height: 0; }
+.count:empty { display: none; }
+.jump { display: flex; gap: .4rem; flex-wrap: wrap; margin: .9rem .1rem 0; }
+.jump a { font-size: .85rem; font-weight: 600; color: var(--muted); padding: .32rem .7rem; border-radius: 999px; border: 1px solid var(--line); }
+.jump a:hover { color: var(--ink); background: var(--line); text-decoration: none; }
+.jump[hidden] { display: none; }
+@media (max-width: 34rem) { .jump { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-left: -1rem; margin-right: -1rem; padding: 0 1rem; } .jump::-webkit-scrollbar { display: none; } .jump a { flex: none; } }
+section[id] { scroll-margin-top: 5rem; }  /* clear the sticky search bar when jumping */

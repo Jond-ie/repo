@@ -4,48 +4,91 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Catapult · pwnapple</title>
+<meta name="description" content="Make your iPhone&#x27;s Home Screen work like Android&#x27;s. Catapult swaps the iOS Home Screen for Trebuchet, the one from LineageOS. Everything else stays iOS.">
+<link rel="icon" href="../CydiaIcon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,650..800&display=swap">
+<link rel="stylesheet" href="../assets/iphone.css">
 <style>
+  /* Same colours as the front page (assets/home.css), quieter: these pages are for reading. */
   :root {
     color-scheme: light dark;
-    --bg: #ffffff; --fg: #1a1a1a; --muted: #666; --card: #f4f4f5;
-    --accent: #3b6ea5; --border: #e2e2e5;
+    --page: #f4f3fa; --ink: #17193a; --muted: #50547a; --faint: #74789b;
+    --gold: #f2b100; --gold-ink: #17193a; --leaf: #127541; --link: #4a3ee0;
+    --panel: #ffffff; --line: rgba(23,25,58,.1);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
-      --accent: #6ea8dc; --border: #26262b;
+      --page: #0f1230; --ink: #f1f0ff; --muted: #a9acd0; --faint: #8084ab;
+      --gold: #ffc233; --leaf: #3ed68a; --link: #ab9dff;
+      --panel: #181c45; --line: rgba(255,255,255,.09);
     }
   }
   :root[data-theme="dark"] {
-    --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
-    --accent: #6ea8dc; --border: #26262b;
+    --page: #0f1230; --ink: #f1f0ff; --muted: #a9acd0; --faint: #8084ab;
+    --gold: #ffc233; --leaf: #3ed68a; --link: #ab9dff;
+    --panel: #181c45; --line: rgba(255,255,255,.09);
   }
   * { box-sizing: border-box; }
+  html { background: var(--page); }
   body {
-    font: 16px/1.6 -apple-system, system-ui, "Segoe UI", sans-serif;
-    background: var(--bg); color: var(--fg);
-    max-width: 40rem; margin: 0 auto; padding: 2.5rem 1rem 4rem;
-    overflow-wrap: anywhere;
+    margin: 0 auto; max-width: 42rem; padding: 1.5rem 1rem 4rem;
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", sans-serif;
+    color: var(--ink); background: var(--page); overflow-wrap: anywhere;
+    -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%;
   }
-  h1 { font-size: 1.9rem; margin: 0 0 .75rem; }
-  h2 { font-size: 1.1rem; margin: 2rem 0 .6rem; }
-  p { margin: 0 0 .9rem; }
-  ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
-  li { margin: .25rem 0; }
-  .card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: .75rem; padding: 1rem 1.15rem;
+  a { color: var(--link); text-underline-offset: .15em; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+  .back { display: inline-block; font-size: .9rem; margin-bottom: 1.6rem; text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+
+  .top { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.1rem; }
+  .icon { width: 64px; height: 64px; border-radius: 16px; flex: none; display: grid; place-items: center; object-fit: cover; }
+  .icon.letter { color: #fff; font: 800 1.6rem/1 "Bricolage Grotesque", -apple-system, sans-serif; }
+  h1 { margin: 0; font: 750 2rem/1.1 "Bricolage Grotesque", -apple-system, sans-serif; letter-spacing: -.02em; }
+  .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .45rem; }
+  .badge { display: inline-flex; align-items: center; height: 1.35rem; padding: 0 .5rem; border-radius: 6px;
+    font: 600 .75rem/1 -apple-system, BlinkMacSystemFont, system-ui, sans-serif; color: var(--muted); background: var(--line); }
+  .badge.ios { color: var(--leaf); background: color-mix(in srgb, var(--leaf) 13%, transparent); }
+
+  .intro > p:first-child { font-size: 1.12rem; }
+  h2 { margin: 2.2rem 0 .6rem; font: 700 1.2rem/1.2 "Bricolage Grotesque", -apple-system, sans-serif; letter-spacing: -.01em; }
+  h3 { margin: 1.4rem 0 .4rem; font-size: 1rem; }
+  p { margin: 0 0 .85rem; }
+  ul { margin: 0 0 .85rem; padding-left: 1.2rem; }
+  li { margin: .3rem 0; }
+  li::marker { color: var(--faint); }
+  code { font-size: .9em; background: var(--line); padding: .05rem .3rem; border-radius: 4px; }
+
+  .facts { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.4rem 0; padding: 0; }
+  .facts div { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: .55rem .85rem; min-width: 8.5rem; }
+  .facts dt { font-size: .75rem; color: var(--muted); margin: 0; }
+  .facts dd { margin: .1rem 0 0; font-weight: 650; }
+
+  .get { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 1rem 1.1rem; margin: 1.6rem 0; }
+  .get p { margin: 0 0 .75rem; color: var(--muted); font-size: .95rem; }
+  .get .buttons { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .button { display: inline-block; font-weight: 700; padding: .6rem 1.15rem; border-radius: 999px; text-decoration: none;
+    background: var(--gold); color: var(--gold-ink); }
+  .button.secondary { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--faint); }
+  .button:hover { filter: brightness(1.05); }
+
+  details.log { margin-top: 2.2rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+  details.log summary { cursor: pointer; font: 700 1.2rem/1.2 "Bricolage Grotesque", -apple-system, sans-serif; }
+  details.log summary span { font: 400 .9rem/1 -apple-system, system-ui, sans-serif; color: var(--muted); margin-left: .3rem; }
+  .dep-shots { margin: 1.4rem 0; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); }
+  @media (max-width: 30rem) {
+    h1 { font-size: 1.7rem; }
+    .icon { width: 54px; height: 54px; border-radius: 14px; }
   }
-  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
-  code { font-size: .9em; }
-  .back { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; }
-  footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
-  a { color: var(--accent); }
 </style>
 </head>
 <body>
-<a class="back" href="../">&larr; pwnapple</a>
-<h1>Catapult</h1>
+<a class="back" href="../">&larr; All tweaks</a>
+<header class="top"><img class="icon" src="../assets/catapult.png" alt=""><div><h1>Catapult</h1><div class="tags"><span class="badge ios" title="Works on iOS 14 to 18">iOS 14–18</span><span class="badge" title="Also has a build for rootful jailbreaks">Rootful too</span></div></div></header>
+<div class="intro">
 <p><strong>Make your iPhone&#x27;s Home Screen work like Android&#x27;s.</strong> Catapult swaps the iOS Home Screen for Trebuchet, the one from LineageOS. Everything else stays iOS.</p>
 <ul>
   <li><strong>An app drawer.</strong> Swipe up for every app in one A to Z list. Its search box also does quick sums, converts units and searches the web.</li>
@@ -55,42 +98,28 @@
   <li><strong>It still feels like an iPhone.</strong> Apps open and close with Apple&#x27;s own animation, straight from their icon.</li>
 </ul>
 <p><a href="https://jond-ie.github.io/repo/catapult/">Everything it can do →</a></p>
-<img src="../screenshots/catapult/home.png" alt="Home screen: Trebuchet grid, dock and search bar" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/catapult/drawer.png" alt="App drawer" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/catapult/search.png" alt="Search answers sums and searches the web" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/catapult/shortcuts.png" alt="Long-press shortcuts" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/catapult/edit.png" alt="Editing pages" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/catapult/settings.png" alt="Home settings: icon themes and fonts" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
+</div>
+<dl class="facts"><div><dt>Version</dt><dd>0.1.0~beta3</dd></div><div><dt>Jailbreak</dt><dd>Rootless, Rootful</dd></div></dl>
+<div class="get"><p>Get it from the pwnapple repo: add it to your package manager, then search for Catapult.</p><div class="buttons"><a class="button" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a><a class="button secondary" href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a></div></div>
+<div class="dep-shots"><span class="iphone" style="--sb:linear-gradient(90deg,#0e87ca,#15817c)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/catapult/home.png" alt="Home screen: Trebuchet grid, dock and search bar" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#0e87ca,#15817c)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/catapult/drawer.png" alt="App drawer" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#0e87ca,#15817c)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/catapult/search.png" alt="Search answers sums and searches the web" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#0e87ca,#15817c)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/catapult/shortcuts.png" alt="Long-press shortcuts" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#0e87ca,#15817c)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/catapult/edit.png" alt="Editing pages" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#0d0e12,#0d0e12)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/catapult/settings.png" alt="Home settings: icon themes and fonts" loading="lazy"></span></span></div>
 <h2>How it works</h2>
-<div class="card">
 <p>1. <strong>Swipe up</strong> for the app drawer: every app A to Z, with a letter bar to jump. 2. <strong>Long-press an empty spot</strong> for Wallpaper &amp; style (icon shapes, grid size), Widgets and Home settings. 3. <strong>Long-press an app</strong> for its shortcuts, App info and Remove. Drag it onto another app to make a folder. 4. <strong>Type in the search bar:</strong> apps, sums like <code>9+2</code>, conversions like <code>5 km in mi</code>, or a web search.</p>
 <p><a href="https://jond-ie.github.io/repo/catapult/">See it in action and everything it can do →</a></p>
-</div>
-<h2>What&#x27;s New in 0.1.0~beta2</h2>
-<div class="card">
+<h2>What&#x27;s New in 0.1.0~beta3</h2>
 <ul>
-  <li><strong>Catapult speaks your language.</strong> It follows your iPhone&#x27;s language: LineageOS&#x27;s own text in 96 languages, and everything Catapult added in 27, including Spanish, Portuguese, French, German, Russian, Arabic, Hindi, Japanese, Korean and Chinese.</li>
-  <li><strong>Fixed:</strong> copying a search answer like 3,5 (decimal comma) pasted 35.</li>
-  <li><strong>Weather</strong> follows your iPhone&#x27;s °C / °F setting.</li>
-  <li>Tested in Simplified Chinese on an iPhone 8 Plus. If a line reads wrong in your language, <a href="https://github.com/Jond-ie/catapult/issues">tell me</a>.</li>
+  <li><strong>Rootful jailbreaks:</strong> Catapult now has a rootful build for iOS 14 and 15 too. Your package manager picks the right one. On iOS 14, theming icons across iOS isn&#x27;t available (it needs iOS 15).</li>
+  <li><strong>Fixed:</strong> on iOS 15.0 and 15.1, iPhone XS and newer, Catapult could crash the Home Screen when it loaded.</li>
+  <li><strong>The app drawer&#x27;s background</strong> now takes the same tint as Quick Settings, matching LineageOS. Thanks to MakrSas for the idea.</li>
+  <li>The rootful build hasn&#x27;t been tried on a phone yet. If something&#x27;s off, <a href="https://github.com/Jond-ie/catapult/issues">tell me</a>.</li>
 </ul>
-</div>
-<h2>Beta 1</h2>
-<div class="card">
+<h2>Works on</h2>
 <ul>
-  <li>First public beta.</li>
-  <li><strong>Safe to try:</strong> if something goes badly wrong, Catapult switches itself off and your normal Home Screen comes back. A normal respring doesn&#x27;t count.</li>
-  <li><strong>Had MakrSas&#x27;s Trebuchet?</strong> Catapult replaces it and keeps your layout.</li>
+  <li><strong>Rootless jailbreaks: iOS 15 to 18. Rootful jailbreaks: iOS 14 and 15.</strong> Your package manager picks the right one.</li>
+  <li>Tested on iOS 15.8.6, 16.2, 16.7, 17.5.1 and 18.6.2, on an iPhone 7, 8 Plus, SE 2nd gen, 11 Pro and 11 Pro Max.</li>
+  <li>Not tried yet: iPads, landscape, the rootful build, and iOS 15 on iPhone XS and newer.</li>
+  <li><strong>Safe to try:</strong> if something goes badly wrong, Catapult switches itself off and your normal Home Screen comes back. <a href="https://github.com/Jond-ie/catapult/issues">Tell me</a> what happened.</li>
 </ul>
-</div>
-<h2>Device Support</h2>
-<div class="card">
-<p><strong>Rootless jailbreaks (Dopamine, palera1n…), iOS 15 to 18.</strong></p>
-<p>Tested on iOS 15.8.6, 16.2, 16.7, 17.5.1 and 18.6.2, on iPhone 7, 8 Plus, SE (2nd gen), 11 Pro and 11 Pro Max.</p>
-<p>Not tried yet: iPads, landscape, and iOS 15 on iPhone XS and newer. If something&#x27;s off, <a href="https://github.com/Jond-ie/catapult/issues">tell me</a>.</p>
-</div>
 <h2>Good to know</h2>
-<div class="card">
 <ul>
   <li><strong>iOS widgets:</strong> they can&#x27;t go on this Home Screen, so Catapult has its own.</li>
   <li><strong>Portrait only</strong> for now.</li>
@@ -99,15 +128,27 @@
   <li><strong>Material You</strong> (by MakrSas) adds colours from your wallpaper.</li>
   <li><strong>Arabic and Hebrew:</strong> translated, but the layout doesn&#x27;t flip right to left yet.</li>
 </ul>
-</div>
 <h2>Credits</h2>
-<div class="card">
 <p>Built on <strong>MakrSas</strong>&#x27;s <a href="https://github.com/MakrSas/Trebuchet">Trebuchet port</a> (Apache 2.0). Thank you, MakrSas.</p>
 <p>Trebuchet and Launcher3 by <strong>LineageOS</strong> and the <strong>Android Open Source Project</strong> (Apache 2.0). Roboto Flex by Google (OFL). Full notices in Settings &gt; About and <a href="https://github.com/Jond-ie/catapult/tree/main/third-party">on GitHub</a>.</p>
 <p>Catapult by <strong>Jond-ie</strong>.</p>
-</div>
+<details class="log"><summary>Changelog<span>2 earlier versions</span></summary>
+<h3>Beta 2</h3>
+<ul>
+  <li><strong>Catapult speaks your language.</strong> It follows your iPhone&#x27;s language: LineageOS&#x27;s own text in 96 languages, and everything Catapult added in 27, including Spanish, Portuguese, French, German, Russian, Arabic, Hindi, Japanese, Korean and Chinese.</li>
+  <li><strong>Fixed:</strong> copying a search answer like 3,5 (decimal comma) pasted 35.</li>
+  <li><strong>Weather</strong> follows your iPhone&#x27;s °C / °F setting.</li>
+  <li>Tested in Simplified Chinese on an iPhone 8 Plus. If a line reads wrong in your language, <a href="https://github.com/Jond-ie/catapult/issues">tell me</a>.</li>
+</ul>
+<h3>Beta 1</h3>
+<ul>
+  <li>First public beta.</li>
+  <li><strong>Safe to try:</strong> if something goes badly wrong, Catapult switches itself off and your normal Home Screen comes back. A normal respring doesn&#x27;t count.</li>
+  <li><strong>Had MakrSas&#x27;s Trebuchet?</strong> Catapult replaces it and keeps your layout.</li>
+</ul>
+</details>
 <footer>
-  <p>Bugs &amp; requests: <a href="https://github.com/Jond-ie/repo/issues">GitHub Issues</a>.</p>
+  <p>Something wrong, or an idea? <a href="https://github.com/Jond-ie/repo/issues">Tell me on GitHub</a>. <a href="../">All tweaks</a></p>
 </footer>
 </body>
 </html>

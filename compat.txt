@@ -1,0 +1,24 @@
+# iOS range and jailbreaks for each tweak. The site's tags come from this file.
+# You classify these. Edit the range (15-27, 15-18, 15-17, 18, 16-17 ...) and the jailbreaks,
+# then change "draft" to "ok". Nothing is published while any line still says draft.
+# After editing, run: python3 ~/tweaks-src/tools/site-compat.py
+#
+# depiction id                  range   status  jailbreaks
+com.johndie.triggr              15-27    ok      rootless roothide
+com.johndie.crest               15-27    ok      rootless roothide
+com.johndie.catapult            14-18   ok      rootless rootful
+com.johndie.pinstant            15-18   ok      rootless roothide
+com.johndie.liteface            18-27      ok   rootless roothide
+com.johndie.blankpass           15-18   ok      rootless roothide
+com.johndie.anywhere            15-17   ok      rootless roothide
+com.johndie.bounceit-rootless   15-27    ok      rootless roothide
+com.johndie.pulloverpro-rootless 15-27    ok      rootless roothide
+com.johndie.density              15-18    ok      rootless
+com.johndie.mirage               16-17    ok      rootless
+com.johndie.podified             15-18    ok      rootless
+com.johndie.begonecia           15-27   ok      rootless roothide
+com.johndie.slaplock             15-17    ok      rootless
+com.scrub.exif                  15-27    ok      rootless roothide
+com.crossfade.music             15-16   ok   rootless roothide
+com.johndie.eqelinker           15-27    ok      rootless roothide
+com.johndie.ccsupport18         18-27      ok   rootless

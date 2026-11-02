@@ -4,86 +4,145 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Crest · pwnapple</title>
+<meta name="description" content="A music player for your own songs that plays them exactly as good as the files are. It looks like hi-fi gear, not an Apple Music copy.">
+<link rel="icon" href="../CydiaIcon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,650..800&display=swap">
+<link rel="stylesheet" href="../assets/iphone.css">
 <style>
+  /* Same colours as the front page (assets/home.css), quieter: these pages are for reading. */
   :root {
     color-scheme: light dark;
-    --bg: #ffffff; --fg: #1a1a1a; --muted: #666; --card: #f4f4f5;
-    --accent: #3b6ea5; --border: #e2e2e5;
+    --page: #f4f3fa; --ink: #17193a; --muted: #50547a; --faint: #74789b;
+    --gold: #f2b100; --gold-ink: #17193a; --leaf: #127541; --link: #4a3ee0;
+    --panel: #ffffff; --line: rgba(23,25,58,.1);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
-      --accent: #6ea8dc; --border: #26262b;
+      --page: #0f1230; --ink: #f1f0ff; --muted: #a9acd0; --faint: #8084ab;
+      --gold: #ffc233; --leaf: #3ed68a; --link: #ab9dff;
+      --panel: #181c45; --line: rgba(255,255,255,.09);
     }
   }
   :root[data-theme="dark"] {
-    --bg: #0e0e10; --fg: #ececee; --muted: #9a9aa0; --card: #17171a;
-    --accent: #6ea8dc; --border: #26262b;
+    --page: #0f1230; --ink: #f1f0ff; --muted: #a9acd0; --faint: #8084ab;
+    --gold: #ffc233; --leaf: #3ed68a; --link: #ab9dff;
+    --panel: #181c45; --line: rgba(255,255,255,.09);
   }
   * { box-sizing: border-box; }
+  html { background: var(--page); }
   body {
-    font: 16px/1.6 -apple-system, system-ui, "Segoe UI", sans-serif;
-    background: var(--bg); color: var(--fg);
-    max-width: 40rem; margin: 0 auto; padding: 2.5rem 1rem 4rem;
-    overflow-wrap: anywhere;
+    margin: 0 auto; max-width: 42rem; padding: 1.5rem 1rem 4rem;
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", sans-serif;
+    color: var(--ink); background: var(--page); overflow-wrap: anywhere;
+    -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%;
   }
-  h1 { font-size: 1.9rem; margin: 0 0 .75rem; }
-  h2 { font-size: 1.1rem; margin: 2rem 0 .6rem; }
-  p { margin: 0 0 .9rem; }
-  ul { margin: 0 0 .9rem; padding-left: 1.25rem; }
-  li { margin: .25rem 0; }
-  .card {
-    background: var(--card); border: 1px solid var(--border);
-    border-radius: .75rem; padding: 1rem 1.15rem;
+  a { color: var(--link); text-underline-offset: .15em; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+  .back { display: inline-block; font-size: .9rem; margin-bottom: 1.6rem; text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+
+  .top { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.1rem; }
+  .icon { width: 64px; height: 64px; border-radius: 16px; flex: none; display: grid; place-items: center; object-fit: cover; }
+  .icon.letter { color: #fff; font: 800 1.6rem/1 "Bricolage Grotesque", -apple-system, sans-serif; }
+  h1 { margin: 0; font: 750 2rem/1.1 "Bricolage Grotesque", -apple-system, sans-serif; letter-spacing: -.02em; }
+  .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .45rem; }
+  .badge { display: inline-flex; align-items: center; height: 1.35rem; padding: 0 .5rem; border-radius: 6px;
+    font: 600 .75rem/1 -apple-system, BlinkMacSystemFont, system-ui, sans-serif; color: var(--muted); background: var(--line); }
+  .badge.ios { color: var(--leaf); background: color-mix(in srgb, var(--leaf) 13%, transparent); }
+
+  .intro > p:first-child { font-size: 1.12rem; }
+  h2 { margin: 2.2rem 0 .6rem; font: 700 1.2rem/1.2 "Bricolage Grotesque", -apple-system, sans-serif; letter-spacing: -.01em; }
+  h3 { margin: 1.4rem 0 .4rem; font-size: 1rem; }
+  p { margin: 0 0 .85rem; }
+  ul { margin: 0 0 .85rem; padding-left: 1.2rem; }
+  li { margin: .3rem 0; }
+  li::marker { color: var(--faint); }
+  code { font-size: .9em; background: var(--line); padding: .05rem .3rem; border-radius: 4px; }
+
+  .facts { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.4rem 0; padding: 0; }
+  .facts div { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: .55rem .85rem; min-width: 8.5rem; }
+  .facts dt { font-size: .75rem; color: var(--muted); margin: 0; }
+  .facts dd { margin: .1rem 0 0; font-weight: 650; }
+
+  .get { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 1rem 1.1rem; margin: 1.6rem 0; }
+  .get p { margin: 0 0 .75rem; color: var(--muted); font-size: .95rem; }
+  .get .buttons { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .button { display: inline-block; font-weight: 700; padding: .6rem 1.15rem; border-radius: 999px; text-decoration: none;
+    background: var(--gold); color: var(--gold-ink); }
+  .button.secondary { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--faint); }
+  .button:hover { filter: brightness(1.05); }
+
+  details.log { margin-top: 2.2rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+  details.log summary { cursor: pointer; font: 700 1.2rem/1.2 "Bricolage Grotesque", -apple-system, sans-serif; }
+  details.log summary span { font: 400 .9rem/1 -apple-system, system-ui, sans-serif; color: var(--muted); margin-left: .3rem; }
+  .dep-shots { margin: 1.4rem 0; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); }
+  @media (max-width: 30rem) {
+    h1 { font-size: 1.7rem; }
+    .icon { width: 54px; height: 54px; border-radius: 14px; }
   }
-  .card p:last-child, .card ul:last-child { margin-bottom: 0; }
-  code { font-size: .9em; }
-  .back { display: inline-block; margin-bottom: 1.5rem; font-size: .9rem; }
-  footer { margin-top: 3rem; font-size: .82rem; color: var(--muted); }
-  a { color: var(--accent); }
 </style>
 </head>
 <body>
-<a class="back" href="../">&larr; pwnapple</a>
-<h1>Crest</h1>
-<p>A high-quality offline music player for your own files. Every song plays at its own sample rate, and it looks like a piece of hi-fi gear, not an Apple Music clone.</p>
+<a class="back" href="../">&larr; All tweaks</a>
+<header class="top"><img class="icon" src="../assets/crest.png" alt=""><div><h1>Crest</h1><div class="tags"><span class="badge ios" title="Works on iOS 15 to 27">iOS 15–27</span></div></div></header>
+<div class="intro">
+<p><strong>A music player for your own songs</strong> that plays them exactly as good as the files are. It looks like hi-fi gear, not an Apple Music copy.</p>
 <ul>
-  <li><strong>Plays almost anything:</strong> FLAC, ALAC, WAV, AIFF, MP3, AAC, Opus, Vorbis, APE, WavPack, MPC, TAK, TTA, WMA, DSD and CUE sheets.</li>
-  <li><strong>Bit-Perfect mode:</strong> nothing between the file and your DAC or headphones.</li>
-  <li><strong>Gapless, crossfade and Automix:</strong> Automix blends songs on the beat, matches their loudness and keeps albums gapless.</li>
-  <li><strong>16-band parametric or graphic EQ</strong> with AutoEQ import. Each output keeps its own EQ (speaker, AirPods, USB DACs, CarPlay) and Crest switches when you plug in or connect.</li>
-  <li><strong>Balance, stereo width, mono, reverb, tempo and key lock.</strong></li>
-  <li><strong>ReplayGain and EBU R128 loudness</strong>, synced lyrics, a visualizer, smart playlists, ratings and listening history.</li>
-  <li><strong>Scrobbling</strong> to Last.fm and ListenBrainz, a Now Playing widget, CarPlay, Wi-Fi Transfer and Files import.</li>
-  <li><strong>Plays the songs already synced to the Music app</strong> (not Apple Music downloads or protected songs).</li>
+  <li><strong>Plays almost anything:</strong> FLAC, ALAC, WAV, MP3, AAC, Opus, DSD, CUE sheets and more.</li>
+  <li><strong>Bit-Perfect mode:</strong> nothing changes the sound between the file and your headphones or DAC.</li>
+  <li><strong>Gapless, crossfade and Automix,</strong> which blends songs on the beat.</li>
+  <li><strong>EQ for each output:</strong> your speaker, AirPods, DAC and car each keep their own EQ, and Crest switches for you. AutoEQ import included.</li>
+  <li><strong>Lyrics, smart playlists, scrobbling</strong> (Last.fm, ListenBrainz), CarPlay and a widget.</li>
 </ul>
-<img src="../screenshots/crest/player.png" alt="Now Playing: smoked acrylic panel, aluminium keys, dot-matrix display" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/crest/home.png" alt="Home: library stats, pinned and recently played" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/crest/library.png" alt="Library" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/crest/album.png" alt="Album page with the mini player" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/crest/deck-tone.png" alt="The Deck, Tone: EQ curve, knobs, transitions, ReplayGain" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/crest/deck-space.png" alt="The Deck, Space: balance, width, reverb, tempo, key lock" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<img src="../screenshots/crest/equalizer.png" alt="Equalizer: response curve and per-output EQ" loading="lazy" style="border-radius:.75rem;max-width:100%;height:auto;display:block;margin:.5rem 0">
-<h2>What&#x27;s New in 1.0.0~beta4.1</h2>
-<div class="card">
+<p><a href="https://jond-ie.github.io/repo/crest/">Everything it can do</a></p>
+</div>
+<dl class="facts"><div><dt>Version</dt><dd>1.0.0</dd></div><div><dt>Jailbreak</dt><dd>Rootless, RootHide</dd></div></dl>
+<div class="get"><p>Get it from the pwnapple repo: add it to your package manager, then search for Crest.</p><div class="buttons"><a class="button" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a><a class="button secondary" href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a></div></div>
+<div class="dep-shots"><span class="iphone" style="--sb:linear-gradient(90deg,#26282b,#26282b)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/crest/player.png" alt="Now Playing: smoked acrylic panel, aluminium keys, dot-matrix display" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#1f2122,#1f2022)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/crest/home.png" alt="Home: library stats, pinned and recently played" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#1f2122,#1f2022)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/crest/library.png" alt="Library" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#242525,#232526)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/crest/album.png" alt="Album page with the mini player" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#131415,#121315)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/crest/deck-tone.png" alt="The Deck, Tone: EQ curve, knobs, transitions, ReplayGain" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#131415,#121315)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/crest/deck-space.png" alt="The Deck, Space: balance, width, reverb, tempo, key lock" loading="lazy"></span></span><span class="iphone" style="--sb:linear-gradient(90deg,#070b06,#070b06)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/crest/equalizer.png" alt="Equalizer: response curve and per-output EQ" loading="lazy"></span></span></div>
+<h2>What&#x27;s New in 1.0.0</h2>
+<ul>
+  <li><strong>Out of beta.</strong> Thanks to everyone who tested and sent requests.</li>
+  <li><strong>Every song at its own sample rate, one after another.</strong> When a song ended and the next one had a different rate (say 44.1 kHz, then 96 kHz), the next one was quietly converted to the old rate. Now Crest switches the output between them, with a very short pause only where the rates differ. Albums at one rate stay gapless. Crossfade and Automix still play both songs at one rate while they blend.</li>
+  <li><strong>USB DACs that switch rates a moment late</strong> no longer get stuck converting everything to one rate.</li>
+  <li><strong>Classic:</strong> turn the whole app into an iPod classic, with a click wheel you can really turn. Settings → Appearance → Player Skin. Browse by Playlists, Artists, Albums, Songs and Genres. The cover on the right now shows in full (it was cut in half).</li>
+  <li><strong>CarPlay log:</strong> if CarPlay acts up, Settings → CarPlay → Share CarPlay Log and send it in an issue.</li>
+  <li><strong>VU Meters</strong> now also shows greyed out in the Classic player, with the reason.</li>
+</ul>
+<h2>Works on</h2>
+<ul>
+  <li><strong>iOS 15 to 27.</strong> Rootless and RootHide jailbreaks.</li>
+  <li>Tested on an iPhone 7 (iOS 15.8.6), an iPhone 11 Pro Max (iOS 16.2), an iPhone XR (iOS 16.0.3), an iPhone SE 2nd gen (iOS 17.5.1) and an iPhone 11 Pro (iOS 18).</li>
+  <li>No jailbreak? The TrollStore and sideload versions are on <a href="https://github.com/Jond-ie/crest/releases">GitHub</a>. They add music with Wi-Fi Transfer only, for now.</li>
+  <li>If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then <a href="https://github.com/Jond-ie/crest/issues">tell me</a>.</li>
+</ul>
+<h2>Good to know</h2>
+<ul>
+  <li><strong>Add music</strong> with Library → Add from Files, or with Wi-Fi Transfer from a computer on the same network.</li>
+  <li>It also plays the songs already synced to the Music app (not Apple Music downloads).</li>
+  <li>CarPlay hasn&#x27;t been tried in a car yet. If you try it, <a href="https://github.com/Jond-ie/crest/issues">tell me</a> how it goes.</li>
+  <li>A song won&#x27;t play or sounds wrong? <a href="https://github.com/Jond-ie/crest/issues">Tell me</a>.</li>
+</ul>
+<h2>Credits</h2>
+<p>Original work by <strong>Jond-ie</strong>. Uses FFmpeg (LGPL 2.1), TagLib (MPL 1.1), Opus and Ogg (BSD), utfcpp (Boost) and Signalsmith Stretch (MIT). The full licences are in <strong>Settings → Open-Source Licenses</strong>, and the FFmpeg build script and the TagLib change are on <a href="https://github.com/Jond-ie/crest/tree/main/third-party">GitHub</a>.</p>
+<details class="log"><summary>Changelog<span>3 earlier versions</span></summary>
+<h3>Beta 4.1</h3>
 <ul>
   <li><strong>Fixed:</strong> Beta 4 shipped with the plain fallback screens on iOS 15 to 17 (the newer look didn&#x27;t load). 4.1 brings the normal screens back everywhere.</li>
   <li><strong>VU meters in the Minimal Player:</strong> the ⋯ menu now shows the VU Meters item greyed out with the reason (they only fit the Crest Player). It was missing on iOS 15.</li>
   <li><strong>Files import on sideloads:</strong> picking music in Files now shows the import and the result, and the picker accepts every audio type. Still needs testing on a real sideload.</li>
   <li><strong>Plus Beta 4:</strong> shuffle an artist from Search, no 50-song search limit, covers you add show right away.</li>
 </ul>
-</div>
-<h2>Beta 4</h2>
-<div class="card">
+<h3>Beta 4</h3>
 <ul>
   <li><strong>Shuffle an artist:</strong> a shuffle button next to each artist in Search plays all their songs, from every album, in random order.</li>
   <li><strong>More search results:</strong> songs in Search no longer stop at 50.</li>
   <li><strong>Covers:</strong> a cover you add in Get Info now shows right away. Crest also finds folder art named cover, folder, front, album or AlbumArt (any case, jpg or png), and prefers a FLAC&#x27;s front cover.</li>
 </ul>
 <p>Thanks to HalfManHalfDragon on Discord for these.</p>
-</div>
-<h2>What&#x27;s New in 1.0.0~beta3</h2>
-<div class="card">
+<h3>Beta 3</h3>
 <ul>
   <li><strong>Bit-Perfect mode:</strong> your songs reach the output exactly as they are in the file, with nothing in between. Tested sample for sample. A <strong>BIT-PERFECT</strong> label shows when it really is, and tapping the format chips on Now Playing tells you why when it isn&#x27;t (Settings → Bit-Perfect).</li>
   <li><strong>Minimal Player:</strong> a calm, big-type layout for Now Playing, if you prefer it (Settings → Appearance).</li>
@@ -91,28 +150,9 @@
   <li><strong>Fixed:</strong> the lyrics page could slide off the screen with no way out (with real cover art).</li>
   <li><strong>iOS 15 fixes:</strong> the Settings, Add and EQ Done buttons and the Deck icon were missing.</li>
 </ul>
-</div>
-<h2>Device Support</h2>
-<div class="card">
-<ul>
-  <li><strong>iOS 15 and up, rootless jailbreaks.</strong> Beta 3 tested on an <strong>iPhone 7 (A10)</strong> with iOS 15.8.6, an <strong>iPhone 11 Pro Max (A13)</strong> with iOS 16.2, and an <strong>iPhone SE (2nd gen, A13)</strong> with iOS 17.5.1. An earlier beta 3 build also ran on an <strong>iPhone 11 Pro (A13)</strong> with iOS 18.</li>
-</ul>
-</div>
-<h2>Notes</h2>
-<div class="card">
-<ul>
-  <li>Add music with <strong>Library → Add from Files</strong> or <strong>Wi-Fi Transfer</strong> (drag and drop from a computer on the same network).</li>
-  <li>No jailbreak? The <strong>TrollStore .tipa</strong> and <strong>sideload .ipa</strong> are on <a href="https://github.com/Jond-ie/crest/releases">GitHub</a>. Those builds add music with <strong>Wi-Fi Transfer</strong> only for now.</li>
-  <li>CarPlay hasn&#x27;t been tested in a car yet: please <a href="https://github.com/Jond-ie/crest/issues">report back</a> if you try it.</li>
-  <li>This is a beta: please <a href="https://github.com/Jond-ie/crest/issues">report</a> songs that won&#x27;t play or sound wrong.</li>
-</ul>
-</div>
-<h2>Credits</h2>
-<div class="card">
-<p>Original work by <strong>Jond-ie</strong>. Uses FFmpeg (LGPL 2.1), TagLib (MPL 1.1), Opus and Ogg (BSD), utfcpp (Boost) and Signalsmith Stretch (MIT). The full licences are in <strong>Settings → Open-Source Licenses</strong>; the FFmpeg build script and the TagLib change are on <a href="https://github.com/Jond-ie/crest/tree/main/third-party">GitHub</a>.</p>
-</div>
+</details>
 <footer>
-  <p>Bugs &amp; requests: <a href="https://github.com/Jond-ie/repo/issues">GitHub Issues</a>.</p>
+  <p>Something wrong, or an idea? <a href="https://github.com/Jond-ie/repo/issues">Tell me on GitHub</a>. <a href="../">All tweaks</a></p>
 </footer>
 </body>
 </html>

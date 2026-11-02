@@ -7,23 +7,35 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "## Scrub\n\nRemoves **GPS and identifying metadata** from photos before apps receive them for sending — so your location and device details don't ride along with a shared image. Orientation and color profile are preserved; JPEG and HEIC supported.\n\nModes and a per-app exclude list in Settings → Scrub."
+          "markdown": "## Scrub\n\n**Removes your location and phone details from photos before you share them.** The picture itself stays the same, including its rotation and colours.\n\n- Works with JPEG and HEIC photos.\n- Choose how it works, and which apps to skip, in Settings → Scrub."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0.0-2",
+          "_sync": "compat"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "Rootless, RootHide",
+          "_sync": "compat"
         },
         {
           "class": "DepictionHeaderView",
-          "title": "Device Support"
+          "title": "Works on"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**A12 and newer: supported and confirmed.** Earlier builds put A12+ devices (iPhone XS / XR and later) into safe mode; the current builds are made with Xcode's toolchain and are tested on a real A12+ device.\n\n- Tested on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1 (arm64e) and an **iPhone 8 Plus (A11)** with iOS 16.7, both with Dopamine. On iOS 17 it installs and loads cleanly; stripping wasn't re-checked there (no GPS photos on the test phone).\n- **If it ever puts you into safe mode:** open Sileo (safe mode still allows it), uninstall it and please [report back](https://github.com/Jond-ie/repo/issues)."
+          "markdown": "- **iOS 15 to 27.** Rootless and RootHide jailbreaks.\n- Tested on an iPhone 8 Plus (iOS 16.7). It also runs on an iPhone SE 2nd gen (iOS 17.5.1), where removing the location wasn't checked again.\n- If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then [tell me](https://github.com/Jond-ie/repo/issues)."
         },
         {
           "class": "DepictionHeaderView",
-          "title": "Notes"
+          "title": "Good to know"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- Covers the common photo-pick paths (Photos library, the system picker). Coverage can vary for apps using custom pickers — feedback on which apps work welcome.\n- Requires **AltList** (com.opa334.altlist) for the app list, plus PreferenceLoader; hooks run via ellekit/Substrate.\n- Tested on an **iPhone 8 Plus (A11, arm64)** with iOS 16.7. A12 and newer: see Device Support."
+          "markdown": "- It works when an app uses your photo library or iOS's photo picker. Apps with their own picker may skip it: [tell me](https://github.com/Jond-ie/repo/issues) which apps work for you.\n- Needs **AltList** and **PreferenceLoader**. Sileo installs them for you."
         },
         {
           "class": "DepictionHeaderView",
@@ -31,7 +43,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Original work by **Jond-ie**."
+          "markdown": "Written from scratch by **Jond-ie**."
         }
       ]
     }

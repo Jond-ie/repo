@@ -7,15 +7,27 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "## CCSupport (iOS 18 fix)\n\n**CCSupport** by **opa334**, the tweak that loads Control Center modules from other tweaks, with one fix for **iOS 18**.\n\n- **The problem:** on iOS 18, whenever SpringBoard runs without tweaks (safe mode, or after a reboot before you re-jailbreak), iOS removes every tweak's module from Control Center, so you have to add them back each time.\n- **The fix:** with CCSupport running, the Control Center layout is kept in its own file, so those modules survive safe mode and reboots. Add your modules back once after installing.\n- Everything else is CCSupport as you know it.\n\n> **iOS 18 only.** On iOS 17 and older, keep opa334's own CCSupport: this one won't install there and never shows up as an update to it."
+          "markdown": "## CCSupport (iOS 18 fix)\n\n**Keeps your Control Center modules after Safe Mode and reboots on iOS 18.** This is opa334's CCSupport, the tweak that lets other tweaks add Control Center modules, with one fix.\n\n- **The problem:** on iOS 18, every time your phone starts without tweaks (Safe Mode, or a reboot before you jailbreak again), iOS removes the tweak modules from Control Center.\n- **The fix:** your Control Center layout is kept in its own file, so the modules stay.\n- After installing, add your modules back one last time.\n- Everything else is CCSupport as you know it."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.3.13-3~ios18fix2",
+          "_sync": "compat"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "Rootless",
+          "_sync": "compat"
         },
         {
           "class": "DepictionHeaderView",
-          "title": "Recommended for"
+          "title": "Works on"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **iOS 18** with rootless Dopamine. It only installs on iOS 18 and newer; iOS 15–17 should keep the official CCSupport.\n- **Not tested on iOS 26.**\n- When opa334 releases an official update, it replaces this one automatically."
+          "markdown": "- **iOS 18 to 27.** Rootless jailbreaks.\n- On iOS 17 and older, keep opa334's CCSupport. This one won't install there.\n- Tested on iOS 18 with Dopamine.\n- When opa334 releases an official update, it replaces this one automatically.\n- If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then [tell me](https://github.com/Jond-ie/repo/issues)."
         },
         {
           "class": "DepictionHeaderView",
@@ -23,7 +35,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**CCSupport** by **opa334 (Lars Fröder)**, MIT License (included in the package). iOS 18 fix by **Jond-ie**, submitted upstream: [opa334/CCSupport#26](https://github.com/opa334/CCSupport/pull/26). Source: [Jond-ie/CCSupport](https://github.com/Jond-ie/CCSupport/tree/ios18-iconstate)."
+          "markdown": "**CCSupport** by **opa334 (Lars Fröder)**, MIT licence (included in the package). iOS 18 fix by **Jond-ie**, sent to opa334: [opa334/CCSupport#26](https://github.com/opa334/CCSupport/pull/26). Source: [Jond-ie/CCSupport](https://github.com/Jond-ie/CCSupport/tree/ios18-iconstate)."
         }
       ]
     }

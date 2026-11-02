@@ -1,0 +1,43 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## PullOver Pro for Triggr\n\n**Pull over your PullOver Pro app, or close it, with any Triggr trigger.** A button press, a gesture, your AirPods connecting: anything Triggr can do.\n\n- Adds a **PullOver Pro** list to Triggr's actions: **Pull Over**, **Close PullOver**, and **Pull Over or Close**.\n- It only sends PullOver Pro its own open and close commands. Nothing else in iOS is changed.\n- No settings."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0.0~beta1",
+          "_sync": "compat"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "Rootless, RootHide",
+          "_sync": "compat"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Works on"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **iOS 15 to 27.** Rootless and RootHide jailbreaks.\n- Needs **Triggr** 2.0 and **PullOver Pro (Rootless)** 3.0. Sileo installs them for you.\n- Tested on iOS 27 (virtual iPhone, RootHide): pull over and close from a Volume Up press."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "By **Jond-ie** ([@Jond_ie](https://x.com/Jond_ie)). PullOver Pro by **c1d3r** ([@c1d3rdev](https://x.com/c1d3rdev))."
+        }
+      ]
+    }
+  ]
+}

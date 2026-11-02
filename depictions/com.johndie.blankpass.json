@@ -7,23 +7,35 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "## BlankPass\n\nA **blank passcode keypad**: the numbers and letters on the Lock Screen passcode buttons are hidden, so only the circles show.\n\n- The buttons, the passcode dots, Emergency and Cancel work exactly as before.\n- Pressing a button doesn't reveal its number either.\n- Only the Lock Screen keypad changes: other number pads (Phone, Settings) are untouched.\n- **No settings.** Install, respring, done. To turn it off, uninstall it."
+          "markdown": "## BlankPass\n\n**A blank passcode keypad.** The numbers and letters on the Lock Screen keypad are hidden, so only the circles show.\n\n- Everything else works as before: the dots, Emergency and Cancel.\n- Pressing a key doesn't show its number either.\n- Only the Lock Screen keypad changes. The keypads in Phone and Settings stay normal.\n- No settings. To turn it off, uninstall it."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0.0",
+          "_sync": "compat"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "Rootless, RootHide",
+          "_sync": "compat"
         },
         {
           "class": "DepictionHeaderView",
-          "title": "Device Support"
+          "title": "Works on"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **arm64 and arm64e** (A12 and newer) builds, made with Xcode's toolchain and checked for the correct arm64e format.\n- Tested on an **iPhone 7 (A10)** with iOS 15.8.6 and Dopamine. Also tested on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1 (arm64e), so **A12 and newer are confirmed**. iOS 16 isn't confirmed yet: please [report back](https://github.com/Jond-ie/repo/issues). If it puts you into safe mode, open Sileo (safe mode still allows it) and uninstall it."
+          "markdown": "- **iOS 15 to 18.** Rootless and RootHide jailbreaks.\n- Tested on an iPhone 7 (iOS 15.8.6) and an iPhone SE 2nd gen (iOS 17.5.1).\n- If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then [tell me](https://github.com/Jond-ie/repo/issues)."
         },
         {
           "class": "DepictionHeaderView",
-          "title": "Notes"
+          "title": "Good to know"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- Make sure you know your passcode by heart: the keypad layout is the standard one (1 2 3 / 4 5 6 / 7 8 9 / 0).\n- Only for rootless jailbreaks with ElleKit (Dopamine)."
+          "markdown": "- Know your passcode by heart. The keys are in the usual order: 1 2 3, 4 5 6, 7 8 9, 0."
         },
         {
           "class": "DepictionHeaderView",
@@ -31,7 +43,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Written from scratch by **Jond-ie**. Concept from the original **BlankPass** by **VladGeek** (Packix)."
+          "markdown": "Written from scratch by **Jond-ie**. Idea from the original **BlankPass** by **VladGeek**."
         }
       ]
     }

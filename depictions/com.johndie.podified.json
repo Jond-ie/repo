@@ -7,7 +7,19 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "## Podified\n\nMakes a **SIM-less iPhone** present itself as an **iPod**. Every feature is a switch in Settings → Podified, all off by default:\n\n- **Rename in Settings:** only the word \"iPhone\" changes to \"iPod\" on About and Storage, and your own model stays (iPhone 13 Pro → **iPod 13 Pro**, iPhone Storage → **iPod Storage**). Your device name is left alone.\n- **Hide Cellular:** removes the Cellular row from Settings.\n- **Status Bar:** replaces \"SOS only\" / \"No Service\" with **iPod**, or hides it like an iPod touch, and removes the signal dots in Control Center.\n- **Hide Phone App:** hides Phone from the Home Screen, Dock and App Library (after a respring). The app stays installed."
+          "markdown": "## Podified\n\n**Make an iPhone without a SIM look like an iPod.** Each change is a switch in Settings → Podified, and they're all off until you turn them on.\n\n- **Rename in Settings:** \"iPhone\" becomes \"iPod\" on About and Storage, and your model stays (iPhone 13 Pro becomes iPod 13 Pro). Your phone's name isn't touched.\n- **Hide Cellular:** removes the Cellular row from Settings.\n- **Status Bar:** shows **iPod** instead of \"No Service\" or \"SOS only\", or nothing at all like an iPod touch.\n- **Hide Phone App:** hides Phone from the Home Screen, the dock and the App Library. The app stays installed."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0.1",
+          "_sync": "compat"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "Rootless",
+          "_sync": "compat"
         },
         {
           "class": "DepictionHeaderView",
@@ -19,19 +31,19 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "Device Support"
+          "title": "Works on"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**A12 and newer: supported and confirmed.** Earlier builds put A12+ devices (iPhone XS / XR and later) into safe mode; the current builds are made with Xcode's toolchain and are tested on a real A12+ device.\n\n- Tested on an **iPhone SE (2nd gen, A13)** with iOS 17.5.1 (arm64e) and an **iPhone 8 Plus (A11)** with iOS 16.7, both with Dopamine.\n- **If it ever puts you into safe mode:** open Sileo (safe mode still allows it), uninstall it and please [report back](https://github.com/Jond-ie/repo/issues)."
+          "markdown": "- **iOS 15 to 18.** Rootless jailbreaks. A RootHide version comes with the next update.\n- Tested on an iPhone 8 Plus (iOS 16.7) and an iPhone SE 2nd gen (iOS 17.5.1).\n- If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then [tell me](https://github.com/Jond-ie/repo/issues)."
         },
         {
           "class": "DepictionHeaderView",
-          "title": "Notes"
+          "title": "Good to know"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **Cosmetic only.** Labels and visibility; emergency calling, SOS and the Phone app itself are never touched.\n- Built for SIM-less iPhones: with a SIM inserted, the carrier name is replaced too.\n- To keep Phone out of Spotlight, use Settings → Siri & Search → Phone → Show App in Search.\n- Tested on an **iPhone 8 Plus (A11, arm64)** with iOS 16.7. A12 and newer: see Device Support."
+          "markdown": "- **Looks only.** Emergency calls, SOS and the Phone app itself still work.\n- With a SIM in, the carrier name is replaced too.\n- To keep Phone out of search too: Settings → Siri & Search → Phone → Show App in Search."
         },
         {
           "class": "DepictionHeaderView",
@@ -39,7 +51,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Original work by **Jond-ie**."
+          "markdown": "Written from scratch by **Jond-ie**."
         }
       ]
     }

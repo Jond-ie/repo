@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PullOver Pro for Triggr · pwnapple</title>
+<meta name="description" content="Pull over your PullOver Pro app, or close it, with any Triggr trigger. A button press, a gesture, your AirPods connecting: anything Triggr can do.">
+<link rel="icon" href="../CydiaIcon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,650..800&display=swap">
+<link rel="stylesheet" href="../assets/iphone.css">
+<style>
+  /* Same colours as the front page (assets/home.css), quieter: these pages are for reading. */
+  :root {
+    color-scheme: light dark;
+    --page: #f4f3fa; --ink: #17193a; --muted: #50547a; --faint: #74789b;
+    --gold: #f2b100; --gold-ink: #17193a; --leaf: #127541; --link: #4a3ee0;
+    --panel: #ffffff; --line: rgba(23,25,58,.1);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --page: #0f1230; --ink: #f1f0ff; --muted: #a9acd0; --faint: #8084ab;
+      --gold: #ffc233; --leaf: #3ed68a; --link: #ab9dff;
+      --panel: #181c45; --line: rgba(255,255,255,.09);
+    }
+  }
+  :root[data-theme="dark"] {
+    --page: #0f1230; --ink: #f1f0ff; --muted: #a9acd0; --faint: #8084ab;
+    --gold: #ffc233; --leaf: #3ed68a; --link: #ab9dff;
+    --panel: #181c45; --line: rgba(255,255,255,.09);
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--page); }
+  body {
+    margin: 0 auto; max-width: 42rem; padding: 1.5rem 1rem 4rem;
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", sans-serif;
+    color: var(--ink); background: var(--page); overflow-wrap: anywhere;
+    -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%;
+  }
+  a { color: var(--link); text-underline-offset: .15em; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+  .back { display: inline-block; font-size: .9rem; margin-bottom: 1.6rem; text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+
+  .top { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.1rem; }
+  .icon { width: 64px; height: 64px; border-radius: 16px; flex: none; display: grid; place-items: center; object-fit: cover; }
+  .icon.letter { color: #fff; font: 800 1.6rem/1 "Bricolage Grotesque", -apple-system, sans-serif; }
+  h1 { margin: 0; font: 750 2rem/1.1 "Bricolage Grotesque", -apple-system, sans-serif; letter-spacing: -.02em; }
+  .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .45rem; }
+  .badge { display: inline-flex; align-items: center; height: 1.35rem; padding: 0 .5rem; border-radius: 6px;
+    font: 600 .75rem/1 -apple-system, BlinkMacSystemFont, system-ui, sans-serif; color: var(--muted); background: var(--line); }
+  .badge.ios { color: var(--leaf); background: color-mix(in srgb, var(--leaf) 13%, transparent); }
+
+  .intro > p:first-child { font-size: 1.12rem; }
+  h2 { margin: 2.2rem 0 .6rem; font: 700 1.2rem/1.2 "Bricolage Grotesque", -apple-system, sans-serif; letter-spacing: -.01em; }
+  h3 { margin: 1.4rem 0 .4rem; font-size: 1rem; }
+  p { margin: 0 0 .85rem; }
+  ul { margin: 0 0 .85rem; padding-left: 1.2rem; }
+  li { margin: .3rem 0; }
+  li::marker { color: var(--faint); }
+  code { font-size: .9em; background: var(--line); padding: .05rem .3rem; border-radius: 4px; }
+
+  .facts { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.4rem 0; padding: 0; }
+  .facts div { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: .55rem .85rem; min-width: 8.5rem; }
+  .facts dt { font-size: .75rem; color: var(--muted); margin: 0; }
+  .facts dd { margin: .1rem 0 0; font-weight: 650; }
+
+  .get { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 1rem 1.1rem; margin: 1.6rem 0; }
+  .get p { margin: 0 0 .75rem; color: var(--muted); font-size: .95rem; }
+  .get .buttons { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .button { display: inline-block; font-weight: 700; padding: .6rem 1.15rem; border-radius: 999px; text-decoration: none;
+    background: var(--gold); color: var(--gold-ink); }
+  .button.secondary { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--faint); }
+  .button:hover { filter: brightness(1.05); }
+
+  details.log { margin-top: 2.2rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+  details.log summary { cursor: pointer; font: 700 1.2rem/1.2 "Bricolage Grotesque", -apple-system, sans-serif; }
+  details.log summary span { font: 400 .9rem/1 -apple-system, system-ui, sans-serif; color: var(--muted); margin-left: .3rem; }
+  .dep-shots { margin: 1.4rem 0; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); }
+  @media (max-width: 30rem) {
+    h1 { font-size: 1.7rem; }
+    .icon { width: 54px; height: 54px; border-radius: 14px; }
+  }
+</style>
+</head>
+<body>
+<a class="back" href="../">&larr; All tweaks</a>
+<header class="top"><img class="icon" src="../assets/pullover.png" alt=""><div><h1>PullOver Pro for Triggr</h1><div class="tags"><span class="badge ios" title="Works on iOS 15 to 27">iOS 15–27</span></div></div></header>
+<div class="intro">
+<p><strong>Pull over your PullOver Pro app, or close it, with any Triggr trigger.</strong> A button press, a gesture, your AirPods connecting: anything Triggr can do.</p>
+<ul>
+  <li>Adds a <strong>PullOver Pro</strong> list to Triggr&#x27;s actions: <strong>Pull Over</strong>, <strong>Close PullOver</strong>, and <strong>Pull Over or Close</strong>.</li>
+  <li>It only sends PullOver Pro its own open and close commands. Nothing else in iOS is changed.</li>
+  <li>No settings.</li>
+</ul>
+</div>
+<dl class="facts"><div><dt>Version</dt><dd>1.0.0~beta1</dd></div><div><dt>Jailbreak</dt><dd>Rootless, RootHide</dd></div></dl>
+<div class="get"><p>Get it from the pwnapple repo: add it to your package manager, then search for PullOver Pro for Triggr.</p><div class="buttons"><a class="button" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a><a class="button secondary" href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a></div></div>
+<h2>Works on</h2>
+<ul>
+  <li><strong>iOS 15 to 27.</strong> Rootless and RootHide jailbreaks.</li>
+  <li>Needs <strong>Triggr</strong> 2.0 and <strong>PullOver Pro (Rootless)</strong> 3.0. Sileo installs them for you.</li>
+  <li>Tested on iOS 27 (virtual iPhone, RootHide): pull over and close from a Volume Up press.</li>
+</ul>
+<h2>Credits</h2>
+<p>By <strong>Jond-ie</strong> (<a href="https://x.com/Jond_ie">@Jond_ie</a>). PullOver Pro by <strong>c1d3r</strong> (<a href="https://x.com/c1d3rdev">@c1d3rdev</a>).</p>
+<footer>
+  <p>Something wrong, or an idea? <a href="https://github.com/Jond-ie/repo/issues">Tell me on GitHub</a>. <a href="../">All tweaks</a></p>
+</footer>
+</body>
+</html>

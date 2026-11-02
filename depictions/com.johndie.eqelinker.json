@@ -7,15 +7,35 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "## EQELinker\n\nLoad your saved **EQE** presets from **Triggr**: one preset when your AirPods connect, another when they disconnect, or any preset on any trigger.\n\n- Adds an **EQE Presets** category to Triggr's actions, listing the presets you saved in EQE.\n- Pair it with **Custom Events → Bluetooth Device Connected / Disconnected** for per-device EQ.\n- Talks to EQE only through EQE's own preset commands.\n- **No settings.**"
+          "markdown": "## EQELinker\n\n**Control EQE with Triggr.** One preset when your AirPods connect, another when they disconnect, or any preset on any trigger.\n\n- Adds an **EQE Presets** list to Triggr's actions, with the presets you saved in EQE.\n- Adds **EQE Effects**: turn the compressor or crossfeed on, off, or toggle them.\n- For EQ per device, use **Bluetooth Device Connected / Disconnected** as the trigger.\n- No settings."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.1.0",
+          "_sync": "compat"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "Rootless, RootHide",
+          "_sync": "compat"
         },
         {
           "class": "DepictionHeaderView",
-          "title": "Requirements"
+          "title": "What's New in 1.1.0"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **Triggr 1.0.4** or newer and **EQE** (installed separately).\n- Rootless jailbreaks (Dopamine), iOS 15–18."
+          "markdown": "- **EQE Effects:** new Triggr actions that turn EQE's compressor or crossfeed on, off, or toggle them. For example: a preset and the compressor when your AirPods connect.\n- **RootHide** version added (needs Triggr 2.0)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Works on"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **iOS 15 to 27.** Rootless and RootHide jailbreaks.\n- Needs **Triggr** and **EQE**. EQE is installed separately.\n- If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then [tell me](https://github.com/Jond-ie/repo/issues)."
         },
         {
           "class": "DepictionHeaderView",

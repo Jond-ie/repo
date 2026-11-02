@@ -1,0 +1,53 @@
+/* A real-looking iPhone around a screenshot: titanium edge, side buttons, black bezel, Dynamic Island
+   and a clean 9:41 status bar (our screenshots have theirs cropped off). Everything scales with the
+   frame's width (container units), so one template works from 120px to 400px wide.
+   Markup: tools/iphone-frame.py writes it. */
+.iphone { container-type: inline-size; position: relative; display: block; width: 100%; padding: 1.7%; }  /* % here: cqw on the container itself would measure its parent */
+/* side buttons: Action + volume up/down on the left, side button on the right */
+.iphone::before, .iphone::after { content: ""; position: absolute; width: 1.1%; border-radius: 2px; }
+.iphone::before { left: 0; top: 19%; height: 26%;
+  background: linear-gradient(#8f8d88 0 15%, transparent 15% 32%, #8f8d88 32% 61%, transparent 61% 71%, #8f8d88 71%); }
+.iphone::after { right: 0; top: 29%; height: 15%; background: #8f8d88; }
+.iphone::before { left: .2cqw; top: 22cqw; height: 9cqw; box-shadow: 0 15cqw 0 0 #8a8884, 0 30cqw 0 0 #8a8884; }
+.iphone::after { right: .2cqw; top: 36cqw; height: 22cqw; }
+.iphone-screen {
+  position: relative; display: block; overflow: hidden; background: #000;
+  border: 2.4cqw solid #000; border-radius: 15.5cqw;
+  /* titanium edge: a lit inner line, the band, a dark outer line, then the shadow */
+  box-shadow: 0 0 0 .25cqw #3a3936, 0 0 0 .55cqw #d6d4cf, 0 0 0 1.25cqw #8b8984, 0 0 0 1.55cqw #4a4946,
+    0 2cqw 4cqw rgba(0,0,0,.3), 0 10cqw 18cqw -5cqw rgba(0,0,0,.5);
+}
+/* Dynamic Island */
+.iphone-screen::before {
+  content: ""; position: absolute; z-index: 2; left: 50%; top: 2.6cqw; transform: translateX(-50%);
+  width: 31cqw; height: 9cqw; border-radius: 9cqw; background: #000;
+  box-shadow: inset -2.2cqw 0 0 -1.4cqw #0d0f1a;
+}
+/* glass: a faint diagonal sheen */
+.iphone-screen::after {
+  content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none;
+  background: linear-gradient(115deg, rgba(255,255,255,.09), transparent 32%);
+}
+/* status bar: colours sampled from the screenshot's top corners (tools/iphone-frame.py) */
+.iphone-sb {
+  position: relative; display: flex; align-items: center; justify-content: space-between;
+  height: 14cqw; padding: 1.6cqw 7.5cqw 0 9.5cqw; color: #fff;
+  background: var(--sb, #000);
+  font: 600 4.3cqw/1 -apple-system, "SF Pro Text", system-ui, sans-serif; letter-spacing: -.01em;
+}
+.iphone-time { font-weight: 600; text-shadow: 0 0 2cqw rgba(0,0,0,.25); }
+/* signal, Wi-Fi, battery */
+.iphone-sb i {
+  width: 19cqw; height: 4cqw; background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 76 16'%3E%3Crect x='0' y='10' width='3.4' height='5' rx='1'/%3E%3Crect x='5' y='7.5' width='3.4' height='7.5' rx='1'/%3E%3Crect x='10' y='4.5' width='3.4' height='10.5' rx='1'/%3E%3Crect x='15' y='1.5' width='3.4' height='13.5' rx='1'/%3E%3Cpath d='M30.5 4.6a10.6 10.6 0 0 1 14.6 0l1.4-1.5a12.7 12.7 0 0 0-17.4 0zm2.6 2.8a6.8 6.8 0 0 1 9.4 0l1.4-1.5a8.9 8.9 0 0 0-12.2 0zm2.6 2.8a3 3 0 0 1 4.2 0l-2.1 2.3z'/%3E%3Crect x='51.5' y='2' width='21' height='12' rx='3.4' fill='none' stroke='%23000' stroke-width='1.2' opacity='.45'/%3E%3Crect x='53.5' y='4' width='17' height='8' rx='1.9'/%3E%3Cpath d='M74 6.2v3.6a2 2 0 0 0 0-3.6z' opacity='.45'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 76 16'%3E%3Crect x='0' y='10' width='3.4' height='5' rx='1'/%3E%3Crect x='5' y='7.5' width='3.4' height='7.5' rx='1'/%3E%3Crect x='10' y='4.5' width='3.4' height='10.5' rx='1'/%3E%3Crect x='15' y='1.5' width='3.4' height='13.5' rx='1'/%3E%3Cpath d='M30.5 4.6a10.6 10.6 0 0 1 14.6 0l1.4-1.5a12.7 12.7 0 0 0-17.4 0zm2.6 2.8a6.8 6.8 0 0 1 9.4 0l1.4-1.5a8.9 8.9 0 0 0-12.2 0zm2.6 2.8a3 3 0 0 1 4.2 0l-2.1 2.3z'/%3E%3Crect x='51.5' y='2' width='21' height='12' rx='3.4' fill='none' stroke='%23000' stroke-width='1.2' opacity='.45'/%3E%3Crect x='53.5' y='4' width='17' height='8' rx='1.9'/%3E%3Cpath d='M74 6.2v3.6a2 2 0 0 0 0-3.6z' opacity='.45'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.iphone .iphone-screen img { display: block; width: 100%; height: auto; margin: 0; border: 0; border-radius: 0; box-shadow: none; }
+.iphone.dark-text .iphone-sb { color: #000; }  /* for screenshots with a light top */
+
+/* spacing where frames replace the old bezel images */
+.step .iphone { margin-top: 1rem; }
+.shots figure .iphone { width: 100%; }
+.shots { padding-left: .8rem; padding-right: .8rem; }
+.dep-shots { display: flex; gap: 1rem; overflow-x: auto; padding: .6rem .6rem 1.4rem; scroll-snap-type: x mandatory; }
+.dep-shots .iphone { flex: none; width: min(60vw, 220px); scroll-snap-align: start; }

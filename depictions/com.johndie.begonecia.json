@@ -7,23 +7,43 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "## Begonecia\n\nA Control Center toggle that silences the **microphone, camera and location** across the whole system. When it's on, apps don't get a permission error — they just get nothing: zeroed mic audio, no camera frames, no location callbacks. A silent blackout, not a visible denial.\n\nToggle it from Control Center; add the tile in Settings → Control Center."
+          "markdown": "## BegoneCIA\n\n**One Control Center button that cuts off the camera, microphone and location for every app.** Apps don't get an error, they just get nothing: silence, no picture, no location.\n\n- **Turns itself off during calls** (on by default), so people can still hear you.\n- **Pick apps** where it stays off while they're open.\n- Add the button in Settings → Control Center."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.2.0",
+          "_sync": "compat"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "Rootless, RootHide",
+          "_sync": "compat"
         },
         {
           "class": "DepictionHeaderView",
-          "title": "What's New in 1.1.0"
+          "title": "What's New in 1.2.0"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **Per-app control:** new Settings page. Block everywhere, everywhere except the apps you pick, or only in the apps you pick.\n- **Triggr actions:** with Triggr 2.0, Turn BegoneCIA On / Off / Toggle are Triggr actions (any button, gesture or event).\n- **Fixes:** Wallet / Apple Pay crash on iOS 18, a parsecd crash, and a Snapchat crash when turning BegoneCIA off.\n- Now also needs **PreferenceLoader** and **AltList** (installed automatically)."
+          "markdown": "- **iOS 27:** now works on iOS 15 through 27.\n- **Nepeta's original Settings page is back:** Enabled, **Disable in calls** and **Disable BegoneCIA for applications**, laid out like the original.\n- **Disable in calls:** on by default. While you're on a call, BegoneCIA steps aside so the other person can hear you, then turns back on when you hang up. Tested with phone calls; FaceTime and apps like WhatsApp use the same system and should work too, so tell me if they don't.\n- **Disable for applications:** pick apps where BegoneCIA switches off while they're open.\n- **Fixes:** location could still reach some apps on iOS 15, and A12 and newer phones on iOS 15.0 and 15.1 could crash."
         },
         {
           "class": "DepictionHeaderView",
-          "title": "Notes"
+          "title": "Works on"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- Rootless jailbreaks with ElleKit (Dopamine), iOS 15–18, arm64 and arm64e.\n- Requires **CCSupport**, **Cephei** (ws.hbang.common, from Chariz), **PreferenceLoader** and **AltList**.\n- Jailbreaking lowers your device's baseline security. Begonecia hardens privacy; it doesn't undo that.\n- If it ever puts you into safe mode, open Sileo and uninstall it."
+          "markdown": "- **iOS 15 to 27.** Rootless and RootHide jailbreaks.\n- Needs **CCSupport**, **Cephei** (from the Chariz repo), **PreferenceLoader** and **AltList**.\n- On iOS 27, open its settings from the TweakSettings app.\n- If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then [tell me](https://github.com/Jond-ie/begonecia/issues)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Good to know"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- A jailbroken phone is less secure overall. BegoneCIA protects your privacy, but it doesn't change that.\n- Set it up in 1.1.0? Your app list keeps working."
         },
         {
           "class": "DepictionHeaderView",
@@ -31,7 +51,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Original **BegoneCIA** by **Eva (Nepeta)** — MIT licensed. Rootless port by **Jond-ie**. The original license and copyright ship inside this package.\n\n[Original BegoneCIA (mirror)](https://github.com/larygwil/BegoneCIA) · [Port source code](https://github.com/Jond-ie/begonecia)"
+          "markdown": "Original **BegoneCIA** by **Eva (Nepeta)**, MIT licence. Rootless and RootHide port by **Jond-ie**. The original licence ships inside the package.\n\n[Original BegoneCIA](https://github.com/NepetaDev/BegoneCIA) · [Port source code](https://github.com/Jond-ie/begonecia)"
         }
       ]
     }

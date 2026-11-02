@@ -7,7 +7,19 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "## Crest\n\nA high-quality offline music player for your own files. Every song plays at its own sample rate, and it looks like a piece of hi-fi gear, not an Apple Music clone.\n\n- **Plays almost anything:** FLAC, ALAC, WAV, AIFF, MP3, AAC, Opus, Vorbis, APE, WavPack, MPC, TAK, TTA, WMA, DSD and CUE sheets.\n- **Bit-Perfect mode:** nothing between the file and your DAC or headphones.\n- **Gapless, crossfade and Automix:** Automix blends songs on the beat, matches their loudness and keeps albums gapless.\n- **16-band parametric or graphic EQ** with AutoEQ import. Each output keeps its own EQ (speaker, AirPods, USB DACs, CarPlay) and Crest switches when you plug in or connect.\n- **Balance, stereo width, mono, reverb, tempo and key lock.**\n- **ReplayGain and EBU R128 loudness**, synced lyrics, a visualizer, smart playlists, ratings and listening history.\n- **Scrobbling** to Last.fm and ListenBrainz, a Now Playing widget, CarPlay, Wi-Fi Transfer and Files import.\n- **Plays the songs already synced to the Music app** (not Apple Music downloads or protected songs)."
+          "markdown": "## Crest\n\n**A music player for your own songs** that plays them exactly as good as the files are. It looks like hi-fi gear, not an Apple Music copy.\n\n- **Plays almost anything:** FLAC, ALAC, WAV, MP3, AAC, Opus, DSD, CUE sheets and more.\n- **Bit-Perfect mode:** nothing changes the sound between the file and your headphones or DAC.\n- **Gapless, crossfade and Automix,** which blends songs on the beat.\n- **EQ for each output:** your speaker, AirPods, DAC and car each keep their own EQ, and Crest switches for you. AutoEQ import included.\n- **Lyrics, smart playlists, scrobbling** (Last.fm, ListenBrainz), CarPlay and a widget.\n\n[Everything it can do](https://jond-ie.github.io/repo/crest/)"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0.0",
+          "_sync": "compat"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "Rootless, RootHide",
+          "_sync": "compat"
         },
         {
           "class": "DepictionScreenshotsView",
@@ -46,11 +58,49 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "What's New in 1.0.0~beta4.1"
+          "title": "What's New in 1.0.0"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **Fixed:** Beta 4 shipped with the plain fallback screens on iOS 15 to 17 (the newer look didn't load). 4.1 brings the normal screens back everywhere.\n- **VU meters in the Minimal Player:** the \u22ef menu now shows the VU Meters item greyed out with the reason (they only fit the Crest Player). It was missing on iOS 15.\n- **Files import on sideloads:** picking music in Files now shows the import and the result, and the picker accepts every audio type. Still needs testing on a real sideload.\n- **Plus Beta 4:** shuffle an artist from Search, no 50-song search limit, covers you add show right away."
+          "markdown": "- **Out of beta.** Thanks to everyone who tested and sent requests.\n- **Every song at its own sample rate, one after another.** When a song ended and the next one had a different rate (say 44.1 kHz, then 96 kHz), the next one was quietly converted to the old rate. Now Crest switches the output between them, with a very short pause only where the rates differ. Albums at one rate stay gapless. Crossfade and Automix still play both songs at one rate while they blend.\n- **USB DACs that switch rates a moment late** no longer get stuck converting everything to one rate.\n- **Classic:** turn the whole app into an iPod classic, with a click wheel you can really turn. Settings → Appearance → Player Skin. Browse by Playlists, Artists, Albums, Songs and Genres. The cover on the right now shows in full (it was cut in half).\n- **CarPlay log:** if CarPlay acts up, Settings → CarPlay → Share CarPlay Log and send it in an issue.\n- **VU Meters** now also shows greyed out in the Classic player, with the reason."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Works on"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **iOS 15 to 27.** Rootless and RootHide jailbreaks.\n- Tested on an iPhone 7 (iOS 15.8.6), an iPhone 11 Pro Max (iOS 16.2), an iPhone XR (iOS 16.0.3), an iPhone SE 2nd gen (iOS 17.5.1) and an iPhone 11 Pro (iOS 18).\n- No jailbreak? The TrollStore and sideload versions are on [GitHub](https://github.com/Jond-ie/crest/releases). They add music with Wi-Fi Transfer only, for now.\n- If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then [tell me](https://github.com/Jond-ie/crest/issues)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Good to know"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Add music** with Library → Add from Files, or with Wi-Fi Transfer from a computer on the same network.\n- It also plays the songs already synced to the Music app (not Apple Music downloads).\n- CarPlay hasn't been tried in a car yet. If you try it, [tell me](https://github.com/Jond-ie/crest/issues) how it goes.\n- A song won't play or sounds wrong? [Tell me](https://github.com/Jond-ie/crest/issues)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Original work by **Jond-ie**. Uses FFmpeg (LGPL 2.1), TagLib (MPL 1.1), Opus and Ogg (BSD), utfcpp (Boost) and Signalsmith Stretch (MIT). The full licences are in **Settings → Open-Source Licenses**, and the FFmpeg build script and the TagLib change are on [GitHub](https://github.com/Jond-ie/crest/tree/main/third-party)."
+        }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "Beta 4.1"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Fixed:** Beta 4 shipped with the plain fallback screens on iOS 15 to 17 (the newer look didn't load). 4.1 brings the normal screens back everywhere.\n- **VU meters in the Minimal Player:** the ⋯ menu now shows the VU Meters item greyed out with the reason (they only fit the Crest Player). It was missing on iOS 15.\n- **Files import on sideloads:** picking music in Files now shows the import and the result, and the picker accepts every audio type. Still needs testing on a real sideload.\n- **Plus Beta 4:** shuffle an artist from Search, no 50-song search limit, covers you add show right away."
         },
         {
           "class": "DepictionHeaderView",
@@ -62,35 +112,11 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "What's New in 1.0.0~beta3"
+          "title": "Beta 3"
         },
         {
           "class": "DepictionMarkdownView",
           "markdown": "- **Bit-Perfect mode:** your songs reach the output exactly as they are in the file, with nothing in between. Tested sample for sample. A **BIT-PERFECT** label shows when it really is, and tapping the format chips on Now Playing tells you why when it isn't (Settings → Bit-Perfect).\n- **Minimal Player:** a calm, big-type layout for Now Playing, if you prefer it (Settings → Appearance).\n- **Big libraries:** you see the scan progress (\"1,240 of 5,800 songs\"), Crest saves as it goes, and it no longer closes during or after a long scan (thousands of songs in one album, or leaving the app mid-scan). Tested with 23,000 songs.\n- **Fixed:** the lyrics page could slide off the screen with no way out (with real cover art).\n- **iOS 15 fixes:** the Settings, Add and EQ Done buttons and the Deck icon were missing."
-        },
-        {
-          "class": "DepictionHeaderView",
-          "title": "Device Support"
-        },
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "- **iOS 15 and up, rootless jailbreaks.** Beta 3 tested on an **iPhone 7 (A10)** with iOS 15.8.6, an **iPhone 11 Pro Max (A13)** with iOS 16.2, and an **iPhone SE (2nd gen, A13)** with iOS 17.5.1. An earlier beta 3 build also ran on an **iPhone 11 Pro (A13)** with iOS 18."
-        },
-        {
-          "class": "DepictionHeaderView",
-          "title": "Notes"
-        },
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "- Add music with **Library → Add from Files** or **Wi-Fi Transfer** (drag and drop from a computer on the same network).\n- No jailbreak? The **TrollStore .tipa** and **sideload .ipa** are on [GitHub](https://github.com/Jond-ie/crest/releases). Those builds add music with **Wi-Fi Transfer** only for now.\n- CarPlay hasn't been tested in a car yet: please [report back](https://github.com/Jond-ie/crest/issues) if you try it.\n- This is a beta: please [report](https://github.com/Jond-ie/crest/issues) songs that won't play or sound wrong."
-        },
-        {
-          "class": "DepictionHeaderView",
-          "title": "Credits"
-        },
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "Original work by **Jond-ie**. Uses FFmpeg (LGPL 2.1), TagLib (MPL 1.1), Opus and Ogg (BSD), utfcpp (Boost) and Signalsmith Stretch (MIT). The full licences are in **Settings → Open-Source Licenses**; the FFmpeg build script and the TagLib change are on [GitHub](https://github.com/Jond-ie/crest/tree/main/third-party)."
         }
       ]
     }

@@ -1,35 +1,71 @@
 Package: com.crossfade.music
 Version: 0.4.0-2
 Architecture: iphoneos-arm64
-Maintainer: John d_ie
+Maintainer: Jond-ie
 Installed-Size: 392
 Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
 Filename: debs/com.crossfade.music_0.4.0-2_iphoneos-arm64.deb
-Size: 24520
-MD5sum: 84825d84d653d834b7b597fb9ae3c63d
-SHA1: 442a8ae54898d7031a9f234c035d9e19faf11965
-SHA256: f90d8639e44c071e1996024c23b6cc57a40991a03945337faf8c70b65ca84fb7
+Size: 24616
+MD5sum: 797c0e4e9404e8298d3c918f39990da0
+SHA1: cdadd25b4101765355e2b5185462f8e754b27417
+SHA256: 501384bf8f89032bb6a7a59296b3496485accb8ac587ec1b9b05cfeb1205a7b4
 Section: Tweaks
 Description: True crossfade between local library songs in the Music app.
-Author: John d_ie
+Author: Jond-ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.crossfade.music.html
+Name: Crossfade
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.crossfade.music.json
+
+Package: com.crossfade.music
+Version: 0.4.0-2
+Architecture: iphoneos-arm64e
+Maintainer: Jond-ie
+Installed-Size: 392
+Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
+Filename: debs/com.crossfade.music_0.4.0-2_iphoneos-arm64e.deb
+Size: 25288
+MD5sum: 01d16cec30252d1e905be3c94d67ab34
+SHA1: 29a8f904117265b13e35d86800dd3ae6e72b918e
+SHA256: e52ebbcdcbe01fbf12ad68e971c569b369e1dd0dacc5e84ba5bd94123981c3fa
+Section: Tweaks
+Description: True crossfade between local library songs in the Music app.
+Author: Jond-ie
 Depiction: https://jond-ie.github.io/repo/depictions/com.crossfade.music.html
 Name: Crossfade
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.crossfade.music.json
 
 Package: com.johndie.anywhere
 Version: 1.0.0
+Architecture: iphoneos-arm64e
+Maintainer: Jond-ie
+Installed-Size: 204
+Depends: mobilesubstrate, firmware (>= 15.0), firmware (<< 18.0)
+Filename: debs/com.johndie.anywhere_1.0.0_iphoneos-arm64e.deb
+Size: 17380
+MD5sum: f01ec049adaec91d1aaeb6814ecd070c
+SHA1: 7de78f2b1cebf599973e428e151dabfa23986c4f
+SHA256: b0d8919d09e070f8fea193170d37e1d5b8bb97278203b3e6df635eb18d9b5d22
+Section: Tweaks
+Description: Place apps and widgets anywhere on the Home Screen, with empty spaces in between, like iOS 18. For iOS 15 to 17. Nothing to set up: install it and drag.
+Author: Jond-ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.anywhere.html
+Name: Anywhere
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.anywhere.json
+
+Package: com.johndie.anywhere
+Version: 1.0.0
 Architecture: iphoneos-arm64
-Maintainer: John d_ie
+Maintainer: Jond-ie
 Installed-Size: 204
 Depends: mobilesubstrate, firmware (>= 15.0), firmware (<< 18.0)
 Filename: debs/com.johndie.anywhere_1.0.0_iphoneos-arm64.deb
-Size: 17296
-MD5sum: 62f3fe51bdce131a6386e72863331512
-SHA1: 4c64511a39aa4c692a1015a1f696afa45187f6c5
-SHA256: 86f3bd29d491cbe1370ed35a072001efadc89d278bc06c946c35fb2038a37129
+Size: 17444
+MD5sum: 84c593e4a0ef71cc5e0dda13b92b024c
+SHA1: b1daffa5b7d685469512fd4f709ac9b6bd643fe5
+SHA256: 5accef4e812d1f639a9d3734daefed5975018abc4ac7f6fbc70cfb6080ae6a5e
 Section: Tweaks
 Description: Place apps and widgets anywhere on the Home Screen, with empty spaces in between, like iOS 18. For iOS 15 to 17. Nothing to set up: install it and drag.
-Author: John d_ie
+Author: Jond-ie
 Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.anywhere.html
 Name: Anywhere
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.anywhere.json
@@ -94,39 +130,78 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html
 Name: BegoneCIA (rootless)
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.json
 
-Package: com.johndie.binarypass
-Version: 1.0.0
+Package: com.johndie.begonecia
+Version: 1.2.0
+Architecture: iphoneos-arm64e
+Maintainer: Jond-ie
+Installed-Size: 728
+Depends: ellekit, com.opa334.ccsupport, ws.hbang.common, preferenceloader, com.opa334.altlist
+Conflicts: me.nepeta.begonecia
+Replaces: me.nepeta.begonecia
+Filename: debs/com.johndie.begonecia_1.2.0_iphoneos-arm64e.deb
+Size: 49624
+MD5sum: 3a53063ae38e32fd3f43e69cb5713452
+SHA1: 01b31b4c37e6a6087cc2b55e1524e14f3cd911ce
+SHA256: 3d67537c8d07cfa18fc547b4414404f5e71733145fc8dd66bc2ed0dd48f80e74
+Section: Tweaks
+Description: CC toggle to disable microphone, camera and GPS system-wide. Rootless and RootHide port (iOS 15-27, arm64 and arm64e). Total silence: mic audio is zeroed in the audio server and Siri, location delegates are nulled, camera inputs are dropped.
+Author: Nepeta <ominousness@protonmail.com>
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html
+Name: BegoneCIA (Rootless)
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.json
+
+Package: com.johndie.begonecia
+Version: 1.2.0
 Architecture: iphoneos-arm64
-Maintainer: John d_ie
+Maintainer: Jond-ie
+Installed-Size: 744
+Depends: ellekit, com.opa334.ccsupport, ws.hbang.common, preferenceloader, com.opa334.altlist
+Conflicts: me.nepeta.begonecia
+Replaces: me.nepeta.begonecia
+Filename: debs/com.johndie.begonecia_1.2.0_iphoneos-arm64.deb
+Size: 51532
+MD5sum: faebd8062e1eab08d48d9f4978cb862c
+SHA1: b3bb4bcedaa1104e543fdd7dfea2abf3cba9175b
+SHA256: 91a1fc84ffcb6497304b3e031e7c3735cd486abaaca5a23dc60012bffa98a297
+Section: Tweaks
+Description: CC toggle to disable microphone, camera and GPS system-wide. Rootless and RootHide port (iOS 15-27, arm64 and arm64e). Total silence: mic audio is zeroed in the audio server and Siri, location delegates are nulled, camera inputs are dropped.
+Author: Nepeta <ominousness@protonmail.com>
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html
+Name: BegoneCIA (Rootless)
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.json
+
+Package: com.johndie.blankpass
+Version: 1.0.0
+Architecture: iphoneos-arm64e
+Maintainer: Jond-ie
 Installed-Size: 168
 Depends: ellekit, firmware (>= 15.0)
-Conflicts: com.johndie.blankpass
-Filename: debs/com.johndie.binarypass_1.0.0_iphoneos-arm64.deb
-Size: 5084
-MD5sum: 7027672545f3554c3e89d1e907b86eea
-SHA1: 5a10adb3aeb5367b719a916084025bd604e822d1
-SHA256: 98e04c031a0575572c90263700015d892bd999d7bebf04ee6c780f9e866969d8
+Filename: debs/com.johndie.blankpass_1.0.0_iphoneos-arm64e.deb
+Size: 3432
+MD5sum: c9e40210e11c3dddaf589123c76d8281
+SHA1: c6f269005c63df22dc8ae70c56750e4066645e0b
+SHA256: 4d1c4ec7fe546188da53fda47f9a9ba834498063c3643c19968dad2edf18b30d
 Section: Tweaks
-Description: Binary passcode keypad: each Lock Screen passcode button shows its number as four dots (8 4 2 1) instead of a digit. No settings. Concept from BinaryPasscode by eskimo (Jordan Koch).
-Author: John d_ie
-Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.binarypass.html
-Name: BinaryPass
-SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.binarypass.json
+Description: Blank passcode keypad: the numbers on the Lock Screen passcode buttons are hidden. No settings.
+Author: Jond-ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.html
+Name: BlankPass
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.json
 
 Package: com.johndie.blankpass
 Version: 1.0.0
 Architecture: iphoneos-arm64
-Maintainer: John d_ie
+Maintainer: Jond-ie
 Installed-Size: 168
 Depends: ellekit, firmware (>= 15.0)
 Filename: debs/com.johndie.blankpass_1.0.0_iphoneos-arm64.deb
-Size: 3360
-MD5sum: eef4107cddec7c9f3ad4d3ec82e0d035
-SHA1: ebbb5f77512365e1496fc9bf553ecacdbca4264d
-SHA256: 2818de00129be84b378ee1426d095bbc5998a167e40e50f04e72f2ddfd28269a
+Size: 3468
+MD5sum: 8df5d536b8186163ce82e9965923fccb
+SHA1: 918b25d3d9227a8bdb36385d5998c08359a10af2
+SHA256: eed2e220bf37992844f3afcc022e58777f6c4350881f3e5d8cceecebca3c613e
 Section: Tweaks
 Description: Blank passcode keypad: the numbers on the Lock Screen passcode buttons are hidden. No settings.
-Author: John d_ie
+Author: Jond-ie
 Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.html
 Name: BlankPass
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.blankpass.json
@@ -158,15 +233,34 @@ Installed-Size: 168
 Depends: mobilesubstrate, firmware (>= 15.0)
 Conflicts: com.jakeashacks.bounceit
 Filename: debs/com.johndie.bounceit-rootless_1.0.4-1~jd2_iphoneos-arm64.deb
-Size: 5938
-MD5sum: b24225745982293ae6099203b23e04e4
-SHA1: d0821447b98880af753afa1541e9bc71d0fae560
-SHA256: 7bae9cccf897842d63fa35232183088d9012d46a1a30c3c41ee6eb53a9bba415
+Size: 6068
+MD5sum: 75ecb5925ec24fc584aa8eeee2a17307
+SHA1: e7cefee8d65cafca90e71a4cfa5f1c23dae8778f
+SHA256: c6a5c5245e4c9bb399ca668ff30333d35adc964c98632926f5e3ad62ed24e753
 Section: Tweaks
-Description: Bouncy spring animations across SpringBoard. Rootless port of Jake James's Bounce It! (iOS 11-13), rebuilt for iOS 15-18.
+Description: Bouncy spring animations across SpringBoard. Rootless and RootHide port of Jake James's Bounce It! (iOS 11-13), rebuilt for iOS 15-27.
 Author: Jake James (port: Jond-ie)
 Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.bounceit-rootless.html
-Name: Bounce It! (rootless)
+Name: Bounce It! (Rootless)
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.bounceit-rootless.json
+
+Package: com.johndie.bounceit-rootless
+Version: 1.0.4-1~jd2
+Architecture: iphoneos-arm64e
+Maintainer: Jond-ie
+Installed-Size: 168
+Depends: mobilesubstrate, firmware (>= 15.0)
+Conflicts: com.jakeashacks.bounceit
+Filename: debs/com.johndie.bounceit-rootless_1.0.4-1~jd2_iphoneos-arm64e.deb
+Size: 6008
+MD5sum: 34096f52df5cb921fe0b51c3fea2da3e
+SHA1: b9ac57aa283b1e2ab440fd41283c8ece4ea6fbf7
+SHA256: 30792a801e262d0b0fc63134142f1d30e12146003936a0621970508ad7a0de58
+Section: Tweaks
+Description: Bouncy spring animations across SpringBoard. Rootless and RootHide port of Jake James's Bounce It! (iOS 11-13), rebuilt for iOS 15-27.
+Author: Jake James (port: Jond-ie)
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.bounceit-rootless.html
+Name: Bounce It! (Rootless)
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.bounceit-rootless.json
 
 Package: com.johndie.catapult
@@ -213,26 +307,106 @@ Icon: https://jond-ie.github.io/repo/assets/catapult.png
 Name: Catapult
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.catapult.json
 
+Package: com.johndie.catapult
+Version: 0.1.0~beta3
+Architecture: iphoneos-arm64
+Maintainer: Jond-ie
+Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
+Recommends: com.makr.materialyou
+Conflicts: com.makr.trebuchet.springboard, com.johndie.trebuchet
+Replaces: com.makr.trebuchet.springboard, com.johndie.trebuchet
+Provides: com.makr.trebuchet.springboard
+Filename: debs/com.johndie.catapult_0.1.0~beta3_iphoneos-arm64.deb
+Size: 1551412
+MD5sum: 1feda38dd7bff447108f1a229e0828a3
+SHA1: 96b4ae345877881d70e565bf5ddcc72ebed61fec
+SHA256: 51f6ae23995a67773abc260212210ae672b01a58bc22b09e2ae792e278b7e4f0
+Section: Tweaks
+Description: Make your iPhone's Home Screen work like Android's. Swaps it for Trebuchet from LineageOS: an app drawer with search, one-page folders, widgets, icon shapes, themes and your own font. Everything else stays iOS. Built on MakrSas's Trebuchet port.
+Author: Jond-ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.catapult.html
+Icon: https://jond-ie.github.io/repo/assets/catapult.png
+Name: Catapult
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.catapult.json
+
+Package: com.johndie.catapult
+Version: 0.1.0~beta3
+Architecture: iphoneos-arm
+Maintainer: Jond-ie
+Depends: mobilesubstrate, preferenceloader, firmware (>= 14.0), firmware (<< 16.0)
+Recommends: com.makr.materialyou
+Conflicts: com.makr.trebuchet.springboard, com.johndie.trebuchet
+Replaces: com.makr.trebuchet.springboard, com.johndie.trebuchet
+Provides: com.makr.trebuchet.springboard
+Filename: debs/com.johndie.catapult_0.1.0~beta3_iphoneos-arm.deb
+Size: 1551260
+MD5sum: c0f2fb49b594dc1b77c2194cebc6f840
+SHA1: 0a93183f50334581edaea7d7b0e44bec3b9484cc
+SHA256: 94aebc10dc4596853243f954d084e7602c153f2d794923e064055ffca44aedc8
+Section: Tweaks
+Description: Make your iPhone's Home Screen work like Android's. Swaps it for Trebuchet from LineageOS: an app drawer with search, one-page folders, widgets, icon shapes, themes and your own font. Everything else stays iOS. Built on MakrSas's Trebuchet port.
+Author: Jond-ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.catapult.html
+Icon: https://jond-ie.github.io/repo/assets/catapult.png
+Name: Catapult (rootful)
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.catapult.json
+
 Package: com.johndie.ccsupport18
 Version: 1.3.13-3~ios18fix2
 Architecture: iphoneos-arm64
-Maintainer: John d_ie
+Maintainer: Jond-ie
 Installed-Size: 664
 Depends: mobilesubstrate, firmware (>= 18.0)
 Conflicts: com.opa334.ccsupport, com.ioscreatix.silo
 Replaces: com.opa334.ccsupport, com.ioscreatix.silo
 Provides: com.opa334.ccsupport (= 1.3.13-3), com.ioscreatix.silo
 Filename: debs/com.johndie.ccsupport18_1.3.13-3~ios18fix2_iphoneos-arm64.deb
-Size: 62540
-MD5sum: 5a0e2d2b65e9d0e9abedc46e0e10f7b4
-SHA1: 0d40d3d619158d4f0b44800eebca7b396b742e67
-SHA256: 475bf355470b27c576b3be71c06f7039e2744964baa16c5410891dff3ccc72e0
+Size: 62340
+MD5sum: 554a2377a02a8d18c4303f6e887dfddf
+SHA1: 768d67fa2dc19077cb07a43b623d9112e568e8df
+SHA256: 0fc626cb47a580423803ff1b0dceea7a91cdd9b34a9c2dcd55f22ba0067444f7
 Section: Tweaks
-Description: iOS 18 only. opa334's CCSupport with one fix: Control Center modules from tweaks stay after safe mode and reboots. Replaces CCSupport. By opa334; fix by John d_ie (submitted upstream).
+Description: iOS 18 to 27. opa334's CCSupport with one fix: Control Center modules from tweaks stay after safe mode and reboots. Replaces CCSupport. By opa334; fix by Jond-ie (submitted upstream).
 Author: opa334
 Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.ccsupport18.html
 Name: CCSupport (iOS 18 fix)
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.ccsupport18.json
+
+Package: com.johndie.crest
+Version: 1.0.0
+Architecture: iphoneos-arm64e
+Maintainer: Jond-ie
+Installed-Size: 12880
+Depends: firmware (>= 15.0)
+Filename: debs/com.johndie.crest_1.0.0_iphoneos-arm64e.deb
+Size: 3090372
+MD5sum: c5adb7ccc1e9bc928aec997e2b96ed8c
+SHA1: f9842fe72ef364cf59904febf83f998da54e4449
+SHA256: d418bf3a3add844b6b985fef66d35cba766640e21d59ad39365d6ee36209bf20
+Section: Multimedia
+Description: High-quality offline music player. Bit-Perfect mode, and plays FLAC, ALAC, DSD, Opus and more at each file's own sample rate, with gapless playback, beat-matched Automix, a parametric EQ that follows your headphones, lyrics, scrobbling, CarPlay and a widget.
+Author: Jond-ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.crest.html
+Name: Crest
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.crest.json
+
+Package: com.johndie.crest
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: Jond-ie
+Installed-Size: 12880
+Depends: firmware (>= 15.0)
+Filename: debs/com.johndie.crest_1.0.0_iphoneos-arm64.deb
+Size: 3089828
+MD5sum: 5470d5d43da23b05d285438ea7628921
+SHA1: eb3121ef34577ef22fe02a2b9bf9b0cd58c0c37e
+SHA256: d685bd9408ac8abfd8008b223f5dae1eaa6ba8e716a8909725f7a65c9e71949e
+Section: Multimedia
+Description: High-quality offline music player. Bit-Perfect mode, and plays FLAC, ALAC, DSD, Opus and more at each file's own sample rate, with gapless playback, beat-matched Automix, a parametric EQ that follows your headphones, lyrics, scrobbling, CarPlay and a widget.
+Author: Jond-ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.crest.html
+Name: Crest
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.crest.json
 
 Package: com.johndie.crest
 Version: 1.0.0~beta1
@@ -309,17 +483,17 @@ SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.crest.json
 Package: com.johndie.density
 Version: 1.0.0
 Architecture: iphoneos-arm64
-Maintainer: John d_ie
+Maintainer: Jond-ie
 Installed-Size: 424
 Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
 Filename: debs/com.johndie.density_1.0.0_iphoneos-arm64.deb
-Size: 28048
-MD5sum: 72c466ef3534f92b98f59494ec4e1465
-SHA1: 903fecc899c95b2e1557a0c9ff26d44ad9e8557d
-SHA256: 3c0cc8f224312f33f2044ddf4ebe66c726e3fba4b98ae97c2ff1a49fed1767a5
+Size: 28160
+MD5sum: e4420a2dbf24c01c28e345f2f2b52494
+SHA1: ab356883a42384c93526cd40d7454b661b65bbc6
+SHA256: c89be26a247dd0622f161d99e11e857bfc5ddcd4c916804516ed14051d435d29
 Section: Tweaks
 Description: More on screen in the apps you pick, like Android's display density, while the status bar and keyboard stay stock.
-Author: John d_ie
+Author: Jond-ie
 Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.density.html
 Name: Density
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.density.json
@@ -360,23 +534,41 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.eqelinker.html
 Name: EQELinker
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.eqelinker.json
 
-Package: com.johndie.faceskip
-Version: 1.0.0
-Architecture: iphoneos-arm64
-Maintainer: John d_ie
-Installed-Size: 356
-Depends: mobilesubstrate, preferenceloader, firmware (>= 18.0)
-Filename: debs/com.johndie.faceskip_1.0.0_iphoneos-arm64.deb
-Size: 15168
-MD5sum: 58e6a15ec0fb91d5c116ca698ca6e3a7
-SHA1: 8dcbef603d3c4cc2473297171cac61f5de4e6df2
-SHA256: c2431c1b53285d8b5a3d4bddc48c970e1b57e1b5bfad43e54402503050461c04
+Package: com.johndie.eqelinker
+Version: 1.1.0
+Architecture: iphoneos-arm64e
+Maintainer: Jond-ie
+Installed-Size: 20
+Depends: firmware (>= 15.0), com.johndie.triggr (>= 1.0.4), com.r333d.eqe
+Filename: debs/com.johndie.eqelinker_1.1.0_iphoneos-arm64e.deb
+Size: 4020
+MD5sum: e0150cacdbe98535c824f160cc249df7
+SHA1: 27ace70e306a2b714038503342dec60f3593b4c8
+SHA256: 626d658805631548d9fabff674cffec620185c30c4395e7a14f4dd8b5ed495b5
 Section: Tweaks
-Description: Face ID goes straight to the Home Screen, no swipe up. Stays on the Lock Screen when you have notifications, music playing or the flashlight on (each optional), and never leaves StandBy. One tiny hook, nothing runs until Face ID matches.
-Author: John d_ie
-Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.faceskip.html
-Name: FaceSkip
-SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.faceskip.json
+Description: Control EQE from Triggr: load your saved EQE presets and turn the compressor or crossfeed on, off or toggle them, e.g. a preset and the compressor when your AirPods connect. Adds "EQE Presets" and "EQE Effects" categories to Triggr's actions.
+Author: Jond-ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.eqelinker.html
+Name: EQELinker
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.eqelinker.json
+
+Package: com.johndie.eqelinker
+Version: 1.1.0
+Architecture: iphoneos-arm64
+Maintainer: Jond-ie
+Installed-Size: 20
+Depends: firmware (>= 15.0), com.johndie.triggr (>= 1.0.4), com.r333d.eqe
+Filename: debs/com.johndie.eqelinker_1.1.0_iphoneos-arm64.deb
+Size: 4032
+MD5sum: e0b127119540d40aef49feca5ed9f1ee
+SHA1: a87a71a4c9440b9687c99f6c41f8bfceed810902
+SHA256: ed30e8fb82e90ee0cd48af32d0c276358494fd14a77ffc617a7ba4422fa7e0ed
+Section: Tweaks
+Description: Control EQE from Triggr: load your saved EQE presets and turn the compressor or crossfeed on, off or toggle them, e.g. a preset and the compressor when your AirPods connect. Adds "EQE Presets" and "EQE Effects" categories to Triggr's actions.
+Author: Jond-ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.eqelinker.html
+Name: EQELinker
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.eqelinker.json
 
 Package: com.johndie.frostboard
 Version: 0.0.1~beta1
@@ -473,25 +665,6 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.frostboard.html
 Name: FrostBoard
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.frostboard.json
 
-Package: com.johndie.glide
-Version: 1.0.0~beta2
-Architecture: iphoneos-arm64
-Maintainer: John d_ie
-Installed-Size: 168
-Depends: ellekit, firmware (>= 15.0)
-Conflicts: com.johndie.pinstant
-Filename: debs/com.johndie.glide_1.0.0~beta2_iphoneos-arm64.deb
-Size: 7266
-MD5sum: 3a083c23a8fc3ef92a3402b2fdfe0d9b
-SHA1: e40c0c2e72b604d9a4c107334cff50b0a4571359
-SHA256: b22861f15da50c2164c81194d6fe7183988ef0b979327980d6e5b70d0a445411
-Section: Tweaks
-Description: Slide to unlock is back: the shimmering "slide to unlock" on the Lock Screen, and a swipe to the right unlocks (or shows the passcode). No settings. Concept from SlideToUnlock by Nepeta.
-Author: John d_ie
-Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.glide.html
-Name: Glide
-SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.glide.json
-
 Package: com.johndie.liteface
 Version: 1.0.0
 Architecture: iphoneos-arm64
@@ -506,6 +679,42 @@ SHA256: e90ad47d4ca9ef7be50f240ff58a183e798e2dfaa928dfab7e51e5c20db9e2c1
 Section: Tweaks
 Description: Every Face ID prompt uses iOS 18's small Face ID animation at the top of the screen (the one hidden apps use) instead of the box in the middle. iOS 18, Face ID iPhones. No settings.
 Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.liteface.html
+Name: LiteFace
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.liteface.json
+
+Package: com.johndie.liteface
+Version: 1.0.1
+Architecture: iphoneos-arm64e
+Maintainer: Jond-ie
+Installed-Size: 168
+Depends: ellekit, firmware (>= 18.0), firmware (<< 28.0)
+Filename: debs/com.johndie.liteface_1.0.1_iphoneos-arm64e.deb
+Size: 3144
+MD5sum: 9319b5f60f2e35fa730ed07439d31538
+SHA1: 27037d8ebe144e7ec943d720d9b8aad8aaa79348
+SHA256: eb98f3352b5f53160dd1a3e9890932717e28a94273348a47576d1cb406308511
+Section: Tweaks
+Description: Every Face ID prompt uses iOS 18's small Face ID animation at the top of the screen (the one hidden apps use) instead of the box in the middle. iOS 18 to 27, Face ID iPhones. No settings.
+Author: Jond-ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.liteface.html
+Name: LiteFace
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.liteface.json
+
+Package: com.johndie.liteface
+Version: 1.0.1
+Architecture: iphoneos-arm64
+Maintainer: Jond-ie
+Installed-Size: 168
+Depends: ellekit, firmware (>= 18.0), firmware (<< 28.0)
+Filename: debs/com.johndie.liteface_1.0.1_iphoneos-arm64.deb
+Size: 3220
+MD5sum: 396ddc196d4c0daf3f13a5a2433b4bd2
+SHA1: 01ce85f9b97c25fdea234391e0973d99f58b4bd0
+SHA256: 70faf5084c222806989dd551e56397289298fb62847a2194feaaf26b26cbb437
+Section: Tweaks
+Description: Every Face ID prompt uses iOS 18's small Face ID animation at the top of the screen (the one hidden apps use) instead of the box in the middle. iOS 18 to 27, Face ID iPhones. No settings.
+Author: Jond-ie
 Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.liteface.html
 Name: LiteFace
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.liteface.json
@@ -531,17 +740,17 @@ SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.mirage.jso
 Package: com.johndie.mirage
 Version: 1.0.0~beta2
 Architecture: iphoneos-arm64
-Maintainer: John d_ie
+Maintainer: Jond-ie
 Installed-Size: 392
 Depends: mobilesubstrate, preferenceloader, firmware (>= 16.0), firmware (<< 18.0)
 Filename: debs/com.johndie.mirage_1.0.0~beta2_iphoneos-arm64.deb
-Size: 11668
-MD5sum: 17537de6769885167b1988373225bb8e
-SHA1: 2e08b285cdb52158c6ae5cbbb8b32f519292484b
-SHA256: db06d5fa77297c2459ef2bb224d05430ab09a826a2ecb57b4d1467c239b55087
+Size: 11788
+MD5sum: 08118ee3ad3271b23fa1dfe4eff71742
+SHA1: 8b92909ad66c8f6a455a0ea8f8bdf1fe1f8bb718
+SHA256: a47019783c220cf2bdbc2871cc5e00e56bb6d4ba17a0d903dd05e5cc8b7c45d4
 Section: Tweaks
 Description: A status bar that looks like it has service: one or two lines with your own carrier names, labels, network type and live signal bars. Display only; it doesn't give the phone service.
-Author: John d_ie
+Author: Jond-ie
 Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.mirage.html
 Name: Mirage
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.mirage.json
@@ -549,18 +758,37 @@ SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.mirage.jso
 Package: com.johndie.pinstant
 Version: 1.0.1
 Architecture: iphoneos-arm64
-Maintainer: John d_ie
+Maintainer: Jond-ie
 Installed-Size: 168
 Depends: ellekit, firmware (>= 15.0)
 Conflicts: com.johndie.glide
 Filename: debs/com.johndie.pinstant_1.0.1_iphoneos-arm64.deb
-Size: 4012
-MD5sum: 337526b6edfc505fa2a08c5147a7b7c6
-SHA1: f6e7fdea7b2482442e52e0c9957a720ac5e82db8
-SHA256: 1ad8b56e031a8eb052f084596a0e5571ca2e6748c32d24f4e893acd9d3442b73
+Size: 4132
+MD5sum: d5c668edc4a0a35d86ec1687508a5267
+SHA1: 622603b6f3c530f260a1069ca5f84ec48d4ae1df
+SHA256: b06586f5cf0cef6391bcf6db31dd9d31bb52cb472e28765361a094b9533eaac8
 Section: Tweaks
 Description: Skips the Lock Screen: waking your device goes straight to the passcode. No settings. Concept from UnlockOrElse by Ethan Whited (ETHN).
-Author: John d_ie
+Author: Jond-ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.pinstant.html
+Name: Pinstant
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.pinstant.json
+
+Package: com.johndie.pinstant
+Version: 1.0.1
+Architecture: iphoneos-arm64e
+Maintainer: Jond-ie
+Installed-Size: 168
+Depends: ellekit, firmware (>= 15.0)
+Conflicts: com.johndie.glide
+Filename: debs/com.johndie.pinstant_1.0.1_iphoneos-arm64e.deb
+Size: 4060
+MD5sum: 6372e257932b45461f7b7cb1e059372f
+SHA1: 057a2386ce2ce05bd5febbfb1949416e997b4bf8
+SHA256: b2ba110e601bc8e7f065d2253828c783bdc2f55662ea7dced53444acff860b4c
+Section: Tweaks
+Description: Skips the Lock Screen: waking your device goes straight to the passcode. No settings. Concept from UnlockOrElse by Ethan Whited (ETHN).
+Author: Jond-ie
 Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.pinstant.html
 Name: Pinstant
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.pinstant.json
@@ -568,55 +796,111 @@ SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.pinstant.j
 Package: com.johndie.podified
 Version: 1.0.1
 Architecture: iphoneos-arm64
-Maintainer: John d_ie
+Maintainer: Jond-ie
 Installed-Size: 356
 Depends: mobilesubstrate, preferenceloader, firmware (>= 15.0)
 Filename: debs/com.johndie.podified_1.0.1_iphoneos-arm64.deb
-Size: 12528
-MD5sum: 03055012217cde93dea6fed10e7651de
-SHA1: 41e61b6abb78a3de41bfd3d186e23d22ccedb5b7
-SHA256: e9a0efdac5bbc0aa72805d9b1ab9bbe9ea04a46f7c7dbf51d507657be9be6802
+Size: 12612
+MD5sum: 80be0634fbc2c55f0178ccf4b99c2a7b
+SHA1: 1e5bd95d81f06a928b6df20531b9cea6f439a6ed
+SHA256: 6ef79e111177934c7b5a51401023fa24defd63cf1584f0a085203dea6ed9ee84
 Section: Tweaks
 Description: Makes a SIM-less iPhone present itself as an iPod: iPod naming in Settings, no Cellular, a clean "iPod" status bar, and an optional hidden Phone app. Cosmetic only; emergency calling is untouched.
-Author: John d_ie
+Author: Jond-ie
 Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.podified.html
 Name: Podified
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.podified.json
 
-Package: com.johndie.shelf
-Version: 1.0.0~beta2
-Architecture: iphoneos-arm64
-Maintainer: John d_ie
-Installed-Size: 168
-Depends: ellekit, firmware (>= 15.0)
-Filename: debs/com.johndie.shelf_1.0.0~beta2_iphoneos-arm64.deb
-Size: 7258
-MD5sum: e8c21b0cddb84f522942841cb0c59f58
-SHA1: 70eb92a4ec3bfe587dccdea4123580c9658413c3
-SHA256: ad8f4e8ca72caea0d78b1d91a3efebabac95a9f8cc90d9050c25334aaf7e3910
+Package: com.johndie.pulloverpro-rootless
+Version: 3.0.0~beta1
+Architecture: iphoneos-arm64e
+Maintainer: Jond-ie
+Installed-Size: 484
+Depends: mobilesubstrate, com.opa334.altlist, firmware (>= 15.0), firmware (<< 28.0)
+Recommends: preferenceloader
+Filename: debs/com.johndie.pulloverpro-rootless_3.0.0~beta1_iphoneos-arm64e.deb
+Size: 64748
+MD5sum: 0657dd4e0a0d53e15957c5dc588d7a43
+SHA1: 46c19530d97cfbd0a1461173460a8f74216d3d08
+SHA256: 65b1df721c483b1533ebc63f5a7ecfe975e6a5773c30d7eb84ca424d4ffe8e0f
 Section: Tweaks
-Description: The iOS 6 glass dock: a shelf in perspective with your Dock icons reflected in it. Drawn in code, no Apple artwork. No settings. Concept from ClassicDock by CoolStar.
-Author: John d_ie
-Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.shelf.html
-Name: Shelf
-SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.shelf.json
+Description: Pin any app to a small handle on the side of the screen and pull it over whatever you're doing. Rootless port of c1d3r's PullOver Pro (GPL-3.0), rebuilt for iOS 15-27.
+Author: c1d3r (port: Jond-ie)
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-rootless.html
+Name: PullOver Pro (Rootless)
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-rootless.json
+
+Package: com.johndie.pulloverpro-rootless
+Version: 3.0.0~beta1
+Architecture: iphoneos-arm64
+Maintainer: Jond-ie
+Installed-Size: 484
+Depends: mobilesubstrate, com.opa334.altlist, firmware (>= 15.0), firmware (<< 28.0)
+Recommends: preferenceloader
+Filename: debs/com.johndie.pulloverpro-rootless_3.0.0~beta1_iphoneos-arm64.deb
+Size: 66244
+MD5sum: c8a3636e6d1b1f0420841105f1eed4ee
+SHA1: 1e82b371bf8567e77fbbb129d7682526e67ae958
+SHA256: d3b80ae499c918e5cbbb6b785a9369d5cb9712bcbb8e189e47c583931453fb02
+Section: Tweaks
+Description: Pin any app to a small handle on the side of the screen and pull it over whatever you're doing. Rootless port of c1d3r's PullOver Pro (GPL-3.0), rebuilt for iOS 15-27.
+Author: c1d3r (port: Jond-ie)
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-rootless.html
+Name: PullOver Pro (Rootless)
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-rootless.json
+
+Package: com.johndie.pulloverpro-triggr
+Version: 1.0.0~beta1
+Architecture: iphoneos-arm64e
+Maintainer: Jond-ie
+Installed-Size: 168
+Depends: mobilesubstrate, com.johndie.triggr (>= 2.0.0~beta1), com.johndie.pulloverpro-rootless (>= 3.0.0~beta1), firmware (>= 15.0)
+Filename: debs/com.johndie.pulloverpro-triggr_1.0.0~beta1_iphoneos-arm64e.deb
+Size: 4132
+MD5sum: cc2cad5612d322e2506d37e4abbd90ca
+SHA1: 6bfd8a259a5574bbeeaeb3a19963dec69b750f01
+SHA256: fb020d03b294a109d71499e22d3f5838d4be0129153121564424677ebae04722
+Section: Tweaks
+Description: Pull over your pinned PullOver Pro app, or close it, with any Triggr trigger.
+Author: Jond-ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-triggr.html
+Name: PullOver Pro for Triggr
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-triggr.json
+
+Package: com.johndie.pulloverpro-triggr
+Version: 1.0.0~beta1
+Architecture: iphoneos-arm64
+Maintainer: Jond-ie
+Installed-Size: 168
+Depends: mobilesubstrate, com.johndie.triggr (>= 2.0.0~beta1), com.johndie.pulloverpro-rootless (>= 3.0.0~beta1), firmware (>= 15.0)
+Filename: debs/com.johndie.pulloverpro-triggr_1.0.0~beta1_iphoneos-arm64.deb
+Size: 5122
+MD5sum: 6d095e67bc37de1e0a93ca8c98596a5e
+SHA1: eaed3e36bb74c547c753f9a631ce56d215d89fe0
+SHA256: ee1eae4ea5491a6a382d50f013a5cf391f4883c46f9bf3dbc8a1e60cf882036e
+Section: Tweaks
+Description: Pull over your pinned PullOver Pro app, or close it, with any Triggr trigger.
+Author: Jond-ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-triggr.html
+Name: PullOver Pro for Triggr
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-triggr.json
 
 Package: com.johndie.slaplock
 Version: 0.2.0~beta1-2
 Architecture: iphoneos-arm64
-Maintainer: John d_ie
+Maintainer: Jond-ie
 Installed-Size: 388
 Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
 Conflicts: com.sentinel.applock
 Replaces: com.sentinel.applock
 Filename: debs/com.johndie.slaplock_0.2.0~beta1-2_iphoneos-arm64.deb
-Size: 17116
-MD5sum: 3097967e6429cc8a61b3acf47168943e
-SHA1: 095b4dbf5b61ff8aff26649a43ea68f44ef1db1d
-SHA256: f7a98e6b19636e7ca796ac118f67b3c64a5d116cc531b6ebe3fac55b5fa76f5d
+Size: 17224
+MD5sum: b65994afb9731fdf1d69024ae4bed1b0
+SHA1: 126e38384e1d4c9b0944fa0aeef7b0dc266e82b1
+SHA256: 6c985c7c9f57f00d92851b451af2c8c7d0dd3584989bb798219ac9cb34d60e25
 Section: Tweaks
 Description: Lock chosen apps behind Face ID / Touch ID (with passcode fallback).
-Author: John d_ie
+Author: Jond-ie
 Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.html
 Name: Slaplock
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.slaplock.json
@@ -689,6 +973,42 @@ SHA256: b8561fbb4654ab1839a8378e3006d807f880fdb0ba57e90f0e9fa709b11deec1
 Section: Tweaks
 Description: Activator-lite for rootless Dopamine: assign actions to the home, lock and volume buttons, Touch ID, the mute switch, status bar taps, icon flicks, shaking, and events like charger, Wi-Fi, battery level or a time of day. Supports A12 and newer (arm64e).
 Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html
+Name: Triggr
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.json
+
+Package: com.johndie.triggr
+Version: 2.0.0
+Architecture: iphoneos-arm64e
+Maintainer: Jond-ie
+Installed-Size: 2080
+Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, uikittools, firmware (>= 15.0)
+Filename: debs/com.johndie.triggr_2.0.0_iphoneos-arm64e.deb
+Size: 261868
+MD5sum: 5361ecd1af6600df7fa4f289fee0c474
+SHA1: 8a21d4d97741e2491570ca6bec0584618e1034c1
+SHA256: 33d1d3f19cd2724641858e9984a7fa049d3b8f51bcf00127ca041c554e05d27c
+Section: Tweaks
+Description: Make any button, gesture or event do anything you want. Activator, rebuilt for iOS 15 to 27 on Rootless and RootHide jailbreaks: buttons, screen edges, the status bar, gestures, calls, music, Wi-Fi and times of day, with conditions and sequences.
+Author: Jond-ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html
+Name: Triggr
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.json
+
+Package: com.johndie.triggr
+Version: 2.0.0
+Architecture: iphoneos-arm64
+Maintainer: Jond-ie
+Installed-Size: 2080
+Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, uikittools, firmware (>= 15.0)
+Filename: debs/com.johndie.triggr_2.0.0_iphoneos-arm64.deb
+Size: 262264
+MD5sum: 7ea473502e234731cd451266bd407f31
+SHA1: d70847a8701f0bc7e421bd6dc5c9a902da914fc6
+SHA256: 20bb37ca2666a445f166245ced1817019b8a2887e67291767134eedecc5b7f42
+Section: Tweaks
+Description: Make any button, gesture or event do anything you want. Activator, rebuilt for iOS 15 to 27 on Rootless and RootHide jailbreaks: buttons, screen edges, the status bar, gestures, calls, music, Wi-Fi and times of day, with conditions and sequences.
+Author: Jond-ie
 Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html
 Name: Triggr
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.json
@@ -858,17 +1178,35 @@ SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.jso
 Package: com.scrub.exif
 Version: 1.0.0-2
 Architecture: iphoneos-arm64
-Maintainer: John d_ie
+Maintainer: Jond-ie
 Installed-Size: 396
 Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
 Filename: debs/com.scrub.exif_1.0.0-2_iphoneos-arm64.deb
-Size: 20654
-MD5sum: 8c434729a32ed3ddcca1bb1991982a8b
-SHA1: 68571908c6e5c19d719485773d436fc99d003790
-SHA256: f4175cc9bba320e12ce059361f6f29d373cec74a3074b36fc6a9f223d7a23a55
+Size: 20756
+MD5sum: a9333327c379d6e97c620e248e6b246b
+SHA1: 873e7d0b6d02fe7a5aad75e167cba63c56abbc05
+SHA256: 87f6e39fb76bc2eacc749d17143a02db11fdb6eeb2b31cc6fa3040d852a5f726
 Section: Tweaks
 Description: Strips location and identifying metadata from photos apps receive.
-Author: John d_ie
+Author: Jond-ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.scrub.exif.html
+Name: Scrub
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.scrub.exif.json
+
+Package: com.scrub.exif
+Version: 1.0.0-2
+Architecture: iphoneos-arm64e
+Maintainer: Jond-ie
+Installed-Size: 396
+Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
+Filename: debs/com.scrub.exif_1.0.0-2_iphoneos-arm64e.deb
+Size: 21256
+MD5sum: 1b6c9bbf0e623979d05cff4f969942a2
+SHA1: b5f5844de33c6a03f9ffcc13cb1b12b445ac5250
+SHA256: 961987e7fb08672857da326edb4fbe9c004cfa9fc95395ac3ac08315ff8f9433
+Section: Tweaks
+Description: Strips location and identifying metadata from photos apps receive.
+Author: Jond-ie
 Depiction: https://jond-ie.github.io/repo/depictions/com.scrub.exif.html
 Name: Scrub
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.scrub.exif.json
