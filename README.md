@@ -5,7 +5,7 @@
 <h1 align="center">pwnapple</h1>
 
 <p align="center">
-  Jailbreak tweaks by Jond-ie, simple to use and tested on real iPhones.<br>
+  Jailbreak tweaks by Jond_ie, simple to use and tested on real iPhones.<br>
   Rootless &amp; RootHide
   <br><br>
   <a href="https://jond-ie.github.io/repo/"><strong>See every tweak →</strong></a> · <a href="https://x.com/Jond_ie">X @Jond_ie</a>
@@ -41,8 +41,8 @@ You need a Rootless jailbreak (Dopamine, palera1n) or RootHide. Catapult also ha
 <summary><strong>Source and credits</strong></summary>
 
 - **Open source:** [Triggr 1.x](https://github.com/Jond-ie/triggr) (GPL-3.0; 2.0 is closed source), [libtriggr](https://github.com/Jond-ie/libtriggr) (MIT, add your tweak to Triggr), [LiteFace](https://github.com/Jond-ie/liteface), [BegoneCIA](https://github.com/Jond-ie/begonecia), [PullOver Pro](https://github.com/Jond-ie/pulloverpro-rootless) (GPL-3.0).
-- **Ports:** BegoneCIA is a Rootless and RootHide port of [BegoneCIA](https://github.com/NepetaDev/BegoneCIA) by Eva (Nepeta), MIT; the license ships in the package. Bounce It! is a Rootless and RootHide port of Jake James's Bounce It!. PullOver Pro is c1d3r's [PullOver Pro](https://github.com/c1d3rdev/PullOver-Pro) (GPL-3.0) with iOS 15–27 Rootless and RootHide support by Jond-ie. The CCSupport iOS 18 fix is opa334's CCSupport with [our fix](https://github.com/opa334/CCSupport/pull/26).
+- **Ports:** BegoneCIA is a Rootless and RootHide port of [BegoneCIA](https://github.com/NepetaDev/BegoneCIA) by Eva (Nepeta), MIT; the license ships in the package. Bounce It! is a Rootless and RootHide port of Jake James's Bounce It!. PullOver Pro is c1d3r's [PullOver Pro](https://github.com/c1d3rdev/PullOver-Pro) (GPL-3.0) with iOS 15–27 Rootless and RootHide support by Jond_ie. The CCSupport iOS 18 fix is opa334's CCSupport with [our fix](https://github.com/opa334/CCSupport/pull/26).
 - **Remakes:** written from scratch, idea credit to the originals. Pinstant (UnlockOrElse by ETHN), BlankPass (VladGeek). Triggr is inspired by Activator (Ryan Petrich).
-- Everything else is original work by Jond-ie. This repo hosts the installable packages only.
+- Everything else is original work by Jond_ie. This repo hosts the installable packages only.
 
 </details>

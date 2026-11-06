@@ -86,7 +86,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Original work by **Jond-ie**. Uses FFmpeg (LGPL 2.1), TagLib (MPL 1.1), Opus and Ogg (BSD), utfcpp (Boost) and Signalsmith Stretch (MIT). The full licences are in **Settings → Open-Source Licenses**, and the FFmpeg build script and the TagLib change are on [GitHub](https://github.com/Jond-ie/crest/tree/main/third-party)."
+          "markdown": "Original work by **Jond_ie**. Uses FFmpeg (LGPL 2.1), TagLib (MPL 1.1), Opus and Ogg (BSD), utfcpp (Boost) and Signalsmith Stretch (MIT). The full licences are in **Settings → Open-Source Licenses**, and the FFmpeg build script and the TagLib change are on [GitHub](https://github.com/Jond-ie/crest/tree/main/third-party)."
         }
       ]
     },

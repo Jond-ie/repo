@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support · pwnapple</title>
+<meta name="description" content="How to report a bug, ask a question, or support Jond_ie's free jailbreak tweaks.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jond-ie.github.io/repo/support/">
+<meta property="og:title" content="Support · pwnapple">
+<meta property="og:description" content="How to report a bug, ask a question, or support Jond_ie's free jailbreak tweaks.">
+<meta property="og:image" content="https://jond-ie.github.io/repo/CydiaIcon.png">
+<link rel="icon" href="../CydiaIcon.png">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  .addr { display: block; }
+  .addr code { display: inline-block; margin: .3rem 0 .5rem; font-size: .8rem; }
+  .net { font-size: .78rem; font-weight: 600; color: var(--faint); margin-left: .3rem; }
+  .copy { background: var(--well); box-shadow: var(--well-shadow); }
+  .copy.done { color: var(--accent); }
+  .stack { display: grid; gap: .8rem; }
+  section > p, .card p { max-width: 70ch; }
+</style>
+</head>
+<body>
+<nav class="bar"><a class="backbtn" href="../">All tweaks</a><span class="title">Support</span></nav>
+<main>
+  <header class="hero">
+    <h1>Support</h1>
+    <p class="lead">Every tweak here is free. Bug reports help the most; donations help me keep working on them.</p>
+  </header>
+
+  <section>
+    <h2>Report a bug or crash</h2>
+    <div class="stack">
+      <div class="card"><div>
+        <h3>Open an issue</h3>
+        <p>Use the tweak's own repo if it has one (linked on its Details page), or the <a href="https://github.com/Jond-ie/repo/issues">pwnapple issue tracker</a>. Include your device, iOS version, jailbreak and the tweak version. For a crash, attach the log from Settings &gt; Privacy &amp; Security &gt; Analytics &amp; Improvements &gt; Analytics Data.</p>
+      </div></div>
+      <div class="card"><div>
+        <h3>Questions</h3>
+        <p>Ask on X: <a href="https://x.com/Jond_ie">@Jond_ie</a>.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Donate</h2>
+    <p>Crypto only for now. Check the network before you send: coins sent on the wrong network can't be recovered.</p>
+    <div class="stack">
+    <div class="card addr">
+      <div>
+        <h3>Bitcoin <span class="net">BTC</span></h3>
+        <p>Bitcoin network only.</p>
+        <p><code id="a0">bc1q7f9wh78tx6apkmfxcs0pj45v0sq9hvzelydtef</code></p>
+        <button class="chip copy" type="button" data-target="a0" aria-label="Copy the Bitcoin address">Copy address</button>
+      </div>
+    </div>
+    <div class="card addr">
+      <div>
+        <h3>Ethereum or USDC <span class="net">ETH, USDC</span></h3>
+        <p>Base (recommended, low fees) or Ethereum mainnet. The same address works on both.</p>
+        <p><code id="a1">0x720AdB28D2b430619d0C748469889dFa6552B2B7</code></p>
+        <button class="chip copy" type="button" data-target="a1" aria-label="Copy the Ethereum or USDC address">Copy address</button>
+      </div>
+    </div>
+    <div class="card addr">
+      <div>
+        <h3>Solana or USDC <span class="net">SOL, USDC</span></h3>
+        <p>Solana network only.</p>
+        <p><code id="a2">262AKFx7P4qVBvH2KaDYu5KADqZcP4KowAkPo7t95wtt</code></p>
+        <button class="chip copy" type="button" data-target="a2" aria-label="Copy the Solana or USDC address">Copy address</button>
+      </div>
+    </div>
+    </div>
+  </section>
+</main>
+<script>
+document.querySelectorAll('.copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var text = document.getElementById(b.dataset.target).textContent;
+    var done = function () { b.textContent = 'Copied'; b.classList.add('done'); setTimeout(function () { b.textContent = 'Copy address'; b.classList.remove('done'); }, 1500); };
+    if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () {});
+  });
+});
+</script>
+</body>
+</html>

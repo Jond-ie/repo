@@ -51,7 +51,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Original **BegoneCIA** by **Eva (Nepeta)**, MIT licence. Rootless and RootHide port by **Jond-ie**. The original licence ships inside the package.\n\n[Original BegoneCIA](https://github.com/NepetaDev/BegoneCIA) · [Port source code](https://github.com/Jond-ie/begonecia)"
+          "markdown": "Original **BegoneCIA** by **Eva (Nepeta)**, MIT licence. Rootless and RootHide port by **Jond_ie**. The original licence ships inside the package.\n\n[Original BegoneCIA](https://github.com/NepetaDev/BegoneCIA) · [Port source code](https://github.com/Jond-ie/begonecia)"
         }
       ]
     }

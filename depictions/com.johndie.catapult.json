@@ -90,7 +90,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Built on **MakrSas**'s [Trebuchet port](https://github.com/MakrSas/Trebuchet) (Apache 2.0). Thank you, MakrSas.\n\nTrebuchet and Launcher3 by **LineageOS** and the **Android Open Source Project** (Apache 2.0). Roboto Flex by Google (OFL). Full notices in Settings > About and [on GitHub](https://github.com/Jond-ie/catapult/tree/main/third-party).\n\nCatapult by **Jond-ie**."
+          "markdown": "Built on **MakrSas**'s [Trebuchet port](https://github.com/MakrSas/Trebuchet) (Apache 2.0). Thank you, MakrSas.\n\nTrebuchet and Launcher3 by **LineageOS** and the **Android Open Source Project** (Apache 2.0). Roboto Flex by Google (OFL). Full notices in Settings > About and [on GitHub](https://github.com/Jond-ie/catapult/tree/main/third-party).\n\nCatapult by **Jond_ie**."
         }
       ]
     },

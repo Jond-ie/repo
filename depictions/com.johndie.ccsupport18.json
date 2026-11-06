@@ -35,7 +35,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "**CCSupport** by **opa334 (Lars Fröder)**, MIT licence (included in the package). iOS 18 fix by **Jond-ie**, sent to opa334: [opa334/CCSupport#26](https://github.com/opa334/CCSupport/pull/26). Source: [Jond-ie/CCSupport](https://github.com/Jond-ie/CCSupport/tree/ios18-iconstate)."
+          "markdown": "**CCSupport** by **opa334 (Lars Fröder)**, MIT licence (included in the package). iOS 18 fix by **Jond_ie**, sent to opa334: [opa334/CCSupport#26](https://github.com/opa334/CCSupport/pull/26). Source: [Jond-ie/CCSupport](https://github.com/Jond-ie/CCSupport/tree/ios18-iconstate)."
         }
       ]
     }

@@ -2,7 +2,7 @@
    Only index.html uses this file; the Details and tweak pages keep site.css. */
 :root {
   color-scheme: light dark;
-  --page: #f4f3fa; --ink: #17193a; --muted: #50547a; --faint: #74789b;
+  --page: #f4f3fa; --ink: #17193a; --muted: #50547a; --faint: #5b5f80;
   --gold: #f2b100; --gold-ink: #17193a; --leaf: #127541; --link: #4a3ee0;
   --panel: rgba(255,255,255,.74); --panel-edge: rgba(23,25,58,.08); --line: rgba(23,25,58,.09);
   --lattice: rgba(23,25,58,.07); --glow: rgba(242,177,0,.22);
@@ -248,3 +248,6 @@ footer p { margin: .4rem 0; }
 .jump[hidden] { display: none; }
 @media (max-width: 34rem) { .jump { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-left: -1rem; margin-right: -1rem; padding: 0 1rem; } .jump::-webkit-scrollbar { display: none; } .jump a { flex: none; } }
 section[id] { scroll-margin-top: 5rem; }  /* clear the sticky search bar when jumping */
+
+/* no lone last words */
+.card p, .lead, footer p { text-wrap: pretty; }
