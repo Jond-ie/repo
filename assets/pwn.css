@@ -94,17 +94,6 @@ a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3
 .desktop-note { margin: .8rem 0 0; font-size: .88rem; color: rgba(255,255,255,.55); max-width: 40ch; }
 .desktop-note[hidden] { display: none; }
 
-/* the flagships, as live activities */
-.activities { list-style: none; margin: clamp(1.8rem, 4vw, 2.6rem) 0 0; padding: .4rem 0 0; border-top: 1px solid rgba(255,255,255,.1);
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13.5rem), 1fr)); gap: 0 .5rem; }
-.activities a { display: flex; align-items: center; gap: .8rem; padding: .7rem .6rem; margin: 0 -.6rem; border-radius: 20px; color: #fff; text-decoration: none; transition: background .2s; }
-.activities a:hover { background: rgba(255,255,255,.07); }
-.activities img { width: 44px; height: 44px; border-radius: 12px; flex: none; }
-.activities a > span { flex: 1; min-width: 0; display: grid; line-height: 1.25; }
-.activities b { font: 700 1.08rem/1.2 var(--display); letter-spacing: -.02em; }
-.activities b + span { font-size: .84rem; color: rgba(255,255,255,.6); }
-.activities .chev { width: 18px; height: 18px; flex: none; fill: none; stroke: rgba(255,255,255,.4); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
-@media (min-width: 46rem) { .activities a { flex-direction: column; align-items: flex-start; } .activities .chev { display: none; } }
 
 /* ───── the pill: the island again, small, once you scroll ───── */
 .pill { position: fixed; z-index: 40; top: 8px; left: 50%; display: flex; align-items: center; gap: .2rem; height: 46px; padding: 0 5px 0 6px;

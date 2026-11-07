@@ -24,7 +24,7 @@
         {
           "class": "DepictionScreenshotsView",
           "itemCornerRadius": 8,
-          "itemSize": "{160, 277}",
+          "itemSize": "{160, 346}",
           "screenshots": [
             {
               "url": "https://jond-ie.github.io/repo/screenshots/density/settings-stock.png",

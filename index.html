@@ -20,7 +20,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap">
 <link rel="stylesheet" href="assets/pwn.css">
-<link rel="stylesheet" href="assets/home.css">
+<link rel="stylesheet" href="assets/home.css?v=20261107">
+<link rel="stylesheet" href="assets/xr.css">
 <link rel="stylesheet" href="assets/iphone.css">
 </head>
 <body>
@@ -36,15 +37,53 @@
     <span class="cam" aria-hidden="true"></span>
   </div>
   <div class="isl-body">
-    <h1>Simple jailbreak tweaks.</h1>
-    <p class="isl-sub">Free, for Rootless and RootHide.</p>
-    <div class="isl-actions">
-      <a class="get" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a>
-      <a class="alt" href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a>
+    <div class="isl-slides" id="slides" aria-roledescription="carousel" aria-label="Jond_ie and featured tweaks">
+    <section class="isl-slide" aria-roledescription="slide" aria-label="1 of 4">
+      <h1>Simple jailbreak tweaks.</h1>
+      <p class="isl-sub">Free, for Rootless and RootHide.</p>
+      <div class="isl-actions">
+        <a class="get" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a>
+        <a class="alt" href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a>
+      </div>
+      <p class="isl-repo"><code id="repo-url">https://jond-ie.github.io/repo/</code><button class="copy" id="copy" type="button" hidden>Copy</button></p>
+      <p class="desktop-note" id="desktop-note" hidden>On a computer? Open this page on your iPhone, or add the address in Sileo or Zebra.</p>
+    </section>
+    <section class="isl-slide feat" aria-roledescription="slide" aria-label="2 of 4: Triggr">
+      <img class="feat-icon" src="assets/triggr.png" alt="" width="72" height="72">
+      <h2>Triggr</h2>
+      <p class="isl-sub">Any button, any gesture, any action.</p>
+      <div class="isl-actions">
+        <a class="get" href="triggr/">See Triggr</a>
+        <a class="alt" href="sileo://package/com.johndie.triggr">Open in Sileo</a>
+      </div>
+      <span class="xr feat-shot" aria-hidden="true"><span class="xr-body"><span class="xr-screen"><img src="screenshots/triggr/1-main.png" alt="" width="828" height="1792" loading="lazy"></span></span></span>
+    </section>
+    <section class="isl-slide feat" aria-roledescription="slide" aria-label="3 of 4: Crest">
+      <img class="feat-icon" src="assets/crest.png" alt="" width="72" height="72">
+      <h2>Crest</h2>
+      <p class="isl-sub">Your music, as good as the files are.</p>
+      <div class="isl-actions">
+        <a class="get" href="crest/">See Crest</a>
+        <a class="alt" href="sileo://package/com.johndie.crest">Open in Sileo</a>
+      </div>
+      <span class="xr feat-shot" aria-hidden="true"><span class="xr-body"><span class="xr-screen"><img src="screenshots/crest/player.png" alt="" width="828" height="1792" loading="lazy"></span></span></span>
+    </section>
+    <section class="isl-slide feat" aria-roledescription="slide" aria-label="4 of 4: Catapult">
+      <img class="feat-icon" src="assets/catapult.png" alt="" width="72" height="72">
+      <h2>Catapult</h2>
+      <p class="isl-sub">The LineageOS Home Screen, on your iPhone.</p>
+      <div class="isl-actions">
+        <a class="get" href="catapult/">See Catapult</a>
+        <a class="alt" href="sileo://package/com.johndie.catapult">Open in Sileo</a>
+      </div>
+      <span class="xr feat-shot" aria-hidden="true"><span class="xr-body"><span class="xr-screen"><img src="screenshots/catapult/home.png" alt="" width="828" height="1792" loading="lazy"></span></span></span>
+    </section>
     </div>
-    <p class="isl-repo"><code id="repo-url">https://jond-ie.github.io/repo/</code><button class="copy" id="copy" type="button" hidden>Copy</button></p>
-    <p class="desktop-note" id="desktop-note" hidden>On a computer? Open this page on your iPhone, or add the address in Sileo or Zebra.</p>
-    <ul class="activities" aria-label="Featured"><li><a href="triggr/"><img src="assets/triggr.png" alt="" width="44" height="44"><span><b>Triggr</b><span>Any button, any gesture, any action.</span></span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="crest/"><img src="assets/crest.png" alt="" width="44" height="44"><span><b>Crest</b><span>Your music, as good as the files are.</span></span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li><li><a href="catapult/"><img src="assets/catapult.png" alt="" width="44" height="44"><span><b>Catapult</b><span>The LineageOS Home Screen, on your iPhone.</span></span><svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li></ul>
+    <div class="isl-nav">
+      <button class="isl-arrow" id="prev" type="button" aria-label="Previous slide" aria-controls="slides"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <div class="isl-dots" id="dots" role="group" aria-label="Choose a slide"><button type="button" aria-label="Jond_ie" aria-current="true"></button><button type="button" aria-label="Triggr"></button><button type="button" aria-label="Crest"></button><button type="button" aria-label="Catapult"></button></div>
+      <button class="isl-arrow" id="next" type="button" aria-label="Next slide" aria-controls="slides"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
   </div>
 </header>
 <main id="index">
@@ -235,6 +274,7 @@
   <p class="foot-note">If a tweak ever puts you in safe mode, uninstall it and <a href="https://github.com/Jond-ie/repo/issues">report it</a>. Ports and remakes credit their original authors on their pages.</p>
   <p class="foot-note">© 2026 Jond_ie</p>
 </footer>
-<script src="assets/home.js"></script>
+<script src="assets/home.js?v=20261107"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6cb9329a0cd5467d8aedefc9fae31345"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

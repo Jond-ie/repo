@@ -24,7 +24,7 @@
         {
           "class": "DepictionScreenshotsView",
           "itemCornerRadius": 8,
-          "itemSize": "{160, 274}",
+          "itemSize": "{160, 346}",
           "screenshots": [
             {
               "url": "https://jond-ie.github.io/repo/screenshots/triggr/12-ifelse.png",
@@ -44,15 +44,15 @@
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/triggr/16-libtriggr.png",
-              "accessibilityText": "Action categories, including BegoneCIA added through libtriggr"
+              "accessibilityText": "Action categories, including BegoneCIA and PullOver Pro added through libtriggr"
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/triggr/9-triggers.png",
-              "accessibilityText": "Trigger list with the new Screen Edges, Phone Calls, Notifications and Music groups"
+              "accessibilityText": "Trigger list: sensors and events, down to Custom Events"
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/triggr/10-combos.png",
-              "accessibilityText": "Lock + Volume: Up and Down presses and holds"
+              "accessibilityText": "Side + Volume: Up and Down presses and holds"
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/triggr/11-edges.png",
@@ -76,7 +76,7 @@
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/triggr/5-picker.png",
-              "accessibilityText": "Action picker with Recently Used and Test"
+              "accessibilityText": "Action picker: Selected, Only If, then every category"
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/triggr/6-apps.png",

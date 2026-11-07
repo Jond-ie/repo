@@ -24,7 +24,7 @@
         {
           "class": "DepictionScreenshotsView",
           "itemCornerRadius": 8,
-          "itemSize": "{160, 276}",
+          "itemSize": "{160, 346}",
           "screenshots": [
             {
               "url": "https://jond-ie.github.io/repo/screenshots/crest/player.png",
@@ -32,15 +32,19 @@
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/crest/home.png",
-              "accessibilityText": "Home: library stats, pinned and recently played"
+              "accessibilityText": "Home: library stats, recently played and recently added"
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/crest/library.png",
               "accessibilityText": "Library"
             },
             {
+              "url": "https://jond-ie.github.io/repo/screenshots/crest/albums.png",
+              "accessibilityText": "Albums grid"
+            },
+            {
               "url": "https://jond-ie.github.io/repo/screenshots/crest/album.png",
-              "accessibilityText": "Album page with the mini player"
+              "accessibilityText": "Album page coloured from its cover, with the mini player"
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/crest/deck-tone.png",
@@ -110,7 +114,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "Original work by **Jond_ie**. Uses FFmpeg (LGPL 2.1), TagLib (MPL 1.1), Opus and Ogg (BSD), utfcpp (Boost) and Signalsmith Stretch (MIT). The full licences are in **Settings → Open-Source Licenses**, and the FFmpeg build script and the TagLib change are on [GitHub](https://github.com/Jond-ie/crest/tree/main/third-party)."
+          "markdown": "Original work by **Jond_ie**. Uses FFmpeg (LGPL 2.1), TagLib (MPL 1.1), Opus and Ogg (BSD), utfcpp (Boost) and Signalsmith Stretch (MIT). The full licences are in **Settings → Open-Source Licenses**, and the FFmpeg build script and the TagLib change are on [GitHub](https://github.com/Jond-ie/crest/tree/main/third-party).\n\nMusic in the screenshots, all [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) from the Internet Archive: knowsur, [Nana Wodori](https://archive.org/details/Knowsur-NanaWodori); Meho, [Are We Alone](https://archive.org/details/AreWeAlone) and [Hibernation](https://archive.org/details/Hibernation_201502); Sciurid, [Burning Bright](https://archive.org/details/BurningBright); B.L.Underwood, [Electro Excursions for the Modern Age](https://archive.org/details/ElectroExcursions); Yukiga Futte Uresii, [Halscape](https://archive.org/details/Halscape); Mathias Klingner, [ODDyssey](https://archive.org/details/MK-ODDyssey); cdrx, [Moody Dancefloor](https://archive.org/details/MoodyDancefloor)."
         }
       ]
     },

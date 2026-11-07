@@ -22,6 +22,17 @@
           "_sync": "compat"
         },
         {
+          "class": "DepictionScreenshotsView",
+          "itemCornerRadius": 8,
+          "itemSize": "{160, 346}",
+          "screenshots": [
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/slaplock/settings.png",
+              "accessibilityText": "Slaplock settings: the apps you can lock"
+            }
+          ]
+        },
+        {
           "class": "DepictionHeaderView",
           "title": "Works on"
         },

@@ -24,11 +24,11 @@
         {
           "class": "DepictionScreenshotsView",
           "itemCornerRadius": 8,
-          "itemSize": "{160, 276}",
+          "itemSize": "{160, 346}",
           "screenshots": [
             {
               "url": "https://jond-ie.github.io/repo/screenshots/catapult/home.png",
-              "accessibilityText": "Home screen: Trebuchet grid, dock and search bar"
+              "accessibilityText": "Home Screen: Trebuchet grid and dock"
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/catapult/drawer.png",
@@ -36,19 +36,19 @@
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/catapult/search.png",
-              "accessibilityText": "Search answers sums and searches the web"
+              "accessibilityText": "Search in the app drawer: apps, and the web"
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/catapult/shortcuts.png",
-              "accessibilityText": "Long-press shortcuts"
+              "accessibilityText": "Long-press an app for its menu"
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/catapult/edit.png",
-              "accessibilityText": "Editing pages"
+              "accessibilityText": "Home Screen menu: wallpaper, widgets and Home settings"
             },
             {
               "url": "https://jond-ie.github.io/repo/screenshots/catapult/settings.png",
-              "accessibilityText": "Home settings: icon themes and fonts"
+              "accessibilityText": "Home settings"
             }
           ]
         },

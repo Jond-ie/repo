@@ -31,3 +31,38 @@ main { width: min(100% - 32px, 64rem); margin: 0 auto; padding: clamp(3rem, 8vw,
 .install li { counter-increment: s; padding-top: .6rem; color: var(--muted); font-size: .98rem; }
 .install li::before { content: counter(s); display: block; font: 800 2.6rem/1 var(--display); color: var(--ink); letter-spacing: -.04em; margin-bottom: .5rem; }
 .install b { color: var(--ink); }
+
+/* ───── the island as a carousel: the repo first, then each flagship ───── */
+#top .isl-body { padding-left: 0; padding-right: 0; }
+.isl-slides { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain; scrollbar-width: none; }
+.isl-slides::-webkit-scrollbar { display: none; }
+.isl-slide { flex: 0 0 100%; min-width: 0; scroll-snap-align: start; scroll-snap-stop: always; padding: 0 clamp(1rem, 5vw, 3.2rem); }
+.isl-slide.feat { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.feat-icon { display: block; width: 72px; height: 72px; border-radius: 18px; margin-bottom: 1.2rem; box-shadow: 0 0 0 .5px rgba(255,255,255,.18), 0 10px 24px -10px rgba(0,0,0,.7); }
+.island .isl-slide h2 { margin: 0; font: 800 clamp(2.7rem, 10.5vw, 5.4rem)/.92 var(--display); letter-spacing: -.04em; }
+/* page dots: a 24 px target around each 7 px dot; the current one stretches */
+.isl-nav { display: flex; align-items: center; justify-content: center; gap: .6rem; margin-top: 1.3rem; }
+.isl-dots { display: flex; justify-content: center; gap: 2px; }
+.isl-arrow { display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 0; border-radius: 99px; background: rgba(255,255,255,.1); color: #fff; cursor: pointer; transition: background .2s, transform .2s var(--ease); }
+.isl-arrow:hover { background: rgba(255,255,255,.18); }
+.isl-arrow:active { transform: scale(.92); }
+.isl-arrow:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.isl-arrow svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.isl-dots button { display: grid; place-items: center; width: 24px; height: 24px; padding: 0; border: 0; background: none; cursor: pointer; transition: width .35s var(--ease); }
+.isl-dots button::before { content: ""; width: 7px; height: 7px; border-radius: 99px; background: rgba(255,255,255,.32); transition: width .35s var(--ease), background .35s; }
+.isl-dots button[aria-current="true"] { width: 34px; }
+.isl-dots button[aria-current="true"]::before { width: 22px; background: #fff; }
+.isl-dots button:focus-visible { outline: 2px solid #fff; outline-offset: 0; border-radius: 99px; }
+/* on wide screens each flagship slide shows a real XR screenshot beside its text; on phones it's left out (and not loaded) */
+.isl-slide .feat-shot { display: none; }
+@media (min-width: 52rem) {
+  /* the text sits as one block in the middle rows; the spare height goes to the rows above and below it */
+  .isl-slide.feat { display: grid; grid-template-columns: 1fr auto; grid-template-rows: 1fr auto auto auto auto 1fr; column-gap: 2.5rem; }
+  .isl-slide.feat > :not(.feat-shot) { grid-column: 1; }
+  .isl-slide.feat > .feat-icon { grid-row: 2; }
+  .isl-slide.feat > h2 { grid-row: 3; }
+  .isl-slide.feat > .isl-sub { grid-row: 4; }
+  .isl-slide.feat > .isl-actions { grid-row: 5; }
+  .isl-slide .feat-shot { display: block; grid-column: 2; grid-row: 1 / -1; align-self: center; width: 190px; margin-right: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) { .isl-slides { scroll-behavior: auto; } }
