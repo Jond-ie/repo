@@ -1,0 +1,142 @@
+/* Jond_ie: shared base for every page. The Dynamic Island is the interface: each page opens with the island grown
+   into a Live Activity, and the island shrinks back to a pill (the navigation) when you scroll. */
+/* Monochrome liquid glass: black, white and greys only. The only colour on a page comes from the tweaks' own icons and screenshots. */
+:root {
+  color-scheme: light dark;
+  --page: #f2f2f4; --ink: #0a0a0b; --muted: #505058; --faint: #66666e;
+  --act: #0a0a0b; --act-ink: #fff; --leaf: var(--ink); --link: var(--ink);
+  --line: rgba(0,0,0,.1); --hover: rgba(0,0,0,.045); --grid: .2; --glow: rgba(255,255,255,.9);
+  --island-shadow: 0 30px 60px -28px rgba(0,0,0,.5), 0 2px 6px rgba(0,0,0,.1);
+  --island-glass: rgba(14,14,16,.86);
+  --display: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --text: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, monospace;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --page: #070708; --ink: #f5f5f7; --muted: #a3a3aa; --faint: #8a8a91;
+    --act: #f5f5f7; --act-ink: #0a0a0b;
+    --line: rgba(255,255,255,.1); --hover: rgba(255,255,255,.05); --grid: .24; --glow: rgba(255,255,255,.07);
+    --island-shadow: 0 30px 70px -30px rgba(0,0,0,.9);
+    --island-glass: rgba(34,34,38,.48);
+  }
+}
+:root[data-theme="dark"] {
+  --page: #070708; --ink: #f5f5f7; --muted: #a3a3aa; --faint: #8a8a91;
+  --act: #f5f5f7; --act-ink: #0a0a0b;
+  --line: rgba(255,255,255,.1); --hover: rgba(255,255,255,.05); --grid: .24; --glow: rgba(255,255,255,.07);
+  --island-shadow: 0 30px 70px -30px rgba(0,0,0,.9);
+  --island-glass: rgba(34,34,38,.48);
+}
+
+* { box-sizing: border-box; }
+html { background: var(--page); scrollbar-color: var(--faint) transparent; scroll-padding-top: 5rem; }
+body { margin: 0; min-height: 100vh; color: var(--ink); background: var(--page); position: relative; isolation: isolate; overflow-x: hidden;
+  font: 17px/1.5 var(--text); -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; caret-color: var(--act); }
+/* the blank-icon grid behind the island, and a soft light for the glass to pick up */
+body::before, body::after { content: ""; position: absolute; inset: 0 0 auto; height: 56rem; z-index: -1; pointer-events: none; }
+body::before { --g: min(62rem, 170vw); opacity: var(--grid);
+  background: url(grid.svg) 50% calc(17rem - var(--g) / 2) / var(--g) var(--g) no-repeat;
+  -webkit-mask: radial-gradient(46rem 28rem at 50% 13rem, #000 20%, transparent 70%); mask: radial-gradient(46rem 28rem at 50% 13rem, #000 20%, transparent 70%); }
+body::after { background: radial-gradient(30rem 20rem at 50% 14rem, var(--glow), transparent 70%); }
+::selection { background: color-mix(in srgb, var(--act) 55%, transparent); color: var(--ink); }
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+:focus-visible { outline: 2.5px solid var(--act); outline-offset: 3px; border-radius: 10px; }
+.wordmark { font-family: var(--display); font-optical-sizing: auto; font-weight: 800; letter-spacing: -.045em; }
+.skip { position: absolute; left: 1rem; top: -4rem; z-index: 50; background: var(--act); color: var(--act-ink); padding: .6rem 1rem; border-radius: 999px; font-weight: 700; }
+.skip:focus { top: 1rem; }
+
+/* ───── the island ───── */
+@property --a { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+.island { position: relative; isolation: isolate; width: min(100% - 16px, 50rem); margin: 10px auto 0; padding: 10px 10px 12px;
+  border-radius: 46px; color: #fff; box-shadow: var(--island-shadow), inset 0 1px 0 rgba(255,255,255,.22), inset 0 -1px 0 rgba(255,255,255,.06), inset 0 0 0 1px rgba(255,255,255,.07);
+  background: var(--island-glass); -webkit-backdrop-filter: blur(30px) saturate(180%); backdrop-filter: blur(30px) saturate(180%);
+  animation: island-open 1.1s var(--ease) .1s both; }
+/* the glass edge: light catching the rim and slowly moving round it */
+.island::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; z-index: -1;
+  background: conic-gradient(from var(--a), rgba(255,255,255,.7), rgba(255,255,255,.1) 22%, rgba(255,255,255,.04) 50%, rgba(255,255,255,.1) 78%, rgba(255,255,255,.7));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); animation: sweep 14s linear infinite; }
+@keyframes sweep { to { --a: 360deg; } }
+/* opens out of a pill-sized island at the top, the way a Live Activity expands */
+@keyframes island-open { from { clip-path: inset(0 calc(50% - 92px) calc(100% - 64px) calc(50% - 92px) round 32px); } to { clip-path: inset(-4px round 48px); } }
+.isl-body { animation: rise .9s var(--ease) .45s both; }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); filter: blur(6px); } }
+
+.isl-bar { display: flex; align-items: center; gap: .75rem; height: 52px; padding: 0 6px 0 4px; }
+.isl-mark { display: inline-flex; align-items: center; gap: .6rem; }
+.isl-mark img { width: 40px; height: 40px; border-radius: 12px; }
+/* tweaks without an icon: a plain graphite tile, so colour only comes from real icons */
+.icon.letter { background-color: #2c2c30 !important; }
+.isl-mark .wordmark { font-size: 1.55rem; line-height: 1; }
+.isl-links { margin-left: auto; display: flex; align-items: center; gap: .25rem; }
+.isl-links a { display: inline-grid; place-items: center; min-width: 40px; height: 40px; padding: 0 .8rem; border-radius: 999px; color: rgba(255,255,255,.82); font-size: .9rem; font-weight: 600; text-decoration: none; }
+.isl-links a:hover { background: rgba(255,255,255,.1); color: #fff; }
+.isl-links svg { width: 16px; height: 16px; fill: currentColor; }
+.cam { width: 30px; height: 30px; flex: none; border-radius: 50%;
+  background: radial-gradient(circle at 38% 34%, rgba(255,255,255,.35) 0 2px, transparent 3px), radial-gradient(circle, #1c1c20 0 7px, #050506 8px 11px, #232327 12px 13px, transparent 14px); }
+
+.isl-body { padding: clamp(1.6rem, 5vw, 3.2rem) clamp(1rem, 5vw, 3.2rem) .4rem; }
+.island h1 { margin: 0; font: 800 clamp(2.7rem, 10.5vw, 5.4rem)/.92 var(--display); letter-spacing: -.04em; max-width: 11ch; text-wrap: balance; }
+.isl-sub { margin: 1.1rem 0 0; font-size: clamp(1.05rem, 2.4vw, 1.25rem); color: rgba(255,255,255,.72); max-width: 34ch; text-wrap: pretty; }
+.isl-actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.7rem; }
+.isl-actions a { display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 1.6rem; border-radius: 999px; font-weight: 700; font-size: 1.02rem; text-decoration: none;
+  transition: transform .3s var(--ease), background .2s; }
+.isl-actions .get { background: #fff; color: #0a0a0b; }
+.isl-actions .alt { background: rgba(255,255,255,.12); color: #fff; }
+.isl-actions a:hover { transform: translateY(-1px); } .isl-actions .alt:hover { background: rgba(255,255,255,.18); }
+.isl-actions a:active { transform: scale(.97); }
+.isl-repo { display: flex; align-items: center; gap: .4rem; margin: 1rem 0 0; max-width: 100%; }
+.isl-repo code { font: .86rem/1 var(--mono); color: rgba(255,255,255,.66); padding: .55rem .7rem; border-radius: 10px; background: rgba(255,255,255,.07); user-select: all; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.isl-repo .copy { font: 650 .84rem/1 var(--text); color: #fff; background: none; border: 0; padding: .55rem .6rem; border-radius: 10px; cursor: pointer; }
+.isl-repo .copy:hover { background: rgba(255,255,255,.1); }
+.desktop-note { margin: .8rem 0 0; font-size: .88rem; color: rgba(255,255,255,.55); max-width: 40ch; }
+.desktop-note[hidden] { display: none; }
+
+/* the flagships, as live activities */
+.activities { list-style: none; margin: clamp(1.8rem, 4vw, 2.6rem) 0 0; padding: .4rem 0 0; border-top: 1px solid rgba(255,255,255,.1);
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 13.5rem), 1fr)); gap: 0 .5rem; }
+.activities a { display: flex; align-items: center; gap: .8rem; padding: .7rem .6rem; margin: 0 -.6rem; border-radius: 20px; color: #fff; text-decoration: none; transition: background .2s; }
+.activities a:hover { background: rgba(255,255,255,.07); }
+.activities img { width: 44px; height: 44px; border-radius: 12px; flex: none; }
+.activities a > span { flex: 1; min-width: 0; display: grid; line-height: 1.25; }
+.activities b { font: 700 1.08rem/1.2 var(--display); letter-spacing: -.02em; }
+.activities b + span { font-size: .84rem; color: rgba(255,255,255,.6); }
+.activities .chev { width: 18px; height: 18px; flex: none; fill: none; stroke: rgba(255,255,255,.4); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+@media (min-width: 46rem) { .activities a { flex-direction: column; align-items: flex-start; } .activities .chev { display: none; } }
+
+/* ───── the pill: the island again, small, once you scroll ───── */
+.pill { position: fixed; z-index: 40; top: 8px; left: 50%; display: flex; align-items: center; gap: .2rem; height: 46px; padding: 0 5px 0 6px;
+  border-radius: 999px; background: rgba(10,10,12,.8); -webkit-backdrop-filter: blur(20px) saturate(180%); backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 10px 30px -12px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.18), inset 0 0 0 1px rgba(255,255,255,.08);
+  transform: translate(-50%, -70px) scale(.7); opacity: 0; pointer-events: none; transition: transform .55s var(--ease), opacity .3s; }
+.pill.on { transform: translate(-50%, 0) scale(1); opacity: 1; pointer-events: auto; }
+.pill a { color: #fff; text-decoration: none; display: inline-flex; align-items: center; height: 36px; border-radius: 999px; font-weight: 650; font-size: .9rem; }
+.pill-home { gap: .45rem; padding: 0 .7rem 0 .2rem; } .pill-home img { border-radius: 8px; } .pill-home .wordmark { font-size: 1.12rem; }
+.pill-search { padding: 0 .8rem; color: rgba(255,255,255,.75) !important; } .pill-search:hover { background: rgba(255,255,255,.1); }
+.pill-x { width: 36px; justify-content: center; color: rgba(255,255,255,.78) !important; } .pill-x:hover { background: rgba(255,255,255,.1); color: #fff !important; }
+.pill-x svg { width: 15px; height: 15px; fill: currentColor; }
+.pill-get { padding: 0 1rem; background: #fff; color: #0a0a0b !important; font-weight: 750 !important; }
+
+/* ───── footer ───── */
+.foot { width: min(100% - 32px, 76rem); margin: clamp(3.5rem, 8vw, 6rem) auto 0; padding: 2rem 0 3rem; border-top: 1px solid var(--line); font-size: .93rem; }
+.foot-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+.foot-top .isl-mark img { width: 32px; height: 32px; border-radius: 9px; }
+.foot-top .wordmark { font-size: 1.3rem; }
+.foot-top p { margin: 0; color: var(--muted); }
+.foot-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.foot-cols h3 { margin: 0 0 .5rem; font-size: .8rem; font-weight: 700; color: var(--faint); }
+.foot-cols a { display: block; padding: .25rem 0; color: var(--ink); text-decoration: none; }
+.foot-cols a:hover { text-decoration: underline; }
+.foot-note { margin: .4rem 0; color: var(--faint); font-size: .84rem; max-width: 70ch; }
+
+/* phones */
+@media (max-width: 34rem) {
+  body { font-size: 16px; }
+  .island { border-radius: 40px; }
+  .isl-links a:not([aria-label]) { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before { animation: none !important; transition: none !important; }
+}

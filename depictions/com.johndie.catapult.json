@@ -58,7 +58,23 @@
         },
         {
           "class": "DepictionMarkdownView",
+          "markdown": "Catapult replaces the iOS Home Screen with **Trebuchet**, the launcher from LineageOS, ported to iOS by MakrSas and extended in Catapult. The layout follows the same rules as on Android.\n\n- **Replaced:** the Home Screen pages, folders and dock, plus Today View, the Spotlight pull-down and the App Library. The app drawer and its search do their jobs.\n- **Untouched:** Control Center, notifications, the app switcher and the apps themselves. Apps still open and close with Apple's own animation, from their icon.\n- **Settings** live on the Home Screen: long-press an empty spot, then Home settings. Icon shapes and grid size are under Wallpaper & style."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Using it"
+        },
+        {
+          "class": "DepictionMarkdownView",
           "markdown": "1. **Swipe up** for the app drawer: every app A to Z, with a letter bar to jump.\n2. **Long-press an empty spot** for Wallpaper & style (icon shapes, grid size), Widgets and Home settings.\n3. **Long-press an app** for its shortcuts, App info and Remove. Drag it onto another app to make a folder.\n4. **Type in the search bar:** apps, sums like `9+2`, conversions like `5 km in mi`, or a web search.\n\n[See it in action and everything it can do →](https://jond-ie.github.io/repo/catapult/)"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Safety and performance"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **It switches itself off if it breaks.** If the Home Screen crashes right after starting 5 times in a row, Catapult turns itself off and the normal Home Screen comes back. A normal respring doesn't count. You can also uninstall it from Sileo.\n- **Smooth on older iPhones.** Scrolling, page swipes and app launches are tuned to stay smooth, even on an iPhone 7.\n- **Off until you want it.** The icon and font options for all of iOS only load when you switch them on."
         },
         {
           "class": "DepictionHeaderView",

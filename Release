@@ -1,8 +1,8 @@
-Origin: pwnapple
-Label: pwnapple
+Origin: Jond_ie
+Label: Jond_ie
 Suite: stable
 Version: 1.0
 Codename: ios
 Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
 Components: main
-Description: Simple, tested jailbreak tweaks: Triggr, Crest, FrostBoard and more. Rootless & RootHide.
+Description: Simple jailbreak tweaks by Jond_ie: Triggr, Crest, Catapult and more. Rootless & RootHide.

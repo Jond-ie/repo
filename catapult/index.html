@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Catapult · pwnapple</title>
+<title>Catapult · Jond_ie</title>
 <meta name="description" content="Make your iPhone's Home Screen work like Android's: an app drawer with search, one-page folders, widgets, icon shapes, themes and your own font. iOS 14 to 18, Rootless and rootful.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jond-ie.github.io/repo/catapult/">
@@ -12,8 +12,14 @@
 <meta property="og:image" content="https://jond-ie.github.io/repo/assets/catapult.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@Jond_ie">
+<meta name="theme-color" content="#f2f2f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070708" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="../CydiaIcon.png">
 <link rel="apple-touch-icon" href="../assets/catapult.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap">
+<link rel="stylesheet" href="../assets/pwn.css">
 <link rel="stylesheet" href="../assets/site.css">
 <link rel="stylesheet" href="../assets/iphone.css">
 <style>
@@ -25,20 +31,18 @@
 </style>
 </head>
 <body>
-<nav class="bar"><a class="backbtn" href="../">All tweaks</a><span class="title">Catapult</span></nav>
-<main>
-  <header class="hero">
-    <img src="../assets/catapult.png" alt="">
-    <h1>Catapult</h1>
-    <p class="lead">Make your iPhone's Home Screen work like Android's.</p>
-    <p class="tag">Catapult swaps the iOS Home Screen for Trebuchet, the one from LineageOS. Everything else stays iOS, and apps still open with Apple's own animation.</p>
-    <div class="pills"><span class="pill">iOS 14 to 18</span><span class="pill">Rootless &amp; Rootful</span><span class="pill">0.1.0 beta 3</span></div>
-    <div class="buttons">
-      <a class="button" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a>
-      <a class="button secondary" href="https://github.com/Jond-ie/catapult/releases">Download .deb</a>
-    </div>
-    <p class="url">Add the repo, then search <b>Catapult</b>. Free.</p>
-  </header>
+<nav class="pill" aria-label="Jond_ie"><a class="pill-home" href="../"><img src="../assets/mark.svg" alt="" width="26" height="26"><span class="wordmark">Jond_ie</span></a><a class="pill-x" href="https://x.com/Jond_ie" aria-label="Jond_ie on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a class="pill-get" href="sileo://source/https://jond-ie.github.io/repo/">Add</a></nav>
+<main class="page">
+  <header class="island hero">
+  <div class="isl-bar"><h1 class="isl-mark"><img src="../assets/catapult.png" alt="" width="44" height="44"><span class="wordmark">Catapult</span></h1><span class="cam" aria-hidden="true"></span></div>
+  <div class="isl-body">
+    <p class="isl-lead">Make your iPhone's Home Screen work like Android's.</p>
+    <p class="isl-sub">Catapult swaps the iOS Home Screen for Trebuchet, the one from LineageOS. Everything else stays iOS, and apps still open with Apple's own animation.</p>
+    <div class="isl-actions"><a class="get" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a>
+      <a class="alt" href="https://github.com/Jond-ie/catapult/releases">Download .deb</a></div>
+    <p class="isl-note">Add the repo, then search <b>Catapult</b>. Free.</p>
+  </div>
+</header>
 
   <section>
     <h2 class="big">See it move</h2>
@@ -86,31 +90,6 @@
   </section>
 
   <section>
-    <h2 class="big">Everything it can do</h2>
-    <p class="sub">The full list. Items marked <span class="new-word">new</span> came in beta 2.</p>
-    <div class="groups">
-      <div class="group"><h3>Home Screen</h3><p>Laid out by the same rules as on Android, ported from LineageOS.</p>
-        <ul><li>Grid sizes</li><li>Dock</li><li>Page dots</li><li>Search bar under the dock, or on top</li><li>Apple's own open and close animation</li><li>Notification dots</li><li>App shortcuts on long-press</li><li>Drag icons, folders and widgets between pages</li><li>Drag to Remove or Uninstall</li><li>New apps added for you (optional)</li><li>Double tap an empty spot to lock</li><li>Lock the layout so nothing moves</li><li>Icon size slider</li><li>Two-line app names</li></ul></div>
-      <div class="group"><h3>App drawer</h3><p>Swipe up from the Home Screen.</p>
-        <ul><li>All apps A to Z, sorted the way your language sorts</li><li>Letter bar for fast scrolling</li><li>App search</li><li>Quick sums (type 9+2)</li><li>Unit conversions</li><li>Web search</li><li>Pick the browser and search engine</li><li>Hidden apps stay out of the drawer and search</li></ul></div>
-      <div class="group"><h3>Folders</h3><p>Drop one app on another.</p>
-        <ul><li>Open on one page, no swiping through pages</li><li>Android's folder animation</li><li>Rename by tapping the name</li><li>Apps close back into the folder</li></ul></div>
-      <div class="group"><h3>Widgets</h3><p>Made for Catapult, in Material You colours. Long-press an empty spot → Widgets.</p>
-        <ul><li>Clock: digital or analog, aligned left, centre or right</li><li>Weather for a city you pick (Open-Meteo, no account)</li><li>Now Playing, with play, pause and skip</li><li>Batteries: iPhone, AirPods (each bud and the case) and other accessories</li><li>Battery: charge left and when it runs out or fills up</li><li>Several sizes each</li></ul></div>
-      <div class="group"><h3>Icons</h3><p>On the Home Screen, or switch it on for all of iOS: the app switcher, Spotlight, Settings and notifications.</p>
-        <ul><li>12 shapes: circle, squircle, square, rounded rect, 4- and 7-sided cookie, pebble, arch, vessel, teardrop, tapered rect, pure square</li><li>SnowBoard, Anemone and FrostBoard themes you already have</li><li>Use your icons across iOS</li><li>Steps aside if FrostBoard, SnowBoard or Anemone is installed</li></ul></div>
-      <div class="group"><h3>Fonts</h3><p>Put .ttf or .otf files in the Fonts folder with Filza: <code>/var/mobile/Library/Trebuchet/Fonts</code>.</p>
-        <ul><li>Use any font on the Home Screen</li><li>Or as your system font in every app</li><li>Emoji and symbols stay Apple's</li><li>Proper bold text when the font has a Bold file</li><li>Respring prompt when it's ready</li></ul></div>
-      <div class="group"><h3>Page transitions</h3>
-        <ul><li>None (flat slide)</li><li>Cube</li><li>Cylinder</li><li>Carousel</li></ul></div>
-      <div class="group"><h3>Languages <span class="new-word">new</span></h3><p>Follows your iPhone's language.</p>
-        <ul><li class="new">96 languages for LineageOS's own text</li><li class="new">27 for everything Catapult added</li><li class="new">Your region's time, date and number style</li><li class="new">°C or °F, from your iPhone's setting</li></ul></div>
-      <div class="group"><h3>Safety</h3>
-        <ul><li>Safe mode: if the Home Screen keeps crashing right after it starts, Catapult switches itself off</li><li>A normal respring doesn't count</li><li>Uninstall from Sileo any time</li><li>Replaces MakrSas's Trebuchet and keeps your layout</li></ul></div>
-    </div>
-  </section>
-
-  <section>
     <h2 class="big">Screenshots</h2>
     <div class="shots">
       <figure><span class="iphone" style="--sb:linear-gradient(90deg,#0e87ca,#15817c)"><span class="iphone-screen"><span class="iphone-sb" aria-hidden="true"><span class="iphone-time">9:41</span><i></i></span><img src="../screenshots/catapult/home.png" alt="" loading="lazy"></span></span><figcaption>Home screen</figcaption></figure>
@@ -137,7 +116,33 @@
   </section>
 
   <section>
-    <h2 class="big">Tested on</h2>
+    <h2 class="big">More details</h2>
+    <p class="sub">Every feature, the iPhones it was tested on, and notes for developers.</p>
+    <div class="fold-list">
+<details><summary>Everything it can do</summary><div class="fold-body">
+    <p class="sub">The full list. Items marked <span class="new-word">new</span> came in beta 2.</p>
+    <div class="groups">
+      <div class="group"><h3>Home Screen</h3><p>Laid out by the same rules as on Android, ported from LineageOS.</p>
+        <ul><li>Grid sizes</li><li>Dock</li><li>Page dots</li><li>Search bar under the dock, or on top</li><li>Apple's own open and close animation</li><li>Notification dots</li><li>App shortcuts on long-press</li><li>Drag icons, folders and widgets between pages</li><li>Drag to Remove or Uninstall</li><li>New apps added for you (optional)</li><li>Double tap an empty spot to lock</li><li>Lock the layout so nothing moves</li><li>Icon size slider</li><li>Two-line app names</li></ul></div>
+      <div class="group"><h3>App drawer</h3><p>Swipe up from the Home Screen.</p>
+        <ul><li>All apps A to Z, sorted the way your language sorts</li><li>Letter bar for fast scrolling</li><li>App search</li><li>Quick sums (type 9+2)</li><li>Unit conversions</li><li>Web search</li><li>Pick the browser and search engine</li><li>Hidden apps stay out of the drawer and search</li></ul></div>
+      <div class="group"><h3>Folders</h3><p>Drop one app on another.</p>
+        <ul><li>Open on one page, no swiping through pages</li><li>Android's folder animation</li><li>Rename by tapping the name</li><li>Apps close back into the folder</li></ul></div>
+      <div class="group"><h3>Widgets</h3><p>Made for Catapult, in Material You colours. Long-press an empty spot → Widgets.</p>
+        <ul><li>Clock: digital or analog, aligned left, centre or right</li><li>Weather for a city you pick (Open-Meteo, no account)</li><li>Now Playing, with play, pause and skip</li><li>Batteries: iPhone, AirPods (each bud and the case) and other accessories</li><li>Battery: charge left and when it runs out or fills up</li><li>Several sizes each</li></ul></div>
+      <div class="group"><h3>Icons</h3><p>On the Home Screen, or switch it on for all of iOS: the app switcher, Spotlight, Settings and notifications.</p>
+        <ul><li>12 shapes: circle, squircle, square, rounded rect, 4- and 7-sided cookie, pebble, arch, vessel, teardrop, tapered rect, pure square</li><li>SnowBoard, Anemone and FrostBoard themes you already have</li><li>Use your icons across iOS</li><li>Steps aside if FrostBoard, SnowBoard or Anemone is installed</li></ul></div>
+      <div class="group"><h3>Fonts</h3><p>Put .ttf or .otf files in the Fonts folder with Filza: <code>/var/mobile/Library/Trebuchet/Fonts</code>.</p>
+        <ul><li>Use any font on the Home Screen</li><li>Or as your system font in every app</li><li>Emoji and symbols stay Apple's</li><li>Proper bold text when the font has a Bold file</li><li>Respring prompt when it's ready</li></ul></div>
+      <div class="group"><h3>Page transitions</h3>
+        <ul><li>None (flat slide)</li><li>Cube</li><li>Cylinder</li><li>Carousel</li></ul></div>
+      <div class="group"><h3>Languages <span class="new-word">new</span></h3><p>Follows your iPhone's language.</p>
+        <ul><li class="new">96 languages for LineageOS's own text</li><li class="new">27 for everything Catapult added</li><li class="new">Your region's time, date and number style</li><li class="new">°C or °F, from your iPhone's setting</li></ul></div>
+      <div class="group"><h3>Safety</h3>
+        <ul><li>Safe mode: if the Home Screen keeps crashing right after it starts, Catapult switches itself off</li><li>A normal respring doesn't count</li><li>Uninstall from Sileo any time</li><li>Replaces MakrSas's Trebuchet and keeps your layout</li></ul></div>
+    </div>
+  </div></details>
+<details><summary>Tested on</summary><div class="fold-body">
     <p class="sub">Not tried yet: iPads, landscape, iOS 14 (rootful only), and iOS 15 on iPhone XS and newer. <a href="https://github.com/Jond-ie/catapult/issues">Tell me how it goes.</a></p>
     <div class="wide"><table class="tested">
       <tr><th>Phone</th><th>iOS</th></tr>
@@ -147,6 +152,8 @@
       <tr><td>iPhone SE (2nd gen)</td><td>17.5.1</td></tr>
       <tr><td>iPhone 11 Pro</td><td>18.6.2</td></tr>
     </table></div>
+  </div></details>
+    </div>
   </section>
 
   <div class="request">
@@ -155,11 +162,21 @@
     <a class="button" href="https://github.com/Jond-ie/catapult/issues">Request or report</a>
   </div>
 
-  <footer>
-    <div class="social"><a href="../">All tweaks</a><a href="https://x.com/Jond_ie">X @Jond_ie</a><a href="https://github.com/Jond-ie/catapult">GitHub</a></div>
-    <p>Catapult by Jond_ie, built on <a href="https://github.com/MakrSas/Trebuchet">MakrSas's Trebuchet port</a>. Trebuchet and Launcher3 by LineageOS and the Android Open Source Project (Apache 2.0); Roboto Flex by Google (OFL). Licences are in the package and <a href="https://github.com/Jond-ie/catapult/tree/main/third-party">on GitHub</a>.</p>
-  </footer>
+  
 </main>
+<footer class="foot">
+  <div class="foot-top">
+    <a class="isl-mark" href="../" style="color:inherit;text-decoration:none"><img src="../assets/mark.svg" alt="" width="32" height="32"><span class="wordmark">Jond_ie</span></a>
+    <p>Want a tweak, or a port of an old favourite? <a href="https://github.com/Jond-ie/repo/issues/new">Request it</a>.</p>
+  </div>
+  <div class="foot-cols">
+    <div><h3>Repo</h3><a href="../">All tweaks</a><a href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a><a href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a></div>
+    <div><h3>Help</h3><a href="https://github.com/Jond-ie/repo/issues">Report a bug</a><a href="../support/">Support and donations</a></div>
+    <div><h3>Jond_ie</h3><a href="https://x.com/Jond_ie">X</a><a href="https://github.com/Jond-ie">GitHub</a></div>
+  </div>
+  <p class="foot-note">Catapult by Jond_ie, built on <a href="https://github.com/MakrSas/Trebuchet">MakrSas's Trebuchet port</a>. Trebuchet and Launcher3 by LineageOS and the Android Open Source Project (Apache 2.0); Roboto Flex by Google (OFL). Licences are in the package and <a href="https://github.com/Jond-ie/catapult/tree/main/third-party">on GitHub</a>.</p>
+  <p class="foot-note">© 2026 Jond_ie</p>
+</footer>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>

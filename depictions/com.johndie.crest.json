@@ -58,6 +58,30 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "How it works"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Every format through a decoder made for it:** FLAC, ALAC, WAV, AIFF, MP3, AAC, Opus, Vorbis, APE, WavPack, Musepack, TAK, TTA, WMA, DSD (DSF and DFF) and CUE sheets.\n- **Each song at its own sample rate.** When the next song has a different rate (say 44.1 kHz, then 96 kHz), Crest switches the output rate instead of converting the song, with a very short pause only where the rates differ. Albums at one rate stay gapless.\n- **It tells you when it can't.** If your output can't play a file's rate, Crest resamples and shows a RESAMPLED tag. In Bit-Perfect mode it shows BIT-PERFECT, or why the song isn't.\n- **Gapless, crossfade and Automix.** Automix blends songs on the beat; while two songs blend, both play at one rate.\n- **Loudness:** ReplayGain (track or album) and EBU R128.\n- **EQ for each output.** Your speaker, AirPods, DAC and car each keep their own EQ, and Crest switches when the output changes. You can import AutoEQ curves.\n- **Your Music app songs** (jailbreak and TrollStore builds) are read where they already are. The first scan opens each song once to read its format and loudness; on a big library that takes a few minutes, so keep Crest open until it finishes."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Privacy"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Offline by default.** No analytics, no ads, no account. Crest only goes online for scrobbling or online lyrics, and both stay off until you turn them on.\n- **Wi-Fi Transfer is locked.** It only runs while its screen is open, and your computer needs the PIN shown on the phone.\n- **Your files stay as they are.** Songs from the Music app are read in place. Nothing is copied, converted or uploaded."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Which build to get"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Jailbroken (Rootless or RootHide):** this repo. Plays your Music app songs, has CarPlay, and adds music with Wi-Fi Transfer, Files or Filza.\n- **TrollStore:** the .tipa from [GitHub](https://github.com/Jond-ie/crest/releases). Music app songs and CarPlay; adds music with Wi-Fi Transfer.\n- **Not jailbroken:** the sideload .ipa from [GitHub](https://github.com/Jond-ie/crest/releases). No Music app songs or CarPlay (the sandbox blocks them); adds music with Wi-Fi Transfer."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "What's New in 1.0.0"
         },
         {
@@ -78,7 +102,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **Add music** with Library → Add from Files, or with Wi-Fi Transfer from a computer on the same network.\n- It also plays the songs already synced to the Music app (not Apple Music downloads).\n- CarPlay hasn't been tried in a car yet. If you try it, [tell me](https://github.com/Jond-ie/crest/issues) how it goes.\n- A song won't play or sounds wrong? [Tell me](https://github.com/Jond-ie/crest/issues)."
+          "markdown": "- **Add music** with Library → Add from Files, or with Wi-Fi Transfer from a computer on the same network.\n- **Apple Music subscription downloads** can't play: Apple locks them to the Music app. Songs synced from a computer, bought on iTunes or uploaded to iCloud Music Library work.\n- **CarPlay** is built in but hasn't been tried in a real car yet. If you try it, [tell me](https://github.com/Jond-ie/crest/issues) how it goes.\n- **A song won't play or sounds wrong?** [Open an issue](https://github.com/Jond-ie/crest/issues) with your build (.deb, .tipa or .ipa), iOS version and the file's format (Crest shows it under Get Info)."
         },
         {
           "class": "DepictionHeaderView",

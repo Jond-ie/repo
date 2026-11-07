@@ -3,39 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Support · pwnapple</title>
+<title>Support · Jond_ie</title>
 <meta name="description" content="How to report a bug, ask a question, or support Jond_ie's free jailbreak tweaks.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jond-ie.github.io/repo/support/">
-<meta property="og:title" content="Support · pwnapple">
+<meta property="og:title" content="Support · Jond_ie">
 <meta property="og:description" content="How to report a bug, ask a question, or support Jond_ie's free jailbreak tweaks.">
 <meta property="og:image" content="https://jond-ie.github.io/repo/CydiaIcon.png">
+<meta name="theme-color" content="#f2f2f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070708" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="../CydiaIcon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap">
+<link rel="stylesheet" href="../assets/pwn.css">
 <link rel="stylesheet" href="../assets/site.css">
 <style>
   .addr { display: block; }
   .addr code { display: inline-block; margin: .3rem 0 .5rem; font-size: .8rem; }
   .net { font-size: .78rem; font-weight: 600; color: var(--faint); margin-left: .3rem; }
-  .copy { background: var(--well); box-shadow: var(--well-shadow); }
-  .copy.done { color: var(--accent); }
   .stack { display: grid; gap: .8rem; }
   section > p, .card p { max-width: 70ch; }
 </style>
 </head>
 <body>
-<nav class="bar"><a class="backbtn" href="../">All tweaks</a><span class="title">Support</span></nav>
-<main>
-  <header class="hero">
-    <h1>Support</h1>
-    <p class="lead">Every tweak here is free. Bug reports help the most; donations help me keep working on them.</p>
-  </header>
+<nav class="pill" aria-label="Jond_ie"><a class="pill-home" href="../"><img src="../assets/mark.svg" alt="" width="26" height="26"><span class="wordmark">Jond_ie</span></a><a class="pill-x" href="https://x.com/Jond_ie" aria-label="Jond_ie on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a class="pill-get" href="sileo://source/https://jond-ie.github.io/repo/">Add</a></nav>
+<main class="page">
+  <header class="island hero">
+  <div class="isl-bar"><h1 class="isl-mark"><img src="../assets/mark.svg" alt="" width="44" height="44"><span class="wordmark">Support</span></h1><span class="cam" aria-hidden="true"></span></div>
+  <div class="isl-body">
+    <p class="isl-lead">Support Jond_ie.</p>
+    <p class="isl-sub">Every tweak here is free. Bug reports help the most; donations help me keep working on them.</p>
+  </div>
+</header>
 
   <section>
-    <h2>Report a bug or crash</h2>
+    <h2 class="big">Report a bug or crash</h2>
     <div class="stack">
       <div class="card"><div>
         <h3>Open an issue</h3>
-        <p>Use the tweak's own repo if it has one (linked on its Details page), or the <a href="https://github.com/Jond-ie/repo/issues">pwnapple issue tracker</a>. Include your device, iOS version, jailbreak and the tweak version. For a crash, attach the log from Settings &gt; Privacy &amp; Security &gt; Analytics &amp; Improvements &gt; Analytics Data.</p>
+        <p>Use the tweak's own repo if it has one (linked on its Details page), or the <a href="https://github.com/Jond-ie/repo/issues">repo issue tracker</a>. Include your device, iOS version, jailbreak and the tweak version. For a crash, attach the log from Settings &gt; Privacy &amp; Security &gt; Analytics &amp; Improvements &gt; Analytics Data.</p>
       </div></div>
       <div class="card"><div>
         <h3>Questions</h3>
@@ -45,7 +52,7 @@
   </section>
 
   <section>
-    <h2>Donate</h2>
+    <h2 class="big">Donate</h2>
     <p>Crypto only for now. Check the network before you send: coins sent on the wrong network can't be recovered.</p>
     <div class="stack">
     <div class="card addr">
@@ -75,6 +82,18 @@
     </div>
   </section>
 </main>
+<footer class="foot">
+  <div class="foot-top">
+    <a class="isl-mark" href="../" style="color:inherit;text-decoration:none"><img src="../assets/mark.svg" alt="" width="32" height="32"><span class="wordmark">Jond_ie</span></a>
+    <p>Want a tweak, or a port of an old favourite? <a href="https://github.com/Jond-ie/repo/issues/new">Request it</a>.</p>
+  </div>
+  <div class="foot-cols">
+    <div><h3>Repo</h3><a href="../">All tweaks</a><a href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a><a href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a></div>
+    <div><h3>Help</h3><a href="https://github.com/Jond-ie/repo/issues">Report a bug</a><a href="../support/">Support and donations</a></div>
+    <div><h3>Jond_ie</h3><a href="https://x.com/Jond_ie">X</a><a href="https://github.com/Jond-ie">GitHub</a></div>
+  </div>
+  <p class="foot-note">© 2026 Jond_ie</p>
+</footer>
 <script>
 document.querySelectorAll('.copy').forEach(function (b) {
   b.addEventListener('click', function () {

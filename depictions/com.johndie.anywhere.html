@@ -3,93 +3,62 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anywhere · pwnapple</title>
+<title>Anywhere · Jond_ie</title>
 <meta name="description" content="Put apps and widgets anywhere on the Home Screen, with empty spaces in between, like iOS 18. Nothing to set up: hold an app and drag it where you want it.">
+<meta name="theme-color" content="#f2f2f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070708" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="../CydiaIcon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,650..800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap">
+<link rel="stylesheet" href="../assets/pwn.css">
+<link rel="stylesheet" href="../assets/site.css">
 <link rel="stylesheet" href="../assets/iphone.css">
 <style>
-  /* Same colours as the front page (assets/home.css), quieter: these pages are for reading. */
-  :root {
-    color-scheme: light dark;
-    --page: #f4f3fa; --ink: #17193a; --muted: #50547a; --faint: #74789b;
-    --gold: #f2b100; --gold-ink: #17193a; --leaf: #127541; --link: #4a3ee0;
-    --panel: #ffffff; --line: rgba(23,25,58,.1);
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --page: #0f1230; --ink: #f1f0ff; --muted: #a9acd0; --faint: #8084ab;
-      --gold: #ffc233; --leaf: #3ed68a; --link: #ab9dff;
-      --panel: #181c45; --line: rgba(255,255,255,.09);
-    }
-  }
-  :root[data-theme="dark"] {
-    --page: #0f1230; --ink: #f1f0ff; --muted: #a9acd0; --faint: #8084ab;
-    --gold: #ffc233; --leaf: #3ed68a; --link: #ab9dff;
-    --panel: #181c45; --line: rgba(255,255,255,.09);
-  }
-  * { box-sizing: border-box; }
-  html { background: var(--page); }
-  body {
-    margin: 0 auto; max-width: 42rem; padding: 1.5rem 1rem 4rem;
-    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", sans-serif;
-    color: var(--ink); background: var(--page); overflow-wrap: anywhere;
-    -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%;
-  }
-  a { color: var(--link); text-underline-offset: .15em; }
-  a:focus-visible, summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
-  .back { display: inline-block; font-size: .9rem; margin-bottom: 1.6rem; text-decoration: none; }
-  .back:hover { text-decoration: underline; }
-
-  .top { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.1rem; }
-  .icon { width: 64px; height: 64px; border-radius: 16px; flex: none; display: grid; place-items: center; object-fit: cover; }
-  .icon.letter { color: #fff; font: 800 1.6rem/1 "Bricolage Grotesque", -apple-system, sans-serif; }
-  h1 { margin: 0; font: 750 2rem/1.1 "Bricolage Grotesque", -apple-system, sans-serif; letter-spacing: -.02em; }
-  .tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .45rem; }
-  .badge { display: inline-flex; align-items: center; height: 1.35rem; padding: 0 .5rem; border-radius: 6px;
-    font: 600 .75rem/1 -apple-system, BlinkMacSystemFont, system-ui, sans-serif; color: var(--muted); background: var(--line); }
-  .badge.ios { color: var(--leaf); background: color-mix(in srgb, var(--leaf) 13%, transparent); }
-
-  .intro > p:first-child { font-size: 1.12rem; }
-  h2 { margin: 2.2rem 0 .6rem; font: 700 1.2rem/1.2 "Bricolage Grotesque", -apple-system, sans-serif; letter-spacing: -.01em; }
-  h3 { margin: 1.4rem 0 .4rem; font-size: 1rem; }
-  p { margin: 0 0 .85rem; }
-  ul { margin: 0 0 .85rem; padding-left: 1.2rem; }
-  li { margin: .3rem 0; }
-  li::marker { color: var(--faint); }
-  code { font-size: .9em; background: var(--line); padding: .05rem .3rem; border-radius: 4px; }
-
-  .facts { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.4rem 0; padding: 0; }
-  .facts div { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: .55rem .85rem; min-width: 8.5rem; }
-  .facts dt { font-size: .75rem; color: var(--muted); margin: 0; }
-  .facts dd { margin: .1rem 0 0; font-weight: 650; }
-
-  .get { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 1rem 1.1rem; margin: 1.6rem 0; }
-  .get p { margin: 0 0 .75rem; color: var(--muted); font-size: .95rem; }
-  .get .buttons { display: flex; flex-wrap: wrap; gap: .5rem; }
-  .button { display: inline-block; font-weight: 700; padding: .6rem 1.15rem; border-radius: 999px; text-decoration: none;
-    background: var(--gold); color: var(--gold-ink); }
-  .button.secondary { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--faint); }
-  .button:hover { filter: brightness(1.05); }
-
-  details.log { margin-top: 2.2rem; border-top: 1px solid var(--line); padding-top: 1rem; }
-  details.log summary { cursor: pointer; font: 700 1.2rem/1.2 "Bricolage Grotesque", -apple-system, sans-serif; }
-  details.log summary span { font: 400 .9rem/1 -apple-system, system-ui, sans-serif; color: var(--muted); margin-left: .3rem; }
-  .dep-shots { margin: 1.4rem 0; }
-  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); }
-  @media (max-width: 30rem) {
-    h1 { font-size: 1.7rem; }
-    .icon { width: 54px; height: 54px; border-radius: 14px; }
-  }
+  /* Depictions: generated by depiction-html.py from depictions/<id>.json. Sileo and Zebra open these pages too. */
+  .page { width: min(100% - 32px, 44rem); }
+  .isl-mark .icon { width: 44px; height: 44px; border-radius: 11px; flex: none; display: grid; place-items: center; object-fit: cover; }
+  .isl-mark .icon.letter { color: #fff; font: 800 1.3rem/1 var(--display); }
+  .island .isl-lead { font-size: clamp(1.45rem, 5.4vw, 2.6rem); max-width: 24ch; }
+  .intro { margin-top: 2.4rem; font-size: 1.05rem; }
+  .page h2 { margin: 2.6rem 0 .7rem; padding-top: 1rem; border-top: 1px solid var(--line); font: 750 1.5rem/1.15 var(--display); letter-spacing: -.025em; }
+  .page h3 { margin: 1.4rem 0 .4rem; font: 700 1.05rem/1.25 var(--display); }
+  .page p { margin: 0 0 .9rem; }
+  .page ul { margin: 0 0 .9rem; padding-left: 1.2rem; }
+  .page li { margin: .3rem 0; }
+  .page li::marker { color: var(--faint); }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 0 1.4rem; margin: 1.6rem 0; padding: 0; }
+  .facts div { padding: .7rem 0; border-bottom: 1px solid var(--line); }
+  .facts dt { font-size: .78rem; font-weight: 700; color: var(--faint); margin: 0; }
+  .facts dd { margin: .15rem 0 0; font-weight: 650; }
+  .dep-shots { display: flex; gap: 1.2rem; overflow-x: auto; scroll-snap-type: x mandatory; margin: 1.4rem -16px; padding: 0 16px .6rem; scrollbar-width: none; }
+  .dep-shots::-webkit-scrollbar { display: none; }
+  .dep-shots > * { flex: none; width: min(56vw, 220px); scroll-snap-align: start; }
+  details.log { margin-top: 2.4rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  details.log summary { font: 700 1.2rem/1.2 var(--display); letter-spacing: -.02em; }
+  details.log summary span { font: 400 .9rem/1 var(--text); color: var(--muted); margin-left: .5rem; }
+  .toc { margin: 2.4rem 0 0; padding: 1rem 0 0; border-top: 1px solid var(--line); }
+  .toc h2 { all: unset; display: block; font: 700 .8rem/1 var(--text); color: var(--faint); margin-bottom: .6rem; }
+  .toc ol { margin: 0; padding: 0; list-style: none; columns: 2 12rem; column-gap: 1.6rem; counter-reset: t; }
+  .toc li { margin: 0; padding: .32rem 0; break-inside: avoid; counter-increment: t; font-size: .95rem; }
+  .toc li::before { content: counter(t); display: inline-block; width: 1.5em; color: var(--faint); font: 600 .8rem/1 var(--mono); font-variant-numeric: tabular-nums; }
+  .toc a { color: var(--ink); text-decoration: none; } .toc a:hover { color: var(--link); text-decoration: underline; }
+  .page h2[id] { scroll-margin-top: 5rem; }
 </style>
 </head>
 <body>
-<a class="back" href="../">&larr; All tweaks</a>
-<header class="top"><span class="icon letter" style="background:#5e5ce6" aria-hidden="true">A</span><div><h1>Anywhere</h1><div class="tags"><span class="badge ios" title="Works on iOS 15 to 17">iOS 15–17</span></div></div></header>
+<nav class="pill" aria-label="Jond_ie"><a class="pill-home" href="../"><img src="../assets/mark.svg" alt="" width="26" height="26"><span class="wordmark">Jond_ie</span></a><a class="pill-x" href="https://x.com/Jond_ie" aria-label="Jond_ie on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a class="pill-get" href="sileo://source/https://jond-ie.github.io/repo/">Add</a></nav>
+<main class="page">
+<header class="island hero">
+  <div class="isl-bar"><h1 class="isl-mark"><span class="icon letter" style="background:#5e5ce6" aria-hidden="true">A</span><span class="wordmark">Anywhere</span></h1><span class="cam" aria-hidden="true"></span></div>
+  <div class="isl-body">
+    <p class="isl-lead">Put apps and widgets anywhere on the Home Screen, with gaps, like iOS 18.</p>
+    <div class="isl-actions"><a class="get" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a><a class="alt" href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a></div>
+    <p class="isl-note">Add the repo, then search <b>Anywhere</b>.</p>
+  </div>
+</header>
 <div class="intro">
-<p><strong>Put apps and widgets anywhere on the Home Screen, with empty spaces in between, like iOS 18.</strong> Nothing to set up: hold an app and drag it where you want it.</p>
+<p>Nothing to set up: hold an app and drag it where you want it.</p>
 <ul>
   <li><strong>Empty spots stay empty.</strong> Move an app away and nothing slides up to fill the gap.</li>
   <li><strong>Drop it and it stays there.</strong> Nothing else moves.</li>
@@ -99,7 +68,6 @@
 </ul>
 </div>
 <dl class="facts"><div><dt>Version</dt><dd>1.0.0</dd></div><div><dt>Jailbreak</dt><dd>Rootless, RootHide</dd></div></dl>
-<div class="get"><p>Get it from the pwnapple repo: add it to your package manager, then search for Anywhere.</p><div class="buttons"><a class="button" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a><a class="button secondary" href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a></div></div>
 <h2>Works on</h2>
 <ul>
   <li><strong>iOS 15 to 17.</strong> Rootless and RootHide jailbreaks. iOS 18 and later already do this.</li>
@@ -113,8 +81,18 @@
 </ul>
 <h2>Credits</h2>
 <p>Written from scratch by <strong>Jond_ie</strong>, following how iOS 18 arranges the Home Screen.</p>
-<footer>
-  <p>Something wrong, or an idea? <a href="https://github.com/Jond-ie/repo/issues">Tell me on GitHub</a>. <a href="../">All tweaks</a></p>
+</main>
+<footer class="foot">
+  <div class="foot-top">
+    <a class="isl-mark" href="../" style="color:inherit;text-decoration:none"><img src="../assets/mark.svg" alt="" width="32" height="32"><span class="wordmark">Jond_ie</span></a>
+    <p>Something wrong, or an idea? <a href="https://github.com/Jond-ie/repo/issues">Tell me on GitHub</a>.</p>
+  </div>
+  <div class="foot-cols">
+    <div><h3>Repo</h3><a href="../">All tweaks</a><a href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a><a href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a></div>
+    <div><h3>Help</h3><a href="https://github.com/Jond-ie/repo/issues">Report a bug</a><a href="../support/">Support and donations</a></div>
+    <div><h3>Jond_ie</h3><a href="https://x.com/Jond_ie">X</a><a href="https://github.com/Jond-ie">GitHub</a></div>
+  </div>
+  <p class="foot-note">© 2026 Jond_ie</p>
 </footer>
 </body>
 </html>
