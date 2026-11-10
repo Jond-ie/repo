@@ -480,6 +480,42 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.crest.html
 Name: Crest
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.crest.json
 
+Package: com.johndie.crest
+Version: 1.1.0
+Architecture: iphoneos-arm64
+Maintainer: Jond_ie
+Installed-Size: 13092
+Depends: firmware (>= 15.0)
+Filename: debs/com.johndie.crest_1.1.0_iphoneos-arm64.deb
+Size: 3093616
+MD5sum: 099e064dfea009a29ce4538416827a04
+SHA1: cccfbd8012fde562b051edcdd414b348c958d5b2
+SHA256: acd2c9cfdd115ced4f7f5d0d0642fa9256e3ea543488f5b5d54d9085918988bc
+Section: Applications
+Description: High-quality offline music player. Bit-Perfect mode, and plays FLAC, ALAC, DSD, Opus and more at each file's own sample rate, with gapless playback, beat-matched Automix, a parametric EQ that follows your headphones, lyrics, scrobbling, CarPlay and a widget.
+Author: Jond_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.crest.html
+Name: Crest
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.crest.json
+
+Package: com.johndie.crest
+Version: 1.1.0
+Architecture: iphoneos-arm64e
+Maintainer: Jond_ie
+Installed-Size: 13092
+Depends: firmware (>= 15.0)
+Filename: debs/com.johndie.crest_1.1.0_iphoneos-arm64e.deb
+Size: 4975648
+MD5sum: efd2df9dbaff15289883279be94e6e16
+SHA1: 421445af33d7d066930801f24b9bde1bacafbdbd
+SHA256: 0d33c2da5109d3d2b77e9e761747974ff54c37f6f2f4bad5080726ba7e7ae016
+Section: Applications
+Description: High-quality offline music player. Bit-Perfect mode, and plays FLAC, ALAC, DSD, Opus and more at each file's own sample rate, with gapless playback, beat-matched Automix, a parametric EQ that follows your headphones, lyrics, scrobbling, CarPlay and a widget.
+Author: Jond_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.crest.html
+Name: Crest
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.crest.json
+
 Package: com.johndie.density
 Version: 1.0.0
 Architecture: iphoneos-arm64
@@ -1135,6 +1171,42 @@ SHA256: e46259581ee2da421e92612ddf5c05ed310be2e989dc4afceb16beb9d0053e11
 Section: Tweaks
 Description: Activator-lite for rootless Dopamine: assign actions to the home, lock and volume buttons, Touch ID, the mute switch, status bar taps, icon flicks, shaking, and events like charger, Wi-Fi, battery level or a time of day. Supports A12 and newer (arm64e).
 Author: John d_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html
+Name: Triggr
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.json
+
+Package: com.johndie.triggr
+Version: 2.1.0
+Architecture: iphoneos-arm64e
+Maintainer: Jond_ie
+Installed-Size: 2156
+Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, uikittools, firmware (>= 15.0)
+Filename: debs/com.johndie.triggr_2.1.0_iphoneos-arm64e.deb
+Size: 527476
+MD5sum: b353f5579e9823d16959885508128f78
+SHA1: e61123fca561d0d951bbdb21af71005320fab232
+SHA256: 7a8ec0e2a3acbb6eed4f8feddda2541d07f8c5e229768d235ac7fe4f751e14c9
+Section: Tweaks
+Description: Make any button, gesture or event do anything you want. Activator, rebuilt for iOS 15 to 27 on Rootless and RootHide jailbreaks: buttons, screen edges, the status bar, gestures, calls, music, Wi-Fi and times of day, with conditions and sequences.
+Author: Jond_ie
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html
+Name: Triggr
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.json
+
+Package: com.johndie.triggr
+Version: 2.1.0
+Architecture: iphoneos-arm64
+Maintainer: Jond_ie
+Installed-Size: 2156
+Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, uikittools, firmware (>= 15.0)
+Filename: debs/com.johndie.triggr_2.1.0_iphoneos-arm64.deb
+Size: 291246
+MD5sum: 804f7c6bfb08f55ac10393ab945a90c4
+SHA1: a1d30b78ed2754a66cb9307683c263afcb238beb
+SHA256: 2ed85587cdd543e2cd657af3210bc77d05e998e17a2e0ed23dfd395c58f87c4e
+Section: Tweaks
+Description: Make any button, gesture or event do anything you want. Activator, rebuilt for iOS 15 to 27 on Rootless and RootHide jailbreaks: buttons, screen edges, the status bar, gestures, calls, music, Wi-Fi and times of day, with conditions and sequences.
+Author: Jond_ie
 Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html
 Name: Triggr
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.json

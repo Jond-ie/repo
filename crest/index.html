@@ -58,7 +58,7 @@
       <div class="idea"><span class="when">Your headphones are on AutoEQ</span><span class="arrow">→</span>import the curve and you're done</div>
       <div class="idea"><span class="when">Some songs are way louder</span><span class="arrow">→</span>ReplayGain evens them out</div>
       <div class="idea"><span class="when">You sing along</span><span class="arrow">→</span>synced lyrics, word by word when the file has them</div>
-      <div class="idea"><span class="when">You've used the Music app for years</span><span class="arrow">→</span>your songs, plays and stars come with you</div>
+      <div class="idea"><span class="when">You've used the Music app for years</span><span class="arrow">→</span>your songs, plays and favourites come with you</div>
       <div class="idea"><span class="when">You track what you listen to</span><span class="arrow">→</span>ListenBrainz and Last.fm scrobbling</div>
       <div class="idea"><span class="when">You fall asleep to music</span><span class="arrow">→</span>sleep timer, or stop after this song</div>
       <div class="idea"><span class="when">You're not jailbroken</span><span class="arrow">→</span>TrollStore and sideload builds</div>
@@ -76,6 +76,7 @@
       <figure><span class="xr"><span class="xr-body"><span class="xr-screen"><img src="../screenshots/crest/library.png" alt="" width="828" height="1792" loading="lazy"></span></span></span><figcaption>Library</figcaption></figure>
       <figure><span class="xr"><span class="xr-body"><span class="xr-screen"><img src="../screenshots/crest/albums.png" alt="" width="828" height="1792" loading="lazy"></span></span></span><figcaption>Albums</figcaption></figure>
       <figure><span class="xr"><span class="xr-body"><span class="xr-screen"><img src="../screenshots/crest/album.png" alt="" width="828" height="1792" loading="lazy"></span></span></span><figcaption>An album</figcaption></figure>
+      <figure><span class="xr"><span class="xr-body"><span class="xr-screen"><img src="../screenshots/crest/visualizer.png" alt="" width="828" height="1792" loading="lazy"></span></span></span><figcaption>Full-screen visualizer</figcaption></figure>
     </div>
   </section>
 
@@ -114,12 +115,12 @@
     <p class="sub">Every feature, the iPhones it was tested on, and notes for developers.</p>
     <div class="fold-list">
 <details><summary>Everything it can do</summary><div class="fold-body">
-    <p class="sub">The full list, for the audio nerds. Items marked <span class="new-word">new</span> came in 1.0.0.</p>
+    <p class="sub">The full list, for the audio nerds. Items marked <span class="new-word">new</span> came in 1.1.0.</p>
     <div class="groups">
       <div class="group"><h3>Plays almost anything</h3><p>Each format through the best decoder for it.</p>
         <ul><li>FLAC</li><li>ALAC</li><li>WAV</li><li>AIFF</li><li>MP3</li><li>AAC</li><li>Opus</li><li>Vorbis</li><li>APE</li><li>WavPack</li><li>Musepack</li><li>TAK</li><li>TTA</li><li>WMA</li><li>DSD (DSF / DFF)</li><li>CUE sheets</li></ul></div>
       <div class="group"><h3>Playback</h3><p>Crest only resamples when your output can't play the file's rate, and tells you.</p>
-        <ul><li>Bit-Perfect mode, proven sample for sample</li><li>BIT-PERFECT label, and why when it isn't</li><li>Each song at its own sample rate</li><li class="new">Switches the output rate between songs, so the next song isn&#39;t converted</li><li>RESAMPLED tag when it has to</li><li>Gapless</li><li>Crossfade</li><li>Automix</li><li>ReplayGain (track / album)</li><li>EBU R128 loudness</li><li>Queue comes back after a relaunch</li><li>Shuffle and repeat</li><li>Sleep timer</li><li>Stop after this song</li></ul></div>
+        <ul><li>Bit-Perfect mode, proven sample for sample</li><li>BIT-PERFECT label, and why when it isn't</li><li>Each song at its own sample rate</li><li>Switches the output rate between songs, so the next song isn&#39;t converted</li><li>RESAMPLED tag when it has to</li><li>Gapless</li><li>Crossfade</li><li>Automix</li><li>ReplayGain (track / album)</li><li>EBU R128 loudness</li><li>Queue comes back after a relaunch</li><li>Shuffle and repeat</li><li>Sleep timer</li><li>Stop after this song</li><li class="new">Resume for long files</li><li class="new">Bookmarks</li></ul></div>
       <div class="group"><h3>Automix</h3><p>A DJ-style transition, not a plain fade.</p>
         <ul><li>Starts on the beat</li><li>Tempo match</li><li>Bass swap</li><li>Echo out</li><li>Filter sweep</li><li>Loudness matched</li><li>Albums stay gapless</li></ul></div>
       <div class="group"><h3>Sound: the Deck</h3><p>Swipe up on the player.</p>
@@ -127,18 +128,19 @@
       <div class="group"><h3>An EQ for every output</h3><p>Crest switches the moment the output changes.</p>
         <ul><li>Speaker</li><li>Wired headphones</li><li>Each Bluetooth device</li><li>USB DACs</li><li>CarPlay</li><li>AirPlay</li></ul></div>
       <div class="group"><h3>Library</h3>
-        <ul><li>Albums</li><li>Artists</li><li>Genres</li><li>Folders</li><li>Songs</li><li>Search</li><li>Shuffle all of an artist's songs from Search</li><li>Playlists</li><li>Smart playlists with rules</li><li>Star ratings</li><li>Play counts</li><li>History and stats</li><li>Pinned albums</li><li>Tag editor</li><li>File info: format, bit depth, rate</li><li>Music app songs</li><li>Scan progress for big libraries</li></ul></div>
+        <ul><li>Albums</li><li>Artists</li><li>Genres</li><li>Folders</li><li>Songs</li><li>Search</li><li>Shuffle all of an artist's songs from Search</li><li>Playlists</li><li>Smart playlists with rules</li><li class="new">Favourites (a heart replaces the stars)</li><li class="new">Play and Shuffle the whole library from Home</li><li class="new">Cover art download</li><li>Play counts</li><li>History and stats</li><li>Pinned albums</li><li>Tag editor</li><li>File info: format, bit depth, rate</li><li>Music app songs</li><li>Scan progress for big libraries</li></ul></div>
       <div class="group"><h3>Lyrics &amp; extras</h3>
-        <ul><li>Synced lyrics</li><li>Word-by-word lyrics</li><li>Online lyrics (LRCLIB, opt-in)</li><li>ListenBrainz</li><li>Last.fm</li><li>Now Playing widget</li><li>CarPlay</li><li>Lock Screen &amp; Control Center</li><li>Visualizer</li><li>Stereo field view</li></ul></div>
+        <ul><li>Synced lyrics</li><li>Word-by-word lyrics</li><li>Online lyrics (LRCLIB, opt-in)</li><li>ListenBrainz</li><li>Last.fm</li><li>Now Playing widget</li><li>CarPlay</li><li>Lock Screen &amp; Control Center</li><li class="new">Full-screen visualizer</li><li>Stereo field view</li></ul></div>
       <div class="group"><h3>The look</h3><p>"Smoked Acrylic Hi-Fi": smoked glass over brushed black, spun-aluminium keys, a dot-matrix display.</p>
-        <ul><li>Mint</li><li>Amber</li><li>Ice</li><li>Rose</li><li>Violet</li><li>Lime</li><li>Orange</li><li>OLED Black</li><li>Album pages coloured by the cover</li><li>Made-up covers for songs without art</li><li>Minimal Player layout</li><li class="new">Classic: the whole app as an iPod classic, click wheel and all</li><li>Optional L/R VU meters</li><li>Knobs with detents</li><li>Haptics</li></ul></div>
+        <ul><li>Mint</li><li>Amber</li><li>Ice</li><li>Rose</li><li>Violet</li><li>Lime</li><li>Orange</li><li>OLED Black</li><li>Album pages coloured by the cover</li><li>Made-up covers for songs without art</li><li>Minimal Player layout</li><li>Classic: the whole app as an iPod classic, click wheel and all</li><li class="new">Car Mode in the Minimal player</li><li class="new">Skins (.crestskin files)</li><li class="new">Background Visuals that move with the music</li><li>Optional L/R VU meters</li><li>Knobs with detents</li><li>Haptics</li></ul></div>
     </div>
   </div></details>
 <details><summary>Tested on</summary><div class="fold-body">
     <div class="wide"><table class="tested">
       <tr><th>Build</th><th>iPhone</th><th>iOS</th></tr>
-      <tr><td>Jailbreak</td><td>11 Pro Max, SE (2nd gen)</td><td>16.2, 17.5.1</td></tr>
-      <tr><td>Jailbreak (1.0.0)</td><td>XR</td><td>16.0.3</td></tr>
+      <tr><td>Jailbreak (1.0.0 betas)</td><td>11 Pro Max, SE (2nd gen)</td><td>16.2, 17.5.1</td></tr>
+      <tr><td>Jailbreak (1.1.0)</td><td>XR</td><td>16.0.3</td></tr>
+      <tr><td>Jailbreak (1.1.0, launch check)</td><td>Virtual iPhone</td><td>18.6.2</td></tr>
       <tr><td>Jailbreak (beta 1)</td><td>7, 11 Pro</td><td>15.8.6, 18.6.2</td></tr>
       <tr><td>Sideload</td><td>iPhone 17e</td><td>27 beta</td></tr>
     </table></div>

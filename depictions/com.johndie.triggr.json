@@ -12,7 +12,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "Version",
-          "text": "2.0.0",
+          "text": "2.1.0",
           "_sync": "compat"
         },
         {
@@ -118,6 +118,14 @@
         },
         {
           "class": "DepictionHeaderView",
+          "title": "What's New in 2.1"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Try a trigger without pressing it:** in Your Setup, swipe right on a trigger, or touch and hold it, and choose Run Now. Its actions run straight away, so you can check what it does.\n- **Asks before restarting:** when a trigger is about to respring, restart or turn off your iPhone, Triggr asks first, so a stray button press can't close everything. Safe Mode doesn't ask, so it still works in one go when a tweak gets stuck. Turn it off in Options → Ask Before Restarting.\n- **Undo:** after you remove a trigger, an Undo button appears at the top right for a few seconds. It brings the trigger back with its actions and Only If conditions.\n- **Clearer button notes:** before you pick an action for a button, the page says what the button normally does and that your action will replace it. Add Only If to keep the normal job some of the time.\n- **Your last picks come first:** when you choose an action, the ones you used most recently are at the top.\n- **A clearer main page:** it says how many triggers are on, and every trigger in Your Setup shows an icon and what it does.\n- **What's New and Guide** are now at the top of the page. What's New lists the changes in every version, in plain words.\n- **A short welcome screen** explains how Triggr works in four steps. It shows once, the first time you open Triggr's settings.\n- **Help & Support** at the bottom of the page: report a problem, get in touch, or support Triggr."
+        },
+        {
+          "class": "DepictionHeaderView",
           "title": "What's New in 2.0"
         },
         {
@@ -162,6 +170,15 @@
       "tabname": "Changelog",
       "class": "DepictionStackView",
       "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "2.1"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "useSpacing": true,
+          "markdown": "- **Try a trigger without pressing it:** in Your Setup, swipe right on a trigger, or touch and hold it, and choose Run Now. Its actions run straight away, so you can check what it does.\n- **Asks before restarting:** when a trigger is about to respring, restart or turn off your iPhone, Triggr asks first, so a stray button press can't close everything. Safe Mode doesn't ask, so it still works in one go when a tweak gets stuck. Turn it off in Options → Ask Before Restarting.\n- **Undo:** after you remove a trigger, an Undo button appears at the top right for a few seconds. It brings the trigger back with its actions and Only If conditions.\n- **Clearer button notes:** before you pick an action for a button, the page says what the button normally does and that your action will replace it. Add Only If to keep the normal job some of the time.\n- **Your last picks come first:** when you choose an action, the ones you used most recently are at the top.\n- **A clearer main page:** it says how many triggers are on, and every trigger in Your Setup shows an icon and what it does.\n- **What's New and Guide** are now at the top of the page. What's New lists the changes in every version, in plain words.\n- **A short welcome screen** explains how Triggr works in four steps. It shows once, the first time you open Triggr's settings.\n- **Help & Support** at the bottom of the page: report a problem, get in touch, or support Triggr."
+        },
         {
           "class": "DepictionHeaderView",
           "title": "2.0"

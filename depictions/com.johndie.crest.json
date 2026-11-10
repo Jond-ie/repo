@@ -12,7 +12,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "Version",
-          "text": "1.0.0",
+          "text": "1.1.0",
           "_sync": "compat"
         },
         {
@@ -57,6 +57,10 @@
             {
               "url": "https://jond-ie.github.io/repo/screenshots/crest/equalizer.png",
               "accessibilityText": "Equalizer: response curve and per-output EQ"
+            },
+            {
+              "url": "https://jond-ie.github.io/repo/screenshots/crest/visualizer.png",
+              "accessibilityText": "Full-screen visualizer"
             }
           ]
         },
@@ -86,11 +90,11 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "What's New in 1.0.0"
+          "title": "What's New in 1.1.0"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **Out of beta.** Thanks to everyone who tested and sent requests.\n- **Every song at its own sample rate, one after another.** When a song ended and the next one had a different rate (say 44.1 kHz, then 96 kHz), the next one was quietly converted to the old rate. Now Crest switches the output between them, with a very short pause only where the rates differ. Albums at one rate stay gapless. Crossfade and Automix still play both songs at one rate while they blend.\n- **USB DACs that switch rates a moment late** no longer get stuck converting everything to one rate.\n- **Classic:** turn the whole app into an iPod classic, with a click wheel you can really turn. Settings → Appearance → Player Skin. Browse by Playlists, Artists, Albums, Songs and Genres. The cover on the right now shows in full (it was cut in half).\n- **CarPlay log:** if CarPlay acts up, Settings → CarPlay → Share CarPlay Log and send it in an issue.\n- **VU Meters** now also shows greyed out in the Classic player, with the reason."
+          "markdown": "- **Car Mode** (Minimal player): the cover edge to edge, then only the song and the scrubber. Tap with two fingers to play or pause; double-tap with two fingers to go in or out.\n- **Cover art download:** missing covers are looked up on the iTunes Store and the Cover Art Archive. Get Info → Change Artwork → Find Online lets you pick one.\n- **Resume and bookmarks:** long files (20 minutes or more by default; Settings → Resume) start again where you left them. ⋯ → Bookmarks saves points in any song.\n- **Full-screen visualizer:** six presets that react to bass, mids, treble and beats. ⋯ → Full-Screen Visualizer, or double-tap the cover.\n- **Skins:** `.crestskin` files change Now Playing, the mini player and the accent colour. Settings → Skins; Share Template gives you a starting file.\n- **Background Visuals:** a soft light that moves with the music behind the song on Now Playing, in the mini player, and at the top of Home. Settings → Background Visuals: Off, Subtle or Strong. It stops when nothing is playing and stays still in Low Power Mode or with Reduce Motion on.\n- **Play and Shuffle on Home:** start the whole library in one tap.\n- **The Deck is a solid panel** with Tone and Space at the top, presets (Flat, Bass, Treble, Loud, Warm) and plainer names (No Clipping, Full EQ, Crossfade, Levelling, Keep Pitch). Tap any control or turn a knob to see what it does.\n- **A heart replaces the five stars.** Songs you rated 4 or 5 stars are favourites now. Home has a Favourites shelf, and smart playlists have a Favourite rule.\n- **Now Playing matches the mini player:** the song sits in the same display, with the same keys. The small visualizer over the cover is gone; double-tap the cover for the full-screen one.\n- **USB DACs:** Crest asks the DAC for the song's sample rate a second time and waits longer for it to switch. This may help DACs that stayed on one rate; it isn't confirmed on a DAC yet. Signal Path (tap DIRECT or RESAMPLED) now shows what was asked and has an Ask Again button.\n- **Fixed:** the Deck's preamp could read \"-0.0\"; the EQ curve stayed lit after turning the EQ off from the Deck; cover search could come back empty or with blank thumbnails."
         },
         {
           "class": "DepictionHeaderView",
@@ -98,7 +102,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **iOS 15 to 27.** Rootless and RootHide jailbreaks.\n- Tested on an iPhone 7 (iOS 15.8.6), an iPhone 11 Pro Max (iOS 16.2), an iPhone XR (iOS 16.0.3), an iPhone SE 2nd gen (iOS 17.5.1) and an iPhone 11 Pro (iOS 18).\n- No jailbreak? The TrollStore and sideload versions are on [GitHub](https://github.com/Jond-ie/crest/releases). They add music with Wi-Fi Transfer only, for now.\n- If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then [tell me](https://github.com/Jond-ie/crest/issues)."
+          "markdown": "- **iOS 15 to 27.** Rootless and RootHide jailbreaks.\n- 1.1.0 was tested on an iPhone XR (iOS 16.0.3) and launched in an iOS 18.6.2 virtual iPhone. It wasn't run on iOS 15 or 17; earlier versions were tested on an iPhone 7 (iOS 15.8.6), an iPhone 11 Pro Max (iOS 16.2), an iPhone SE 2nd gen (iOS 17.5.1) and an iPhone 11 Pro (iOS 18).\n- No jailbreak? The TrollStore and sideload versions are on [GitHub](https://github.com/Jond-ie/crest/releases). They add music with Wi-Fi Transfer only, for now.\n- If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then [tell me](https://github.com/Jond-ie/crest/issues)."
         },
         {
           "class": "DepictionHeaderView",
@@ -122,6 +126,22 @@
       "tabname": "Changelog",
       "class": "DepictionStackView",
       "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.1.0"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Car Mode** (Minimal player): the cover edge to edge, then only the song and the scrubber. Tap with two fingers to play or pause; double-tap with two fingers to go in or out.\n- **Cover art download:** missing covers are looked up on the iTunes Store and the Cover Art Archive. Get Info → Change Artwork → Find Online lets you pick one.\n- **Resume and bookmarks:** long files (20 minutes or more by default; Settings → Resume) start again where you left them. ⋯ → Bookmarks saves points in any song.\n- **Full-screen visualizer:** six presets that react to bass, mids, treble and beats. ⋯ → Full-Screen Visualizer, or double-tap the cover.\n- **Skins:** `.crestskin` files change Now Playing, the mini player and the accent colour. Settings → Skins; Share Template gives you a starting file.\n- **Background Visuals:** a soft light that moves with the music behind the song on Now Playing, in the mini player, and at the top of Home. Settings → Background Visuals: Off, Subtle or Strong. It stops when nothing is playing and stays still in Low Power Mode or with Reduce Motion on.\n- **Play and Shuffle on Home:** start the whole library in one tap.\n- **The Deck is a solid panel** with Tone and Space at the top, presets (Flat, Bass, Treble, Loud, Warm) and plainer names (No Clipping, Full EQ, Crossfade, Levelling, Keep Pitch). Tap any control or turn a knob to see what it does.\n- **A heart replaces the five stars.** Songs you rated 4 or 5 stars are favourites now. Home has a Favourites shelf, and smart playlists have a Favourite rule.\n- **Now Playing matches the mini player:** the song sits in the same display, with the same keys. The small visualizer over the cover is gone; double-tap the cover for the full-screen one.\n- **USB DACs:** Crest asks the DAC for the song's sample rate a second time and waits longer for it to switch. This may help DACs that stayed on one rate; it isn't confirmed on a DAC yet. Signal Path (tap DIRECT or RESAMPLED) now shows what was asked and has an Ask Again button.\n- **Fixed:** the Deck's preamp could read \"-0.0\"; the EQ curve stayed lit after turning the EQ off from the Deck; cover search could come back empty or with blank thumbnails."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.0.0"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Out of beta.** Thanks to everyone who tested and sent requests.\n- **Every song at its own sample rate, one after another.** When a song ended and the next one had a different rate (say 44.1 kHz, then 96 kHz), the next one was quietly converted to the old rate. Now Crest switches the output between them, with a very short pause only where the rates differ. Albums at one rate stay gapless. Crossfade and Automix still play both songs at one rate while they blend.\n- **USB DACs that switch rates a moment late** no longer get stuck converting everything to one rate.\n- **Classic:** turn the whole app into an iPod classic, with a click wheel you can really turn. Settings → Appearance → Player Skin. Browse by Playlists, Artists, Albums, Songs and Genres. The cover on the right now shows in full (it was cut in half).\n- **CarPlay log:** if CarPlay acts up, Settings → CarPlay → Share CarPlay Log and send it in an issue.\n- **VU Meters** now also shows greyed out in the Classic player, with the reason."
+        },
         {
           "class": "DepictionHeaderView",
           "title": "Beta 4.1"
