@@ -1211,6 +1211,46 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.html
 Name: Triggr
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.triggr.json
 
+Package: com.johndie.xedgeprotect
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Maintainer: Jond_ie
+Installed-Size: 948
+Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
+Conflicts: com.smokin1337.xedgeprotect
+Replaces: com.smokin1337.xedgeprotect
+Filename: debs/com.johndie.xedgeprotect_1.0.0_iphoneos-arm64.deb
+Size: 58554
+MD5sum: 89739dac9a71e3d48d90cc4ba9d5b2cd
+SHA1: 79dcb05b8d96a34525200e631fa3113bb32b20ab
+SHA256: ee0e9ab0af450704918af83e2998ed207b42577d534206b163b2b02ea477171e
+Section: Tweaks
+Description: Stops accidental Home Bar swipes: the first swipe up only shows the Home Bar, the second goes home. A port of XEdgeProtect by smokin1337 for iOS 15 to 27, Rootless and RootHide.
+Author: smokin1337 (port: Jond_ie)
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.xedgeprotect.html
+Name: XEdgeProtect
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.xedgeprotect.json
+
+Package: com.johndie.xedgeprotect
+Version: 1.0.0
+Architecture: iphoneos-arm64e
+Maintainer: Jond_ie
+Installed-Size: 948
+Depends: mobilesubstrate, preferenceloader, com.opa334.altlist, firmware (>= 15.0)
+Conflicts: com.smokin1337.xedgeprotect
+Replaces: com.smokin1337.xedgeprotect
+Filename: debs/com.johndie.xedgeprotect_1.0.0_iphoneos-arm64e.deb
+Size: 57700
+MD5sum: a36c3029958dc48b762ab0bee561b83e
+SHA1: c6df899c942a091bd9a8b6c92afa69d67328b437
+SHA256: cf409cda73cafd6f7ac49dd0ebdbb6dfe5402e1252abec87ad4bd6a7a33cbece
+Section: Tweaks
+Description: Stops accidental Home Bar swipes: the first swipe up only shows the Home Bar, the second goes home. A port of XEdgeProtect by smokin1337 for iOS 15 to 27, Rootless and RootHide.
+Author: smokin1337 (port: Jond_ie)
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.xedgeprotect.html
+Name: XEdgeProtect
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.xedgeprotect.json
+
 Package: com.scrub.exif
 Version: 1.0.0-2
 Architecture: iphoneos-arm64

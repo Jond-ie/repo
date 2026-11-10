@@ -1,0 +1,59 @@
+{
+  "class": "DepictionTabView",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "## XEdgeProtect\n\n**Stops accidental swipes home.** With edge protect on, the first swipe up only shows the Home Bar; swipe again to go home. A port of XEdgeProtect by smokin1337.\n\n- **Pick where:** all apps, only the apps you choose, or while the keyboard is up. A second list turns it off for chosen apps.\n- **Auto-Hide Home Bar:** hides the bar shortly after you open an app, like iOS 26 and 27, with a slider for the delay.\n- **Floating dock tweaks:** stop the swipe-up dock gesture in all apps or in chosen apps.\n- Everything is off until you turn it on in Settings → XEdgeProtect."
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0.0",
+          "_sync": "compat"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "Rootless, RootHide",
+          "_sync": "compat"
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "What's New in 1.0.0"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- First release of the port. It keeps the original's options and settings keys.\n- **Changed from the original:** the old faint Home Bar is gone, so the bar is either shown normally or hidden; the conflict pop-ups are replaced by short notes under each group.\n- **Added:** Auto-Hide timing that matches iOS 26 and 27."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Works on"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **iOS 15 to 27.** Rootless and RootHide jailbreaks.\n- Tested by hand on an iPhone XR (iOS 16.0.3).\n- **Not run on iOS 15, 17, 18, 26 or 27.** Every method it uses was checked against those versions' system files, but it hasn't been run there. RootHide is untested too.\n- If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then [tell me](https://github.com/Jond-ie/repo/issues)."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Good to know"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- It replaces the original XEdgeProtect. The two can't be installed together.\n- Needs AltList for the app lists.\n- The \"Disabled\" lists win over everything else, even when an app asks for edge protect itself."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Credits"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**XEdgeProtect** by **smokin1337**. This port was rebuilt from version 1.0.6 for iOS 12. Rootless and RootHide port for iOS 15 to 27 by **Jond_ie**."
+        }
+      ]
+    }
+  ]
+}

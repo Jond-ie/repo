@@ -12,6 +12,7 @@ com.johndie.liteface            18-27      ok   rootless roothide
 com.johndie.blankpass           15-18   ok      rootless roothide
 com.johndie.anywhere            15-17   ok      rootless roothide
 com.johndie.bounceit-rootless   15-27    ok      rootless roothide
+com.johndie.xedgeprotect        15-27    ok      rootless roothide
 com.johndie.pulloverpro-rootless 15-27    ok      rootless roothide
 com.johndie.density              15-18    ok      rootless
 com.johndie.mirage               16-17    ok      rootless
