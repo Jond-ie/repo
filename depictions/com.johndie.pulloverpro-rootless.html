@@ -34,6 +34,7 @@
   .facts dd { margin: .15rem 0 0; font-weight: 650; }
   .dep-shots { display: flex; gap: 1.2rem; overflow-x: auto; scroll-snap-type: x mandatory; margin: 1.4rem -16px; padding: 0 16px .6rem; scrollbar-width: none; }
   .dep-shots::-webkit-scrollbar { display: none; }
+  .dep-video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; margin: 1.6rem 0 .4rem; border-radius: 14px; background: #08080a; }
   .dep-shots > * { flex: none; width: min(56vw, 220px); scroll-snap-align: start; }
   details.log { margin-top: 2.4rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   details.log summary { font: 700 1.2rem/1.2 var(--display); letter-spacing: -.02em; }
@@ -66,6 +67,8 @@
   <li><strong>Settings</strong> for left-handed mode, a dark handle, QuickSwitch size, hiding in landscape, staying above the keyboard, closing when you go home, and shrinking the handle to a nub when idle. Changes apply right away, no respring.</li>
 </ul>
 </div>
+<video class="dep-video" src="../media/pullover.mp4" poster="../media/pullover-poster.jpg" width="1280" height="720" autoplay muted loop playsinline controls preload="metadata" aria-label="PullOver Pro on an iPhone 11 Pro: apps pulled over from the handle, QuickSwitch, and iOS 27.2.1 shown in Settings"></video>
+<script>if (matchMedia("(prefers-reduced-motion: reduce)").matches) { var v = document.querySelector(".dep-video"); v.removeAttribute("autoplay"); v.pause(); }</script>
 <dl class="facts"><div><dt>Version</dt><dd>3.0.1</dd></div><div><dt>Jailbreak</dt><dd>Rootless, RootHide</dd></div></dl>
 <div class="dep-shots"><span class="xr"><span class="xr-body"><span class="xr-screen"><img src="../screenshots/pullover/over.png" alt="Settings pulled over the Home Screen, showing iOS 27.2.1" width="828" height="1792" loading="lazy"></span></span></span><span class="xr"><span class="xr-body"><span class="xr-screen"><img src="../screenshots/pullover/quickswitch.png" alt="QuickSwitch: hold the handle, then drag an app to the middle to open it" width="828" height="1792" loading="lazy"></span></span></span><span class="xr"><span class="xr-body"><span class="xr-screen"><img src="../screenshots/pullover/settings.png" alt="PullOver Pro settings" width="828" height="1792" loading="lazy"></span></span></span><span class="xr"><span class="xr-body"><span class="xr-screen"><img src="../screenshots/pullover/settings-more.png" alt="More settings, including Close When Going Home" width="828" height="1792" loading="lazy"></span></span></span></div>
 <h2>What&#x27;s New in 3.0.1</h2>

@@ -1,4 +1,9 @@
 {
+  "_video": {
+    "url": "https://jond-ie.github.io/repo/media/pullover.mp4",
+    "poster": "https://jond-ie.github.io/repo/media/pullover-poster.jpg",
+    "alt": "PullOver Pro on an iPhone 11 Pro: apps pulled over from the handle, QuickSwitch, and iOS 27.2.1 shown in Settings"
+  },
   "class": "DepictionTabView",
   "tabs": [
     {
