@@ -848,6 +848,44 @@ Name: Podified
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.podified.json
 
 Package: com.johndie.pulloverpro-rootless
+Version: 3.0.0
+Architecture: iphoneos-arm64e
+Maintainer: Jond_ie
+Installed-Size: 488
+Depends: mobilesubstrate, com.opa334.altlist, firmware (>= 15.0), firmware (<< 28.0)
+Recommends: preferenceloader
+Filename: debs/com.johndie.pulloverpro-rootless_3.0.0_iphoneos-arm64e.deb
+Size: 67386
+MD5sum: 4e2386963a894e8a1d9358f770003208
+SHA1: 4641efbc46217dc0a8b345ce4169784b9f9c6ed1
+SHA256: f8ad02bbc23f8c4bb4f8940d6ef4a1e609b91f461cb814f31e3c32bbd299bfee
+Section: Tweaks
+Description: Pull over any app, anywhere, from a small handle at the edge of the screen. Original tweak by c1d3r (GPL-3.0), updated for iOS 15-27.
+Author: c1d3r (port: Jond_ie)
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-rootless.html
+Name: PullOver Pro
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-rootless.json
+
+Package: com.johndie.pulloverpro-rootless
+Version: 3.0.0
+Architecture: iphoneos-arm64
+Maintainer: Jond_ie
+Installed-Size: 488
+Depends: mobilesubstrate, com.opa334.altlist, firmware (>= 15.0), firmware (<< 28.0)
+Recommends: preferenceloader
+Filename: debs/com.johndie.pulloverpro-rootless_3.0.0_iphoneos-arm64.deb
+Size: 68628
+MD5sum: e754a55c2a149318a3fdfd868a89507a
+SHA1: a16000e83a32fc9c2654e5352f8872648a07e8a4
+SHA256: a8e6c2cd3deb1bc8001e132362de3a62439b253cd12a5640a25132da126f5041
+Section: Tweaks
+Description: Pull over any app, anywhere, from a small handle at the edge of the screen. Original tweak by c1d3r (GPL-3.0), updated for iOS 15-27.
+Author: c1d3r (port: Jond_ie)
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-rootless.html
+Name: PullOver Pro
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.pulloverpro-rootless.json
+
+Package: com.johndie.pulloverpro-rootless
 Version: 3.0.0~beta1
 Architecture: iphoneos-arm64e
 Maintainer: Jond-ie
