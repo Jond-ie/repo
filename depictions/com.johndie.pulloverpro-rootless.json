@@ -12,7 +12,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "Version",
-          "text": "3.0.0",
+          "text": "3.0.1",
           "_sync": "compat"
         },
         {
@@ -46,11 +46,11 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "What's New in 3.0.0"
+          "title": "What's New in 3.0.1"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **Out of beta.**\n- **Closes for Control Center and Notification Center:** the pulled-over app closes as soon as either starts coming down.\n- **Fixed:** slider values in settings were cut off on iOS 16.\n- Shorter credits, and Help & Support rows in settings."
+          "markdown": "- **Fixed:** on some phones the handle never appeared after a respring until the phone was locked and unlocked again. Reported on an iPhone 13 Pro on iOS 17."
         },
         {
           "class": "DepictionHeaderView",
@@ -58,7 +58,7 @@
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **iOS 15 to 27.** Rootless and RootHide jailbreaks.\n- Tested by hand on an iPhone 11 Pro (iOS 27.2.1). Earlier builds ran on an iPhone 11 Pro Max (iOS 16.2), an iPhone XR (iOS 16.0.3) and, as the RootHide build, in an iOS 27 virtual iPhone.\n- If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then [tell me](https://github.com/Jond-ie/pulloverpro/issues)."
+          "markdown": "- **iOS 15 to 27.** Rootless and RootHide jailbreaks.\n- 3.0.1 was checked on an iPhone XR (iOS 16.0.3). 3.0.0 was tested by hand on an iPhone 11 Pro (iOS 27.2.1); earlier builds ran on an iPhone 11 Pro Max (iOS 16.2) and, as the RootHide build, in an iOS 27 virtual iPhone. The iOS 17 fix is not confirmed on an iOS 17 phone yet.\n- If it ever sends your phone to Safe Mode, open Sileo (it still works there) and uninstall it. Then [tell me](https://github.com/Jond-ie/pulloverpro/issues)."
         },
         {
           "class": "DepictionHeaderView",
@@ -82,6 +82,14 @@
       "tabname": "Changelog",
       "class": "DepictionStackView",
       "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "3.0.1"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Fixed:** on some phones the handle never appeared after a respring until the phone was locked and unlocked again. Reported on an iPhone 13 Pro on iOS 17."
+        },
         {
           "class": "DepictionHeaderView",
           "title": "3.0.0"
