@@ -170,6 +170,46 @@ Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html
 Name: BegoneCIA (Rootless)
 SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.json
 
+Package: com.johndie.begonecia
+Version: 1.2.1
+Architecture: iphoneos-arm64
+Maintainer: Jond-ie
+Installed-Size: 744
+Depends: mobilesubstrate, com.opa334.ccsupport, ws.hbang.common, preferenceloader, com.opa334.altlist
+Conflicts: me.nepeta.begonecia
+Replaces: me.nepeta.begonecia
+Filename: debs/com.johndie.begonecia_1.2.1_iphoneos-arm64.deb
+Size: 51424
+MD5sum: 33362dd021884c7e8a2a1062f01192a8
+SHA1: 8068a3478be37807d7ae7951c263d36bcbb35971
+SHA256: ef40f25ed1bc49bb2d77863624c78c5aee839e7ca2eb06445aeefe300f4a1fdf
+Section: Tweaks
+Description: CC toggle to disable microphone, camera and GPS system-wide. Rootless and RootHide port (iOS 15-27, arm64 and arm64e). Total silence: mic audio is zeroed in the audio server and Siri, location delegates are nulled, camera inputs are dropped.
+Author: Nepeta <ominousness@protonmail.com>
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html
+Name: BegoneCIA
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.json
+
+Package: com.johndie.begonecia
+Version: 1.2.1
+Architecture: iphoneos-arm64e
+Maintainer: Jond-ie
+Installed-Size: 728
+Depends: mobilesubstrate, com.opa334.ccsupport, ws.hbang.common, preferenceloader, com.opa334.altlist
+Conflicts: me.nepeta.begonecia
+Replaces: me.nepeta.begonecia
+Filename: debs/com.johndie.begonecia_1.2.1_iphoneos-arm64e.deb
+Size: 49400
+MD5sum: 0863a532d3a8a3ba2ee3e4b41290d6d9
+SHA1: 9a0cc390ca45cf9647bffbb0f69982624c7c18a1
+SHA256: e528b1e1c255e5531c9468ed8c1a328083d1bd18759df564048eb6e97f0fbb49
+Section: Tweaks
+Description: CC toggle to disable microphone, camera and GPS system-wide. Rootless and RootHide port (iOS 15-27, arm64 and arm64e). Total silence: mic audio is zeroed in the audio server and Siri, location delegates are nulled, camera inputs are dropped.
+Author: Nepeta <ominousness@protonmail.com>
+Depiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.html
+Name: BegoneCIA
+SileoDepiction: https://jond-ie.github.io/repo/depictions/com.johndie.begonecia.json
+
 Package: com.johndie.blankpass
 Version: 1.0.0
 Architecture: iphoneos-arm64e

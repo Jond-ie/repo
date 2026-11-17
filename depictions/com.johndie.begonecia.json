@@ -12,7 +12,7 @@
         {
           "class": "DepictionTableTextView",
           "title": "Version",
-          "text": "1.2.0",
+          "text": "1.2.1",
           "_sync": "compat"
         },
         {
@@ -34,11 +34,19 @@
         },
         {
           "class": "DepictionHeaderView",
-          "title": "What's New in 1.2.0"
+          "title": "What's New in 1.2.1"
         },
         {
           "class": "DepictionMarkdownView",
-          "markdown": "- **iOS 27:** now works on iOS 15 through 27.\n- **Nepeta's original Settings page is back:** Enabled, **Disable in calls** and **Disable BegoneCIA for applications**, laid out like the original.\n- **Disable in calls:** on by default. While you're on a call, BegoneCIA steps aside so the other person can hear you, then turns back on when you hang up. Tested with phone calls; FaceTime and apps like WhatsApp use the same system and should work too, so tell me if they don't.\n- **Disable for applications:** pick apps where BegoneCIA switches off while they're open.\n- **Fixes:** location could still reach some apps on iOS 15, and A12 and newer phones on iOS 15.0 and 15.1 could crash."
+          "markdown": "- **The X link in Settings** now reads X, and the footer names Jond_ie.\n- **Quieter:** BegoneCIA no longer writes a line to the system log of every app it loads into.\n\nEvery version's notes are in the Changelog tab."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "Light by design"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Nothing runs on a timer.** SpringBoard decides once, when you switch apps or flip the button, and every app follows that one setting.\n- **Apps get nothing, not an error.** Silence from the mic, no picture, no location, so apps don't crash or nag.\n- **Private.** BegoneCIA never touches the network and keeps no logs."
         },
         {
           "class": "DepictionHeaderView",
@@ -63,6 +71,28 @@
         {
           "class": "DepictionMarkdownView",
           "markdown": "Original **BegoneCIA** by **Eva (Nepeta)**, MIT licence. Rootless and RootHide port by **Jond_ie**. The original licence ships inside the package.\n\n[Original BegoneCIA](https://github.com/NepetaDev/BegoneCIA) · [Port source code](https://github.com/Jond-ie/begonecia)"
+        }
+      ]
+    },
+    {
+      "tabname": "Changelog",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.2.1"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **The X link in Settings** now reads X, and the footer names Jond_ie.\n- **Quieter:** BegoneCIA no longer writes a line to the system log of every app it loads into."
+        },
+        {
+          "class": "DepictionHeaderView",
+          "title": "1.2.0"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **iOS 27:** now works on iOS 15 through 27.\n- **Nepeta's original Settings page is back:** Enabled, **Disable in calls** and **Disable BegoneCIA for applications**, laid out like the original.\n- **Disable in calls:** on by default. While you're on a call, BegoneCIA steps aside so the other person can hear you, then turns back on when you hang up. Tested with phone calls; FaceTime and apps like WhatsApp use the same system and should work too, so tell me if they don't.\n- **Disable for applications:** pick apps where BegoneCIA switches off while they're open.\n- **Fixes:** location could still reach some apps on iOS 15, and A12 and newer phones on iOS 15.0 and 15.1 could crash."
         }
       ]
     }

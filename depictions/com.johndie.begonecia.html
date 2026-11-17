@@ -34,6 +34,7 @@
   .facts dd { margin: .15rem 0 0; font-weight: 650; }
   .dep-shots { display: flex; gap: 1.2rem; overflow-x: auto; scroll-snap-type: x mandatory; margin: 1.4rem -16px; padding: 0 16px .6rem; scrollbar-width: none; }
   .dep-shots::-webkit-scrollbar { display: none; }
+  .dep-video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; margin: 1.6rem 0 .4rem; border-radius: 14px; background: #08080a; }
   .dep-shots > * { flex: none; width: min(56vw, 220px); scroll-snap-align: start; }
   details.log { margin-top: 2.4rem; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   details.log summary { font: 700 1.2rem/1.2 var(--display); letter-spacing: -.02em; }
@@ -53,7 +54,7 @@
 <header class="island hero">
   <div class="isl-bar"><h1 class="isl-mark"><span class="icon letter" style="background:#ff3b30" aria-hidden="true">B</span><span class="wordmark">BegoneCIA</span></h1><span class="cam" aria-hidden="true"></span></div>
   <div class="isl-body">
-    <p class="isl-lead">One Control Center button that cuts off the camera, mic and location for every app, except during calls and in apps you pick.</p>
+    <p class="isl-lead">One Control Center button that cuts off the camera, microphone and location for every app.</p>
     <div class="isl-actions"><a class="get" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a><a class="alt" href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a></div>
     <p class="isl-note">Add the repo, then search <b>BegoneCIA</b>.</p>
   </div>
@@ -66,15 +67,19 @@
   <li>Add the button in Settings → Control Center.</li>
 </ul>
 </div>
-<dl class="facts"><div><dt>Version</dt><dd>1.2.0</dd></div><div><dt>Jailbreak</dt><dd>Rootless, RootHide</dd></div></dl>
+<dl class="facts"><div><dt>Version</dt><dd>1.2.1</dd></div><div><dt>Jailbreak</dt><dd>Rootless, RootHide</dd></div></dl>
 <div class="dep-shots"><span class="xr"><span class="xr-body"><span class="xr-screen"><img src="../screenshots/begonecia/settings.png" alt="BegoneCIA settings" width="828" height="1792" loading="lazy"></span></span></span></div>
-<h2>What&#x27;s New in 1.2.0</h2>
+<h2>What&#x27;s New in 1.2.1</h2>
 <ul>
-  <li><strong>iOS 27:</strong> now works on iOS 15 through 27.</li>
-  <li><strong>Nepeta&#x27;s original Settings page is back:</strong> Enabled, <strong>Disable in calls</strong> and <strong>Disable BegoneCIA for applications</strong>, laid out like the original.</li>
-  <li><strong>Disable in calls:</strong> on by default. While you&#x27;re on a call, BegoneCIA steps aside so the other person can hear you, then turns back on when you hang up. Tested with phone calls; FaceTime and apps like WhatsApp use the same system and should work too, so tell me if they don&#x27;t.</li>
-  <li><strong>Disable for applications:</strong> pick apps where BegoneCIA switches off while they&#x27;re open.</li>
-  <li><strong>Fixes:</strong> location could still reach some apps on iOS 15, and A12 and newer phones on iOS 15.0 and 15.1 could crash.</li>
+  <li><strong>The X link in Settings</strong> now reads X, and the footer names Jond_ie.</li>
+  <li><strong>Quieter:</strong> BegoneCIA no longer writes a line to the system log of every app it loads into.</li>
+</ul>
+<p>Every version&#x27;s notes are in the Changelog tab.</p>
+<h2>Light by design</h2>
+<ul>
+  <li><strong>Nothing runs on a timer.</strong> SpringBoard decides once, when you switch apps or flip the button, and every app follows that one setting.</li>
+  <li><strong>Apps get nothing, not an error.</strong> Silence from the mic, no picture, no location, so apps don&#x27;t crash or nag.</li>
+  <li><strong>Private.</strong> BegoneCIA never touches the network and keeps no logs.</li>
 </ul>
 <h2>Works on</h2>
 <ul>
@@ -91,6 +96,21 @@
 <h2>Credits</h2>
 <p>Original <strong>BegoneCIA</strong> by <strong>Eva (Nepeta)</strong>, MIT licence. Rootless and RootHide port by <strong>Jond_ie</strong>. The original licence ships inside the package.</p>
 <p><a href="https://github.com/NepetaDev/BegoneCIA">Original BegoneCIA</a> · <a href="https://github.com/Jond-ie/begonecia">Port source code</a></p>
+<details class="log"><summary>Changelog<span>2 earlier versions</span></summary>
+<h3>1.2.1</h3>
+<ul>
+  <li><strong>The X link in Settings</strong> now reads X, and the footer names Jond_ie.</li>
+  <li><strong>Quieter:</strong> BegoneCIA no longer writes a line to the system log of every app it loads into.</li>
+</ul>
+<h3>1.2.0</h3>
+<ul>
+  <li><strong>iOS 27:</strong> now works on iOS 15 through 27.</li>
+  <li><strong>Nepeta&#x27;s original Settings page is back:</strong> Enabled, <strong>Disable in calls</strong> and <strong>Disable BegoneCIA for applications</strong>, laid out like the original.</li>
+  <li><strong>Disable in calls:</strong> on by default. While you&#x27;re on a call, BegoneCIA steps aside so the other person can hear you, then turns back on when you hang up. Tested with phone calls; FaceTime and apps like WhatsApp use the same system and should work too, so tell me if they don&#x27;t.</li>
+  <li><strong>Disable for applications:</strong> pick apps where BegoneCIA switches off while they&#x27;re open.</li>
+  <li><strong>Fixes:</strong> location could still reach some apps on iOS 15, and A12 and newer phones on iOS 15.0 and 15.1 could crash.</li>
+</ul>
+</details>
 </main>
 <footer class="foot">
   <div class="foot-top">

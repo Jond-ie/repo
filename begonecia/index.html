@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BegoneCIA · Jond_ie</title>
+<meta name="description" content="One Control Center button that cuts off the camera, mic and location for every app, except during calls and in apps you pick. iOS 15 to 27, Rootless and RootHide.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jond-ie.github.io/repo/begonecia/">
+<meta property="og:title" content="BegoneCIA: switch off your mic, camera and location">
+<meta property="og:description" content="One Control Center button for the camera, mic and location. iOS 15 to 27, Rootless and RootHide.">
+<meta property="og:image" content="https://jond-ie.github.io/repo/assets/begonecia.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@Jond_ie">
+<meta name="theme-color" content="#f2f2f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070708" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../CydiaIcon.png">
+<link rel="apple-touch-icon" href="../assets/begonecia.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&display=swap">
+<link rel="stylesheet" href="../assets/pwn.css">
+<link rel="stylesheet" href="../assets/site.css">
+<link rel="stylesheet" href="../assets/iphone.css">
+<link rel="stylesheet" href="../assets/xr.css">
+</head>
+<body>
+<nav class="pill" aria-label="Jond_ie"><a class="pill-home" href="../"><img src="../assets/mark.svg" alt="" width="26" height="26"><span class="wordmark">Jond_ie</span></a><a class="pill-x" href="https://x.com/Jond_ie" aria-label="Jond_ie on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a class="pill-get" href="sileo://source/https://jond-ie.github.io/repo/">Add</a></nav>
+<main class="page">
+  <header class="island hero">
+  <div class="isl-bar"><h1 class="isl-mark"><img src="../assets/begonecia.png" alt="" width="44" height="44"><span class="wordmark">BegoneCIA</span></h1><span class="cam" aria-hidden="true"></span></div>
+  <div class="isl-body">
+    <p class="isl-lead">One Control Center button that cuts off the camera, mic and location for every app.</p>
+    <p class="isl-sub">Apps don't get an error, they just get nothing. It steps aside during calls and in apps you pick.</p>
+    <div class="isl-actions"><a class="get" href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a>
+      <a class="alt" href="https://github.com/Jond-ie/begonecia">Source code</a></div>
+    <p class="isl-note">Add the repo, search <b>BegoneCIA</b>, then add its button in Settings → Control Center. iOS 15 to 27, Rootless and RootHide.</p>
+  </div>
+</header>
+
+  <section>
+    <h2 class="big">How it works</h2>
+    <div class="how">
+      <div class="step"><b>1</b>Tap the button<p>In Control Center. While it's on, every app gets silence from the mic, no camera picture and no location.</p></div>
+      <div class="step"><b>2</b>Calls still work<p>Disable in calls is on by default. During a call BegoneCIA steps aside so people can hear you, then comes back when you hang up.</p></div>
+      <div class="step"><b>3</b>Pick your exceptions<p>Disable BegoneCIA for applications: in the apps you tick, it switches off while they're open.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="big">Made for you if…</h2>
+    <div class="ideas">
+      <div class="idea"><span class="when">You don't trust an app's permissions</span><span class="arrow">→</span>it gets nothing, whatever it was allowed</div>
+      <div class="idea"><span class="when">You leave the room for a meeting</span><span class="arrow">→</span>one tap and the phone stops listening</div>
+      <div class="idea"><span class="when">You want location off, but not for Maps</span><span class="arrow">→</span>tick Maps as an exception</div>
+      <div class="idea"><span class="when">You use Triggr</span><span class="arrow">→</span>turn BegoneCIA on or off from any button or gesture</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="big">Screenshots</h2>
+    <div class="shots">
+      <figure><span class="xr"><span class="xr-body"><span class="xr-screen"><img src="../screenshots/begonecia/cc.jpg" alt="Control Center with the BegoneCIA button" width="828" height="1792" loading="lazy"></span></span></span><figcaption>The Control Center button</figcaption></figure>
+      <figure><span class="xr"><span class="xr-body"><span class="xr-screen"><img src="../screenshots/begonecia/settings-27.png" alt="BegoneCIA settings" width="828" height="1792" loading="lazy"></span></span></span><figcaption>Settings</figcaption></figure>
+      <figure><span class="xr"><span class="xr-body"><span class="xr-screen"><img src="../screenshots/begonecia/apps.png" alt="Picking apps where BegoneCIA stays off" width="828" height="1792" loading="lazy"></span></span></span><figcaption>Apps it skips</figcaption></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="big">Light by design</h2>
+    <div class="points">
+      <div class="point"><h3>Nothing on a timer</h3><p>SpringBoard decides once, when you switch apps or tap the button, and every app follows that one setting. Nothing polls in the background.</p></div>
+      <div class="point"><h3>No crashes, no nags</h3><p>Apps get silence, no picture and no location instead of an error, so they keep working as if nothing was there.</p></div>
+      <div class="point"><h3>Private</h3><p>BegoneCIA never touches the network and keeps no logs. It's open source, so you can check.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="big">Questions</h2>
+    <details><summary>Where are the settings on iOS 27?</summary><p>Settings tweaks don't show up in the Settings app on iOS 27. Open BegoneCIA's page from the TweakSettings app instead.</p></details>
+    <details><summary>Does it work with FaceTime and WhatsApp calls?</summary><p>Disable in calls was tested with phone calls. FaceTime and apps like WhatsApp use the same system and should work too. If one doesn't, please <a href="https://github.com/Jond-ie/begonecia/issues">tell me</a>.</p></details>
+    <details><summary>Does it make my phone secure?</summary><p>It protects your camera, mic and location, but a jailbroken phone is less secure overall, and BegoneCIA doesn't change that.</p></details>
+    <details><summary>What does it need?</summary><p>CCSupport, PreferenceLoader, AltList and Cephei. Sileo installs them with it; if it can't find Cephei, add the Chariz repo.</p></details>
+  </section>
+
+  <section>
+    <h2 class="big">More details</h2>
+    <div class="fold-list">
+<details><summary>Tested on</summary><div class="fold-body">
+    <div class="wide"><table class="tested">
+      <tr><th>iPhone</th><th>iOS</th></tr>
+      <tr><td>11 Pro</td><td>18.6.2, 27.2.1</td></tr>
+      <tr><td>SE (2nd gen)</td><td>15.2, 17.5.1, 27.0.1</td></tr>
+      <tr><td>11 Pro Max</td><td>16.2 (with a real phone call)</td></tr>
+      <tr><td>8 Plus</td><td>16.7</td></tr>
+      <tr><td>7</td><td>15.8.6</td></tr>
+    </table></div>
+  </div></details>
+    </div>
+  </section>
+
+  <div class="request">
+    <h2>Something not blocked?</h2>
+    <p>If an app still gets through, tell me which one and your iOS version.</p>
+    <a class="button" href="https://github.com/Jond-ie/begonecia/issues">Request or report</a>
+  </div>
+
+</main>
+<footer class="foot">
+  <div class="foot-top">
+    <a class="isl-mark" href="../" style="color:inherit;text-decoration:none"><img src="../assets/mark.svg" alt="" width="32" height="32"><span class="wordmark">Jond_ie</span></a>
+    <p>Want a tweak, or a port of an old favourite? <a href="https://github.com/Jond-ie/repo/issues/new">Request it</a>.</p>
+  </div>
+  <div class="foot-cols">
+    <div><h3>Repo</h3><a href="../">All tweaks</a><a href="sileo://source/https://jond-ie.github.io/repo/">Add to Sileo</a><a href="zbra://sources/add/https://jond-ie.github.io/repo/">Add to Zebra</a></div>
+    <div><h3>Help</h3><a href="https://github.com/Jond-ie/begonecia/issues">Report a bug</a><a href="../support/">Support and donations</a></div>
+    <div><h3>Jond_ie</h3><a href="https://x.com/Jond_ie">X</a><a href="https://github.com/Jond-ie">GitHub</a></div>
+  </div>
+  <p class="foot-note">Original BegoneCIA by Eva (Nepeta), MIT licence. Rootless and RootHide port by Jond_ie; the licence ships inside the package.</p>
+  <p class="foot-note">© 2026 Jond_ie</p>
+</footer>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6cb9329a0cd5467d8aedefc9fae31345"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
